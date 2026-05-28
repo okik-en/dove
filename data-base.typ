@@ -3,7 +3,7 @@
 #show: okiken-style.with(progress-char: emoji.fingers.pinch, title-color-map: color.map.icefire)
 #show: replace
 
-#import "@preview/cetz:0.5.0"
+#import "@preview/cetz:0.5.1"
 
 #set page("a4")
 
@@ -1234,13 +1234,6 @@ ANSI/SPARC$3$層スキーマに関する記述として、適切*でない*も�
     概念スキーマをコンピュータ上に実装するための記述である。
 ]
 
-== データの独立性
-
-#data(pretest)
-
-一般にDBMSは、ANSI/X3/SPARKの$3$層スキーマをサポートすることで、データの独立性を達成することができる、と言われている。
-これはどういうことか、詳しく説明しなさい。
-
 == データの独立性とビュー
 
 #data(pretest)
@@ -1259,8 +1252,7 @@ ANSI/SPARC$3$層スキーマに関する記述として、適切*でない*も�
 
 #data(((2022, 4), (2023, 2), (2023, 3), (2024, 2), (2025, 2)), p: (101, 107))
 
-#[@3層スキーマ]はANSI/X3/SPARCのDBMS$3$層スキーマ構造の一部である。
-これは#ana(1)が提案した#ana(2)をエッセンスとするものである。
+#[@3層スキーマ]は#ana(1)のDBMS#ana(2)構造の一部である。
 次の問いに答えなさい。
 + 次のそれぞれの管理者の役割を述べなさい。
   + データベース管理者
@@ -1276,7 +1268,39 @@ ANSI/SPARC$3$層スキーマに関する記述として、適切*でない*も�
 
 #figure(
   caption: [ANSI/X3/SPARCのDBMS$3$層スキーマ構造の一部],
-  image("img/2023-1-03-1.png", height: 16em),
+  cetz.canvas(length: 30pt, {
+    import cetz.draw: *
+    set-style(content: (align: center, wrap: it => align(center, text(size: 8pt, it))))
+
+    polygon((3, 6), 6, name: "組織体管理者")
+    content((), [組織体 \ 管理者])
+
+    polygon((0, 3), 6, name: "データベース管理者")
+    content((), [データベース \ 管理者])
+
+    polygon((3, 3), 4, angle: 45deg, radius: 1.28, name: "概念スキーマプロセッサ")
+    content((), [概念スキーマ \ プロセッサ])
+
+    polygon((6, 3), 6, name: "アプリケーションシステム管理者")
+    content((), [ｱﾌﾟﾘｹｰｼｮﾝ \ システム \ 管理者])
+
+    polygon((0, 0), 4, angle: 45deg, radius: 1.28, name: "内部スキーマプロセッサ")
+    content((), [内部スキーマ \ プロセッサ])
+
+    polygon((3, 0), 3, angle: 90deg, radius: 1.14, name: "三角形")
+
+    polygon((6, 0), 4, angle: 45deg, radius: 1.28, name: "外部スキーマプロセッサ")
+    content((), [外部スキーマ \ プロセッサ])
+
+    line("組織体管理者", "概念スキーマプロセッサ")
+    line("データベース管理者", "概念スキーマプロセッサ")
+    line("データベース管理者", "内部スキーマプロセッサ")
+    line("アプリケーションシステム管理者", "概念スキーマプロセッサ")
+    line("アプリケーションシステム管理者", "外部スキーマプロセッサ")
+    line("三角形", "概念スキーマプロセッサ")
+    line("三角形", "内部スキーマプロセッサ")
+    line("三角形", "外部スキーマプロセッサ")
+  }),
 ) <3層スキーマ>
 
 == ビュー
@@ -1333,14 +1357,118 @@ $B^+$木はレコードが挿入されて成長するから、同じコードの
 また、中間ノード$A$には十分な空きがあるものとする。
 
 #figure(
-  image("img/2021-2-13-1.png", height: 5em),
+  cetz.canvas(length: 36pt, {
+    import cetz.draw: *
+    set-style(
+      content: (align: center, wrap: text.with(size: 8pt), frame: "rect", padding: 6pt),
+      line: (mark: (end: ">", fill: black, scale: 0.5)),
+    )
+    content((1, 1), $A$, name: "A")
+    content((0, 0), $B$, name: "B")
+    content((1, 0), $C$, name: "C")
+    content((2, 0), $D$, name: "D")
+    line((1, 1.5), "A.north")
+    line("A", "B.north")
+    line("A", "C.north")
+    line("A", "D.north")
+    line((name: "B", anchor: 20deg), (name: "C", anchor: 160deg))
+    line((name: "C", anchor: 200deg), (name: "B", anchor: 340deg))
+    line((name: "C", anchor: 20deg), (name: "D", anchor: 160deg))
+    line((name: "D", anchor: 200deg), (name: "C", anchor: 340deg))
+  }),
 )
 
 #options[
-  + #image("img/2021-2-13-2.png", height: 5em)
-  + #image("img/2021-2-13-3.png", height: 5em)
-  + #image("img/2021-2-13-4.png", height: 5em)
-  + #image("img/2021-2-13-5.png", height: 5em)
+  + #cetz.canvas(length: 36pt, {
+      import cetz.draw: *
+      set-style(
+        content: (align: center, wrap: text.with(size: 8pt), frame: "rect", padding: 6pt),
+        line: (mark: (end: ">", fill: black, scale: 0.5)),
+      )
+      content((1, 1), $A$, name: "A")
+      content((0, 0), $B$, name: "B")
+      content((1, 0), $C_1$, name: "C1")
+      content((2, 0), $C_2$, name: "C2")
+      content((3, 0), $D$, name: "D")
+      line((1, 1.5), "A.north")
+      line("A", "B.north")
+      line("A", "C1.north")
+      line("A", "D.north")
+      line((name: "B", anchor: 20deg), (name: "C1", anchor: 160deg))
+      line((name: "C1", anchor: 200deg), (name: "B", anchor: 340deg))
+      line((name: "C1", anchor: 20deg), (name: "C2", anchor: 160deg))
+      line((name: "C2", anchor: 200deg), (name: "C1", anchor: 340deg))
+      line((name: "C2", anchor: 20deg), (name: "D", anchor: 160deg))
+      line((name: "D", anchor: 200deg), (name: "C2", anchor: 340deg))
+    })
+  + #cetz.canvas(length: 36pt, {
+      import cetz.draw: *
+      set-style(
+        content: (align: center, wrap: text.with(size: 8pt), frame: "rect", padding: 6pt),
+        line: (mark: (end: ">", fill: black, scale: 0.5)),
+      )
+      content((1, 1), $A$, name: "A")
+      content((0, 0), $B$, name: "B")
+      content((1, 0), $C_1$, name: "C1")
+      content((2, 0), $C_2$, name: "C2")
+      content((3, 0), $D$, name: "D")
+      line((1, 1.5), "A.north")
+      line("A", "B.north")
+      line("A", "C1.north")
+      line("A", "C2.north")
+      line("A", "D.north")
+      line((name: "B", anchor: 20deg), (name: "C1", anchor: 160deg))
+      line((name: "C1", anchor: 200deg), (name: "B", anchor: 340deg))
+      line((name: "C1", anchor: 20deg), (name: "C2", anchor: 160deg))
+      line((name: "C2", anchor: 200deg), (name: "C1", anchor: 340deg))
+      line((name: "C2", anchor: 20deg), (name: "D", anchor: 160deg))
+      line((name: "D", anchor: 200deg), (name: "C2", anchor: 340deg))
+    })
+  + #cetz.canvas(length: 36pt, {
+      import cetz.draw: *
+      set-style(
+        content: (align: center, wrap: text.with(size: 8pt), frame: "rect", padding: 6pt),
+        line: (mark: (end: ">", fill: black, scale: 0.5)),
+      )
+      content((1, 1), $A$, name: "A")
+      content((0, 0), $B$, name: "B")
+      content((1, 0), $C_1$, name: "C1")
+      content((2, 0), $D$, name: "D")
+      content((3, 0), $C_2$, name: "C2")
+      line((1, 1.5), "A.north")
+      line("A", "B.north")
+      line("A", "C1.north")
+      line("A", "D.north")
+      line("A", "C2.north")
+      line((name: "B", anchor: 20deg), (name: "C1", anchor: 160deg))
+      line((name: "C1", anchor: 200deg), (name: "B", anchor: 340deg))
+      line((name: "C1", anchor: 20deg), (name: "D", anchor: 160deg))
+      line((name: "D", anchor: 200deg), (name: "C1", anchor: 340deg))
+      line((name: "D", anchor: 20deg), (name: "C2", anchor: 160deg))
+      line((name: "C2", anchor: 200deg), (name: "D", anchor: 340deg))
+    })
+  + #cetz.canvas(length: 36pt, {
+      import cetz.draw: *
+      set-style(
+        content: (align: center, wrap: text.with(size: 8pt), frame: "rect", padding: 6pt),
+        line: (mark: (end: ">", fill: black, scale: 0.5)),
+      )
+      content((1, 1), $A$, name: "A")
+      content((0, 0), $B$, name: "B")
+      content((1, 0), $C_1$, name: "C1")
+      content((2, 0), $D$, name: "D")
+      content((1, -1), $C_2$, name: "C2")
+      line((1, 1.5), "A.north")
+      line("A", "B.north")
+      line("A", "C1.north")
+      line("A", "D.north")
+      line((name: "B", anchor: 20deg), (name: "C1", anchor: 160deg))
+      line((name: "C1", anchor: 200deg), (name: "B", anchor: 340deg))
+      line((name: "C1", anchor: 20deg), (name: "D", anchor: 160deg))
+      line((name: "D", anchor: 200deg), (name: "C1", anchor: 340deg))
+      line((name: "C1", anchor: 260deg), (name: "C2", anchor: 100deg))
+      line((name: "C2", anchor: 70deg), (name: "C1", anchor: 290deg))
+    })
 ]
 
 == ファイルアクセス
@@ -1362,6 +1490,21 @@ $B^+$木はレコードが挿入されて成長するから、同じコードの
   この順で挿入した時に、結果として得られる$B^+$木を示しなさい。ここで、$B^+$木のオーダーは$3$とする。
 + 探索キー値が$1, 2, 3, 4, 5, 5, 6, 7$のレコードの最初は、空のヒープファイルに、
   この"逆"順で挿入した時に、結果として得られる$B^+$木を示しなさい。$B^+$木のオーダーは$3$とする。
+
+== $B^+$木インデックスのアクセスコスト
+
+#data(((2022, 2), (2023, 3)), p: (117, 119))
+
++ $B^+$木インデックスが定義されている候補キーを利用して、$1$件のデータを検索するとき、
+  データ総件数$X$に対する$B^+$木インデックスを格納するノードへのアクセス回数のオーダを表す式はどれか。
+  #options[
+    + $sqrt(X)$
+    + $log X$
+    + $X$
+    + $X!$
+  ]
++ 探索キー値が$4, 1, 2, 7, 6, 3, 5$のレコードの最初は、空のヒープファイルに、
+  この順で挿入した時に、結果として得られる$B^+$木を示しなさい。ここで、$B^+$木のオーダーは$3$とする。
 
 == $B^+$木
 
@@ -1387,21 +1530,6 @@ $B^+$木はレコードが挿入されて成長するから、同じコードの
 ]
 
 = 質問処理の最適化
-
-== $B^+$木インデックスのアクセスコスト
-
-#data(((2022, 2), (2023, 3)), p: (117, 119))
-
-+ $B^+$木インデックスが定義されている候補キーを利用して、$1$件のデータを検索するとき、
-  データ総件数$X$に対する$B^+$木インデックスを格納するノードへのアクセス回数のオーダを表す式はどれか。
-  #options[
-    + $sqrt(X)$
-    + $log X$
-    + $X$
-    + $X!$
-  ]
-+ 探索キー値が$4, 1, 2, 7, 6, 3, 5$のレコードの最初は、空のヒープファイルに、
-  この順で挿入した時に、結果として得られる$B^+$木を示しなさい。ここで、$B^+$木のオーダーは$3$とする。
 
 == 入れ子ループ結合法
 

@@ -1,0 +1,391 @@
+#import "../../utils.typ": *
+#import "@preview/cetz:0.5.2"
+
+= データベース管理システム
+
+== $3$層スキーマ構造
+
+#data(((2021, 1), (2022, 1)), p: (104, 105))
+
+データベースの３層スキーマ構造に関する記述のうち、適切なものはどれか。
+#options[
+  + 概念スキーマは、データの物理的関係を表現する。
+  + 外部スキーマは、利用者の必要とするデータの見方を表現する。
+  + 内部スキーマは、データの論理的関係を表現する。
+  + 物理スキーマは、データの物理的関係を表現する。
+]
+
+== スキーマの特徴
+
+#data((2023, 4), p: (104, 105))
+
+業務の中で発生するデータは多くの場合、データベースによって管理する。
+データベース全体の構造や仕様を定義するものに、データベーススキーマがある。
+データベーススキーマの構成の仕方のひとつに、以下の$3$つの構成要素を用いるものがある。
+#enum(
+  numbering: "a",
+  [外部スキーマ],
+  [概念スキーマ],
+  [内部スキーマ],
+)
+
+上記の構成要素の説明を以下に示す。
+#enum(
+  numbering: "①",
+  [
+    磁気ディスク装置などへデータを記録する際、どの位置に、
+    どのような物理レコードサイズで記録するかを定義する。
+  ],
+  [
+    アプリケーションから利用することを想定したデータベースの仕様で、
+    アプリケーションからのデータ入力や出力の方法を定義する。
+  ],
+  [
+    データの論理構造をデータモデルに従って定義したもので、
+    リレーショナルデータベースでいえば、関係表の定義を指す。
+  ],
+)
+
+データベーススキーマの構成要素ａ〜ｃと、その説明①〜③の組み合わせとして、
+最も適切なものを下記の解答群から選べ。
+
+#figure(
+  table(
+    columns: (3em,) + (3em,) * 3,
+    align: center,
+    [], [a], [b], [c],
+    _opt_[ア], [①], [②], [③],
+    _opt_[イ], [②], [③], [①],
+    _opt_[ウ], [③], [①], [②],
+    _opt_[エ], [③], [②], [①],
+  ),
+)
+
+== $3$層スキーマのサポート
+
+#data((2021, 2), p: (101, (104, 107)))
+
+ANSI/SPARCの$3$層スキーマについて、概念スキーマ、内部スキーマ、外部スキーマの説明は、どれですか、当てはまる*全て*を列挙しなさい。
+#options[
+  + データベースが対象とするデータの世界(議論領域)を整理し、
+    コンピュータの技術面には何も触れず、
+    データの論理的な構造だけをまとめたものをいう。
+    これを作ることを論理設計という。
+  + 具体的な応用とその利用者とを考慮したデータベースの一部分の記述をいう。
+  + 論理設計の結果をそのコンピュータシステム上に実装するソフトウエアの集まりをいう。
+    これを作ることを物理設計という。
+  + 主に情報技術の専門家が担当する。
+  + 主にデータベース管理者が担当する。
+  + 主にデータベースの利用者が使う。
+]
+
+== $3$層スキーマの実現
+
+#data((2021, 2), p: (104, 107))
+
+ANSI/SPARC$3$層スキーマに関する記述として、適切*でない*ものはどれか。
+#options[
+  + ANSI/SPARC$3$層スキーマの意義は、
+    物理的データ独立性及び論理的データ独立性を確保することである。
+  + 外部スキーマは、 実世界が変化しても応用プログラムができるだけ影響を
+    受けないようにするための考え方である。
+  + 関係データベースのビューやネットワークデータベースのサブスキーマは、
+    概念スキーマに相当する。
+  + 内部スキーマは、直接編成ファイルやVSAMファイルなどの物理ファイルを用いて、
+    概念スキーマをコンピュータ上に実装するための記述である。
+]
+
+== データの独立性とビュー
+
+#data(pretest)
+
+あるデータベースシステムにおいて、データの保存方法（ファイル構造）を変更したが、 ユーザプログラムは変更せずに動作し続けた。
+この理由を、ANSI/SPARC三層スキーマの観点から説明しなさい。
+さらに、利用者ごとに異なるビュー（外部スキーマ）を提供できる理由についても説明しなさい。
+
+== データの独立性とビュー
+
+#data(pretest)
+
+外部スキーマ（ビュー）の役割を説明し、なぜ同じデータでも異なる意味に見えることがあるのか、具体例を用いて説明しなさい。
+
+== $3$層スキーマの構成
+
+#data(((2022, 4), (2023, 2), (2023, 3), (2024, 2), (2025, 2)), p: (101, 107))
+
+#[@3層スキーマ]は#ana(1)のDBMS#ana(2)構造の一部である。
+次の問いに答えなさい。
++ 次のそれぞれの管理者の役割を述べなさい。
+  + データベース管理者
+  + 組織体管理者
+  + アプリケーションシステム管理者
++ 図の中央の三角形は何か？
+  + その名称を与えなさい。
+  + 機能を説明しなさい。
++ $3$層スキーマと何か、$3$つの層の名称を、全て記載しなさい。
++ $3$層スキーマをサポートする意義として、データの独立性があるが、$2$つの観点から実装が議論される。
+  この$2$つとは何かを記述しなさい。
++ この$2$つのデータ独立性の達成可能性と限界を、その根拠・理由と共に論じよ。
+
+#figure(
+  caption: [ANSI/X3/SPARCのDBMS$3$層スキーマ構造の一部],
+  cetz.canvas(length: 30pt, {
+    import cetz.draw: *
+    set-style(content: (align: center, wrap: it => align(center, text(size: 8pt, it))))
+
+    polygon((3, 6), 6, name: "組織体管理者")
+    content((), [組織体 \ 管理者])
+
+    polygon((0, 3), 6, name: "データベース管理者")
+    content((), [データベース \ 管理者])
+
+    polygon((3, 3), 4, angle: 45deg, radius: 1.28, name: "概念スキーマプロセッサ")
+    content((), [概念スキーマ \ プロセッサ])
+
+    polygon((6, 3), 6, name: "アプリケーションシステム管理者")
+    content((), [ｱﾌﾟﾘｹｰｼｮﾝ \ システム \ 管理者])
+
+    polygon((0, 0), 4, angle: 45deg, radius: 1.28, name: "内部スキーマプロセッサ")
+    content((), [内部スキーマ \ プロセッサ])
+
+    polygon((3, 0), 3, angle: 90deg, radius: 1.14, name: "三角形")
+
+    polygon((6, 0), 4, angle: 45deg, radius: 1.28, name: "外部スキーマプロセッサ")
+    content((), [外部スキーマ \ プロセッサ])
+
+    line("組織体管理者", "概念スキーマプロセッサ")
+    line("データベース管理者", "概念スキーマプロセッサ")
+    line("データベース管理者", "内部スキーマプロセッサ")
+    line("アプリケーションシステム管理者", "概念スキーマプロセッサ")
+    line("アプリケーションシステム管理者", "外部スキーマプロセッサ")
+    line("三角形", "概念スキーマプロセッサ")
+    line("三角形", "内部スキーマプロセッサ")
+    line("三角形", "外部スキーマプロセッサ")
+  }),
+) <3層スキーマ>
+
+== ビュー
+
+#data((2022, 2), p: (107, 110))
+
+関係データベース管理システム（RDBMS）におけるビューに関する記述のうち、適切なものはどれか。
+#options[
+  + ビューとは、名前を付けた導出表のことである。
+  + ビューに対して、ビューを定義することはできない。
+  + ビューの定義を行ってから、必要があれば、その基底表を定義する。
+  + ビューは一つの基底表に対して一つだけ定義できる。
+]
+
+== ビューの更新可能性
+
+#data((2021, 2), p: (108, 109))
+
+更新不可能なビューはどれか。
+#options[
+  + ビュー定義に`GROUP BY`句が含まれるビュー
+  + ビュー定義に`WHERE`句が含まれるビュー
+  + ビューに対するビュー
+  + 元の表の主キーを含まないビュー
+]
+
+== 索引と木構造
+
+#data(pretest)
+
++ $B$木または$B^+$木が高速である理由を、計算量の観点から説明しなさい。
++ 二分探索木と比較して、なぜ性能が安定するのか説明しなさい。
++ 次の順序で値を挿入した二分探索木を描け
+  $ 37, quad 24, quad 42, quad 7 $
++ 木が偏ると検索性能はどうなるか説明せよ。
++ なぜデータベースでは$B^+$木が好まれるのか説明しなさい。
+
+== 内部スキーマの実現
+
+#data((2021, 2), p: (110, 112))
+
+$B^+$木はレコードが挿入されて成長するから、同じコードの場合でも、コードの挿入順が異なる$B^+$木となる。
+ファイル社員に、教科書$112$ページ図$9.6$で示されているレコード挿入と逆の順番で、レコードを挿入して行った場合のオーダー$3$の$B^+$木を作成しなさい。
+回答には、図$9.6$のように成長過程も与えなさい。
+
+== $B^+$木
+
+#data((2021, 2), p: (110, 112))
+
+関係データベースのテーブルにレコードを$1$件追加したところ、
+インデックスとして使う、図の$B^+$木のリーフノード$C$が$C_1$と$C_2$に分割された。
+ノード分割後の$B^+$木構造はどれか。
+ここで、矢印はノードへのポインタとする。
+また、中間ノード$A$には十分な空きがあるものとする。
+
+#figure(
+  cetz.canvas(length: 36pt, {
+    import cetz.draw: *
+    set-style(
+      content: (align: center, wrap: text.with(size: 8pt), frame: "rect", padding: 6pt),
+      line: (mark: (end: ">", fill: black, scale: 0.5)),
+    )
+    content((1, 1), $A$, name: "A")
+    content((0, 0), $B$, name: "B")
+    content((1, 0), $C$, name: "C")
+    content((2, 0), $D$, name: "D")
+    line((1, 1.5), "A.north")
+    line("A", "B.north")
+    line("A", "C.north")
+    line("A", "D.north")
+    line((name: "B", anchor: 20deg), (name: "C", anchor: 160deg))
+    line((name: "C", anchor: 200deg), (name: "B", anchor: 340deg))
+    line((name: "C", anchor: 20deg), (name: "D", anchor: 160deg))
+    line((name: "D", anchor: 200deg), (name: "C", anchor: 340deg))
+  }),
+)
+
+#options[
+  + #cetz.canvas(length: 36pt, {
+      import cetz.draw: *
+      set-style(
+        content: (align: center, wrap: text.with(size: 8pt), frame: "rect", padding: 6pt),
+        line: (mark: (end: ">", fill: black, scale: 0.5)),
+      )
+      content((1, 1), $A$, name: "A")
+      content((0, 0), $B$, name: "B")
+      content((1, 0), $C_1$, name: "C1")
+      content((2, 0), $C_2$, name: "C2")
+      content((3, 0), $D$, name: "D")
+      line((1, 1.5), "A.north")
+      line("A", "B.north")
+      line("A", "C1.north")
+      line("A", "D.north")
+      line((name: "B", anchor: 20deg), (name: "C1", anchor: 160deg))
+      line((name: "C1", anchor: 200deg), (name: "B", anchor: 340deg))
+      line((name: "C1", anchor: 20deg), (name: "C2", anchor: 160deg))
+      line((name: "C2", anchor: 200deg), (name: "C1", anchor: 340deg))
+      line((name: "C2", anchor: 20deg), (name: "D", anchor: 160deg))
+      line((name: "D", anchor: 200deg), (name: "C2", anchor: 340deg))
+    })
+  + #cetz.canvas(length: 36pt, {
+      import cetz.draw: *
+      set-style(
+        content: (align: center, wrap: text.with(size: 8pt), frame: "rect", padding: 6pt),
+        line: (mark: (end: ">", fill: black, scale: 0.5)),
+      )
+      content((1, 1), $A$, name: "A")
+      content((0, 0), $B$, name: "B")
+      content((1, 0), $C_1$, name: "C1")
+      content((2, 0), $C_2$, name: "C2")
+      content((3, 0), $D$, name: "D")
+      line((1, 1.5), "A.north")
+      line("A", "B.north")
+      line("A", "C1.north")
+      line("A", "C2.north")
+      line("A", "D.north")
+      line((name: "B", anchor: 20deg), (name: "C1", anchor: 160deg))
+      line((name: "C1", anchor: 200deg), (name: "B", anchor: 340deg))
+      line((name: "C1", anchor: 20deg), (name: "C2", anchor: 160deg))
+      line((name: "C2", anchor: 200deg), (name: "C1", anchor: 340deg))
+      line((name: "C2", anchor: 20deg), (name: "D", anchor: 160deg))
+      line((name: "D", anchor: 200deg), (name: "C2", anchor: 340deg))
+    })
+  + #cetz.canvas(length: 36pt, {
+      import cetz.draw: *
+      set-style(
+        content: (align: center, wrap: text.with(size: 8pt), frame: "rect", padding: 6pt),
+        line: (mark: (end: ">", fill: black, scale: 0.5)),
+      )
+      content((1, 1), $A$, name: "A")
+      content((0, 0), $B$, name: "B")
+      content((1, 0), $C_1$, name: "C1")
+      content((2, 0), $D$, name: "D")
+      content((3, 0), $C_2$, name: "C2")
+      line((1, 1.5), "A.north")
+      line("A", "B.north")
+      line("A", "C1.north")
+      line("A", "D.north")
+      line("A", "C2.north")
+      line((name: "B", anchor: 20deg), (name: "C1", anchor: 160deg))
+      line((name: "C1", anchor: 200deg), (name: "B", anchor: 340deg))
+      line((name: "C1", anchor: 20deg), (name: "D", anchor: 160deg))
+      line((name: "D", anchor: 200deg), (name: "C1", anchor: 340deg))
+      line((name: "D", anchor: 20deg), (name: "C2", anchor: 160deg))
+      line((name: "C2", anchor: 200deg), (name: "D", anchor: 340deg))
+    })
+  + #cetz.canvas(length: 36pt, {
+      import cetz.draw: *
+      set-style(
+        content: (align: center, wrap: text.with(size: 8pt), frame: "rect", padding: 6pt),
+        line: (mark: (end: ">", fill: black, scale: 0.5)),
+      )
+      content((1, 1), $A$, name: "A")
+      content((0, 0), $B$, name: "B")
+      content((1, 0), $C_1$, name: "C1")
+      content((2, 0), $D$, name: "D")
+      content((1, -1), $C_2$, name: "C2")
+      line((1, 1.5), "A.north")
+      line("A", "B.north")
+      line("A", "C1.north")
+      line("A", "D.north")
+      line((name: "B", anchor: 20deg), (name: "C1", anchor: 160deg))
+      line((name: "C1", anchor: 200deg), (name: "B", anchor: 340deg))
+      line((name: "C1", anchor: 20deg), (name: "D", anchor: 160deg))
+      line((name: "D", anchor: 200deg), (name: "C1", anchor: 340deg))
+      line((name: "C1", anchor: 260deg), (name: "C2", anchor: 100deg))
+      line((name: "C2", anchor: 70deg), (name: "C1", anchor: 290deg))
+    })
+]
+
+== ファイルアクセス
+
+#data((2022, 4), p: 113)
+
+ファイルのアクセス法としては、$B^+$木以外にも、スキャン、二分探索やハッシュ法など多様である。
+しかし、$B^+$木が利用されている理由は、木は#ana(1)しているという性質を持つからである。
+これはどのようなレコードへも#ana(2)の長さが等しいという性質である。
+しかも、この性質はレコードの挿入や#ana(3)などにより、木の構造が、#ana(4)に変化しても失われない。
+データベースには#ana(5)が頻繁に生じるので、この#ana(1)木［これを英語で#ana(6) treeと呼ぶ］
+の性質は重宝される。
+
+== $B^+$木
+
+#data(((2022, 4), (2023, 2), (2024, 2)), p: 114)
+
++ 探索キー値が$1, 2, 3, 4, 5, 5, 6, 7$のレコードの最初は、空のヒープファイルに、
+  この順で挿入した時に、結果として得られる$B^+$木を示しなさい。ここで、$B^+$木のオーダーは$3$とする。
++ 探索キー値が$1, 2, 3, 4, 5, 5, 6, 7$のレコードの最初は、空のヒープファイルに、
+  この"逆"順で挿入した時に、結果として得られる$B^+$木を示しなさい。$B^+$木のオーダーは$3$とする。
+
+== $B^+$木インデックスのアクセスコスト
+
+#data(((2022, 2), (2023, 3)), p: (117, 119))
+
++ $B^+$木インデックスが定義されている候補キーを利用して、$1$件のデータを検索するとき、
+  データ総件数$X$に対する$B^+$木インデックスを格納するノードへのアクセス回数のオーダを表す式はどれか。
+  #options[
+    + $sqrt(X)$
+    + $log X$
+    + $X$
+    + $X!$
+  ]
++ 探索キー値が$4, 1, 2, 7, 6, 3, 5$のレコードの最初は、空のヒープファイルに、
+  この順で挿入した時に、結果として得られる$B^+$木を示しなさい。ここで、$B^+$木のオーダーは$3$とする。
+
+== $B^+$木
+
+#data(((2021, 2), (2022, 3)), p: (117, 119))
+
+"部品"表のメーカコード列に対し、$B^+$木インデックスを作成した。
+これによって、"部品"表の検索の性能改善が最も期待できる操作はどれか。
+ここで、部品及びメーカのデータ件数は十分に多く、
+"部品"表に存在するメーカコード列の値の種類は十分な数があり、
+かつ、均一に分散しているものとする。
+また、"部品"表のごく少数の行には、メーカコード列に`NULL`が設定されている。
+実線の下線は主キーを、破線の下線は外部キーを表す。
+四択の答えだけではなく、図や考察も与えること。
+
+- 部品(#underline[商品番号], 部品名, #underline(stroke: (dash: "densely-dashed"))[メーカコード])
+- メーカ(#underline[メーカコード], メーカ名, 所在地)
+
+#options[
+  + メーカコードの値が`1001`以外の部品を検索する。
+  + メーカコードの値が`1001`でも`4001`でもない部品を検索する。
+  + メーカコードの値が`4001`以上、`4003`以下の部品を検索する。
+  + メーカコードの値が`NULL`以外の部品を検索する。
+]

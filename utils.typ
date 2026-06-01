@@ -60,6 +60,12 @@
   }
 }
 
+#let rchead(r, c) = {
+  place(bottom + left, r)
+  place(top + right, c)
+  place(line(stroke: red, start: (20%, 20%), end: (80%, 80%)))
+}
+
 #let ans(body) = if not sys.inputs.keys().contains("no-hint") {
   set text(red)
   set enum(indent: .5em)

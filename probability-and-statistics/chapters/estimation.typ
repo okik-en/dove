@@ -130,7 +130,7 @@
     したがって#_opt_[イ]は誤りである。
   + 母集団を使って分散を求めるときは、普通の分散を使い、標本を使って分散を求めるときは、不偏分散を使う。
   + + $hat(theta)_n$は$theta$のまわりに均一的に分布し、平均的には母数と一致するという性質、すなわち$E[hat(theta)_n] = theta$が成り立つことを不偏性という。
-    + 標本の大きさ$n$が大きくなるにつれ、$hat(theta)_n$が$theta$に近づくという性質、すなわち$forall epsilon > 0: lim_(n -> infinity) P(abs(hat(theta)_n - theta) < epsilon) = 1$が成り立つことを一致性という。
+    + 標本の大きさ$n$が大きくなるにつれ、$hat(theta)_n$が$theta$に近づく（確率収束する）という性質、すなわち$forall epsilon > 0: lim_(n -> infinity) P(abs(hat(theta)_n - theta) < epsilon) = 1$が成り立つことを一致性という。
     + $hat(theta)_n$の分散はなるべく小さい方がよいという性質、すなわち$forall hat(theta)'_n: V(hat(theta)_n) <= V(hat(theta)'_n)$が成り立つことを有効性という。
   + $n$は一致性に影響する。なぜならば$n -> infinity$における確率収束を主張するからである。
 ]

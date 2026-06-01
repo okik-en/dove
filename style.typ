@@ -14,7 +14,6 @@
   set terms(indent: 2em, spacing: 1em)
   set enum(indent: 2em, numbering: "(1-a)", spacing: 1em)
   set grid(gutter: 2em, align: top)
-  show strong: set text(black)
   show raw: set text(size: 11pt)
   show heading.where(level: 1, outlined: true): it => {
     pagebreak()

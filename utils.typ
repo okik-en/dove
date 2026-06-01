@@ -64,7 +64,6 @@
   set text(red)
   set enum(indent: .5em)
   block(
-    breakable: false,
     stroke: red,
     inset: (x: 0em, y: .5em),
     outset: (x: 1em, y: .5em),

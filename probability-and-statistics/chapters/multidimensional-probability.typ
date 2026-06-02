@@ -16,6 +16,28 @@ $6$個の赤玉と$4$個の白玉が入っている袋から、無作為に$1$�
   + $6/10 dot 5/9 + 4/10 dot 6/9 = 3/5$
 ]
 
+== 復元抽出と非復元抽出
+
+#data((2026, 2), p: 107)
+
+箱の中に赤玉が$3$個、白玉が$5$個入っている。
++ 玉を$1$個取り出して色を確認し、戻さずにもう$1$個取り出す。
+  + $2$回とも赤である確率を求めよ。
+  + $2$回目が赤である確率を求めよ。
+  + $2$回目が赤であったとき、$1$回目も赤である確率を求めよ。
++ 今度は玉を取り出した後、箱に戻してから次を引くものとする。
+  $2$回目が赤であったとき、$1$回目も赤である確率を求めよ。
++ 問(1)と問(2)の結果を比較し，違いが生じる理由を説明せよ。
+
+#ans[
+  + + $3/8 dot 2/7 = 6/56 = 3/28$
+    + $3/8 dot 2/7 + 5/8 dot 3/7 = 21/56 = 3/8$
+    + $frac(frac(6, 56, style: "skewed"), frac(21, 56, style: "skewed")) = 6/21 = 2/7$
+  + $3/8$
+  + 非復元抽出では、$1$回目の結果により箱の中身が変わるため独立でない。
+    復元抽出では状態が変わらないため独立である。
+]
+
 == 変数変換と確率分布
 
 #data((2022, 1), p: (107, 108))
@@ -67,6 +89,50 @@ $X$と$Y$とは独立かどうか、理由をつけて説明せよ。
   となるため、$x >= 0$かつ$y >= 0$のときも、その他においても
   $ f(x, y) = f_1(x) f_2(y) $
   が成り立つ。すなわち、$X$と$Y$は独立である。
+]
+
+== 連続型確率変数の独立性
+
+#data((2026, 2))
+
+次の同時確率密度関数について、確率変数$X$、$Y$の独立性を判定せよ。
+
+ただし、必要に応じて次を用いてよい：
+$ integral_0^infinity e^(-x) d x = 1, wide integral_0^infinity x e^(-x) d x = 1 $
+
++ $f(x, y) = cases(x e^(- x - y) wide (x >= 0, y >= 0), 0 wide ("otherwise"))$
+  + 周辺密度関数$f_X (x)$、$f_Y (y)$を求めよ。
+  + $X$、$Y$が独立であるかどうかを判定し、理由を述べよ。
++ $f(x, y) = cases(c (x + y) e^(- x - y) wide (x >= 0, y >= 0), 0 wide ("otherwise"))$
+  + 定数$c$を求めよ。
+  + $X$、$Y$が独立であるかどうかを判定し、理由を述べよ。
+
+#ans[
+  + + それぞれ$x >= 0$、$y >= 0$のとき
+      $
+        f_X (x) = integral_(-infinity)^infinity f(x, y) d y = x e^(-x) underbracket(integral_0^infinity e^(-x) d x, = 1) = x e^(-x)
+      $
+      $
+        f_Y (y) = integral_(-infinity)^infinity f(x, y) d x = e^(-y) underbracket(integral_0^infinity x e^(-x) d x, = 1) = e^(-y)
+      $
+      より次が解答である。
+      $
+        f_X (x) = cases(x e^(-x) quad (x >= 0), 0 quad ("otherwise")) , wide f_Y (y) = cases(e^(-y) quad (y >= 0), 0 quad ("otherwise"))
+      $
+    + $f(x, y) = x e^(-x) e^(-y) = f_X (x) f_Y (y)$が成り立つため、$X$と$Y$は独立である。
+  + + $integral_(-infinity)^infinity integral_(-infinity)^infinity f(x, y) d x d y = 1$となる必要があるため
+      $
+        integral_0^infinity #h(-.4em) integral_0^infinity c (x + y) e^(-x - y) d x d y = c underbracket(integral_0^infinity x e^(-x) d x, = 1) underbracket(integral_0^infinity e^(-y) d y, = 1) + c underbracket(integral_0^infinity e^(-x) d x, = 1) underbracket(integral_0^infinity y e^(-y) d y, = 1) = 2 c
+      $
+      によれば$c = 1/2$。
+    + それぞれ$x >= 0, y >= 0$のとき
+      $
+        f_X (x) = integral_(-infinity)^infinity f(x, y) d y = 1/2 x e^(-x) underbracket(integral_0^infinity e^(-y) d y, = 1) + 1/2 e^(-x) underbracket(integral_0^infinity y e^(-y) d y, = 1) = 1/2 (x + 1) e^(-x)
+      $
+      $
+        f_Y (y) = integral_(-infinity)^infinity f(x, y) d x = 1/2 e^(-y) underbracket(integral_0^infinity x e^(-x) d x, = 1) + 1/2 y e^(-y) underbracket(integral_0^infinity e^(-x) d x, = 1) = 1/2 (y + 1) e^(-y)
+      $
+      より、例えば$x = y = 0$のとき$f(x, y) != f_X (x) f_Y (y)$であるため、$X$と$Y$は独立でない。
 ]
 
 == 同時確率分布と独立性

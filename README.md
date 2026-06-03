@@ -8,8 +8,6 @@
 
 ```bash
 git clone https://github.com/okik-en/dove.git
-cd dove
-git submodule add https://github.com/okik-en/typ.git
 ```
 
 ### プレコミットの追加

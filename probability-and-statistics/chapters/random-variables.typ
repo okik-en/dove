@@ -1,4 +1,4 @@
-#import "../../utils.typ": *
+#import "../../typst/utils.typ": *
 
 = 確率変数と確率分布
 

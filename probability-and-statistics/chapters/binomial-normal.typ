@@ -1,4 +1,4 @@
-#import "../../utils.typ": *
+#import "../../typst/utils.typ": *
 
 = 二項分布と正規分布
 

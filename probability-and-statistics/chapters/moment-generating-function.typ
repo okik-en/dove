@@ -1,4 +1,4 @@
-#import "../../utils.typ": *
+#import "../../typst/utils.typ": *
 
 = 確率分布とモーメント母関数
 

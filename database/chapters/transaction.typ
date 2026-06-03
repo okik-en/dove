@@ -1,4 +1,4 @@
-#import "../../utils.typ": *
+#import "../../typst/utils.typ": *
 #import "@preview/cetz:0.5.2"
 
 = トランザクション

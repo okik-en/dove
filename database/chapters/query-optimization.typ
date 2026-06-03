@@ -1,4 +1,4 @@
-#import "../../utils.typ": *
+#import "../../typst/utils.typ": *
 
 = 質問処理の最適化
 

@@ -1,4 +1,6 @@
-#import "typ/templates/okiken.typ": eqref, family
+#import "style.typ": family
+
+#let with-hint = not sys.inputs.keys().contains("no-hint")
 
 #let database = "__database__"
 #let unknown = (__tag__: "unknown")
@@ -22,13 +24,35 @@
   font: family.sans,
 )
 
-#let options(body) = {
+#let answer-circle = if with-hint {
+  circle.with(
+    height: 1em,
+    width: 1em,
+    inset: -1.5pt,
+    outset: 2pt,
+    stroke: red,
+  )
+} else { text }
+
+#let options(a: none, body) = {
   set enum(
-    numbering: n => text(
-      weight: "bold",
-      font: family.sans,
-      numbering("ア", n),
-    ),
+    numbering: n => if (type(a) == array and (a.contains(n) or a.contains(numbering("ア", n))))
+      or n == a
+      or numbering("ア", n) == a {
+      answer-circle(
+        text(
+          weight: "bold",
+          font: family.sans,
+          numbering("ア", n),
+        ),
+      )
+    } else {
+      text(
+        weight: "bold",
+        font: family.sans,
+        numbering("ア", n),
+      )
+    },
     body-indent: 2em,
   )
   body
@@ -66,7 +90,7 @@
   place(line(stroke: red, start: (20%, 20%), end: (80%, 80%)))
 }
 
-#let ans(body) = if not sys.inputs.keys().contains("no-hint") {
+#let ans(body) = if with-hint {
   set text(red)
   set enum(indent: .5em)
   block(
@@ -76,4 +100,20 @@
     width: 100%,
     body,
   )
+}
+
+#let eqref(ref, body) = {
+  [
+    #math.equation(
+      block: true,
+      numbering: num => numbering(
+        "(1.1)",
+        counter(heading).get().first(),
+        num,
+      ),
+      number-align: right + horizon,
+      body,
+    )
+    #ref
+  ]
 }

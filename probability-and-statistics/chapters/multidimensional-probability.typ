@@ -1,4 +1,4 @@
-#import "../../utils.typ": *
+#import "../../typst/utils.typ": *
 
 = 多次元確率分布
 
@@ -54,6 +54,7 @@ $1$、$2$、$3$、$4$の数字が等確率で出る$2$つの（正四面体）�
       table(
         columns: 6,
         stroke: none,
+        align: horizon + center,
         table.vline(x: 1, stroke: red),
         table.vline(x: 5, stroke: red),
         table.header($Y$, $0$, $1$, $2$, $3$, [計]),

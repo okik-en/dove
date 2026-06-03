@@ -1,4 +1,4 @@
-#import "../style.typ": style
+#import "../typst/style.typ": style
 #show: style
 
 #set document(title: "確率統計")

@@ -1,0 +1,8 @@
+repos:
+  - repo: local
+    hooks:
+      - id: export-typst-pdf
+        name: Export Typst PDF
+        entry: sh scripts/export.sh
+        language: system
+        pass_filenames: false

@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# Resolve Typst
-
-if [ -n "$LOCALAPPDATA" ]; then
-  WINGET_TYPST_PATH=$(cygpath -u "$LOCALAPPDATA/Microsoft/WinGet/Packages/Typst.Typst_Microsoft.Winget.Source_8wekyb3d8bbwe/typst-x86_64-pc-windows-msvc")
-  export PATH="$PATH:$WINGET_TYPST_PATH"
-fi
-export PATH="$PATH:/c/Program Files/Typst:/c/Program Files (x86)/Typst"
-
 # Builds probability-and-statistics
 
 typst compile probability-and-statistics/probability-and-statistics.typ probability-and-statistics/probability-and-statistics.pdf --root "$PWD"

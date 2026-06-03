@@ -10,14 +10,7 @@
 
 #title()
 #outline()
-#include "chapters/about-database.typ"
-#include "chapters/relational-data-model.typ"
-#include "chapters/operation-description.typ"
-#include "chapters/sql.typ"
-#include "chapters/relational-database-design.typ"
-#include "chapters/normalization.typ"
-#include "chapters/database-management-system.typ"
-#include "chapters/query-optimization.typ"
-#include "chapters/transaction.typ"
-#include "chapters/parallel-execution-protocol.typ"
-#include "chapters/bigdata-and-nosql.typ"
+
+#for name in yaml("appendix.yaml") {
+  include "chapters/*.typ".replace("*", name)
+}

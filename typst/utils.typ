@@ -1,3 +1,5 @@
+#import "@preview/cetz:0.5.2"
+#import "html.typ": frame
 #import "style.typ": family
 
 #let with-hint = not sys.inputs.keys().contains("no-hint")
@@ -24,7 +26,9 @@
   font: family.sans,
 )
 
-#let answer-circle = if with-hint {
+#let answer-circle = if (sys.inputs.keys().contains("html") and sys.inputs.html == "true") {
+  it => it
+} else if with-hint {
   circle.with(
     height: 1em,
     width: 1em,
@@ -32,7 +36,7 @@
     outset: 2pt,
     stroke: red,
   )
-} else { text }
+} else { x => x }
 
 #let options(a: none, body) = {
   set enum(
@@ -90,16 +94,24 @@
   place(line(stroke: red, start: (20%, 20%), end: (80%, 80%)))
 }
 
-#let ans(body) = if with-hint {
+#let ans(body) = if sys.inputs.keys().contains("html") and sys.inputs.html == "true" {
   set text(red)
-  set enum(indent: .5em)
-  block(
-    stroke: red,
-    inset: (x: 0em, y: .5em),
-    outset: (x: 1em, y: .5em),
-    width: 100%,
-    body,
-  )
+  html.details({
+    html.summary("解答", style: "cursor: pointer;")
+    html.div(style: "color: red;", body)
+  })
+} else {
+  if with-hint {
+    set text(red)
+    set enum(indent: .5em)
+    block(
+      stroke: red,
+      inset: (x: 0em, y: .5em),
+      outset: (x: 1em, y: .5em),
+      width: 100%,
+      body,
+    )
+  }
 }
 
 #let eqref(ref, body) = {

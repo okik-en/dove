@@ -1,5 +1,4 @@
-#import "@preview/cjk-spacer:0.2.1": cjk-spacer
-#import "fix-indent.typ": *
+#let __svg__ = state("__svg__", false)
 
 #let emoji-regex = regex("[\u{2600}-\u{27BF}\u{1F000}-\u{1FFFF}]")
 
@@ -21,35 +20,17 @@
   math: (fonts.math, (name: fonts.serif, covers: "latin-in-cjk"), fonts.serif-cjk),
 )
 
-#let style(body) = {
+
+#let frame(tag: "div", it) = context {
+  __svg__.update(_ => true)
+  if sys.inputs.keys().contains("html") and sys.inputs.html == "true" {
+    html.elem(tag, html.frame(it))
+  } else { it }
+  __svg__.update(_ => false)
+}
+
+#let style(body) = context {
   set text(lang: "ja")
-  show: cjk-spacer
-  show: fix-indent
-  set page(
-    paper: "a4",
-    margin: (left: 25mm, right: 25mm, top: 30mm, bottom: 30mm),
-    header: text(size: 8pt, [
-      Last compiled on: #datetime.display(datetime.today(), "[year]/[month]/[day] ([weekday])").
-      #h(1fr)
-      This work by
-      #link("https://github.com/okik-en", "okik-en")
-      is permitted for use for personal purposes only.
-    ]),
-    footer: context {
-      align(center, text(
-        font: family.serif,
-        size: 8pt,
-        style: "italic",
-        lang: "en",
-        number-type: "old-style",
-        number-width: "tabular",
-      )[
-        #counter(page).get().first()
-        of
-        #counter(page).final().first()
-      ])
-    },
-  )
 
   //* MARK:フォント関連
 
@@ -79,7 +60,6 @@
   }
 
   set heading(numbering: "1.1.1.")
-  show footnote: it => panic("Footnotes are not supported in this document.")
   set figure(
     numbering: num => numbering("1.1", counter(heading).get().first(), num),
   )
@@ -90,6 +70,40 @@
   // 数式番号 (通常は表示しない)
   set math.equation(numbering: none)
   show math.equation: it => math.display(it)
+
+  //* MARK: 数式等の調整
+
+  // 図をHTMLで表示する際のスタイル
+  show table: frame.with(tag: "table")
+
+  // インライン数式
+  show math.equation.where(block: false): it => context {
+    if __svg__.get() { it } else {
+      html.elem(
+        "span",
+        attrs: (
+          class: "inline",
+          role: "math",
+          alt: if it.alt == none { repr(it.body).replace(regex("\n\s*"), _ => "") } else { it.alt },
+        ),
+        html.frame(it),
+      )
+    }
+  }
+  // ブロック数式
+  show math.equation.where(block: true): it => context {
+    if __svg__.get() { it } else {
+      html.elem(
+        "div",
+        attrs: (
+          style: "text-align: center;",
+          role: "math",
+          alt: if it.alt == none { repr(it.body).replace(regex("\n\s*"), _ => "") } else { it.alt },
+        ),
+        html.frame(it),
+      )
+    }
+  }
 
   //* MARK:スタイルシート
 
@@ -103,10 +117,35 @@
   set enum(indent: 2em, body-indent: 0.4em, spacing: 1em, numbering: "(1-a)")
   set grid(gutter: 2em, align: top)
   show raw: set text(size: 11pt)
-  show heading.where(level: 1, outlined: true): it => {
+  show strong: it => html.elem("strong", attrs: (class: "strong"), it)
+  show heading.where(level: 1, outlined: true): it => if (
+    sys.inputs.keys().contains("html") and sys.inputs.html == "true"
+  ) { it } else {
     pagebreak()
     it
   }
 
-  body
+  html.html(lang: "ja", {
+    // <head> ~ </head>
+    html.head({
+      html.meta(charset: "utf-8")
+      html.meta(name: "viewport", content: "width=device-width, initial-scale=1")
+      html.title(document.title)
+      if document.description != none {
+        html.meta(name: "description", content: document.description)
+      }
+      // html.link(rel: "preconnect", href: "https://fonts.googleapis.com")
+      // html.link(rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous")
+
+      // html.script(src: "script.js")
+      // html.link(rel: "stylesheet", href: css-relative-path)
+    })
+    // <body> ~ </body>
+    html.body({
+      html.div(class: "container", {
+        html.main(body)
+        // html.aside(outline())
+      })
+    })
+  })
 }

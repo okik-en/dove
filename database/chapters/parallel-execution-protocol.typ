@@ -48,8 +48,6 @@
   ),
 )
 
-#pagebreak()
-
 == 同時実行制御の必要性
 
 #data((2023, 3), p: (151, 153))
@@ -108,168 +106,126 @@ $T_1$、$T_2$の組合せのうち、直列可能性が保証できるものは�
 / `WRITE x`: データ`x`を書き出す
 / `UNLOCK x`: データ`x`をアンロックする
 
-#pagebreak()
-
 #{
-  set enum(tight: true)
   show raw: set text(8pt)
-  set grid(gutter: .5em)
-  align(
-    center,
-    grid(
-      columns: 4,
-      gutter: 2em,
-      text(font: family.sans, weight: "bold")[ア],
-      text(font: family.sans, weight: "bold")[イ],
-      text(font: family.sans, weight: "bold")[ウ],
-      text(font: family.sans, weight: "bold")[エ],
+  figure(
+    table(
+      columns: (1fr,) * 8,
+      stroke: none,
+      table.cell(colspan: 2, text(font: family.sans, weight: "bold")[ア]),
+      table.cell(colspan: 2, text(font: family.sans, weight: "bold")[イ]),
+      table.cell(colspan: 2, text(font: family.sans, weight: "bold")[ウ]),
+      table.cell(colspan: 2, text(font: family.sans, weight: "bold")[エ]),
+      $T_1$, $T_2$, $T_1$, $T_2$, $T_1$, $T_2$, $T_1$, $T_2$,
+      ```
+      READ a
+      LOCK a
+      LOCK b
+      a = a + 3
 
-      grid(
-        columns: 2,
-        figure(
-          caption: $T_1$,
-          ```
-          READ a
-          LOCK a
-          LOCK b
-          a = a + 3
+      WRITE a
+      READ b
+      b = b + 5
 
-          WRTIE a
-          READ b
-          b = b + 5
+      WRITE b
+      UNLOCK a
+      UNLOCK b
+      ```,
+      ```
+      READ a
+      LOCK a
+      LOCK b
+      a = a + 3
 
-          WRITE b
-          UNLOCK a
-          UNLOCK b
-          ```,
-        ),
-        figure(
-          caption: $T_2$,
-          ```
-          READ a
-          LOCK a
-          LOCK b
-          a = a + 3
+      WRITE a
+      READ b
+      b = b + 5
 
-          WRITE a
-          READ b
-          b = b + 5
+      WRITE b
+      UNLOCK a
+      UNLOCK b
+      ```,
+      ```
+      LOCK a
+      READ a
+      a = a + 3
 
-          WRITE b
-          UNLOCK a
-          UNLOCK b
-          ```,
-        ),
-      ),
+      WRITE a
+      UNLOCK a
+      LOCK b
+      READ b
+      b = b + 5
 
-      grid(
-        columns: 2,
-        figure(
-          caption: $T_1$,
-          ```
-          LOCK a
-          READ a
-          a = a + 3
+      WRITE b
+      UNLOCK b
+      ```,
+      ```
+      LOCK a
+      READ a
+      a = a + 3
 
-          WRITE a
-          UNLOCK a
-          LOCK b
-          READ b
-          b = b + 5
+      WRITE a
+      UNLOCK a
+      LOCK b
+      READ b
+      b = b + 5
 
-          WRITE b
-          UNLOCK b
-          ```,
-        ),
-        figure(
-          caption: $T_2$,
-          ```
-          LOCK a
-          READ a
-          a = a + 3
+      WRITE b
+      UNLOCK b
+      ```,
+      ```
+      LOCK a
+      READ a
+      a = a + 3
 
-          WRITE a
-          UNLOCK a
-          LOCK b
-          READ b
-          b = b + 5
+      WRITE a
+      UNLOCK a
+      LOCK b
+      READ b
+      b = b + 5
 
-          WRITE b
-          UNLOCK b
-          ```,
-        ),
-      ),
-      grid(
-        columns: 2,
-        figure(
-          caption: $T_1$,
-          ```
-          LOCK a
-          READ a
-          a = a + 3
+      WRITE b
+      UNLOCK b
+      ```,
+      ```
+      LOCK a
+      READ a
+      LOCK b
+      READ b
+      UNLOCK a
+      UNLOCK b
+      ```,
+      ```
+      LOCK a
+      READ a
+      a = a + 3
 
-          WRITE a
-          UNLOCK a
-          LOCK b
-          READ b
-          b = b + 5
+      WRITE a
+      LOCK b
+      READ b
+      b = b + 5
 
-          WRITE b
-          UNLOCK b
-          ```,
-        ),
-        figure(
-          caption: $T_2$,
-          ```
-          LOCK a
-          READ a
-          LOCK b
-          READ b
-          UNLOCK a
-          UNLOCK b
-          ```,
-        ),
-      ),
-      grid(
-        columns: 2,
-        figure(
-          caption: $T_1$,
-          ```
-          LOCK a
-          READ a
-          a = a + 3
-
-          WRITE a
-          LOCK b
-          READ b
-          b = b + 5
-
-          WRITE b
-          UNLOCK b
-          UNLOCK a
-          ```,
-        ),
-        figure(
-          caption: $T_2$,
-          ```
-          LOCK a
-          READ a
-          LOCK b
-          READ b
-          UNLOCK b
-          UNLOCK a
-          ```,
-        ),
-      ),
+      WRITE b
+      UNLOCK b
+      UNLOCK a
+      ```,
+      ```
+      LOCK a
+      READ a
+      LOCK b
+      READ b
+      UNLOCK b
+      UNLOCK a
+      ```,
     ),
   )
 }
 
-== $2$相ロッキングプロトコル
+== 2相ロッキングプロトコル
 
 #data((2023, 3), p: (163, 165))
 
-$2$相ロッキングプロトコルに従ってロックを獲得するトランザクション$A$、$B$を
+2相ロッキングプロトコルに従ってロックを獲得するトランザクション$A$、$B$を
 図のように同時実行した場合に、デッドロックが発生しないデータ処理順序はどれか。
 ここで、`read`と`update`の位置は，アプリケーションプログラムでの命令発行時点を表す。
 また、データ`W`への`read`は共有ロックを要求し、
@@ -370,7 +326,7 @@ RDBMSのロックに関する記述のうち、適切なものはどれか。
 
 + $T_1$と$T_2$とを同時に実行する非直列スケジュールを全て示しなさい。
   ただし、それらは$T_1$の第一ステップから実行を開始するとする。
-+ (1)で得られた非直列スケジュールのうち、$2$相ロッキングプロトコル(2PL)に従った場合に、
++ (1)で得られた非直列スケジュールのうち、2相ロッキングプロトコル(2PL)に従った場合に、
   実行されるスケジュールはどれか、理由も含めて説明しなさい。
 + (2)で得られた非直列スケジュールのうち、トランザクション$T_1$と$T_2$とを2PLに従い、
   実行させた時のスケジュールを示しなさい。
@@ -420,8 +376,8 @@ RDBMSのロックに関する記述のうち、適切なものはどれか。
 
 次の(1)&(2)に該当するトランザクションの隔離性水準はどれか。
 + 対象の表のダーティリードは回避できる。
-+ 一つのトランザクション中で、対象の表のある行を$2$回以上参照する場合、
-  $1$回目の読込みの列値と$2$回目以降の読込みの列値が同じであることが保証されない。
++ 一つのトランザクション中で、対象の表のある行を2回以上参照する場合、
+  1回目の読込みの列値と2回目以降の読込みの列値が同じであることが保証されない。
 #options[
   + `READ COMMITTED`
   + `READ UNCOMMITTED`

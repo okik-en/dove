@@ -1,7 +1,6 @@
 #import "../typst/style.typ": style
-#show: style
-
 #set document(title: "確率統計")
+#show: style
 
 #title()
 備考。

@@ -110,7 +110,7 @@ $T_1$、$T_2$の組合せのうち、直列可能性が保証できるものは�
   show raw: set text(8pt)
   figure(
     table(
-      columns: (1fr,) * 8,
+      columns: 8,
       stroke: none,
       table.cell(colspan: 2, text(font: family.sans, weight: "bold")[ア]),
       table.cell(colspan: 2, text(font: family.sans, weight: "bold")[イ]),

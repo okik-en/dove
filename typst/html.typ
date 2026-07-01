@@ -74,7 +74,7 @@
   //* MARK: 数式等の調整
 
   // 図をHTMLで表示する際のスタイル
-  show table: frame.with(tag: "table")
+  show table: it => if it.stroke == none { it } else { frame(tag: "table", it) }
 
   // インライン数式
   show math.equation.where(block: false): it => context {
@@ -82,7 +82,7 @@
       html.elem(
         "span",
         attrs: (
-          class: "inline",
+          style: "display: inline-flex;",
           role: "math",
           alt: if it.alt == none { repr(it.body).replace(regex("\n\s*"), _ => "") } else { it.alt },
         ),
@@ -105,6 +105,9 @@
     }
   }
 
+  // 画像
+  show image: html.frame
+
   //* MARK:スタイルシート
 
   show title: it => block(
@@ -115,15 +118,17 @@
   set par(first-line-indent: (amount: 1em, all: true), justify: true, leading: .8em)
   set list(indent: 2em, body-indent: 0.4em, spacing: 1em)
   set enum(indent: 2em, body-indent: 0.4em, spacing: 1em, numbering: "(1-a)")
-  set grid(gutter: 2em, align: top)
-  show raw: set text(size: 11pt)
-  show strong: it => html.elem("strong", attrs: (class: "strong"), it)
-  show heading.where(level: 1, outlined: true): it => if (
-    sys.inputs.keys().contains("html") and sys.inputs.html == "true"
-  ) { it } else {
-    pagebreak()
+  show terms: it => html.dl({
     it
-  }
+      .children
+      .map(el => html.div(style: "display: flex; gap: 4pt;", {
+        html.dt(html.strong(el.term))
+        html.dd(style: "margin-inline-start: 0pt;", el.description)
+      }))
+      .join()
+  })
+  show raw: set text(size: 11pt)
+  show strong: it => html.elem("strong", it)
 
   html.html(lang: "ja", {
     // <head> ~ </head>
@@ -141,11 +146,12 @@
       // html.link(rel: "stylesheet", href: css-relative-path)
     })
     // <body> ~ </body>
-    html.body({
-      html.div(class: "container", {
-        html.main(body)
-        // html.aside(outline())
-      })
-    })
+    html.body(
+      style: "display: flex; flex-direction: row;",
+      {
+        html.aside(style: "min-width: 20em;", outline())
+        html.main(style: "max-width: 800em;", body)
+      },
+    )
   })
 }

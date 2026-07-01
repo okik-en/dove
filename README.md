@@ -1,27 +1,55 @@
-# 某S氏の過去問まとめ
+# :dove: - A collection of past exam problems!
 
-## Installation
+## Dir
 
-### リポジトリのクローン
+```tree
+.
+├─answers   # answers (will be removed)
+├─dist      # pdf for distribution
+├─docs      # html for GitHub Pages
+├─scripts   # hooks
+├─src       # source files in Typst
+└─typst     # Typst templates/utils
+```
 
-（gitのインストールは済んだものとします）
+We will be including answers in distributed pdf files or doc html files instead of providing them as separate pdf files in the answers directory.
+You can find the distributed pdf files in the `dist` directory, files with `answer` prefix including the partial answers as for now.
+
+## Init
+
+You do not need to follow these steps if you just want to view the problems. These are for those who want to contribute or build the PDFs and HTML files by themselves.
+
+### Clone repo
 
 ```bash
 git clone https://github.com/okik-en/dove.git
 ```
 
-### プレコミットの追加
+### Install Typst
 
-> [!NOTE]
-> [pre-commit](https://pre-commit.com/)のインストール方法:
-> ```bash
-> pip install pre-commit
-> ```
+You can skip this step if you have already installed Typst
+
+Refer to [GitHub](https://github.com/typst/typst#installation) for installation instructions, or use the following commands:
+```bash
+brew install typst  # for macOS
+```
+```bash
+winget install typst  # for Windows
+  ```
+
+### Add pre-commit hooks
+
+#### Install pre-commit
+
+Refer to the [official documentation](https://pre-commit.com/#installation) for installation instructions, or use the following command:
+```bash
+pip install pre-commit
+```
+
+#### Install hooks
+
+Following command enables pre-commit hooks for this repository.
 
 ```bash
 pre-commit install
 ```
-
-## ToDo
-
-- GitHub Pagesへの公開

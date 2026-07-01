@@ -1,0 +1,25 @@
+database:
+  title: データベース
+  chapters:
+    - about-database
+    - relational-data-model
+    - operation-description
+    - sql
+    - relational-database-design
+    - normalization
+    - database-management-system
+    - query-optimization
+    - transaction
+    - parallel-execution-protocol
+    - bigdata-and-nosql
+probability-and-statistics:
+  title: 確率統計
+  remarks: 過去に共通テストやセンター試験（追試験を含む！）から出題されていた例が多くあるので、予め解いておくとよいだろう。
+  chapters:
+    - data-statistics
+    - random-variables
+    - multidimensional-probability
+    - binomial-normal
+    - moment-generating-function
+    - estimation
+    - test

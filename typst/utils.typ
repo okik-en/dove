@@ -1,10 +1,10 @@
 #import "@preview/cetz:0.5.2"
 #import "html.typ": frame
-#import "style.typ": family
+#import "style.typ": database, family
 
-#let with-hint = not sys.inputs.keys().contains("no-hint")
+#let with-hint = sys.inputs.at("hint", default: "false") == "true"
+#let is-html = sys.inputs.at("html", default: "false") == "true"
 
-#let database = "__database__"
 #let unknown = (__tag__: "unknown")
 #let pretest = (__tag__: "pretest")
 
@@ -15,9 +15,9 @@
 
 #let ana(x) = [
   (
-  #h(1em)
+  #sym.space.quad
   #x
-  #h(1em)
+  #sym.space.quad
   )
 ]
 
@@ -26,9 +26,7 @@
   font: family.sans,
 )
 
-#let answer-circle = if (sys.inputs.keys().contains("html") and sys.inputs.html == "true") {
-  it => it
-} else if with-hint {
+#let answer-circle = if not is-html and with-hint {
   circle.with(
     height: 1em,
     width: 1em,
@@ -38,11 +36,44 @@
   )
 } else { x => x }
 
-#let options(a: none, body) = {
+#let __inner-option-counter__ = counter("__inner-option-counter__")
+
+#let options(a: none, body) = context {
+  __inner-option-counter__.step()
+  let all = type(a) == array
+  let in-a(i) = (
+    (type(a) == array and (a.contains(i) or a.contains(numbering("ア", i)))) or i == a or numbering("ア", i) == a
+  )
+  show enum: it => if is-html {
+    html.fieldset(
+      style: "display: flex; flex-direction: column; gap: 4pt; width: fit-content; padding-right: 1em;",
+      {
+        html.legend(if all { "選択肢（全て）" } else { "選択肢" })
+        it
+          .children
+          .enumerate()
+          .map(((i, it)) => {
+            html.label(
+              style: "display: flex; flex-direction: row; gap:4pt; align-items: center;",
+              {
+                html.input(
+                  style: "display: block;",
+                  type: if all { "checkbox" } else { "radio" },
+                  value: i,
+                  name: str(__inner-option-counter__.get().first()),
+                  checked: in-a(i + 1),
+                  disabled: true,
+                )
+                html.div(it.body)
+              },
+            )
+          })
+          .join()
+      },
+    )
+  } else { it }
   set enum(
-    numbering: n => if (type(a) == array and (a.contains(n) or a.contains(numbering("ア", n))))
-      or n == a
-      or numbering("ア", n) == a {
+    numbering: n => if in-a(n) {
       answer-circle(
         text(
           weight: "bold",
@@ -75,7 +106,7 @@
     } else [#years.first()年 #("春中間", "春期末", "夏中間", "夏期末").at(years.last() - 1)]
   } else if years == pretest [小テスト] else if years == unknown [詳細不明]
   if type(years) == array and years.len() > 6 { parbreak() }
-  h(1fr)
+  sym.space.quad
   if p != none {
     [教科書：]
     if type(p) == array {
@@ -94,24 +125,22 @@
   place(line(stroke: red, start: (20%, 20%), end: (80%, 80%)))
 }
 
-#let ans(body) = if sys.inputs.keys().contains("html") and sys.inputs.html == "true" {
+#let ans(body) = if is-html {
   set text(red)
   html.details({
     html.summary("解答", style: "cursor: pointer;")
     html.div(style: "color: red;", body)
   })
-} else {
-  if with-hint {
-    set text(red)
-    set enum(indent: .5em)
-    block(
-      stroke: red,
-      inset: (x: 0em, y: .5em),
-      outset: (x: 1em, y: .5em),
-      width: 100%,
-      body,
-    )
-  }
+} else if with-hint {
+  set text(red)
+  set enum(indent: .5em)
+  block(
+    stroke: red,
+    inset: (x: 0em, y: .5em),
+    outset: (x: 1em, y: .5em),
+    width: 100%,
+    body,
+  )
 }
 
 #let eqref(ref, body) = {

@@ -21,6 +21,8 @@
   math: (fonts.math, (name: fonts.serif, covers: "latin-in-cjk"), fonts.serif-cjk),
 )
 
+#let database = "__database__"
+
 #let style(body) = {
   set text(lang: "ja")
   show: cjk-spacer
@@ -107,6 +109,8 @@
     pagebreak()
     it
   }
+  show figure.where(kind: database): set figure(supplement: none)
+  show figure.where(kind: database): set figure.caption(position: top)
 
   body
 }

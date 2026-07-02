@@ -48,7 +48,7 @@
   )
   show enum: it => if is-html {
     html.fieldset(
-      style: "display: flex; flex-direction: column; gap: 4pt; width: fit-content; padding-right: 1em;",
+      style: "display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;",
       {
         html.legend(if all { "選択肢（全て）" } else { "選択肢" })
         it
@@ -66,7 +66,7 @@
                   checked: in-a(i + 1),
                   disabled: true,
                 )
-                html.div(it.body)
+                html.div(style: "overflow-x: auto;", it.body)
               },
             )
           })

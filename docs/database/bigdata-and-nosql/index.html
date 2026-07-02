@@ -7,17 +7,19 @@
     <meta property="og:title" content="ontext(">
     <meta property="og:image" content="https://raw.githubusercontent.com/okik-en/mathematical-documents/master/okik-en.png">
     <meta property="og:type" content="article">
-    <meta property="og:site_name" content="数学的読み物置き場">
+    <meta property="og:site_name" content="dove">
     <meta property="og:locale" content="ja_JP">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
     <style>
       *[role="math"] use { fill: currentColor; }
+      *[role="math"] path { stroke: currentColor; }
+      pre { overflow-x: auto; max-width: 100%; }
     </style>
   </head>
   <body>
     <main>
       <h1>11. ビッグデータとNoSQL</h1>
-      <nav style="display: flex; justify-content: space-between; margin: 2em;"><a href="../about-database"><code>./first</code></a><a href="../parallel-execution-protocol"><code>./prev</code></a><a href="../../"><code>../</code></a><span><code>-</code></span><span><code>-</code></span></nav>
+      <nav style="display: flex; justify-content: space-between; gap: 1em; margin: 2em;"><a href="../about-database"><code>./first</code></a><a href="../parallel-execution-protocol"><code>./prev</code></a><a href="../../"><code>../</code></a><span><code>-</code></span><span><code>-</code></span></nav>
       <h2>11.1. ビッグデータの定義</h2>
       <p>出題：2022年 夏中間、2023年 夏期末、2024年 夏期末、2025年 夏期末 教科書：pp. 177 - 178</p>
       <ol>
@@ -38,9 +40,9 @@
       <h2>11.3. キー・バリューストア</h2>
       <p>出題：2023年 夏期末 教科書：pp. 180 - 181</p>
       <p>ビッグデータの処理で使われるキーバリューストアの説明として、適切なものはどれか。</p>
-      <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; padding-right: 1em;">
+      <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;">
         <legend>選択肢</legend>
-        <label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="1" disabled><div>「ノード」、「リレーションシップ」、「プロパティ」の3要素によってノード間の関係性を表現する。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="1" disabled><div>1件分のデータを「ドキュメント」と呼び、個々のドキュメントのデータ構造は自由であって、 データを追加する都度変えることができる。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="1" disabled><div>集合論に基づいて、行と列からなる2次元の表で表現する。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="3" name="1" disabled><div>任意の保存したいデータと、そのデータを一意に識別できる値を組みとして保存する。</div></label>
+        <label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="1" disabled><div style="overflow-x: auto;">「ノード」、「リレーションシップ」、「プロパティ」の3要素によってノード間の関係性を表現する。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="1" disabled><div style="overflow-x: auto;">1件分のデータを「ドキュメント」と呼び、個々のドキュメントのデータ構造は自由であって、 データを追加する都度変えることができる。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="1" disabled><div style="overflow-x: auto;">集合論に基づいて、行と列からなる2次元の表で表現する。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="3" name="1" disabled><div style="overflow-x: auto;">任意の保存したいデータと、そのデータを一意に識別できる値を組みとして保存する。</div></label>
       </fieldset>
       <h2>11.4. NoSQLと分散DB</h2>
       <p>出題：2024年 夏期末 教科書：pp. 180 - 183</p>
@@ -77,23 +79,23 @@
       <h2>11.7. 相関関係の発見</h2>
       <p>出題：2022年 夏期末 教科書：p. 188</p>
       <p>ビッグデータの活用例として，大量のデータから統計学的手法などを用いて新たな知識（傾向やパターン） を見つけ出すプロセスはどれか。</p>
-      <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; padding-right: 1em;">
+      <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;">
         <legend>選択肢</legend>
-        <label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="2" disabled><div>データウェアハウス</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="2" disabled><div>データディクショナリ</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="2" disabled><div>データマイニング</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="3" name="2" disabled><div>メタデータ</div></label>
+        <label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="2" disabled><div style="overflow-x: auto;">データウェアハウス</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="2" disabled><div style="overflow-x: auto;">データディクショナリ</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="2" disabled><div style="overflow-x: auto;">データマイニング</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="3" name="2" disabled><div style="overflow-x: auto;">メタデータ</div></label>
       </fieldset>
       <h2>11.8. データレイク</h2>
       <p>出題：2022年 夏期末 </p>
       <p>ビッグデータのデータ貯蔵場所であるデータレイクの特徴として，適切なものはどれか。</p>
-      <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; padding-right: 1em;">
+      <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;">
         <legend>選択肢</legend>
-        <label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="3" disabled><div>あらゆるデータをそのままの形式や構造で格納しておく。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="3" disabled><div>データ量を抑えるために，データの記述情報であるメタデータは格納しない。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="3" disabled><div>データを格納する前にデータ利用方法を設計し，それに沿ってスキーマをあらかじめ定義しておく。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="3" name="3" disabled><div>テキストファイルやバイナリデータなど，格納するデータの形式に応じてリポジトリを使い分ける。</div></label>
+        <label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="3" disabled><div style="overflow-x: auto;">あらゆるデータをそのままの形式や構造で格納しておく。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="3" disabled><div style="overflow-x: auto;">データ量を抑えるために，データの記述情報であるメタデータは格納しない。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="3" disabled><div style="overflow-x: auto;">データを格納する前にデータ利用方法を設計し，それに沿ってスキーマをあらかじめ定義しておく。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="3" name="3" disabled><div style="overflow-x: auto;">テキストファイルやバイナリデータなど，格納するデータの形式に応じてリポジトリを使い分ける。</div></label>
       </fieldset>
       <h2>11.9. データウェアハウス</h2>
       <p>出題：2023年 夏期末 </p>
       <p>データベースに蓄積されたデータを有効活用するためにデータウェアハウスの構築が求められている。 データウェアハウスの構築、運用あるいはデータ分析手法などに関する記述として、最も適切なものはどれか。</p>
-      <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; padding-right: 1em;">
+      <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;">
         <legend>選択肢</legend>
-        <label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="4" disabled><div>BI（Business Intelligence）ツールとは、人工知能のアルゴリズムを開発するソフトウェアをいう。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="4" disabled><div>ETL（Extract/Transform/Load）とは、時系列処理のデータ変換を行うアルゴリズムをいい、 将来の販売動向のシミュレーションなどを行うことができる。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="4" disabled><div>大量かつ多様な形式のデータを処理するデータベースで、 RDBとは異なるデータ構造を扱うものにNoSQLデータベースがある。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="3" name="4" disabled><div>データマイニングとは、データの特性に応じてRDBのスキーマ定義を最適化することをいう。</div></label>
+        <label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="4" disabled><div style="overflow-x: auto;">BI（Business Intelligence）ツールとは、人工知能のアルゴリズムを開発するソフトウェアをいう。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="4" disabled><div style="overflow-x: auto;">ETL（Extract/Transform/Load）とは、時系列処理のデータ変換を行うアルゴリズムをいい、 将来の販売動向のシミュレーションなどを行うことができる。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="4" disabled><div style="overflow-x: auto;">大量かつ多様な形式のデータを処理するデータベースで、 RDBとは異なるデータ構造を扱うものにNoSQLデータベースがある。</div></label><label style="display: flex; flex-direction: row; gap:4pt; align-items: center;"><input style="display: block;" type="radio" value="3" name="4" disabled><div style="overflow-x: auto;">データマイニングとは、データの特性に応じてRDBのスキーマ定義を最適化することをいう。</div></label>
       </fieldset>
       <h2>11.10. DWH</h2>
       <p>出題：2024年 夏期末 </p>
@@ -102,7 +104,7 @@
         <li>DWHの父Bill Inmonのアプローチである主題思考（subject-oriented）を説明しなさい。</li>
         <li>Ralph KimbalのDWHへの貢献を説明しなさい。</li>
       </ol>
-      <nav style="display: flex; justify-content: space-between; margin: 2em;"><a href="../about-database"><code>./first</code></a><a href="../parallel-execution-protocol"><code>./prev</code></a><a href="../"><code>../</code></a><span><code>-</code></span><span><code>-</code></span></nav>
+      <nav style="display: flex; justify-content: space-between; gap: 1em; margin: 2em;"><a href="../about-database"><code>./first</code></a><a href="../parallel-execution-protocol"><code>./prev</code></a><a href="../../"><code>../</code></a><span><code>-</code></span><span><code>-</code></span></nav>
     </main>
   </body>
 </html>

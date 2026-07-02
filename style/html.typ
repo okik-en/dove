@@ -25,7 +25,10 @@
 #let frame(it) = context {
   __svg__.update(_ => true)
   if sys.inputs.keys().contains("html") and sys.inputs.html == "true" {
-    html.div(style: "width: fit-content; background-color: white; margin: .5em; padding: .5em;", html.frame(it))
+    html.div(
+      style: "width: fit-content; background-color: white; margin: .5em; padding: .5em; overflow-x: auto;",
+      html.frame(it),
+    )
   } else { it }
   __svg__.update(_ => false)
 }
@@ -83,7 +86,7 @@
       html.elem(
         "span",
         attrs: (
-          style: "display: inline-flex; fill: inherit; !important",
+          style: "display: inline-flex; fill: inherit; overflow-x: auto;",
           role: "math",
           alt: if it.alt == none { repr(it.body).replace(regex("\n\s*"), _ => "") } else { it.alt },
         ),
@@ -97,7 +100,7 @@
       html.elem(
         "div",
         attrs: (
-          style: "text-align: center; fill: inherit; !important",
+          style: "text-align: center; fill: inherit; overflow-x: auto;",
           role: "math",
           alt: if it.alt == none { repr(it.body).replace(regex("\n\s*"), _ => "") } else { it.alt },
         ),
@@ -155,7 +158,7 @@
       html.elem("meta", attrs: (property: "og:type", content: doc-type))
       html.elem("meta", attrs: (
         property: "og:site_name",
-        content: "数学的読み物置き場",
+        content: "dove",
       ))
       html.elem("meta", attrs: (
         property: "og:locale",
@@ -166,7 +169,13 @@
 
       // html.script(src: "script.js")
       html.link(rel: "stylesheet", href: "https://cdn.simplecss.org/simple.min.css")
-      html.style("*[role=\"math\"] use { fill: currentColor; }")
+      html.style(
+        (
+          "*[role=\"math\"] use { fill: currentColor; }",
+          "*[role=\"math\"] path { stroke: currentColor; }",
+          "pre { overflow-x: auto; max-width: 100%; }",
+        ).join("\n"),
+      )
     })
     // <body> ~ </body>
     html.body(html.main(body))

@@ -23,6 +23,8 @@
 
 #let database = "__database__"
 
+#let styled(..args) = args.named().pairs().map(((k, v)) => k + ": " + v).join("; ")
+
 #let style(body) = {
   set text(lang: "ja")
   show: cjk-spacer

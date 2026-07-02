@@ -55,10 +55,10 @@
         columns: 6,
         stroke: none,
         align: horizon + center,
-        table.vline(x: 1, stroke: red),
-        table.vline(x: 5, stroke: red),
+        table.vline(x: 1, stroke: black),
+        table.vline(x: 5),
         table.header($Y$, $0$, $1$, $2$, $3$, [計]),
-        table.hline(y: 1, stroke: red),
+        table.hline(y: 1),
         $P$, $1/4$, $3/8$, $1/4$, $1/8$, $1$,
       )
     }
@@ -153,8 +153,13 @@ $ integral_0^infinity e^(-x) d x = 1, wide integral_0^infinity x e^(-x) d x = 1 
         columns: (3em,) * 4,
         rows: (3em,) * 4,
         align: horizon + center,
-        stroke: (x, y) => if x == 0 and y == 0 { (right: red, bottom: red) } else if x == 0 { (right: red) } else if y
-          == 0 { (bottom: red) },
+        stroke: (x, y) => if x == 0 and y == 0 {
+          (right: black, bottom: black)
+        } else if x == 0 {
+          (right: black)
+        } else if y == 0 {
+          (bottom: black)
+        },
         rchead($X$, $Y$), $0$, $1$, [計],
 
         $0$, $2/5$, $2/15$, $2/3$,
@@ -365,7 +370,7 @@ $C$を初回と2回目との和が9である事象とする。
     $
       P(A|B) = frac(P(A) P(B|A), P(A) P(B|A) + P(A^c) P(B|A^c)) = frac(1/10000 dot 99/100, 1/10000 dot 99/100 + 9999/10000 dot 1/100) = 99/10098 approx 0.0098
     $
-    + この検査$K$で陽性になったとしても、発症していない人の偽陽性が多く、実際には病気$S$を発症しない可能性が高いといえる。
+  + この検査$K$で陽性になったとしても、発症していない人の偽陽性が多く、実際には病気$S$を発症しない可能性が高いといえる。
 ]
 
 == ベイズの定理

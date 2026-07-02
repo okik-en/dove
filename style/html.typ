@@ -1,4 +1,4 @@
-#import "style.typ": database
+#import "style.typ": database, styled
 #let __svg__ = state("__svg__", false)
 
 #let emoji-regex = regex("[\u{2600}-\u{27BF}\u{1F000}-\u{1FFFF}]")
@@ -26,7 +26,13 @@
   __svg__.update(_ => true)
   if sys.inputs.keys().contains("html") and sys.inputs.html == "true" {
     html.div(
-      style: "width: fit-content; background-color: white; margin: .5em; padding: .5em; overflow-x: auto;",
+      style: styled(
+        width: "fit-content",
+        background-color: "white",
+        margin: ".5em",
+        padding: ".5em",
+        overflow-x: "auto",
+      ),
       html.frame(it),
     )
   } else { it }
@@ -80,35 +86,6 @@
   // 図をHTMLで表示する際のスタイル
   show table: it => if it.stroke == none { it } else { frame(it) }
 
-  // インライン数式
-  show math.equation.where(block: false): it => context {
-    if __svg__.get() { it } else {
-      html.elem(
-        "span",
-        attrs: (
-          style: "display: inline-flex; fill: inherit; overflow-x: auto;",
-          role: "math",
-          alt: if it.alt == none { repr(it.body).replace(regex("\n\s*"), _ => "") } else { it.alt },
-        ),
-        html.frame(it),
-      )
-    }
-  }
-  // ブロック数式
-  show math.equation.where(block: true): it => context {
-    if __svg__.get() { it } else {
-      html.elem(
-        "div",
-        attrs: (
-          style: "text-align: center; fill: inherit; overflow-x: auto;",
-          role: "math",
-          alt: if it.alt == none { repr(it.body).replace(regex("\n\s*"), _ => "") } else { it.alt },
-        ),
-        html.frame(it),
-      )
-    }
-  }
-
   // 画像
   show image: frame
 
@@ -125,9 +102,9 @@
   show terms: it => html.dl({
     it
       .children
-      .map(el => html.div(style: "display: flex; gap: 4pt;", {
+      .map(el => html.div(style: styled(display: "flex", gap: "4pt"), {
         html.dt(html.strong(el.term))
-        html.dd(style: "margin-inline-start: 0pt;", el.description)
+        html.dd(style: styled(margin-inline-start: "0pt"), el.description)
       }))
       .join()
   })
@@ -171,9 +148,14 @@
       html.link(rel: "stylesheet", href: "https://cdn.simplecss.org/simple.min.css")
       html.style(
         (
-          "*[role=\"math\"] use { fill: currentColor; }",
-          "*[role=\"math\"] path { stroke: currentColor; }",
-          "pre { overflow-x: auto; max-width: 100%; }",
+          "pre { overflow-x: auto; }",
+          "li { overflow-x: auto; overflow-y: hidden; }",
+          "ol { list-style-type: none; counter-reset: dec; }",
+          "ol > li { counter-increment: dec; }",
+          "ol > li:before { content: '(' counter(dec, decimal) ') '; }",
+          "ol ol { list-style-type: none; counter-reset: llt; }",
+          "ol ol > li { counter-increment: llt; }",
+          "ol ol > li:before { content: '(' counter(dec, decimal) '-' counter(llt, lower-latin) ') '; }",
         ).join("\n"),
       )
     })

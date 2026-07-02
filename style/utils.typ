@@ -1,6 +1,6 @@
 #import "@preview/cetz:0.5.2"
 #import "html.typ": frame
-#import "style.typ": database, family
+#import "style.typ": database, family, styled
 
 #let with-hint = sys.inputs.at("hint", default: "false") == "true"
 #let is-html = sys.inputs.at("html", default: "false") == "true"
@@ -48,7 +48,16 @@
   )
   show enum: it => if is-html {
     html.fieldset(
-      style: "display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;",
+      style: styled(
+        display: "flex",
+        flex-direction: "column",
+        gap: "4pt",
+        width: "fit-content",
+        min-width: "0",
+        max-width: "100%",
+        padding-right: "1em",
+        overflow-x: "hidden",
+      ),
       {
         html.legend(if all { "選択肢（全て）" } else { "選択肢" })
         it
@@ -56,17 +65,22 @@
           .enumerate()
           .map(((i, it)) => {
             html.label(
-              style: "display: flex; flex-direction: row; gap:4pt; align-items: center;",
+              style: styled(
+                display: "flex",
+                flex-direction: "row",
+                gap: "4pt",
+                align-items: "center",
+              ),
               {
                 html.input(
-                  style: "display: block;",
+                  style: styled(display: "block"),
                   type: if all { "checkbox" } else { "radio" },
                   value: i,
                   name: str(__inner-option-counter__.get().first()),
                   checked: in-a(i + 1),
                   disabled: true,
                 )
-                html.div(style: "overflow-x: auto;", it.body)
+                html.div(style: styled(overflow-x: "auto"), it.body)
               },
             )
           })
@@ -124,20 +138,18 @@
 #let rchead(r, c) = {
   place(bottom + left, r)
   place(top + right, c)
-  place(line(stroke: red, start: (20%, 20%), end: (80%, 80%)))
+  place(line(stroke: black, start: (20%, 20%), end: (80%, 80%)))
 }
 
 #let ans(body) = if is-html {
-  set text(red)
-  html.details({
+  html.details(/*style: "line-height: 3em;",*/ {
     html.summary("解答", style: "cursor: pointer;")
-    html.div(style: "color: red;", body)
+    html.div(body)
   })
 } else if with-hint {
-  set text(red)
   set enum(indent: .5em)
   block(
-    stroke: red,
+    stroke: black,
     inset: (x: 0em, y: .5em),
     outset: (x: 1em, y: .5em),
     width: 100%,

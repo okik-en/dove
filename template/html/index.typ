@@ -1,5 +1,6 @@
-#import "/style/html.typ": style
+#import "/style/html.typ": style, styled
 #set document(title: "目次")
+
 #show: style.with(doc-type: "website")
 
 #title()

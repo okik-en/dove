@@ -96,7 +96,7 @@
   <body>
     <main>
       <h1>9. トランザクション</h1>
-      <nav style="display: flex; justify-content: space-between; gap: 1em; margin: 2em;"><a href="../about-database"><code>./first</code></a><a href="../query-optimization"><code>./prev</code></a><a href="../../"><code>../</code></a><a href="../parallel-execution-protocol"><code>./next</code></a><a href="../bigdata-and-nosql"><code>./last</code></a></nav>
+      <nav style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1em; margin: 2em;"><a href="../about-database"><code>./first</code></a><a href="../query-optimization"><code>./prev</code></a><a href="../../"><code>../</code></a><a href="../parallel-execution-protocol"><code>./next</code></a><a href="../bigdata-and-nosql"><code>./last</code></a></nav>
       <h2>9.1. トランザクションとは</h2>
       <p>出題：2022年 春期末、2023年 夏中間、2024年 夏中間、2025年 夏中間 教科書：pp. 128 - 130</p>
       <p>トランザクションとは、データベースに対する (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>1<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) レベルでの一つの (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>2<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) な作用をいう。 通常、 (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>3<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) レベルでのデータベースに対する (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>2<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) な作用は、SQLで言えば、 質問のための<code>SELECT</code>文や更新のための<code>INSERT</code>文や<code>DELETE</code>文などであるが、 (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>1<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) レベルでは、それらひとつひとつは、一般には意味を持たないことに注意する。 トランザクションとう概念がデータベースに導入されてはじめて、 データベースの (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>4<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) という概念が明確になった。 それにより、 (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>5<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) 回復の全貌が明らかになった。 さらに、組織体の (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>6<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) 資源としてのデータベースに同時に多数のユーザーがアクセスし、 整合の取れた作業ができることを約束する (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>7<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) 制御の概念が明らかとなった。</p>
@@ -389,7 +389,7 @@
           </ol>
         </div>
       </details>
-      <nav style="display: flex; justify-content: space-between; gap: 1em; margin: 2em;"><a href="../about-database"><code>./first</code></a><a href="../query-optimization"><code>./prev</code></a><a href="../../"><code>../</code></a><a href="../parallel-execution-protocol"><code>./next</code></a><a href="../bigdata-and-nosql"><code>./last</code></a></nav>
+      <nav style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1em; margin: 2em;"><a href="../about-database"><code>./first</code></a><a href="../query-optimization"><code>./prev</code></a><a href="../../"><code>../</code></a><a href="../parallel-execution-protocol"><code>./next</code></a><a href="../bigdata-and-nosql"><code>./last</code></a></nav>
     </main>
   </body>
 </html>

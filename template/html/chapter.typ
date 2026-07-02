@@ -7,7 +7,7 @@
 #let cs = yaml("/appendix.yaml").at(__srcdir__).at("chapters")
 #let id = cs.position(s => s == __chapter__) + 1
 
-#let navi = html.nav(style: "display: flex; justify-content: space-between; gap: 1em; margin: 2em;", {
+#let navi = html.nav(style: "display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1em; margin: 2em;", {
   if id > 1 {
     html.elem("a", attrs: (href: "../" + cs.first()), `./first`)
     html.elem("a", attrs: (href: "../" + cs.at(id - 2)), `./prev`)

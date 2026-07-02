@@ -3,6 +3,8 @@ repos:
     hooks:
       - id: build
         name: Build Typst PDF & HTML
-        entry: sh scripts/build.sh
-        language: system
+        entry: python3 scripts/build.py
+        language: python
         pass_filenames: false
+        additional_dependencies:
+          - pyyaml

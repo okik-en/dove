@@ -4,12 +4,13 @@
 
 ```tree
 .
-├─answers   # answers (will be removed)
-├─dist      # pdf for distribution
-├─docs      # html for GitHub Pages
-├─scripts   # hooks
-├─src       # source files in Typst
-└─typst     # Typst templates/utils
+├─answers     # answers (will be removed)
+├─dist        # pdf for distribution
+├─docs        # html for GitHub Pages
+├─scripts     # hooks
+├─src         # source files in Typst
+├─template    # template files for pdf/html
+└─typst       # Typst templates/utils
 ```
 
 We will be including answers in distributed pdf files or doc html files instead of providing them as separate pdf files in the answers directory.

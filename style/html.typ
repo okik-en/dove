@@ -145,11 +145,10 @@
       // html.link(rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous")
 
       // html.script(src: "script.js")
-      html.link(rel: "stylesheet", href: "https://cdn.simplecss.org/simple.min.css")
+      html.link(rel: "stylesheet", href: "https://cdn.simplecss.org/simple.css")
       html.style(
         (
-          "pre { overflow-x: auto; }",
-          "li { overflow-x: auto; overflow-y: hidden; }",
+          "math, pre { overflow-x: auto; overflow-y: hidden; max-width: 100%; }",
           "ol { list-style-type: none; counter-reset: dec; }",
           "ol > li { counter-increment: dec; }",
           "ol > li:before { content: '(' counter(dec, decimal) ') '; }",

@@ -141,14 +141,20 @@
         property: "og:locale",
         content: "ja_JP",
       ))
-      // html.link(rel: "preconnect", href: "https://fonts.googleapis.com")
-      // html.link(rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous")
-
-      // html.script(src: "script.js")
+      html.link(rel: "preconnect", href: "https://fonts.googleapis.com")
+      html.link(rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "anonymous")
+      html.link(
+        href: "https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Math&family=Noto+Sans+Mono:wght@100..900&display=swap",
+        rel: "stylesheet",
+      )
       html.link(rel: "stylesheet", href: "https://cdn.simplecss.org/simple.css")
       html.style(
         (
+          "body { font-family: 'Noto Sans', 'Noto Emoji', sans-serif; }",
+          "math { font-family: 'Noto Sans Math', 'Noto Emoji', math; padding: 1pt; }",
+          "code { font-family: 'Noto Sans Mono', 'Noto Emoji', monospace; }",
           "math, pre { overflow-x: auto; overflow-y: hidden; max-width: 100%; }",
+          "a { text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid; } ",
           "ol { list-style-type: none; counter-reset: dec; }",
           "ol > li { counter-increment: dec; }",
           "ol > li:before { content: '(' counter(dec, decimal) ') '; }",

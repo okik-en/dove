@@ -9,9 +9,16 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="dove">
     <meta property="og:locale" content="ja_JP">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans+Math&amp;family=Noto+Sans+Mono:wght@100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
     <style>
+      body { font-family: 'Noto Sans', 'Noto Emoji', sans-serif; }
+      math { font-family: 'Noto Sans Math', 'Noto Emoji', math; padding: 1pt; }
+      code { font-family: 'Noto Sans Mono', 'Noto Emoji', monospace; }
       math, pre { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+      a { text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid; } 
       ol { list-style-type: none; counter-reset: dec; }
       ol > li { counter-increment: dec; }
       ol > li:before { content: '(' counter(dec, decimal) ') '; }
@@ -388,7 +395,7 @@
           不偏分散について述べられた次の文章のうち、誤っているものを選び、理由も与えなさい。
           <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden">
             <legend>選択肢</legend>
-            <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="0" name="1" disabled><div style="overflow-x: auto">不偏分散は母分散の不偏推定量である</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="1" name="1" disabled><div style="overflow-x: auto">一般に、不偏分散の平方根を取ったものは、標準偏差の不偏推定量になる</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="2" name="1" disabled><div style="overflow-x: auto">同じデータから標本分散と不偏分散を計算すると、不偏分散の方が常に大きくなる</div></label>
+            <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="0" name="1" disabled><b style="display: block">ア</b><div style="overflow-x: auto">不偏分散は母分散の不偏推定量である</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="1" name="1" disabled><b style="display: block">イ</b><div style="overflow-x: auto">一般に、不偏分散の平方根を取ったものは、標準偏差の不偏推定量になる</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="2" name="1" disabled><b style="display: block">ウ</b><div style="overflow-x: auto">同じデータから標本分散と不偏分散を計算すると、不偏分散の方が常に大きくなる</div></label>
           </fieldset>
         </li>
         <li>不偏分散と通常の分散の使い分けを、利用するデータを基準に論じなさい。</li>

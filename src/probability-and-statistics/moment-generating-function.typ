@@ -36,7 +36,7 @@
 ]
 
 #ans[
-  #link("https://info.ouj.ac.jp/~maps17/11/11Queueing_pat.pdf")[$M slash M slash 1$システム]によれば、単位時間あたりに平均$lambda$人が到着し、平均$mu$人分の処理が完了するとき、利用率を$rho = lambda/mu$と定義すれば、$rho < 1$のときに定常状態が存在し、その平均客数は$L = rho/(1 - rho)$であり、平均滞在時間は$W = lambda^(-1) L = mu^(-1)/(1 - rho)$となることが知られている。
+  #link("https://okik-en.github.io/mathematical-documents/mm1/")[$M slash M slash 1$システム]によれば、単位時間あたりに平均$lambda$人が到着し、平均$mu$人分の処理が完了するとき、利用率を$rho = lambda/mu$と定義すれば、$rho < 1$のときに定常状態が存在し、その平均客数は$L = rho/(1 - rho)$であり、平均滞在時間は$W = lambda^(-1) L = mu^(-1)/(1 - rho)$となることが知られている。
   これによれば、$W = frac(frac(1, 90, style: "skewed"), 1 - frac(60, 90, style: "skewed")) "h" = 1/30 "h" = 120 "s"$となり、答えとして#_opt_[オ]が得られる。
 ]
 

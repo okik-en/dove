@@ -80,6 +80,7 @@
                   checked: in-a(i + 1),
                   disabled: true,
                 )
+                html.b(style: styled(display: "block"), numbering("ア", i + 1))
                 html.div(style: styled(overflow-x: "auto"), it.body)
               },
             )

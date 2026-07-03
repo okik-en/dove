@@ -9,9 +9,16 @@
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="dove">
     <meta property="og:locale" content="ja_JP">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans+Math&amp;family=Noto+Sans+Mono:wght@100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
     <style>
+      body { font-family: 'Noto Sans', 'Noto Emoji', sans-serif; }
+      math { font-family: 'Noto Sans Math', 'Noto Emoji', math; padding: 1pt; }
+      code { font-family: 'Noto Sans Mono', 'Noto Emoji', monospace; }
       math, pre { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
+      a { text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid; } 
       ol { list-style-type: none; counter-reset: dec; }
       ol > li { counter-increment: dec; }
       ol > li:before { content: '(' counter(dec, decimal) ') '; }
@@ -126,7 +133,7 @@
       </figure>
       <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden">
         <legend>選択肢</legend>
-        <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="0" name="1" disabled><div style="overflow-x: auto"><code>科目 HAVING AVG(点数) >= 80</code></div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="1" name="1" disabled><div style="overflow-x: auto"><code>科目 WHERE 点数 >= 80</code></div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="2" name="1" checked disabled><div style="overflow-x: auto"><code>学生番号 HAVING AVG(点数) >= 80</code></div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="3" name="1" disabled><div style="overflow-x: auto"><code>学生番号 WHERE 点数 >= 80</code></div></label>
+        <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="0" name="1" disabled><b style="display: block">ア</b><div style="overflow-x: auto"><code>科目 HAVING AVG(点数) >= 80</code></div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="1" name="1" disabled><b style="display: block">イ</b><div style="overflow-x: auto"><code>科目 WHERE 点数 >= 80</code></div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="2" name="1" checked disabled><b style="display: block">ウ</b><div style="overflow-x: auto"><code>学生番号 HAVING AVG(点数) >= 80</code></div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="3" name="1" disabled><b style="display: block">エ</b><div style="overflow-x: auto"><code>学生番号 WHERE 点数 >= 80</code></div></label>
       </fieldset>
       <h2>4.3. GROUP BY</h2>
       <p>出題：2026年 春中間 </p>
@@ -168,7 +175,7 @@
           このSQL文は、和、差、直積、射影、選択のリレーション演算のうち、 どの演算の組み合わせで表現されるのか、選びなさい。
           <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden">
             <legend>選択肢</legend>
-            <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="0" name="2" disabled><div style="overflow-x: auto">差、選択、射影</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="1" name="2" disabled><div style="overflow-x: auto">差、直積、選択</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="2" name="2" checked disabled><div style="overflow-x: auto">直積、選択、射影</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="3" name="2" disabled><div style="overflow-x: auto">和、直積、射影</div></label>
+            <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="0" name="2" disabled><b style="display: block">ア</b><div style="overflow-x: auto">差、選択、射影</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="1" name="2" disabled><b style="display: block">イ</b><div style="overflow-x: auto">差、直積、選択</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="2" name="2" checked disabled><b style="display: block">ウ</b><div style="overflow-x: auto">直積、選択、射影</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="3" name="2" disabled><b style="display: block">エ</b><div style="overflow-x: auto">和、直積、射影</div></label>
           </fieldset>
         </li>
         <li>さらに問い合わせに相当するリレーショナル代数表現も与えなさい。</li>
@@ -232,7 +239,7 @@
       <p>SQLが提供する3値論理において、<code>A</code>に<code>5</code>、<code>B</code>に<code>4</code>、<code>C</code>に<code>NULL</code>を代入したとき、 論理式<code>(A > C) or (B > A) or (C = A)</code>の評価結果はどれか。</p>
       <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden">
         <legend>選択肢</legend>
-        <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="0" name="3" disabled><div style="overflow-x: auto"><math><mi displaystyle="true">∅</mi></math>(空)</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="1" name="3" disabled><div style="overflow-x: auto"><code>false</code>(偽)</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="2" name="3" disabled><div style="overflow-x: auto"><code>true</code>(真)</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="3" name="3" checked disabled><div style="overflow-x: auto"><code>unknown</code>(不定)</div></label>
+        <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="0" name="3" disabled><b style="display: block">ア</b><div style="overflow-x: auto"><math><mi displaystyle="true">∅</mi></math>(空)</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="1" name="3" disabled><b style="display: block">イ</b><div style="overflow-x: auto"><code>false</code>(偽)</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="2" name="3" disabled><b style="display: block">ウ</b><div style="overflow-x: auto"><code>true</code>(真)</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="3" name="3" checked disabled><b style="display: block">エ</b><div style="overflow-x: auto"><code>unknown</code>(不定)</div></label>
       </fieldset>
       <h2>4.9. SQLとビュー</h2>
       <p>出題：2021年 春中間 教科書：pp. 48 - 55</p>
@@ -246,7 +253,7 @@
       </figure>
       <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden">
         <legend>選択肢</legend>
-        <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="0" name="4" checked disabled><div style="overflow-x: auto">8823のユーザは、所在地が“東京”の行を参照できるようになる。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="1" name="4" disabled><div style="overflow-x: auto">このビューの作成者はこのビューに対するSELECT権限をもたない。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="2" name="4" disabled><div style="overflow-x: auto">実装“取引先”が削除されても、このビューに対するユーザの権限は残る。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="3" name="4" disabled><div style="overflow-x: auto">導出表“東京取引先”には、8823行までを記録できる。</div></label>
+        <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="0" name="4" checked disabled><b style="display: block">ア</b><div style="overflow-x: auto">8823のユーザは、所在地が“東京”の行を参照できるようになる。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="1" name="4" disabled><b style="display: block">イ</b><div style="overflow-x: auto">このビューの作成者はこのビューに対するSELECT権限をもたない。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="2" name="4" disabled><b style="display: block">ウ</b><div style="overflow-x: auto">実装“取引先”が削除されても、このビューに対するユーザの権限は残る。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="3" name="4" disabled><b style="display: block">エ</b><div style="overflow-x: auto">導出表“東京取引先”には、8823行までを記録できる。</div></label>
       </fieldset>
       <h2>4.10. 意味と正しさ</h2>
       <p>出題：小テスト </p>

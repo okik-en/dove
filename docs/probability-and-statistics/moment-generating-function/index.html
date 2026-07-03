@@ -19,6 +19,7 @@
       code { font-family: 'Noto Sans Mono', 'Noto Emoji', monospace; }
       math, pre { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
       a { text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid; } 
+      li p:first-child { display: inline; }
       ol { list-style-type: none; counter-reset: dec; }
       ol > li { counter-increment: dec; }
       ol > li:before { content: '(' counter(dec, decimal) ') '; }
@@ -111,7 +112,7 @@
       <h2>5.1. ポアソン分布</h2>
       <p>出題：2023年 春期末、2025年 春中間 教科書：pp. 168 - 169</p>
       <p>命題「二項分布は、ポアソン分布で近似できる。 その一方で、正規分布も二項分布を近似できる」を考える。 この命題は正しいかどうか考察せよ。間違いであれば、その理由を指摘せよ。 もし、正しいならば、なぜ、同じ二項分布が2つの異なる分布、ポアソン分布と正規分布とで近似できるのか、 その理由を、できるだけ数式を用いて説明せよ。</p>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>この命題は正しい。 <math><mtext displaystyle="true">𝐵𝑖𝑛</mtext><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑛</mi><mo>,</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>は<math><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑋</mi><mo>=</mo><mi>𝑘</mi></mrow><mo>)</mo></mrow><mo displaystyle="true">=</mo><mrow displaystyle="true"><mo>(</mo><mfrac linethickness="0"><mi>𝑛</mi><mi>𝑘</mi></mfrac><mo>)</mo></mrow><msup displaystyle="true"><mi>𝑝</mi><mi>𝑘</mi></msup><msup displaystyle="true"><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow><mrow><mi>𝑛</mi><mo lspace="0em" rspace="0em">−</mo><mi>𝑘</mi></mrow></msup></math>とかけて、<math><mi displaystyle="true">𝑛</mi><mi displaystyle="true">𝑝</mi></math>および<math><mi displaystyle="true">𝑛</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>が十分に大きいときはド・モアブル–ラプラスの定理から<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑛</mi><mi>𝑝</mi><mo>,</mo><mi>𝑛</mi><mi>𝑝</mi><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></math>に近似できる。 他方で<math><mi displaystyle="true">𝑛</mi></math>が十分に大きく<math><mi displaystyle="true">𝑝</mi></math>が十分に小さいときはポアソンの小数の法則から<math><mrow displaystyle="true"><mo>(</mo><mfrac linethickness="0"><mi>𝑛</mi><mi>𝑘</mi></mfrac><mo>)</mo></mrow><msup displaystyle="true"><mi>𝑝</mi><mi>𝑘</mi></msup><msup displaystyle="true"><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow><mrow><mi>𝑛</mi><mo lspace="0em" rspace="0em">−</mo><mi>𝑘</mi></mrow></msup><mo stretchy="false" displaystyle="true">→</mo><msup displaystyle="true"><mi>𝑒</mi><mrow><mo>−</mo><mi>𝜆</mi></mrow></msup><mfrac displaystyle="true"><msup><mi>𝜆</mi><mi>𝑘</mi></msup><mrow><mi>𝑘</mi><mo>!</mo></mrow></mfrac></math>とみなせて、近似的にポアソン分布に従うものとみなせる。</div>
       </details>
@@ -122,9 +123,9 @@
         <legend>選択肢</legend>
         <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="0" name="1" disabled><b style="display: block">ア</b><div style="overflow-x: auto"><math><mn displaystyle="true">60</mn></math>秒</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="1" name="1" disabled><b style="display: block">イ</b><div style="overflow-x: auto"><math><mn displaystyle="true">75</mn></math>秒</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="2" name="1" disabled><b style="display: block">ウ</b><div style="overflow-x: auto"><math><mn displaystyle="true">90</mn></math>秒</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="3" name="1" disabled><b style="display: block">エ</b><div style="overflow-x: auto"><math><mn displaystyle="true">105</mn></math>秒</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center"><input style="display: block" type="radio" value="4" name="1" disabled><b style="display: block">オ</b><div style="overflow-x: auto"><math><mn displaystyle="true">120</mn></math>秒</div></label>
       </fieldset>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
-        <div><a href="https://okik-en.github.io/mathematical-documents/mm1/"><math><mi displaystyle="true">𝑀</mi><mi displaystyle="true">/</mi><mi displaystyle="true">𝑀</mi><mi displaystyle="true">/</mi><mn displaystyle="true">1</mn></math>システム</a>によれば、単位時間あたりに平均<math><mi displaystyle="true">𝜆</mi></math>人が到着し、平均<math><mi displaystyle="true">𝜇</mi></math>人分の処理が完了するとき、利用率を<math><mi displaystyle="true">𝜌</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mi>𝜆</mi><mi>𝜇</mi></mfrac></math>と定義すれば、<math><mi displaystyle="true">𝜌</mi><mo displaystyle="true">&lt;</mo><mn displaystyle="true">1</mn></math>のときに定常状態が存在し、その平均客数は<math><mi displaystyle="true">𝐿</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mi>𝜌</mi><mrow><mn>1</mn><mo>−</mo><mi>𝜌</mi></mrow></mfrac></math>であり、平均滞在時間は<math><mi displaystyle="true">𝑊</mi><mo displaystyle="true">=</mo><msup displaystyle="true"><mi>𝜆</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi displaystyle="true">𝐿</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><msup><mi>𝜇</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mn>1</mn><mo>−</mo><mi>𝜌</mi></mrow></mfrac></math>となることが知られている。 これによれば、<math><mi displaystyle="true">𝑊</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn scriptlevel="1">1</mn><mrow><mn>1</mn><mo>−</mo><mn scriptlevel="1">60</mn></mrow></mfrac><mspace width="0.2222em"/><mtext displaystyle="true">h</mtext><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>1</mn><mn>30</mn></mfrac><mspace width="0.2222em"/><mtext displaystyle="true">h</mtext><mo displaystyle="true">=</mo><mn displaystyle="true">120</mn><mspace width="0.2222em"/><mtext displaystyle="true">s</mtext></math>となり、答えとしてオが得られる。</div>
+        <div><a href="https://okik-en.github.io/mathematical-documents/mm1/"><math><mi displaystyle="true">𝑀</mi><mi displaystyle="true">/</mi><mi displaystyle="true">𝑀</mi><mi displaystyle="true">/</mi><mn displaystyle="true">1</mn></math>システム</a>によれば、単位時間あたりに平均<math><mi displaystyle="true">𝜆</mi></math>人が到着し、平均<math><mi displaystyle="true">𝜇</mi></math>人分の処理が完了するとき、利用率を<math><mi displaystyle="true">𝜌</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mi>𝜆</mi><mi>𝜇</mi></mfrac></math>と定義すれば、<math><mi displaystyle="true">𝜌</mi><mo displaystyle="true">&lt;</mo><mn displaystyle="true">1</mn></math>のときに定常状態が存在し、その平均客数は<math><mi displaystyle="true">𝐿</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mi>𝜌</mi><mrow><mn>1</mn><mo>−</mo><mi>𝜌</mi></mrow></mfrac></math>であり、平均滞在時間は<math><mi displaystyle="true">𝑊</mi><mo displaystyle="true">=</mo><msup displaystyle="true"><mi>𝜆</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi displaystyle="true">𝐿</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><msup><mi>𝜇</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mn>1</mn><mo>−</mo><mi>𝜌</mi></mrow></mfrac></math>となることが知られている。 これによれば、<math><mi displaystyle="true">𝑊</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mrow><mo stretchy="false">(</mo><mn>1</mn><mi>/</mi><mn>90</mn><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>−</mo><mo form="prefix" stretchy="false">(</mo><mn>60</mn><mi>/</mi><mn>90</mn><mo stretchy="false">)</mo></mrow></mfrac><mspace width="0.2222em"/><mtext displaystyle="true">h</mtext><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>1</mn><mn>30</mn></mfrac><mspace width="0.2222em"/><mtext displaystyle="true">h</mtext><mo displaystyle="true">=</mo><mn displaystyle="true">120</mn><mspace width="0.2222em"/><mtext displaystyle="true">s</mtext></math>となり、答えとしてオが得られる。</div>
       </details>
       <h2>5.3. 二項分布とポアソン分布</h2>
       <p>出題：2023年 春中間 教科書：pp. 166 - 169</p>
@@ -132,7 +133,7 @@
         <li>打率が3割のバッターが5打席で、ヒットを少なくとも一本打つ確率を求めなさい。</li>
         <li>平均して1分間に2人が銀行窓口に並ぶとする。 この窓口に1分間に4人以上並ぶ確率を求めなさい。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -372,6 +373,8 @@
                   <mn>18</mn>
                   <mn>399</mn>
                 </mfrac>
+                <mi> </mi>
+                <mtext>(1)</mtext>
               </math>
               <p>を用いた。</p>
             </li>
@@ -385,7 +388,7 @@
         <li>ある町の1日の交通事故の件数が、平均3件のポアソン分布に従うとする。 この町におけるある日の事故件数が、2件以上である確率を求めよ。</li>
         <li>確率変数<math><mi displaystyle="true">𝑋</mi></math>がポアソン分布に従い、<math><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑋</mi><mo>=</mo><mn>3</mn></mrow><mo>)</mo></mrow><mo displaystyle="true">=</mo><mn displaystyle="true">5</mn><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑋</mi><mo>=</mo><mn>5</mn></mrow><mo>)</mo></mrow></math>なる関係を満たす。この時の<math><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑋</mi><mo>≤</mo><mn>3</mn></mrow><mo>)</mo></mrow></math>を計算せよ。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -534,6 +537,8 @@
                   <mn>4439</mn>
                   <mn>221</mn>
                 </mfrac>
+                <mi> </mi>
+                <mtext>(2)</mtext>
               </math>
               <p>を用いた。</p>
             </li>
@@ -592,7 +597,7 @@
                 <mo>≈</mo>
                 <mn>0.8751</mn>
               </math>
-              <p>ただし<a href="#e2">式 (3.1)</a>を用いた。</p>
+              <p>ただし<a href="#e2">式 </a>を用いた。</p>
             </li>
           </ol>
         </div>
@@ -606,7 +611,7 @@
         <li>不良品が3個以上入っている確率</li>
       </ol>
       <p>(2)と(3)の答えは、できるだけ適当な小数点までの近似で、最終計算すること。</p>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -623,7 +628,7 @@
         <li>サイコロを240回投げた時、6の目が38〜45回出る確率を求めなさい。</li>
         <li>不良品率が0.1%である製品を500個取り出した時、不良品が3個以上入っている確率を求めなさい。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -671,7 +676,15 @@
                               <mo>−</mo>
                               <mn>40</mn>
                             </mrow>
-                            <mn scriptlevel="1">10</mn>
+                            <mrow>
+                              <mo stretchy="false">(</mo>
+                              <mn>10</mn>
+                              <mi>/</mi>
+                              <msqrt>
+                                <mn>3</mn>
+                              </msqrt>
+                              <mo stretchy="false">)</mo>
+                            </mrow>
                           </mfrac>
                           <mo>≤</mo>
                           <mi>𝑍</mi>
@@ -682,7 +695,15 @@
                               <mo>−</mo>
                               <mn>40</mn>
                             </mrow>
-                            <mn scriptlevel="1">10</mn>
+                            <mrow>
+                              <mo stretchy="false">(</mo>
+                              <mn>10</mn>
+                              <mi>/</mi>
+                              <msqrt>
+                                <mn>3</mn>
+                              </msqrt>
+                              <mo stretchy="false">)</mo>
+                            </mrow>
                           </mfrac>
                         </mrow>
                         <mo>)</mo>
@@ -949,6 +970,8 @@
                     <mn>1</mn>
                   </mrow>
                 </mfrac>
+                <mi> </mi>
+                <mtext>(3)</mtext>
               </math>
               <p>を用いた。</p>
             </li>
@@ -1006,7 +1029,7 @@
           </ol>
         </li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -1048,7 +1071,7 @@
         <li>上記(4)において、<math><mi displaystyle="true">𝑛</mi></math>の期待値を求めよ。</li>
         <li><math><mi displaystyle="true">𝑛</mi></math>と<math><mi displaystyle="true">𝜆</mi><mo displaystyle="true">=</mo><mi displaystyle="true">𝑁</mi><mi displaystyle="true">𝑝</mi></math>を固定し、<math><mi displaystyle="true">𝑁</mi><mo stretchy="false" displaystyle="true">→</mo><mi displaystyle="true">∞</mi></math>の極限をとると、 (4)の確率分布<math><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑛</mi><mi>&amp;</mi><mi>𝑁</mi><mo>,</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>はポアソン分布<math><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑛</mi><mo>;</mo><mi>𝜆</mi></mrow><mo>)</mo></mrow></math>に近づくことを証明せよ。 必要であれば、等式<math><munder displaystyle="true"><mo lspace="0em" rspace="0.16666666666666666em">lim</mo><mrow><mi>𝑁</mi><mo lspace="0em" rspace="0em" stretchy="false">→</mo><mi>∞</mi></mrow></munder><msup displaystyle="true"><mrow><mo>(</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mi>𝑥</mi><mi>𝑁</mi></mfrac></mrow><mo>)</mo></mrow><mi>𝑁</mi></msup><mo displaystyle="true">=</mo><msup displaystyle="true"><mi>𝑒</mi><mi>𝑥</mi></msup></math>を使って良い。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>

@@ -19,6 +19,7 @@
       code { font-family: 'Noto Sans Mono', 'Noto Emoji', monospace; }
       math, pre { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
       a { text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid; } 
+      li p:first-child { display: inline; }
       ol { list-style-type: none; counter-reset: dec; }
       ol > li { counter-increment: dec; }
       ol > li:before { content: '(' counter(dec, decimal) ') '; }
@@ -126,9 +127,24 @@
       <p>出題：2025年 春期末 </p>
       <p>次の表を情報無損失分解したものはどれか。ここで、下線部は主キーを表す。</p>
       <math display="block">
-        <mtext>発注伝票(</mtext>
-        <span>注文番号</span>
-        <mtext>, 商品番号, 商品名, 商品単価, 注文数量)</mtext>
+        <mtext>発注伝票</mtext>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mstyle style="text-decoration: underline;">
+              <mtext>注文番号</mtext>
+            </mstyle>
+            <mo>,</mo>
+            <mtext>商品番号</mtext>
+            <mo>,</mo>
+            <mtext>商品名</mtext>
+            <mo>,</mo>
+            <mtext>商品単価</mtext>
+            <mo>,</mo>
+            <mtext>注文数量</mtext>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
       </math>
       <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden">
         <legend>選択肢</legend>
@@ -211,11 +227,11 @@
             <td>(4.と5.と推移律)</td>
           </tr>
         </table>
-        <figcaption>表 6.2: {学籍番号, 科目} → 判定の証明</figcaption>
+        <figcaption>表 2: {学籍番号, 科目} → 判定の証明</figcaption>
       </figure>
       <ol>
         <li>3つの公理を列挙せよ。</li>
-        <li><a href="#loc-1">表 6.2</a>にある証明とは、何の何に対する証明を与えているのか、説明せよ。</li>
+        <li><a href="#loc-1">表 2</a>にある証明とは、何の何に対する証明を与えているのか、説明せよ。</li>
         <li>アームストロング公理系が必要/重要となる正規化はどのレベルか（第一～第三正規形、それともボイス・コッド）？ 理由と共に与えよ。</li>
         <li>第3正規形であるが、ボイス・コッド正規形ではない、事例を1つ与えて、この事実も説明せよ。</li>
       </ol>
@@ -311,7 +327,7 @@
       </ol>
       <h2>6.16. 正規化</h2>
       <p>出題：小テスト </p>
-      <p>リレーション<math><mtext displaystyle="true">𝑇𝑎𝑏𝑙𝑒</mtext><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝐴</mi><mo>,</mo><mi>𝐵</mi><mo>,</mo><mi>𝐶</mi><mo>,</mo><mi>𝐷</mi><mo>,</mo><mi>𝐸</mi><mo>,</mo><mi>𝐹</mi><mo>,</mo><mi>𝐺</mi><mo>,</mo><mi>𝐻</mi></mrow><mo>)</mo></mrow></math>がある。 <math><mi displaystyle="true">𝐴</mi></math>～<math><mi displaystyle="true">𝐻</mi></math>は属性名であり、下線は主キーであることを示す。 次の属性間従属関係がある。</p>
+      <p>リレーション<math><mtext displaystyle="true">𝑇𝑎𝑏𝑙𝑒</mtext><mrow displaystyle="true"><mo>(</mo><mrow><mstyle style="text-decoration: underline;"><mi>𝐴</mi></mstyle><mo>,</mo><mi>𝐵</mi><mo>,</mo><mi>𝐶</mi><mo>,</mo><mstyle style="text-decoration: underline;"><mi>𝐷</mi></mstyle><mo>,</mo><mi>𝐸</mi><mo>,</mo><mstyle style="text-decoration: underline;"><mi>𝐹</mi></mstyle><mo>,</mo><mi>𝐺</mi><mo>,</mo><mi>𝐻</mi></mrow><mo>)</mo></mrow></math>がある。 <math><mi displaystyle="true">𝐴</mi></math>～<math><mi displaystyle="true">𝐻</mi></math>は属性名であり、下線は主キーであることを示す。 次の属性間従属関係がある。</p>
       <math display="block">
         <mi>𝐴</mi>
         <mo stretchy="false">→</mo>

@@ -143,7 +143,7 @@
 }
 
 #let ans(body) = if is-html {
-  html.details(/*style: "line-height: 3em;",*/ {
+  html.details(style: "margin: 1em 0;", {
     html.summary("解答", style: "cursor: pointer;")
     html.div(body)
   })
@@ -162,13 +162,24 @@
   [
     #math.equation(
       block: true,
-      numbering: num => numbering(
-        "(1.1)",
-        counter(heading).get().first(),
-        num,
-      ),
+      numbering: num => if not is-html {
+        numbering(
+          "(1.1)",
+          counter(heading).get().first(),
+          num,
+        )
+      },
       number-align: right + horizon,
-      body,
+      body
+        + if is-html {
+          (
+            sym.space.nobreak
+              + context numbering(
+                "(1)",
+                counter(math.equation).get().first(),
+              )
+          )
+        },
     )
     #ref
   ]

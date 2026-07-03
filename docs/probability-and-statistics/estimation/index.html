@@ -19,6 +19,7 @@
       code { font-family: 'Noto Sans Mono', 'Noto Emoji', monospace; }
       math, pre { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
       a { text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid; } 
+      li p:first-child { display: inline; }
       ol { list-style-type: none; counter-reset: dec; }
       ol > li { counter-increment: dec; }
       ol > li:before { content: '(' counter(dec, decimal) ') '; }
@@ -115,7 +116,7 @@
         <li>全世界の女性全員について推論を行う場合</li>
         <li>日本に住む女性全員について推論を行う場合</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -133,7 +134,7 @@
         <li>標本数<math><mi displaystyle="true">𝑛</mi></math>が大きいとき、<math><msub displaystyle="true"><mi>𝑆</mi><mi>𝑛</mi></msub><mo displaystyle="true">=</mo><msub displaystyle="true"><mi>𝑋</mi><mn>1</mn></msub><mo displaystyle="true">+</mo><msub displaystyle="true"><mi>𝑋</mi><mn>2</mn></msub><mo displaystyle="true">+</mo><mi displaystyle="true">⋯</mi><mo displaystyle="true">+</mo><msub displaystyle="true"><mi>𝑋</mi><mi>𝑛</mi></msub></math>は、どのような分布に従うのか、中心極限定理を用いできるだけ数式を用いて正確に説明せよ.</li>
         <li>中心極限定理は、大数の法則の精度化と言えるかを議論せよ。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -151,7 +152,7 @@
         <li>25個の電球の無作為標本の寿命の平均が、1170時間を超える確率を求めよ。</li>
         <li>無作為に選んだ<math><mi displaystyle="true">𝑁</mi></math>個の電球の寿命の平均が、少なくとも0.9の確率で1175時間を超えるといえる<math><mi displaystyle="true">𝑁</mi></math>の値を求めよ。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -229,11 +230,13 @@
                         <mn>1180</mn>
                       </mrow>
                       <mrow>
+                        <mo stretchy="false">(</mo>
                         <mn>20</mn>
-                        <mo lspace="0em" rspace="0em">/</mo>
+                        <mi>/</mi>
                         <msqrt>
                           <mi>𝑁</mi>
                         </msqrt>
+                        <mo stretchy="false">)</mo>
                       </mrow>
                     </mfrac>
                   </mrow>
@@ -283,7 +286,7 @@
       <h2>6.4. 中心極限定理</h2>
       <p>出題：2025年 春期末 </p>
       <p>ある種の繊維一本の破断強度は平均1.2 kg、標準偏差0.1 kgの正規分布に従う。 この繊維100本の束に、122.5 kgの荷重をかける時、束が破壊される確率を計算せよ。</p>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <p>各繊維の破断強度<math><msub displaystyle="true"><mi>𝑋</mi><mn>1</mn></msub><mo displaystyle="true">,</mo><mi displaystyle="true">…</mi><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑋</mi><mn>100</mn></msub></math>について、その合計破断強度<math><mi displaystyle="true">𝑋</mi><mo displaystyle="true">=</mo><msub displaystyle="true"><mi>𝑋</mi><mn>1</mn></msub><mo displaystyle="true">+</mo><mi displaystyle="true">⋯</mi><mo displaystyle="true">+</mo><msub displaystyle="true"><mi>𝑋</mi><mn>100</mn></msub></math>の期待値は<math><mi displaystyle="true">𝐸</mi><mrow displaystyle="true"><mo>[</mo><mi>𝑋</mi><mo>]</mo></mrow><mo displaystyle="true">=</mo><mn displaystyle="true">100</mn><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em" displaystyle="true">×</mo><mn displaystyle="true">1.2</mn><mspace width="0.2222em"/><mtext displaystyle="true">kg</mtext><mo displaystyle="true">=</mo><mn displaystyle="true">120</mn><mspace width="0.2222em"/><mtext displaystyle="true">kg</mtext></math>、標準偏差は<math><mi displaystyle="true">𝜎</mi><mrow displaystyle="true"><mo>[</mo><mi>𝑋</mi><mo>]</mo></mrow><mo displaystyle="true">=</mo><msqrt displaystyle="true"><mn>100</mn></msqrt><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em" displaystyle="true">×</mo><mn displaystyle="true">0.1</mn><mspace width="0.2222em"/><mtext displaystyle="true">kg</mtext><mo displaystyle="true">=</mo><mn displaystyle="true">1</mn><mspace width="0.2222em"/><mtext displaystyle="true">kg</mtext></math>であり、正規分布の再生性から<math><mi displaystyle="true">𝑋</mi></math>は<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>120</mn><mspace width="0.2222em"/><mtext>kg</mtext><mo>,</mo><mn>1</mn><mspace width="0.2222em"/><mtext>kg</mtext></mrow><mo>)</mo></mrow></math>に従う。</p>
@@ -356,7 +359,7 @@
         </li>
         <li>３つの <math><mrow displaystyle="true"><mo>{</mo><mrow><msub><mi>𝑇</mi><mn>1</mn></msub><mo>,</mo><msub><mi>𝑇</mi><mn>2</mn></msub><mo>,</mo><msub><mi>𝑇</mi><mn>3</mn></msub></mrow><mo>}</mo></mrow></math>の中では、どれが最小の分散を持つかを、理由も含めて説明しなさい。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -410,7 +413,7 @@
         </li>
         <li>さらに、標本サイズに影響される性質は、上の3つのうちのどれか、理由も添えて回答しなさい。 必要に応じて、数式や図を用いること。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -468,7 +471,7 @@
         <mn>74</mn>
       </math>
       <p>この時、1000名の結果を母集団として、母平均と母分散の不偏推定量を求めなさい。</p>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <p>母平均の不偏推定量<math><mi displaystyle="true">𝑋</mi></math>は</p>
@@ -650,7 +653,7 @@
         <li>標本の不良率（標本比率）<math><msub displaystyle="true"><mi>𝑝</mi><mn>0</mn></msub></math>は同じ値が得られるものとする。 このとき、信頼度95%の信頼区間の値を、標本の大きさ<math><mi displaystyle="true">𝑛</mi></math>の場合の半分にするには、 標本の大きさをいくらにすればよいか、導出計算も含めて、論じよ。</li>
         <li>製品の不良率を<math><mi displaystyle="true">𝑝</mi><mo displaystyle="true">=</mo><mn displaystyle="true">0.05</mn></math>とする。 標本の大きさが<math><mi displaystyle="true">𝑛</mi><mo displaystyle="true">=</mo><mn displaystyle="true">1900</mn></math>のとき、確率<math><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>76</mn><mo>≤</mo><mi>𝑋</mi><mo>≤</mo><mn>114</mn></mrow><mo>)</mo></mrow></math>を、近似的に求めよ。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -830,7 +833,7 @@
         <li>中心極限定理を利用することで、<math><mi displaystyle="true">𝑝</mi></math>についてどのようなことが分かるかを論じなさい。</li>
         <li><math><mi displaystyle="true">𝑝</mi></math>について、2倍の精度でより正確に確率を知りたい場合は、 何回コインを投げる必要があるかを検討しなさい。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>

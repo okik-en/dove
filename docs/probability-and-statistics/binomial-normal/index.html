@@ -19,6 +19,7 @@
       code { font-family: 'Noto Sans Mono', 'Noto Emoji', monospace; }
       math, pre { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
       a { text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid; } 
+      li p:first-child { display: inline; }
       ol { list-style-type: none; counter-reset: dec; }
       ol > li { counter-increment: dec; }
       ol > li:before { content: '(' counter(dec, decimal) ') '; }
@@ -111,7 +112,7 @@
       <h2>4.1. 二項分布</h2>
       <p>出題：2025年 春中間 </p>
       <p>2項分布<math><mi displaystyle="true">𝐵</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>の平均と分散を（公式からではなく）直接計算によって与えよ。</p>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <p><math><mi displaystyle="true">𝑋</mi><mo displaystyle="true">∼</mo><mi displaystyle="true">𝐵</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>であるとは、<math><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑋</mi><mo>=</mo><mi>𝑘</mi></mrow><mo>)</mo></mrow><mo displaystyle="true">=</mo><mrow displaystyle="true"><mo>(</mo><mfrac linethickness="0"><mn>2</mn><mi>𝑘</mi></mfrac><mo>)</mo></mrow><msup displaystyle="true"><mi>𝑝</mi><mi>𝑘</mi></msup><msup displaystyle="true"><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow><mrow><mn>2</mn><mo lspace="0em" rspace="0em">−</mo><mi>𝑘</mi></mrow></msup></math>をいう。</p>
@@ -574,7 +575,7 @@
         <li>試験問題は全部で10問あり、この内の5問以上が正解となる確率</li>
         <li>試験問題は全部で100問あり、この内の25問以上が正解となる確率</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -761,7 +762,7 @@
               </math>
             </li>
             <li>
-              <p>正解数を<math><mi displaystyle="true">𝑋</mi></math>とすれば、<math><mi displaystyle="true">𝑋</mi></math>は<math><mtext displaystyle="true">𝐵𝑖𝑛</mtext><mrow displaystyle="true"><mo>(</mo><mrow><mn>100</mn><mo>,</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow><mo>)</mo></mrow></math>に従い、<math><mi displaystyle="true">𝐸</mi><mrow displaystyle="true"><mo>[</mo><mi>𝑋</mi><mo>]</mo></mrow><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>50</mn><mn>3</mn></mfrac></math>かつ<math><mi displaystyle="true">𝜎</mi><mrow displaystyle="true"><mo>[</mo><mi>𝑋</mi><mo>]</mo></mrow><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mrow><mn>5</mn><msqrt><mn>5</mn></msqrt></mrow><mn>3</mn></mfrac></math>である。 いま、<math><mi displaystyle="true">𝑛</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow><mo displaystyle="true">></mo><mi displaystyle="true">𝑛</mi><mi displaystyle="true">𝑝</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>50</mn><mn>3</mn></mfrac><mo displaystyle="true">></mo><mn displaystyle="true">5</mn></math>と<math><mi displaystyle="true">𝑛</mi></math>が十分に大きいため、ド・モアブル–ラプラスの定理から<math><mi displaystyle="true">𝑋</mi></math>は近似的に<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>100</mn><mo>,</mo><msup><mrow><mo>(</mo><mrow><mrow><mn>5</mn><msqrt><mn>5</mn></msqrt></mrow><mo lspace="0em" rspace="0em">/</mo><mn>3</mn></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>に従い</p>
+              <p>正解数を<math><mi displaystyle="true">𝑋</mi></math>とすれば、<math><mi displaystyle="true">𝑋</mi></math>は<math><mtext displaystyle="true">𝐵𝑖𝑛</mtext><mrow displaystyle="true"><mo>(</mo><mrow><mn>100</mn><mo>,</mo><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow><mo>)</mo></mrow></math>に従い、<math><mi displaystyle="true">𝐸</mi><mrow displaystyle="true"><mo>[</mo><mi>𝑋</mi><mo>]</mo></mrow><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>50</mn><mn>3</mn></mfrac></math>かつ<math><mi displaystyle="true">𝜎</mi><mrow displaystyle="true"><mo>[</mo><mi>𝑋</mi><mo>]</mo></mrow><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mrow><mn>5</mn><msqrt><mn>5</mn></msqrt></mrow><mn>3</mn></mfrac></math>である。 いま、<math><mi displaystyle="true">𝑛</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow><mo displaystyle="true">></mo><mi displaystyle="true">𝑛</mi><mi displaystyle="true">𝑝</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>50</mn><mn>3</mn></mfrac><mo displaystyle="true">></mo><mn displaystyle="true">5</mn></math>と<math><mi displaystyle="true">𝑛</mi></math>が十分に大きいため、ド・モアブル–ラプラスの定理から<math><mi displaystyle="true">𝑋</mi></math>は近似的に<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>100</mn><mo>,</mo><msup><mrow><mo>(</mo><mrow><mo stretchy="false">(</mo><mn>5</mn><msqrt><mn>5</mn></msqrt><mi>/</mi><mn>3</mn><mo stretchy="false">)</mo></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>に従い</p>
               <math display="block">
                 <mtable class="multiline-equation aligned">
                   <mtr>
@@ -800,13 +801,21 @@
                             <mrow>
                               <mn>24.5</mn>
                               <mo>−</mo>
-                              <mn scriptlevel="1">50</mn>
+                              <mo form="prefix" stretchy="false">(</mo>
+                              <mn>50</mn>
+                              <mi>/</mi>
+                              <mn>3</mn>
+                              <mo stretchy="false">)</mo>
                             </mrow>
                             <mrow>
-                              <mn scriptlevel="1">5</mn>
-                              <msqrt scriptlevel="1">
+                              <mo stretchy="false">(</mo>
+                              <mn>5</mn>
+                              <msqrt>
                                 <mn>5</mn>
                               </msqrt>
+                              <mi>/</mi>
+                              <mn>3</mn>
+                              <mo stretchy="false">)</mo>
                             </mrow>
                           </mfrac>
                         </mrow>
@@ -884,7 +893,7 @@
         <li>条件(1)について、ド・モアブル-ラプラスの定理（正規近似）を用いて、標本サイズ<math><mi displaystyle="true">𝑛</mi></math>を評価しなさい。</li>
         <li>(2)と(3)の結果を比較し、なぜ求められる標本サイズ<math><mi displaystyle="true">𝑛</mi></math>に差が生じるのかを説明しなさい。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -1509,7 +1518,7 @@
         <li>正規分布の計算には、なぜ表を利用する/必要になるのか、その数学的な理由を述べなさい。</li>
         <li>（半）整数補正とは、どのような操作であり、なぜ必要なのか、数理統計学的に説明しなさい。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -1589,7 +1598,7 @@
           <p>である一様分布に従い、互いに独立である時の<math><mi displaystyle="true">𝑊</mi><mo displaystyle="true">=</mo><mi displaystyle="true">𝑋</mi><mi displaystyle="true">𝑌</mi></math>の期待値を求めよ。</p>
         </li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -1830,7 +1839,7 @@
           </ol>
         </li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -1945,7 +1954,7 @@
           <p>をみたす最小の<math><mi displaystyle="true">𝑛</mi></math>を求めよ。</p>
         </li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -2132,7 +2141,7 @@
         <li>得点が80点以上95点以下に該当する受験者数をおよそ何人か求めなさい。</li>
         <li>得点の上位20%に入るための最低点を求めなさい。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -2277,7 +2286,7 @@
         <li>実際に感染している人が陽性となる確率を95%にしたい。この時の定数<math><mi displaystyle="true">𝐶</mi></math>を求めよ。</li>
         <li>上の時に、正常者が間違って陽性と判断される確率を求めよ。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -2319,7 +2328,7 @@
         <li>10000回投げて表が出る回数の期待値と標準偏差を求めよ。</li>
         <li>10000回投げて表が出る回数が4900から5100の間にある確率を、正規分布近似を用いて評価せよ。 ただし、評価はより正確な確率値が得られる手法を用いること。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <ol>
@@ -2391,7 +2400,7 @@
         <li>さらに、この範囲に入る受験生の人数は少なくとも何人であるといえるか求めなさい。</li>
         <li>また、得点<math><mi displaystyle="true">𝑋</mi></math>が正規分布<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>60</mn><mo>,</mo><msup><mn>6</mn><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>に従うと仮定して、<math><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>42</mn><mo>≤</mo><mi>𝑋</mi><mo>≤</mo><mn>78</mn></mrow><mo>)</mo></mrow></math>を求めなさい。</li>
       </ol>
-      <details>
+      <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>
           <p><math><mi displaystyle="true">𝑛</mi><mo displaystyle="true">=</mo><mn displaystyle="true">200</mn></math>、<math><mi displaystyle="true">𝜇</mi><mo displaystyle="true">=</mo><mn displaystyle="true">60</mn></math>、<math><mi displaystyle="true">𝜎</mi><mo displaystyle="true">=</mo><mn displaystyle="true">6</mn></math>とおく。</p>

@@ -19,6 +19,7 @@
       code { font-family: 'Noto Sans Mono', 'Noto Emoji', monospace; }
       math, pre { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
       a { text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid; } 
+      li p:first-child { display: inline; }
       ol { list-style-type: none; counter-reset: dec; }
       ol > li { counter-increment: dec; }
       ol > li:before { content: '(' counter(dec, decimal) ') '; }
@@ -116,20 +117,30 @@
       </ol>
       <h2>4.2. SQL文</h2>
       <p>出題：2022年 春中間、2023年 春中間、2025年 春中間 教科書：pp. 48 - 55</p>
-      <p>“得点”表から、学生ごとに全科目の点数の平均を算出し、 平均が<math><mn displaystyle="true">80</mn></math>点以上の学生の学生番号とその平均点を求める。 <code>{ a }</code>に入れる適切な字句はどれか。 ここで、<span style="text-decoration: underline">実戦の下線</span>は主キーを表す。</p>
+      <p>“得点”表から、学生ごとに全科目の点数の平均を算出し、 平均が<math><mn displaystyle="true">80</mn></math>点以上の学生の学生番号とその平均点を求める。 <code>{ a }</code>に入れる適切な字句はどれか。 ここで、<span style="text-decoration: underline">実線の下線</span>は主キーを表す。</p>
       <math display="block">
-        <mtext>得点(</mtext>
-        <span>学生番号</span>
-        <mtext>,</mtext>
-        <mspace width="0.2222em"/>
-        <span>科目</span>
-        <mtext>, 点数)</mtext>
+        <mtext>得点</mtext>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mstyle style="text-decoration: underline;">
+              <mtext>学生番号</mtext>
+            </mstyle>
+            <mo>,</mo>
+            <mstyle style="text-decoration: underline;">
+              <mtext>科目</mtext>
+            </mstyle>
+            <mo>,</mo>
+            <mtext>点数</mtext>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
       </math>
       <figure>
         <pre><code data-lang="sql"><span style="color: #d73948">SELECT</span> 学生番号, <span style="color: #4b69c6">AVG</span>(点数)
 <span style="color: #d73948">FROM</span> 得点
 <span style="color: #d73948">GROUP BY</span> { a }</code></pre>
-        <figcaption>コード 2.1: SQL文</figcaption>
+        <figcaption>コード 1: SQL文</figcaption>
       </figure>
       <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden">
         <legend>選択肢</legend>
@@ -139,7 +150,18 @@
       <p>出題：2026年 春中間 </p>
       <p>次の関係がある：</p>
       <math display="block">
-        <mtext>得点(学生番号, 科目, 点数)</mtext>
+        <mtext>得点</mtext>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mtext>学生番号</mtext>
+            <mo>,</mo>
+            <mtext>科目</mtext>
+            <mo>,</mo>
+            <mtext>点数</mtext>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
       </math>
       <p>この表に対して、以下の問いに答えなさい。</p>
       <ol>
@@ -153,7 +175,7 @@
       <figure>
         <pre><code data-lang="sql"><span style="color: #d73948">SELECT</span> A1, A2, A3 <span style="color: #d73948">FROM</span> R
 <span style="color: #d73948">WHERE</span> A4 <span style="color: #d73948">=</span> <span style="color: #198810">'</span><span style="color: #198810">a</span><span style="color: #198810">'</span></code></pre>
-        <figcaption>コード 4.2: SQL文</figcaption>
+        <figcaption>コード 2: SQL文</figcaption>
       </figure>
       <p>に対応する関係代数の演算の組み合わせを与えなさい。</p>
       <h2>4.5. リレーショナル代数との関係</h2>
@@ -163,11 +185,40 @@
         <pre><code data-lang="sql"><span style="color: #d73948">SELECT</span> <span style="color: #b60157">納品</span>.<span style="color: #b60157">顧客番号</span>, <span style="color: #b60157">顧客</span>.<span style="color: #b60157">顧客名</span>
 <span style="color: #d73948">FROM</span> 納品, 顧客
 <span style="color: #d73948">WHERE</span> <span style="color: #b60157">納品</span>.<span style="color: #b60157">顧客番号</span> <span style="color: #d73948">=</span> <span style="color: #b60157">顧客</span>.<span style="color: #b60157">顧客番号</span></code></pre>
-        <figcaption>コード 5.3: SQL文</figcaption>
+        <figcaption>コード 3: SQL文</figcaption>
       </figure>
       <p>ここに、リレーションは</p>
       <math display="block">
-        <div>納品(<span style="text-decoration: underline">商品番号</span>, <span style="text-decoration: underline">顧客番号</span>, 納品数量)、顧客(<span style="text-decoration: underline">顧客番号</span>, 顧客名)</div>
+        <mtext>納品</mtext>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mstyle style="text-decoration: underline;">
+              <mtext>商品番号</mtext>
+            </mstyle>
+            <mo>,</mo>
+            <mstyle style="text-decoration: underline;">
+              <mtext>顧客番号</mtext>
+            </mstyle>
+            <mo>,</mo>
+            <mtext>納品数量</mtext>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
+        <mo rspace="0em">,</mo>
+        <mspace width="1em"/>
+        <mtext>顧客</mtext>
+        <mrow>
+          <mo>(</mo>
+          <mrow>
+            <mstyle style="text-decoration: underline;">
+              <mtext>顧客番号</mtext>
+            </mstyle>
+            <mo>,</mo>
+            <mtext>顧客名</mtext>
+          </mrow>
+          <mo>)</mo>
+        </mrow>
       </math>
       <p>であり、<span style="text-decoration: underline">アンダーライン</span>は主キーを表します。</p>
       <ol>
@@ -192,7 +243,7 @@
   <span style="color: #d73948">FROM</span> 会員
   <span style="color: #d73948">GROUP BY</span> グループ
   <span style="color: #d73948">HAVING</span> <span style="color: #4b69c6">COUNT</span>(<span style="color: #d73948">*</span>) <span style="color: #d73948">></span> <span style="color: #b60157">1</span></code></pre>
-                <figcaption>コード 6.4: SQL文</figcaption>
+                <figcaption>コード 4: SQL文</figcaption>
               </figure>
             </td>
             <td>

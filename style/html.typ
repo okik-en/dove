@@ -60,19 +60,7 @@
 
   //* MARK:カウンタ関連
 
-  // カウンタリセット
-  show heading.where(level: 1): it => {
-    counter(math.equation).update(0)
-    counter(figure.where(kind: image)).update(0)
-    counter(figure.where(kind: table)).update(0)
-    counter(figure.where(kind: raw)).update(0)
-    it
-  }
-
   set heading(numbering: "1.1.1.")
-  set figure(
-    numbering: num => numbering("1.1", counter(heading).get().first(), num),
-  )
   show figure.where(kind: image): set figure(supplement: [図])
   show figure.where(kind: table): set figure(supplement: [表])
   show figure.where(kind: raw): set figure(supplement: [コード])
@@ -80,8 +68,6 @@
   // 数式番号 (通常は表示しない)
   set math.equation(numbering: none)
   show math.equation: it => math.display(it)
-
-  //* MARK: 数式等の調整
 
   // 図をHTMLで表示する際のスタイル
   show table: it => if it.stroke == none { it } else { frame(it) }
@@ -112,6 +98,10 @@
   show strong: it => html.elem("strong", it)
   show figure.where(kind: database): set figure(supplement: none)
   show figure.where(kind: database): set figure.caption(position: top)
+
+  show math.frac.where(style: "horizontal"): it => math.paren.l + it.num + math.slash + it.denom + math.paren.r
+  show math.frac.where(style: "skewed"): it => math.paren.l + it.num + math.slash + it.denom + math.paren.r
+  show math.underline: it => html.elem("mstyle", attrs: (style: "text-decoration: underline;"), it.body)
 
   html.html(lang: "ja", {
     // <head> ~ </head>
@@ -155,6 +145,7 @@
           "code { font-family: 'Noto Sans Mono', 'Noto Emoji', monospace; }",
           "math, pre { overflow-x: auto; overflow-y: hidden; max-width: 100%; }",
           "a { text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid; } ",
+          "li p:first-child { display: inline; }",
           "ol { list-style-type: none; counter-reset: dec; }",
           "ol > li { counter-increment: dec; }",
           "ol > li:before { content: '(' counter(dec, decimal) ') '; }",

@@ -101,7 +101,16 @@
 
   show math.frac.where(style: "horizontal"): it => math.paren.l + it.num + math.slash + it.denom + math.paren.r
   show math.frac.where(style: "skewed"): it => math.paren.l + it.num + math.slash + it.denom + math.paren.r
-  show math.underline: it => html.elem("mstyle", attrs: (style: "text-decoration: underline;"), it.body)
+  show math.underline: it => html.elem(
+    "mstyle",
+    attrs: (style: styled(border-bottom: "1pt solid currentColor", padding: "0pt 1pt 2pt")),
+    it.body,
+  )
+  show math.overline: it => html.elem(
+    "mstyle",
+    attrs: (style: styled(border-top: "1pt solid currentColor", padding: "2pt 1pt 0pt")),
+    it.body,
+  )
 
   html.html(lang: "ja", {
     // <head> ~ </head>

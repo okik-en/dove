@@ -1,27 +1,6 @@
 #import "style.typ": database, styled
 #let __svg__ = state("__svg__", false)
 
-#let emoji-regex = regex("[\u{2600}-\u{27BF}\u{1F000}-\u{1FFFF}]")
-
-#let fonts = (
-  serif: "New Computer Modern",
-  serif-cjk: "Noto Serif JP",
-  sans: "Arial",
-  sans-cjk: "Noto Sans JP",
-  mono: "Fira Code",
-  mono-cjk: "Noto Sans JP",
-  math: "New Computer Modern Math",
-  emoji: "Noto Emoji",
-)
-
-#let family = (
-  serif: ((name: fonts.emoji, covers: emoji-regex), (name: fonts.serif, covers: "latin-in-cjk"), fonts.serif-cjk),
-  sans: ((name: fonts.emoji, covers: emoji-regex), (name: fonts.sans, covers: "latin-in-cjk"), fonts.sans-cjk),
-  mono: ((name: fonts.emoji, covers: emoji-regex), (name: fonts.mono, covers: "latin-in-cjk"), fonts.mono-cjk),
-  math: (fonts.math, (name: fonts.serif, covers: "latin-in-cjk"), fonts.serif-cjk),
-)
-
-
 #let frame(it) = context {
   __svg__.update(_ => true)
   if sys.inputs.keys().contains("html") and sys.inputs.html == "true" {
@@ -40,23 +19,17 @@
 }
 
 #let style(doc-type: "article", body) = context {
-  set text(lang: "ja")
-
-  //* MARK:フォント関連
-
   set text(
-    font: family.serif,
+    lang: "ja",
+    font: "Noto Sans JP",
     cjk-latin-spacing: auto,
     top-edge: "ascender",
     bottom-edge: "descender",
     number-type: "lining",
     number-width: "tabular",
   )
-  show title: set text(font: family.sans)
-  show heading: set text(font: family.sans)
-  show strong: set text(font: family.sans)
-  show raw: set text(font: family.mono)
-  show math.equation: set text(font: family.math)
+  show math.equation: set text(font: "Noto Sans Math")
+  show raw: set text(font: ("Noto Sans Mono", "Noto Sans JP"))
 
   //* MARK:カウンタ関連
 

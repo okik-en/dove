@@ -5,11 +5,11 @@
 
 #let fonts = (
   serif: "New Computer Modern",
-  serif-cjk: "Yu Mincho",
+  serif-cjk: "Noto Serif JP",
   sans: "Arial",
-  sans-cjk: "Yu Gothic",
+  sans-cjk: "Noto Sans JP",
   mono: "Fira Code",
-  mono-cjk: "Yu Gothic UI",
+  mono-cjk: "Noto Sans JP",
   math: "New Computer Modern Math",
   emoji: "Noto Emoji",
 )

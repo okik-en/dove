@@ -113,18 +113,18 @@
 #let data(years, p: none) = {
   set text(size: 8pt)
   set par(first-line-indent: 0em)
-  [出題：]
-  if type(years) == array {
-    if years.any(year => type(year) == array) {
-      years
-        .map(year => if type(year)
-          == array [#year.first()年 #("春中間", "春期末", "夏中間", "夏期末").at(year.last() - 1)])
-        .join("、")
-    } else [#years.first()年 #("春中間", "春期末", "夏中間", "夏期末").at(years.last() - 1)]
-  } else if years == pretest [小テスト] else if years == unknown [詳細不明]
-  if type(years) == array and years.len() > 6 { parbreak() }
-  sym.space.quad
-  if p != none {
+  let before = {
+    [出題：]
+    if type(years) == array {
+      if years.any(year => type(year) == array) {
+        years
+          .map(year => if type(year)
+            == array [#year.first()年 #("春中間", "春期末", "夏中間", "夏期末").at(year.last() - 1)])
+          .join("、")
+      } else [#years.first()年 #("春中間", "春期末", "夏中間", "夏期末").at(years.last() - 1)]
+    } else if years == pretest [小テスト] else if years == unknown [詳細不明]
+  }
+  let after = if p != none {
     [教科書：]
     if type(p) == array {
       if p.any(x => (
@@ -133,6 +133,17 @@
         p.first() == p.last()
       ) [p. #p.first()] else [pp. #p.first() - #p.last()]
     } else [p. #p]
+  }
+  if is-html {
+    html.small(style: styled(display: "flex", width: "100%", justify-content: "space-between", flex-wrap: "wrap"), {
+      html.span(before)
+      html.span(after)
+    })
+  } else {
+    before
+    if type(years) == array and years.len() > 5 { parbreak() }
+    h(1fr)
+    after
   }
 }
 

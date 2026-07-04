@@ -1,4 +1,4 @@
-#import "/style/html.typ": style
+#import "/style/html.typ": style, styled
 #let __chapter__ = sys.inputs.at("chapter")
 #let __srcdir__ = sys.inputs.at("srcdir")
 #let __content__ = yaml("/appendix.yaml").at(__srcdir__)
@@ -30,7 +30,29 @@
   #metadata(it.body) <title>
   #counter(heading).update(0)
 ]
-#show heading.where(level: 2): set heading(level: 1, numbering: sub => numbering("1.1.", id, sub))
+#show heading.where(level: 2): it => context html.h2(
+  id: str(counter(heading).get().last()),
+  style: styled(display: "flex", justify-content: "space-between", align-items: "center"),
+  {
+    html.span(numbering("1.1.", id, counter(heading).get().last()) + it.body)
+    html.elem(
+      "a",
+      attrs: (
+        style: styled(cursor: "pointer", font-size: "1rem"),
+        onclick: "navigator.share({title: '"
+          + repr(it.body)
+          + "', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/"
+          + __srcdir__
+          + "/"
+          + __chapter__
+          + "#"
+          + str(counter(heading).get().last())
+          + "'});",
+      ),
+      `#`,
+    )
+  },
+)
 #show: style
 
 #title()

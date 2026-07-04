@@ -14,18 +14,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans+Math&amp;family=Noto+Sans+Mono:wght@100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
     <style>
-      body { font-family: 'Noto Sans', 'Noto Emoji', sans-serif; }
-      math { font-family: 'Noto Sans Math', 'Noto Emoji', math; padding: 1pt; }
-      code { font-family: 'Noto Sans Mono', 'Noto Emoji', monospace; }
-      math, pre { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
-      a { text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid; } 
-      li p:first-child { display: inline; }
-      ol { list-style-type: none; counter-reset: dec; }
-      ol > li { counter-increment: dec; }
-      ol > li:before { content: '(' counter(dec, decimal) ') '; }
-      ol ol { list-style-type: none; counter-reset: llt; }
-      ol ol > li { counter-increment: llt; }
-      ol ol > li:before { content: '(' counter(dec, decimal) '-' counter(llt, lower-latin) ') '; }
+      body{font-family: 'Noto Sans', 'Noto Emoji', sans-serif;}
+      math{font-family: 'Noto Sans Math', 'Noto Emoji', math; padding: 1pt;}
+      code{font-family: 'Noto Sans Mono', 'Noto Emoji', monospace;}
+      math, pre{overflow-x: auto; overflow-y: hidden; max-width: 100%;}
+      a{text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid;}
+      li p:first-child{display: inline;}
+      ol{list-style-type: none; counter-reset: dec;}
+      ol > li{counter-increment: dec;}
+      ol > li:before{content: '(' counter(dec, decimal) ') ';}
+      ol ol{list-style-type: none; counter-reset: llt;}
+      ol ol > li{counter-increment: llt;}
+      ol ol > li:before{content: '(' counter(dec, decimal) '-' counter(llt, lower-latin) ') ';}
     </style>
     <style>
       /* Alignment */
@@ -109,8 +109,8 @@
     <main>
       <h1>6. 推定</h1>
       <nav style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1em; margin: 2em;"><a href="../data-statistics"><code>./first</code></a><a href="../moment-generating-function"><code>./prev</code></a><a href="../../"><code>../</code></a><a href="../test"><code>./next</code></a><a href="../test"><code>./last</code></a></nav>
-      <h2>6.1. 母集団と標本</h2>
-      <p>出題：2022年 夏期末 教科書：p. 174</p>
+      <h2 id="1" style="display: flex; justify-content: space-between; align-items: center;"><span>6.1.母集団と標本</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[母集団と標本]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#1'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏期末</span><span>教科書：p. 174</span></small></p>
       <p>次の2つの文章において、「日本に住む女性全員」という集団は母集団か標本のどちらであるか、 それぞれ考察し、理由も説明しなさい。</p>
       <ol>
         <li>全世界の女性全員について推論を行う場合</li>
@@ -125,8 +125,8 @@
           </ol>
         </div>
       </details>
-      <h2>6.2. 無作為標本の独立性</h2>
-      <p>出題：2025年 春期末 </p>
+      <h2 id="2" style="display: flex; justify-content: space-between; align-items: center;"><span>6.2.無作為標本の独立性</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[無作為標本の独立性]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#2'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 春期末</span><span></span></small></p>
       <p>母平均<math><mi displaystyle="true">𝜇</mi></math>、母分散<math><msup displaystyle="true"><mi>𝜎</mi><mn>2</mn></msup></math>の母集団から取り出された<math><mi displaystyle="true">𝑛</mi></math>個の無作為標本を <math><msub displaystyle="true"><mi>𝑋</mi><mn>1</mn></msub><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑋</mi><mn>2</mn></msub><mo displaystyle="true">,</mo><mi displaystyle="true">…</mi><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑋</mi><mi>𝑛</mi></msub></math>とする.</p>
       <ol>
         <li>無作為標本<math><msub displaystyle="true"><mi>𝑋</mi><mn>1</mn></msub><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑋</mi><mn>2</mn></msub><mo displaystyle="true">,</mo><mi displaystyle="true">…</mi><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑋</mi><mi>𝑛</mi></msub></math>の確率変数としての独立性を論じよ、無条件に独立か、それとも、どのような条件下で独立となるのか。</li>
@@ -145,8 +145,8 @@
           </ol>
         </div>
       </details>
-      <h2>6.3. 中心極限定理</h2>
-      <p>出題：2025年 春期末 教科書：p. 179</p>
+      <h2 id="3" style="display: flex; justify-content: space-between; align-items: center;"><span>6.3.中心極限定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[中心極限定理]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#3'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 春期末</span><span>教科書：p. 179</span></small></p>
       <p>ある工場で生産される電球の寿命は平均1180時間、標準偏差20時間の正規分布に従う。</p>
       <ol>
         <li>25個の電球の無作為標本の寿命の平均が、1170時間を超える確率を求めよ。</li>
@@ -287,8 +287,8 @@
           </ol>
         </div>
       </details>
-      <h2>6.4. 中心極限定理</h2>
-      <p>出題：2025年 春期末 </p>
+      <h2 id="4" style="display: flex; justify-content: space-between; align-items: center;"><span>6.4.中心極限定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[中心極限定理]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#4'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 春期末</span><span></span></small></p>
       <p>ある種の繊維一本の破断強度は平均1.2 kg、標準偏差0.1 kgの正規分布に従う。 この繊維100本の束に、122.5 kgの荷重をかける時、束が破壊される確率を計算せよ。</p>
       <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
@@ -348,8 +348,8 @@
           </math>
         </div>
       </details>
-      <h2>6.5. 不偏推定量</h2>
-      <p>出題：2022年 夏中間 教科書：pp. 202 - 205</p>
+      <h2 id="5" style="display: flex; justify-content: space-between; align-items: center;"><span>6.5.不偏推定量</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[不偏推定量]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#5'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏中間</span><span>教科書：pp. 202 - 205</span></small></p>
       <p>平均<math><mi displaystyle="true">𝜇</mi></math>、分散<math><msup displaystyle="true"><mi>𝜎</mi><mn>2</mn></msup></math>の母集団からの大きさ3の無作為標本を<math><msub displaystyle="true"><mi>𝑋</mi><mn>1</mn></msub></math>、<math><msub displaystyle="true"><mi>𝑋</mi><mn>2</mn></msub></math>、<math><msub displaystyle="true"><mi>𝑋</mi><mn>3</mn></msub></math> とする。</p>
       <ol>
         <li>
@@ -386,8 +386,8 @@
           </ol>
         </div>
       </details>
-      <h2>6.6. 不偏分散と推定量</h2>
-      <p>出題：2023年 夏中間、2023年 夏期末、2025年 夏中間 教科書：pp. 176 - 180, 202 - 205</p>
+      <h2 id="6" style="display: flex; justify-content: space-between; align-items: center;"><span>6.6.不偏分散と推定量</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[不偏分散と推定量]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#6'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 夏中間、2023年 夏期末、2025年 夏中間</span><span>教科書：pp. 176 - 180, 202 - 205</span></small></p>
       <ol>
         <li>
           <p>平均0、分散1.2である、ある分布に従う母集団から3つサンプルを取ってきたら <math><mrow displaystyle="true"><mo>{</mo><mrow><mo>−</mo><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn></mrow><mo>}</mo></mrow></math>という値だった。この時の</p>
@@ -441,8 +441,8 @@
           </ol>
         </div>
       </details>
-      <h2>6.7. 母平均・母分散の不偏推定量</h2>
-      <p>出題：2022年 夏中間、2024年 春期末 教科書：p. 205</p>
+      <h2 id="7" style="display: flex; justify-content: space-between; align-items: center;"><span>6.7.母平均・母分散の不偏推定量</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[母平均・母分散の不偏推定量]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#7'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏中間、2024年 春期末</span><span>教科書：p. 205</span></small></p>
       <p>ある入学試験で確率・統計を選択受験したのが1000名でした。 そのうち10人の結果を無造作に抽出した結果は次のとおりでした</p>
       <math display="block">
         <mn>32</mn>
@@ -656,8 +656,8 @@
           </math>
         </div>
       </details>
-      <h2>6.8. 信頼区間の評価</h2>
-      <p>出題：2025年 夏中間 教科書：pp. 179, 216</p>
+      <h2 id="8" style="display: flex; justify-content: space-between; align-items: center;"><span>6.8.信頼区間の評価</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[信頼区間の評価]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#8'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 夏中間</span><span>教科書：pp. 179, 216</span></small></p>
       <p>ある製品の不良率を<math><mi displaystyle="true">𝑝</mi></math>とし、この製品の中から<math><mi displaystyle="true">𝑛</mi></math>個を無作為に抽出して調べるとき、その中の不良品の個数を<math><mi displaystyle="true">𝑋</mi></math>個とする。 このとき、次の各問いに答えよ。確率分布は、パラメータまで記述せよ。</p>
       <ol>
         <li><math><mi displaystyle="true">𝑋</mi></math>はどのような確率分布に従うかを答えよ.</li>
@@ -672,7 +672,7 @@
             <li><math><mi displaystyle="true">𝑋</mi></math>は二項分布<math><mtext displaystyle="true">𝐵𝑖𝑛</mtext><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑛</mi><mo>,</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>に従う。</li>
             <li>ド・モアブル–ラプラスの定理により、<math><mi displaystyle="true">𝑋</mi></math>は<math><mi displaystyle="true">𝑛</mi></math>が大きいとき近似的に正規分布<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑛</mi><mi>𝑝</mi><mo>,</mo><mi>𝑛</mi><mi>𝑝</mi><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></math>に従う。</li>
             <li>
-              <p>信頼区間の幅は、<math><mn displaystyle="true">2</mn><mi displaystyle="true">𝑧</mi><mrow displaystyle="true"><mo>(</mo><mfrac><mi>𝛼</mi><mn>2</mn></mfrac><mo>)</mo></mrow><msqrt displaystyle="true"><mfrac><mrow><msub><mi>𝑝</mi><mn>0</mn></msub><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><msub><mi>𝑝</mi><mn>0</mn></msub></mrow><mo>)</mo></mrow></mrow><mi>𝑛</mi></mfrac></msqrt></math>であるから、これを<math><mi displaystyle="true">𝑛</mi></math>の場合の半分にするには、</p>
+              <p><a href="https://okik-en.github.io/mathematical-documents/confidence-interval/">信頼区間</a>の幅は、<math><mn displaystyle="true">2</mn><mi displaystyle="true">𝑧</mi><mrow displaystyle="true"><mo>(</mo><mfrac><mi>𝛼</mi><mn>2</mn></mfrac><mo>)</mo></mrow><msqrt displaystyle="true"><mfrac><mrow><msub><mi>𝑝</mi><mn>0</mn></msub><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><msub><mi>𝑝</mi><mn>0</mn></msub></mrow><mo>)</mo></mrow></mrow><mi>𝑛</mi></mfrac></msqrt></math>であるから、これを<math><mi displaystyle="true">𝑛</mi></math>の場合の半分にするには、</p>
               <math display="block">
                 <mi>𝑧</mi>
                 <mrow>
@@ -747,7 +747,7 @@
                   </mfrac>
                 </msqrt>
               </math>
-              <p>である必要がある。これを満たす<math><msup displaystyle="true"><mi>𝑛</mi><mo>′</mo></msup></math>は<math><msup displaystyle="true"><mi>𝑛</mi><mo>′</mo></msup><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>1</mn><mn>4</mn></mfrac><mi displaystyle="true">𝑛</mi></math>である。</p>
+              <p>である必要がある。これを満たす<math><msup displaystyle="true"><mi>𝑛</mi><mo>′</mo></msup></math>は<math><msup displaystyle="true"><mi>𝑛</mi><mo>′</mo></msup><mo displaystyle="true">=</mo><mn displaystyle="true">4</mn><mi displaystyle="true">𝑛</mi></math>である。</p>
             </li>
             <li>
               <p><math><mi displaystyle="true">𝑛</mi><mi displaystyle="true">𝑝</mi><mo displaystyle="true">=</mo><mn displaystyle="true">1900</mn><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em" displaystyle="true">⋅</mo><mn displaystyle="true">0.05</mn><mo displaystyle="true">=</mo><mn displaystyle="true">95</mn></math>、<math><mi displaystyle="true">𝑛</mi><mi displaystyle="true">𝑝</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow><mo displaystyle="true">=</mo><mn displaystyle="true">1900</mn><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em" displaystyle="true">⋅</mo><mn displaystyle="true">0.05</mn><mo lspace="0.2222222222222222em" rspace="0.2222222222222222em" displaystyle="true">⋅</mo><mn displaystyle="true">0.95</mn><mo displaystyle="true">=</mo><mn displaystyle="true">90.25</mn><mo displaystyle="true">=</mo><msup displaystyle="true"><mn>9.5</mn><mn>2</mn></msup></math>より、<math><mi displaystyle="true">𝑋</mi></math>は近似的に<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>95</mn><mo>,</mo><msup><mn>9.5</mn><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>に従う。 よって</p>
@@ -838,8 +838,8 @@
           </ol>
         </div>
       </details>
-      <h2>6.9. 信頼区間の評価</h2>
-      <p>出題：2022年 夏中間 教科書：pp. 180 - 182</p>
+      <h2 id="9" style="display: flex; justify-content: space-between; align-items: center;"><span>6.9.信頼区間の評価</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[信頼区間の評価]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#9'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏中間</span><span>教科書：pp. 180 - 182</span></small></p>
       <p>表が出る確率が<math><mi displaystyle="true">𝑝</mi></math>のコインがあり、この偏った確率<math><mi displaystyle="true">𝑝</mi></math>を知りたい。 10,000回コインを（独立に）投げて、3,500回の表が出た。 <math><mi displaystyle="true">𝑝</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>3500</mn><mn>10000</mn></mfrac><mo displaystyle="true">=</mo><mn displaystyle="true">0.35</mn></math>と断定して良いかどうか、を考える。</p>
       <ol>
         <li>中心極限定理を利用することで、<math><mi displaystyle="true">𝑝</mi></math>についてどのようなことが分かるかを論じなさい。</li>
@@ -902,21 +902,8 @@
           </ol>
         </div>
       </details>
-      <h2>6.10. 信頼区間の評価</h2>
-      <p>出題：2025年 夏期末 </p>
-      <ol>
-        <li>サイズが<math><mi displaystyle="true">𝑛</mi></math>の標本のうち、性質<math><mi displaystyle="true">𝐴</mi></math>を持つものが<math><mi displaystyle="true">𝑌</mi></math>個あったとする。 この時、標本比率を<math><mi displaystyle="true">𝑞</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mi>𝑌</mi><mi>𝑛</mi></mfrac></math>とした時、性質<math><mi displaystyle="true">𝐴</mi></math>の母比率<math><mi displaystyle="true">𝑝</mi></math>の信頼度<math><mn displaystyle="true">100</mn><mrow displaystyle="true"><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝛼</mi></mrow><mo>)</mo></mrow><mi displaystyle="true">%</mi></math>の信頼区間の評価式を与えよ。 厳密な証明までは要求していないが、評価式導出過程も与えよ。</li>
-        <li>
-          <p>ある学校<math><mi displaystyle="true">𝑆</mi></math>で、人気TV番組<math><mi displaystyle="true">𝑇</mi></math>の視聴実態を把握したい。 視聴率アンケート調査の結果、140名中32名がこの番組<math><mi displaystyle="true">𝑇</mi></math>を見ていることがわかった。 この時、以下の問に答えよ。</p>
-          <ol>
-            <li>この学校における視聴率<math><mi displaystyle="true">𝑝</mi></math>の95%の信頼区間を求めよ。</li>
-            <li>視聴率<math><mi displaystyle="true">𝑝</mi></math>を標本比率で推定した時の誤差が3%以下である確率が0.95となるようにするには何人の学生に対してのアンケート調査が必要になるか。</li>
-            <li>また、標本比率が未知の場合、つまり、視聴率アンケートを全く実施していなかった場合は、どうなるか。</li>
-          </ol>
-        </li>
-      </ol>
-      <h2>6.11. 母比率の区間推定</h2>
-      <p>出題：2024年 夏中間、2024年 夏期末 教科書：pp. 223 - 225</p>
+      <h2 id="10" style="display: flex; justify-content: space-between; align-items: center;"><span>6.10.信頼区間の評価</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[信頼区間の評価]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#10'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 夏中間、2024年 夏期末、2025年 夏期末</span><span>教科書：pp. 224 - 225</span></small></p>
       <ol>
         <li>
           <p>二項分布<math><mtext displaystyle="true">𝐵𝑖𝑛</mtext><mrow displaystyle="true"><mo>(</mo><mrow><mn>1</mn><mo>,</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>に従う二項母集団から無作為標本を<math><msub displaystyle="true"><mi>𝑋</mi><mn>1</mn></msub><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑋</mi><mn>2</mn></msub><mo displaystyle="true">,</mo><mi displaystyle="true">…</mi><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑋</mi><mi>𝑛</mi></msub></math>とする時、</p>
@@ -941,15 +928,707 @@
           </ol>
         </li>
       </ol>
-      <h2>6.12. 母比率の区間推定</h2>
-      <p>出題：2024年 夏期末 教科書：pp. 223 - 225</p>
+      <details style="margin: 1em 0;">
+        <summary style="cursor: pointer;">解答</summary>
+        <div>
+          <ol>
+            <li>
+              <ol>
+                <li>
+                  <math display="block">
+                    <mi>𝐸</mi>
+                    <mrow>
+                      <mo>[</mo>
+                      <mi>𝑞</mi>
+                      <mo>]</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mi>𝑝</mi>
+                    <mo rspace="0em">,</mo>
+                    <mspace width="1em"/>
+                    <mtext>Var</mtext>
+                    <mrow>
+                      <mo>(</mo>
+                      <mi>𝑞</mi>
+                      <mo>)</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mrow>
+                        <mi>𝑝</mi>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <mn>1</mn>
+                            <mo>−</mo>
+                            <mi>𝑝</mi>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                      <mi>𝑛</mi>
+                    </mfrac>
+                  </math>
+                </li>
+                <li>
+                  <p><math><mi displaystyle="true">𝑌</mi><mo displaystyle="true">=</mo><msub displaystyle="true"><mi>𝑋</mi><mn>1</mn></msub><mo displaystyle="true">+</mo><msub displaystyle="true"><mi>𝑋</mi><mn>2</mn></msub><mo displaystyle="true">+</mo><mi displaystyle="true">⋯</mi><mo displaystyle="true">+</mo><msub displaystyle="true"><mi>𝑋</mi><mi>𝑛</mi></msub></math>は<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑛</mi><mi>𝑝</mi><mo>,</mo><mi>𝑛</mi><mi>𝑝</mi><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></math>に従うため</p>
+                  <math display="block">
+                    <mi>𝐸</mi>
+                    <mrow>
+                      <mo>[</mo>
+                      <mi>𝑌</mi>
+                      <mo>]</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mi>𝑛</mi>
+                    <mi>𝑝</mi>
+                    <mo rspace="0em">,</mo>
+                    <mspace width="1em"/>
+                    <mtext>Var</mtext>
+                    <mrow>
+                      <mo>(</mo>
+                      <mi>𝑌</mi>
+                      <mo>)</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mi>𝑛</mi>
+                    <mi>𝑝</mi>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <mn>1</mn>
+                        <mo>−</mo>
+                        <mi>𝑝</mi>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                  </math>
+                  <p>であり、期待値の線形性より</p>
+                  <math display="block">
+                    <mtable class="multiline-equation">
+                      <mtr>
+                        <mtd>
+                          <mi>𝐸</mi>
+                          <mrow>
+                            <mo>[</mo>
+                            <mi>𝑞</mi>
+                            <mo>]</mo>
+                          </mrow>
+                          <mo>=</mo>
+                          <mi>𝐸</mi>
+                          <mrow>
+                            <mo>[</mo>
+                            <mfrac>
+                              <mi>𝑌</mi>
+                              <mi>𝑛</mi>
+                            </mfrac>
+                            <mo>]</mo>
+                          </mrow>
+                          <mo>=</mo>
+                          <mfrac>
+                            <mn>1</mn>
+                            <mi>𝑛</mi>
+                          </mfrac>
+                          <mi>𝐸</mi>
+                          <mrow>
+                            <mo>[</mo>
+                            <mi>𝑞</mi>
+                            <mo>]</mo>
+                          </mrow>
+                          <mo>=</mo>
+                          <mfrac>
+                            <mrow>
+                              <mi>𝑛</mi>
+                              <mi>𝑝</mi>
+                            </mrow>
+                            <mi>𝑛</mi>
+                          </mfrac>
+                          <mo>=</mo>
+                          <mi>𝑝</mi>
+                          <mo rspace="0em">,</mo>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd>
+                          <mtext>Var</mtext>
+                          <mrow>
+                            <mo>(</mo>
+                            <mi>𝑞</mi>
+                            <mo>)</mo>
+                          </mrow>
+                          <mo>=</mo>
+                          <mtext>Var</mtext>
+                          <mrow>
+                            <mo>(</mo>
+                            <mfrac>
+                              <mi>𝑌</mi>
+                              <mi>𝑛</mi>
+                            </mfrac>
+                            <mo>)</mo>
+                          </mrow>
+                          <mo>=</mo>
+                          <mfrac>
+                            <mn>1</mn>
+                            <msup>
+                              <mi>𝑛</mi>
+                              <mn>2</mn>
+                            </msup>
+                          </mfrac>
+                          <mspace width="0.2222em"/>
+                          <mtext>Var</mtext>
+                          <mrow>
+                            <mo>(</mo>
+                            <mi>𝑌</mi>
+                            <mo>)</mo>
+                          </mrow>
+                          <mo>=</mo>
+                          <mfrac>
+                            <mrow>
+                              <mi>𝑛</mi>
+                              <mi>𝑝</mi>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mn>1</mn>
+                                  <mo>−</mo>
+                                  <mi>𝑝</mi>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                            </mrow>
+                            <msup>
+                              <mi>𝑛</mi>
+                              <mn>2</mn>
+                            </msup>
+                          </mfrac>
+                          <mo>=</mo>
+                          <mfrac>
+                            <mrow>
+                              <mi>𝑝</mi>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mn>1</mn>
+                                  <mo>−</mo>
+                                  <mi>𝑝</mi>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                            </mrow>
+                            <mi>𝑛</mi>
+                          </mfrac>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                  </math>
+                  <p>となる。</p>
+                </li>
+              </ol>
+            </li>
+            <li>
+              <ol>
+                <li>
+                  <math display="block">
+                    <mrow>
+                      <mo>[</mo>
+                      <mrow>
+                        <mi>𝑞</mi>
+                        <mo>−</mo>
+                        <mi>𝑧</mi>
+                        <mrow>
+                          <mo>(</mo>
+                          <mfrac>
+                            <mi>𝛼</mi>
+                            <mn>2</mn>
+                          </mfrac>
+                          <mo>)</mo>
+                        </mrow>
+                        <msqrt>
+                          <mfrac>
+                            <mrow>
+                              <mi>𝑞</mi>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mn>1</mn>
+                                  <mo>−</mo>
+                                  <mi>𝑞</mi>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                            </mrow>
+                            <mi>𝑛</mi>
+                          </mfrac>
+                        </msqrt>
+                        <mo>,</mo>
+                        <mi>𝑞</mi>
+                        <mo>+</mo>
+                        <mi>𝑧</mi>
+                        <mrow>
+                          <mo>(</mo>
+                          <mfrac>
+                            <mi>𝛼</mi>
+                            <mn>2</mn>
+                          </mfrac>
+                          <mo>)</mo>
+                        </mrow>
+                        <msqrt>
+                          <mfrac>
+                            <mrow>
+                              <mi>𝑞</mi>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mn>1</mn>
+                                  <mo>−</mo>
+                                  <mi>𝑞</mi>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                            </mrow>
+                            <mi>𝑛</mi>
+                          </mfrac>
+                        </msqrt>
+                      </mrow>
+                      <mo>]</mo>
+                    </mrow>
+                  </math>
+                </li>
+                <li>ド・モアブル–ラプラスの定理と中心極限定理。</li>
+              </ol>
+            </li>
+            <li>
+              <ol>
+                <li>
+                  <math display="block">
+                    <mrow>
+                      <mo>[</mo>
+                      <mrow>
+                        <mfrac>
+                          <mn>32</mn>
+                          <mn>140</mn>
+                        </mfrac>
+                        <mo>±</mo>
+                        <mn>1.96</mn>
+                        <msqrt>
+                          <mfrac>
+                            <mrow>
+                              <mn>32</mn>
+                              <mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mn>140</mn>
+                                  <mo>−</mo>
+                                  <mn>32</mn>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                            </mrow>
+                            <msup>
+                              <mn>140</mn>
+                              <mn>3</mn>
+                            </msup>
+                          </mfrac>
+                        </msqrt>
+                      </mrow>
+                      <mo>]</mo>
+                    </mrow>
+                    <mo>≈</mo>
+                    <mrow>
+                      <mo>[</mo>
+                      <mrow>
+                        <mn>0.2286</mn>
+                        <mo>±</mo>
+                        <mn>0.06956</mn>
+                      </mrow>
+                      <mo>]</mo>
+                    </mrow>
+                    <mo>≈</mo>
+                    <mrow>
+                      <mo>[</mo>
+                      <mrow>
+                        <mn>0.1590</mn>
+                        <mo>,</mo>
+                        <mn>0.2982</mn>
+                      </mrow>
+                      <mo>]</mo>
+                    </mrow>
+                  </math>
+                </li>
+                <li>
+                  <p>標本サイズが<math><mi displaystyle="true">𝑛</mi></math>の場合でも<math><mi displaystyle="true">𝑞</mi><mo displaystyle="true">≈</mo><mn displaystyle="true">0.2286</mn></math>と考えられるため</p>
+                  <math display="block">
+                    <mrow>
+                      <mo>|</mo>
+                      <mrow>
+                        <mi>𝑝</mi>
+                        <mo>−</mo>
+                        <mi>𝑞</mi>
+                      </mrow>
+                      <mo>|</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mn>1.96</mn>
+                    <msqrt>
+                      <mfrac>
+                        <mrow>
+                          <mn>0.2286</mn>
+                          <mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo>
+                          <mn>0.7714</mn>
+                        </mrow>
+                        <mi>𝑛</mi>
+                      </mfrac>
+                    </msqrt>
+                    <mo>≤</mo>
+                    <mn>0.03</mn>
+                  </math>
+                  <p>すなわち</p>
+                  <math display="block">
+                    <mi>𝑛</mi>
+                    <mo>≥</mo>
+                    <mfrac>
+                      <mrow>
+                        <mn>0.2286</mn>
+                        <mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo>
+                        <mn>0.7714</mn>
+                        <mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo>
+                        <msup>
+                          <mn>1.96</mn>
+                          <mn>2</mn>
+                        </msup>
+                      </mrow>
+                      <msup>
+                        <mn>0.03</mn>
+                        <mn>2</mn>
+                      </msup>
+                    </mfrac>
+                    <mo>≈</mo>
+                    <mn>752.706</mn>
+                  </math>
+                  <p>を満たす必要がある。ゆえに753人にアンケートをとらなければならない。</p>
+                </li>
+                <li>
+                  <p><math><mi displaystyle="true">𝑞</mi></math>が未知であるから、信頼区間の幅は</p>
+                  <math display="block">
+                    <mn>2</mn>
+                    <mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo>
+                    <mn>1.96</mn>
+                    <msqrt>
+                      <mfrac>
+                        <mrow>
+                          <mi>𝑝</mi>
+                          <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                              <mn>1</mn>
+                              <mo>−</mo>
+                              <mi>𝑝</mi>
+                            </mrow>
+                            <mo>)</mo>
+                          </mrow>
+                        </mrow>
+                        <mi>𝑛</mi>
+                      </mfrac>
+                    </msqrt>
+                    <mo>≤</mo>
+                    <mn>2</mn>
+                    <mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo>
+                    <mn>0.03</mn>
+                  </math>
+                  <p>を満足する（そもそも上が定義である）。いかなる<math><mi displaystyle="true">𝑝</mi></math>に対しても</p>
+                  <math display="block">
+                    <mi>𝑝</mi>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <mn>1</mn>
+                        <mo>−</mo>
+                        <mi>𝑝</mi>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                    <mo>≤</mo>
+                    <msup>
+                      <mfrac>
+                        <mrow>
+                          <mi>𝑝</mi>
+                          <mo>+</mo>
+                          <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                              <mn>1</mn>
+                              <mo>−</mo>
+                              <mi>𝑝</mi>
+                            </mrow>
+                            <mo>)</mo>
+                          </mrow>
+                        </mrow>
+                        <mn>2</mn>
+                      </mfrac>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>4</mn>
+                    </mfrac>
+                  </math>
+                  <p>が<math><mtext displaystyle="true">AM</mtext><mo displaystyle="true">≥</mo><mtext displaystyle="true">GM</mtext></math>よりいえて、ゆえに</p>
+                  <math display="block">
+                    <mi>𝑛</mi>
+                    <mo>≥</mo>
+                    <msup>
+                      <mrow>
+                        <mo>(</mo>
+                        <mfrac>
+                          <mn>1.96</mn>
+                          <mn>0.03</mn>
+                        </mfrac>
+                        <mo>)</mo>
+                      </mrow>
+                      <mn>2</mn>
+                    </msup>
+                    <mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo>
+                    <mfrac>
+                      <mn>1</mn>
+                      <mn>4</mn>
+                    </mfrac>
+                    <mo>≈</mo>
+                    <mn>1067.1</mn>
+                  </math>
+                  <p>であり、1068人にアンケートをとらなければならない。</p>
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </div>
+      </details>
+      <h2 id="11" style="display: flex; justify-content: space-between; align-items: center;"><span>6.11.母比率の区間推定</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[母比率の区間推定]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#11'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 夏期末</span><span>教科書：pp. 223 - 225</span></small></p>
       <p>ある特定銘柄の洗剤を使っている消費者の比率を推定したい。 次の場合、少なくとも何個の標本が必要か。</p>
       <ol>
         <li>母集団比率<math><mi displaystyle="true">𝑝</mi></math>は0.8と0.9の範囲にあることがわかっていて、少なくとも0.99の確率で、 標本比率<math><mover accent="true" displaystyle="true"><mi>𝑝</mi><mo>̂</mo></mover></math>と母集団比率<math><mi displaystyle="true">𝑝</mi></math>との差を0.02以下にしたい場合。</li>
         <li>母集団比率<math><mi displaystyle="true">𝑝</mi></math>について何もわかっていなくて、少なくとも0.95の確率で 標本比率<math><mover accent="true" displaystyle="true"><mi>𝑝</mi><mo>̂</mo></mover></math>と母集団比率<math><mi displaystyle="true">𝑝</mi></math>との差を0.03以下にしたい場合。</li>
       </ol>
-      <h2>6.13. ベルヌーイ試行</h2>
-      <p>出題：2025年 夏期末 </p>
+      <details style="margin: 1em 0;">
+        <summary style="cursor: pointer;">解答</summary>
+        <div>
+          <ol>
+            <li>
+              <p><math><mi displaystyle="true">𝑛</mi></math>が十分に大きいと仮定すると</p>
+              <math display="block">
+                <mi>𝑍</mi>
+                <mo>=</mo>
+                <mfrac>
+                  <mrow>
+                    <mover accent="true">
+                      <mi>𝑝</mi>
+                      <mo>̂</mo>
+                    </mover>
+                    <mo>−</mo>
+                    <mi>𝑝</mi>
+                  </mrow>
+                  <msqrt>
+                    <mo stretchy="false">(</mo>
+                    <mi>𝑝</mi>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <mn>1</mn>
+                        <mo>−</mo>
+                        <mi>𝑝</mi>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                    <mi>/</mi>
+                    <mi>𝑛</mi>
+                    <mo stretchy="false">)</mo>
+                  </msqrt>
+                </mfrac>
+              </math>
+              <p>は近似的に正規分布<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>に従い、<math><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mrow><mrow><mo>|</mo><mi>𝑍</mi><mo>|</mo></mrow><mo>&lt;</mo><mn>2.576</mn></mrow><mo>)</mo></mrow><mo displaystyle="true">≈</mo><mn displaystyle="true">0.99</mn></math>。</p>
+              <p>すなわち</p>
+              <math display="block">
+                <mi>𝑃</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mrow>
+                      <mo>|</mo>
+                      <mrow>
+                        <mover accent="true">
+                          <mi>𝑝</mi>
+                          <mo>̂</mo>
+                        </mover>
+                        <mo>−</mo>
+                        <mi>𝑝</mi>
+                      </mrow>
+                      <mo>|</mo>
+                    </mrow>
+                    <mo>&lt;</mo>
+                    <mn>2.576</mn>
+                    <msqrt>
+                      <mfrac>
+                        <mrow>
+                          <mi>𝑝</mi>
+                          <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                              <mn>1</mn>
+                              <mo>−</mo>
+                              <mi>𝑝</mi>
+                            </mrow>
+                            <mo>)</mo>
+                          </mrow>
+                        </mrow>
+                        <mi>𝑛</mi>
+                      </mfrac>
+                    </msqrt>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+                <mo>=</mo>
+                <mn>0.99</mn>
+              </math>
+              <p>であり、<math><mrow displaystyle="true"><mo>|</mo><mrow><mover accent="true"><mi>𝑝</mi><mo>̂</mo></mover><mo>−</mo><mi>𝑝</mi></mrow><mo>|</mo></mrow><mo displaystyle="true">&lt;</mo><mn displaystyle="true">0.02</mn></math>を満たすには</p>
+              <math display="block">
+                <mn>2.576</mn>
+                <msqrt>
+                  <mfrac>
+                    <mrow>
+                      <mi>𝑝</mi>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <mn>1</mn>
+                          <mo>−</mo>
+                          <mi>𝑝</mi>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                    </mrow>
+                    <mi>𝑛</mi>
+                  </mfrac>
+                </msqrt>
+                <mo>≤</mo>
+                <mn>0.02</mn>
+                <mspace width="2em"/>
+                <mo rspace="0.2777777777777778em">∴</mo>
+                <mi>𝑛</mi>
+                <mo>≥</mo>
+                <msup>
+                  <mrow>
+                    <mo>(</mo>
+                    <mfrac>
+                      <mn>2.576</mn>
+                      <mn>0.02</mn>
+                    </mfrac>
+                    <mo>)</mo>
+                  </mrow>
+                  <mn>2</mn>
+                </msup>
+                <mi>𝑝</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mn>1</mn>
+                    <mo>−</mo>
+                    <mi>𝑝</mi>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+              </math>
+              <p>が必要。ゆえに<math><mi displaystyle="true">𝑝</mi><mo displaystyle="true">∈</mo><mrow displaystyle="true"><mo>[</mo><mrow><mn>0.8</mn><mo>,</mo><mn>0.9</mn></mrow><mo>]</mo></mrow></math>では</p>
+              <math display="block">
+                <mi>𝑝</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mn>1</mn>
+                    <mo>−</mo>
+                    <mi>𝑝</mi>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+                <mo>≤</mo>
+                <mn>0.8</mn>
+                <mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo>
+                <mn>0.2</mn>
+                <mo>=</mo>
+                <mn>0.16</mn>
+              </math>
+              <p>を満たすから、</p>
+              <math display="block">
+                <mi>𝑛</mi>
+                <mo>≥</mo>
+                <msup>
+                  <mrow>
+                    <mo>(</mo>
+                    <mfrac>
+                      <mn>2.576</mn>
+                      <mn>0.02</mn>
+                    </mfrac>
+                    <mo>)</mo>
+                  </mrow>
+                  <mn>2</mn>
+                </msup>
+                <mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo>
+                <mn>0.16</mn>
+                <mo>≈</mo>
+                <mn>2654.3</mn>
+              </math>
+              <p>が満たされなければならない。ゆえに2655個の標本が必要となる。</p>
+            </li>
+            <li>
+              <p>上と同様に</p>
+              <math display="block">
+                <mi>𝑝</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mn>1</mn>
+                    <mo>−</mo>
+                    <mi>𝑝</mi>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+                <mo>≤</mo>
+                <mfrac>
+                  <mn>1</mn>
+                  <mn>4</mn>
+                </mfrac>
+              </math>
+              <p>に注意して</p>
+              <math display="block">
+                <mi>𝑛</mi>
+                <mo>≥</mo>
+                <msup>
+                  <mrow>
+                    <mo>(</mo>
+                    <mfrac>
+                      <mn>1.96</mn>
+                      <mn>0.03</mn>
+                    </mfrac>
+                    <mo>)</mo>
+                  </mrow>
+                  <mn>2</mn>
+                </msup>
+                <mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">×</mo>
+                <mfrac>
+                  <mn>1</mn>
+                  <mn>4</mn>
+                </mfrac>
+                <mo>≈</mo>
+                <mn>1067.1</mn>
+              </math>
+              <p>が満たさなければならない。ゆえに1068個の標本が必要となる。</p>
+            </li>
+          </ol>
+        </div>
+      </details>
+      <h2 id="12" style="display: flex; justify-content: space-between; align-items: center;"><span>6.12.ベルヌーイ試行</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ベルヌーイ試行]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#12'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 夏期末</span><span></span></small></p>
       <p><math><mn displaystyle="true">2</mn></math>種類の結果（確率<math><mi displaystyle="true">𝑝</mi></math>の成功<math><mi displaystyle="true">𝑆</mi></math>と確率<math><mn displaystyle="true">1</mn><mo displaystyle="true">−</mo><mi displaystyle="true">𝑝</mi></math>の失敗<math><mi displaystyle="true">𝐹</mi></math>）を生じる実験を同じ条件でかつ独立に<math><mi displaystyle="true">𝑚</mi></math>回繰り返す ベルヌーイ試行の成功<math><mi displaystyle="true">𝑆</mi></math>の事象の回数<math><mi displaystyle="true">𝑘</mi></math>の確率分布を二項分布<math><mi displaystyle="true">𝐵</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑚</mi><mo>;</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>という。</p>
       <ol>
         <li>二項分布<math><mi displaystyle="true">𝐵</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑚</mi><mo>;</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>の確率関数<math><mi displaystyle="true">𝑓</mi><mrow displaystyle="true"><mo>(</mo><mi>𝑘</mi><mo>)</mo></mrow></math>を与えよ.</li>
@@ -961,24 +1640,1601 @@
           <ol>
             <li>(4)で求めた最尤推定量は不偏推定量と言えるか?</li>
             <li>(4)で求めた最尤推定量は一致推定量と言えるか?</li>
-            <li>(4)で求めた最尤推定量は有効推定量と言えるか?</li>
+            <li><s>(4)で求めた最尤推定量は有効推定量と言えるか?</s> ⟵ <strong><strong>超絶悪問というよりもはや問題不備のため解答不可</strong></strong></li>
           </ol>
         </li>
       </ol>
-      <h2>6.14. 正規分布</h2>
-      <p>出題：2025年 夏中間 </p>
+      <details style="margin: 1em 0;">
+        <summary style="cursor: pointer;">解答</summary>
+        <div>
+          <ol>
+            <li>
+              <math display="block">
+                <mi>𝑓</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mi>𝑘</mi>
+                  <mo>)</mo>
+                </mrow>
+                <mo>=</mo>
+                <mrow>
+                  <mo>(</mo>
+                  <mfrac linethickness="0">
+                    <mi>𝑚</mi>
+                    <mi>𝑘</mi>
+                  </mfrac>
+                  <mo>)</mo>
+                </mrow>
+                <msup>
+                  <mi>𝑝</mi>
+                  <mi>𝑘</mi>
+                </msup>
+                <msup>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mn>1</mn>
+                      <mo>−</mo>
+                      <mi>𝑝</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                  <mrow>
+                    <mi>𝑚</mi>
+                    <mo lspace="0em" rspace="0em">−</mo>
+                    <mi>𝑘</mi>
+                  </mrow>
+                </msup>
+              </math>
+            </li>
+            <li>
+              <math display="block">
+                <mtable class="multiline-equation aligned">
+                  <mtr>
+                    <mtd>
+                      <mi>𝐸</mi>
+                      <mrow>
+                        <mo>[</mo>
+                        <mi>𝑋</mi>
+                        <mo>]</mo>
+                      </mrow>
+                    </mtd>
+                    <mtd>
+                      <mo form="infix">=</mo>
+                      <munderover>
+                        <mo form="prefix" lspace="0em">∑</mo>
+                        <mrow>
+                          <mi>𝑘</mi>
+                          <mo lspace="0em" rspace="0em">=</mo>
+                          <mn>0</mn>
+                        </mrow>
+                        <mi>𝑚</mi>
+                      </munderover>
+                      <mi>𝑘</mi>
+                      <mi>𝑓</mi>
+                      <mrow>
+                        <mo>(</mo>
+                        <mi>𝑘</mi>
+                        <mo>)</mo>
+                      </mrow>
+                    </mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd></mtd>
+                    <mtd>
+                      <mo form="infix">=</mo>
+                      <munderover>
+                        <mo form="prefix" lspace="0em">∑</mo>
+                        <mrow>
+                          <mi>𝑘</mi>
+                          <mo lspace="0em" rspace="0em">=</mo>
+                          <mn>0</mn>
+                        </mrow>
+                        <mi>𝑚</mi>
+                      </munderover>
+                      <mi>𝑘</mi>
+                      <mrow>
+                        <mo>(</mo>
+                        <mfrac linethickness="0">
+                          <mi>𝑚</mi>
+                          <mi>𝑘</mi>
+                        </mfrac>
+                        <mo>)</mo>
+                      </mrow>
+                      <msup>
+                        <mi>𝑝</mi>
+                        <mi>𝑘</mi>
+                      </msup>
+                      <msup>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <mn>1</mn>
+                            <mo>−</mo>
+                            <mi>𝑝</mi>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                        <mrow>
+                          <mi>𝑚</mi>
+                          <mo lspace="0em" rspace="0em">−</mo>
+                          <mi>𝑘</mi>
+                        </mrow>
+                      </msup>
+                    </mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd></mtd>
+                    <mtd>
+                      <mo form="infix">=</mo>
+                      <munderover>
+                        <mo form="prefix" lspace="0em">∑</mo>
+                        <mrow>
+                          <mi>𝑘</mi>
+                          <mo lspace="0em" rspace="0em">=</mo>
+                          <mn>0</mn>
+                        </mrow>
+                        <mi>𝑚</mi>
+                      </munderover>
+                      <mi>𝑘</mi>
+                      <mo lspace="0.2222222222222222em" rspace="0.2222222222222222em">⋅</mo>
+                      <mfrac>
+                        <mrow>
+                          <mi>𝑚</mi>
+                          <mo>!</mo>
+                        </mrow>
+                        <mrow>
+                          <mi>𝑘</mi>
+                          <mo form="postfix">!</mo>
+                          <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                              <mi>𝑚</mi>
+                              <mo>−</mo>
+                              <mi>𝑘</mi>
+                            </mrow>
+                            <mo>)</mo>
+                          </mrow>
+                          <mo>!</mo>
+                        </mrow>
+                      </mfrac>
+                      <msup>
+                        <mi>𝑝</mi>
+                        <mi>𝑘</mi>
+                      </msup>
+                      <msup>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <mn>1</mn>
+                            <mo>−</mo>
+                            <mi>𝑝</mi>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                        <mrow>
+                          <mi>𝑚</mi>
+                          <mo lspace="0em" rspace="0em">−</mo>
+                          <mi>𝑘</mi>
+                        </mrow>
+                      </msup>
+                    </mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd></mtd>
+                    <mtd>
+                      <mo form="infix">=</mo>
+                      <mi>𝑚</mi>
+                      <mi>𝑝</mi>
+                      <munderover>
+                        <mo form="prefix">∑</mo>
+                        <mrow>
+                          <mi>𝑘</mi>
+                          <mo lspace="0em" rspace="0em">=</mo>
+                          <mn>0</mn>
+                        </mrow>
+                        <mi>𝑚</mi>
+                      </munderover>
+                      <mfrac>
+                        <mrow>
+                          <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                              <mi>𝑚</mi>
+                              <mo>−</mo>
+                              <mn>1</mn>
+                            </mrow>
+                            <mo>)</mo>
+                          </mrow>
+                          <mo>!</mo>
+                        </mrow>
+                        <mrow>
+                          <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                              <mi>𝑘</mi>
+                              <mo>−</mo>
+                              <mn>1</mn>
+                            </mrow>
+                            <mo>)</mo>
+                          </mrow>
+                          <mo form="postfix">!</mo>
+                          <mrow>
+                            <mo>{</mo>
+                            <mrow>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mi>𝑚</mi>
+                                  <mo>−</mo>
+                                  <mn>1</mn>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mo>−</mo>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mi>𝑘</mi>
+                                  <mo>−</mo>
+                                  <mn>1</mn>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                            </mrow>
+                            <mo>}</mo>
+                          </mrow>
+                          <mo>!</mo>
+                        </mrow>
+                      </mfrac>
+                      <msup>
+                        <mi>𝑝</mi>
+                        <mrow>
+                          <mi>𝑘</mi>
+                          <mo lspace="0em" rspace="0em">−</mo>
+                          <mn>1</mn>
+                        </mrow>
+                      </msup>
+                      <msup>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <mn>1</mn>
+                            <mo>−</mo>
+                            <mi>𝑝</mi>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                        <mrow>
+                          <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                              <mi>𝑚</mi>
+                              <mo lspace="0em" rspace="0em">−</mo>
+                              <mn>1</mn>
+                            </mrow>
+                            <mo>)</mo>
+                          </mrow>
+                          <mo lspace="0em" rspace="0em">−</mo>
+                          <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                              <mi>𝑘</mi>
+                              <mo lspace="0em" rspace="0em">−</mo>
+                              <mn>1</mn>
+                            </mrow>
+                            <mo>)</mo>
+                          </mrow>
+                        </mrow>
+                      </msup>
+                    </mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd></mtd>
+                    <mtd>
+                      <mo form="infix">=</mo>
+                      <mi>𝑚</mi>
+                      <mi>𝑝</mi>
+                      <munderover>
+                        <mo form="prefix">∑</mo>
+                        <mrow>
+                          <msup>
+                            <mi>𝑘</mi>
+                            <mo>′</mo>
+                          </msup>
+                          <mo lspace="0em" rspace="0em">=</mo>
+                          <mn>0</mn>
+                        </mrow>
+                        <mrow>
+                          <mi>𝑚</mi>
+                          <mo lspace="0em" rspace="0em">−</mo>
+                          <mn>1</mn>
+                        </mrow>
+                      </munderover>
+                      <mfrac>
+                        <mrow>
+                          <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                              <mi>𝑚</mi>
+                              <mo>−</mo>
+                              <mn>1</mn>
+                            </mrow>
+                            <mo>)</mo>
+                          </mrow>
+                          <mo>!</mo>
+                        </mrow>
+                        <mrow>
+                          <msup>
+                            <mi>𝑘</mi>
+                            <mo>′</mo>
+                          </msup>
+                          <mo form="postfix">!</mo>
+                          <mrow>
+                            <mo>{</mo>
+                            <mrow>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mi>𝑚</mi>
+                                  <mo>−</mo>
+                                  <mn>1</mn>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mo>−</mo>
+                              <msup>
+                                <mi>𝑘</mi>
+                                <mo>′</mo>
+                              </msup>
+                            </mrow>
+                            <mo>}</mo>
+                          </mrow>
+                          <mo>!</mo>
+                        </mrow>
+                      </mfrac>
+                      <msup>
+                        <mi>𝑝</mi>
+                        <msup>
+                          <mi>𝑘</mi>
+                          <mo>′</mo>
+                        </msup>
+                      </msup>
+                      <msup>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <mn>1</mn>
+                            <mo>−</mo>
+                            <mi>𝑝</mi>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                        <mrow>
+                          <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                              <mi>𝑚</mi>
+                              <mo lspace="0em" rspace="0em">−</mo>
+                              <mn>1</mn>
+                            </mrow>
+                            <mo>)</mo>
+                          </mrow>
+                          <mo lspace="0em" rspace="0em">−</mo>
+                          <msup>
+                            <mi>𝑘</mi>
+                            <mo>′</mo>
+                          </msup>
+                        </mrow>
+                      </msup>
+                    </mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd></mtd>
+                    <mtd>
+                      <mo form="infix">=</mo>
+                      <mi>𝑚</mi>
+                      <mi>𝑝</mi>
+                      <munderover>
+                        <mo form="prefix" rspace="0em">∑</mo>
+                        <mrow>
+                          <msup>
+                            <mi>𝑘</mi>
+                            <mo>′</mo>
+                          </msup>
+                          <mo lspace="0em" rspace="0em">=</mo>
+                          <mn>0</mn>
+                        </mrow>
+                        <mrow>
+                          <mi>𝑚</mi>
+                          <mo lspace="0em" rspace="0em">−</mo>
+                          <mn>1</mn>
+                        </mrow>
+                      </munderover>
+                      <mrow>
+                        <mo>(</mo>
+                        <mfrac linethickness="0">
+                          <mrow>
+                            <mi>𝑚</mi>
+                            <mo>−</mo>
+                            <mn>1</mn>
+                          </mrow>
+                          <msup>
+                            <mi>𝑘</mi>
+                            <mo>′</mo>
+                          </msup>
+                        </mfrac>
+                        <mo>)</mo>
+                      </mrow>
+                      <msup>
+                        <mi>𝑝</mi>
+                        <msup>
+                          <mi>𝑘</mi>
+                          <mo>′</mo>
+                        </msup>
+                      </msup>
+                      <msup>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <mn>1</mn>
+                            <mo>−</mo>
+                            <mi>𝑝</mi>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                        <mrow>
+                          <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                              <mi>𝑚</mi>
+                              <mo lspace="0em" rspace="0em">−</mo>
+                              <mn>1</mn>
+                            </mrow>
+                            <mo>)</mo>
+                          </mrow>
+                          <mo lspace="0em" rspace="0em">−</mo>
+                          <msup>
+                            <mi>𝑘</mi>
+                            <mo>′</mo>
+                          </msup>
+                        </mrow>
+                      </msup>
+                    </mtd>
+                  </mtr>
+                  <mtr>
+                    <mtd></mtd>
+                    <mtd>
+                      <mo form="infix">=</mo>
+                      <mi>𝑚</mi>
+                      <mi>𝑝</mi>
+                    </mtd>
+                  </mtr>
+                </mtable>
+              </math>
+            </li>
+            <li>
+              <p>教科書の<math><munderover displaystyle="true"><mo form="prefix" lspace="0em" rspace="0em">∏</mo><mrow><mi>𝑖</mi><mo lspace="0em" rspace="0em">=</mo><mn>1</mn></mrow><mn>1</mn></munderover></math>とした場合であることに注意して：</p>
+              <math display="block">
+                <mi>𝑙</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mi>𝑝</mi>
+                  <mo>)</mo>
+                </mrow>
+                <mo>=</mo>
+                <mo form="prefix" lspace="0em" rspace="0.16666666666666666em">log</mo>
+                <mi>𝑓</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mi>𝑘</mi>
+                    <mo>;</mo>
+                    <mi>𝑝</mi>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+                <mo>=</mo>
+                <mo form="prefix" lspace="0em" rspace="0em">log</mo>
+                <mrow>
+                  <mo>(</mo>
+                  <mfrac linethickness="0">
+                    <mi>𝑚</mi>
+                    <mi>𝑘</mi>
+                  </mfrac>
+                  <mo>)</mo>
+                </mrow>
+                <msup>
+                  <mi>𝑝</mi>
+                  <mi>𝑘</mi>
+                </msup>
+                <msup>
+                  <mrow>
+                    <mo>(</mo>
+                    <mrow>
+                      <mn>1</mn>
+                      <mo>−</mo>
+                      <mi>𝑝</mi>
+                    </mrow>
+                    <mo>)</mo>
+                  </mrow>
+                  <mrow>
+                    <mi>𝑚</mi>
+                    <mo lspace="0em" rspace="0em">−</mo>
+                    <mi>𝑘</mi>
+                  </mrow>
+                </msup>
+                <mo>=</mo>
+                <mo form="prefix" lspace="0em" rspace="0em">log</mo>
+                <mrow>
+                  <mo>(</mo>
+                  <mfrac linethickness="0">
+                    <mi>𝑚</mi>
+                    <mi>𝑘</mi>
+                  </mfrac>
+                  <mo>)</mo>
+                </mrow>
+                <mo>+</mo>
+                <mi>𝑘</mi>
+                <mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">log</mo>
+                <mi>𝑝</mi>
+                <mo>+</mo>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mi>𝑚</mi>
+                    <mo>−</mo>
+                    <mi>𝑘</mi>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+                <mo form="prefix" lspace="0.16666666666666666em" rspace="0em">log</mo>
+                <mrow>
+                  <mo>(</mo>
+                  <mrow>
+                    <mn>1</mn>
+                    <mo>−</mo>
+                    <mi>𝑝</mi>
+                  </mrow>
+                  <mo>)</mo>
+                </mrow>
+              </math>
+            </li>
+            <li>
+              <p>尤度方程式は</p>
+              <math display="block">
+                <mfrac>
+                  <mi>𝑑</mi>
+                  <mrow>
+                    <mi>𝑑</mi>
+                    <mi>𝑝</mi>
+                  </mrow>
+                </mfrac>
+                <mi>𝑙</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mi>𝑝</mi>
+                  <mo>)</mo>
+                </mrow>
+                <mo>=</mo>
+                <mfrac>
+                  <mi>𝑘</mi>
+                  <mi>𝑝</mi>
+                </mfrac>
+                <mo>−</mo>
+                <mfrac>
+                  <mrow>
+                    <mi>𝑚</mi>
+                    <mo>−</mo>
+                    <mi>𝑘</mi>
+                  </mrow>
+                  <mrow>
+                    <mn>1</mn>
+                    <mo>−</mo>
+                    <mi>𝑝</mi>
+                  </mrow>
+                </mfrac>
+                <mo>=</mo>
+                <mn>0</mn>
+              </math>
+              <p>であり、これを満たす最尤推定量は</p>
+              <math display="block">
+                <mover accent="true">
+                  <mi>𝑝</mi>
+                  <mo>̂</mo>
+                </mover>
+                <mo>=</mo>
+                <mfrac>
+                  <mi>𝑘</mi>
+                  <mi>𝑚</mi>
+                </mfrac>
+              </math>
+              <p>と得られる。</p>
+            </li>
+            <li>
+              <ol>
+                <li>
+                  <math display="block">
+                    <mi>𝐸</mi>
+                    <mrow>
+                      <mo>[</mo>
+                      <mover accent="true">
+                        <mi>𝑝</mi>
+                        <mo>̂</mo>
+                      </mover>
+                      <mo>]</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mi>𝐸</mi>
+                    <mrow>
+                      <mo>[</mo>
+                      <mfrac>
+                        <mi>𝑘</mi>
+                        <mi>𝑚</mi>
+                      </mfrac>
+                      <mo>]</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mn>1</mn>
+                      <mi>𝑚</mi>
+                    </mfrac>
+                    <mi>𝐸</mi>
+                    <mrow>
+                      <mo>[</mo>
+                      <mi>𝑘</mi>
+                      <mo>]</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mn>1</mn>
+                      <mi>𝑚</mi>
+                    </mfrac>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <mi>𝑚</mi>
+                        <mi>𝑝</mi>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mi>𝑝</mi>
+                  </math>
+                  <p>より不偏推定量である。</p>
+                </li>
+                <li>大数の法則から<math><munder displaystyle="true"><mo lspace="0em" rspace="0.16666666666666666em">lim</mo><mrow><mi>𝑚</mi><mo lspace="0em" rspace="0em" stretchy="false">→</mo><mi>∞</mi></mrow></munder><mover accent="true" displaystyle="true"><mi>𝑝</mi><mo>̂</mo></mover><mo displaystyle="true">=</mo><munder displaystyle="true"><mo form="prefix" lspace="0em" rspace="0.16666666666666666em">lim</mo><mrow><mi>𝑚</mi><mo lspace="0em" rspace="0em" stretchy="false">→</mo><mi>∞</mi></mrow></munder><mfrac displaystyle="true"><mi>𝑘</mi><mi>𝑚</mi></mfrac><mo displaystyle="true">=</mo><mi displaystyle="true">𝑝</mi></math>であるから一致推定量である。</li>
+                <li><strong><strong>この問題および某氏の示した（恐らくAIによる）解答は、誰の目から見ても明らかに本授業の範囲を逸脱しており、誠に残念でしかなく、同時に強い遺憾の念を抱く。</strong></strong> このような問題を解くことは明らかに時間の無駄であるから、常にミスがあると仮定し（現に2026年度も例に漏れず大量のミスがあった）、捨てる判断が求められる。</li>
+              </ol>
+            </li>
+          </ol>
+        </div>
+      </details>
+      <h2 id="13" style="display: flex; justify-content: space-between; align-items: center;"><span>6.13.正規分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[正規分布]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#13'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 夏中間</span><span></span></small></p>
       <p>正規分布<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝜇</mi><mo>,</mo><msup><mi>𝜎</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>においては、２つの母数<math><mi displaystyle="true">𝜇</mi></math>、<math><msup displaystyle="true"><mi>𝜎</mi><mn>2</mn></msup></math>それぞれが推定対象となる。</p>
       <ol>
         <li>母数<math><mi displaystyle="true">𝜇</mi></math>の推定に関してモーメント法と最尤法の計算結果と比較を論じよ。</li>
         <li>もう一つの母数<math><msup displaystyle="true"><mi>𝜎</mi><mn>2</mn></msup></math>の推定に関してモーメント法と最尤法の計算結果と比較を論じよ。</li>
       </ol>
-      <h2>6.15. 有限母集団補正</h2>
-      <p>出題：2025年 夏中間 </p>
+      <details style="margin: 1em 0;">
+        <summary style="cursor: pointer;">解答</summary>
+        <div>
+          <ol>
+            <li>
+              <dl>
+                <div style="display: flex; gap: 4pt;">
+                  <dt><strong>モーメント法</strong></dt>
+                  <dd style="margin-inline-start: 0pt;">
+                    <p><math><mi displaystyle="true">𝑋</mi><mo displaystyle="true">∼</mo><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝜇</mi><mo>,</mo><msup><mi>𝜎</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>とする。 母数<math><mi displaystyle="true">𝜇</mi></math>は母集団の1次モーメント<math><msub displaystyle="true"><mi>𝜇</mi><mn>1</mn></msub></math>に等しく <math><msub displaystyle="true"><mi>𝜇</mi><mn>1</mn></msub><mo displaystyle="true">=</mo><mi displaystyle="true">𝐸</mi><mrow displaystyle="true"><mo>[</mo><mi>𝑋</mi><mo>]</mo></mrow><mo displaystyle="true">=</mo><mi displaystyle="true">𝜇</mi></math> であい、ゆえに<math><msub displaystyle="true"><mi>𝜇</mi><mn>1</mn></msub></math>を<math><mover accent="true" displaystyle="true"><msub><mi>𝜇</mi><mn>1</mn></msub><mo>̂</mo></mover><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>1</mn><mi>𝑛</mi></mfrac><munderover displaystyle="true"><mo form="prefix">∑</mo><mrow><mi>𝑖</mi><mo lspace="0em" rspace="0em">=</mo><mn>1</mn></mrow><mi>𝑛</mi></munderover><msub displaystyle="true"><mi>𝑋</mi><mi>𝑖</mi></msub><mo displaystyle="true">=</mo><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><mi>𝑋</mi></mstyle></math>で置き換えると</p>
+                    <math display="block">
+                      <mover accent="true">
+                        <mi>𝜇</mi>
+                        <mo>̂</mo>
+                      </mover>
+                      <mo>=</mo>
+                      <mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;">
+                        <mi>𝑋</mi>
+                      </mstyle>
+                    </math>
+                  </dd>
+                </div>
+                <div style="display: flex; gap: 4pt;">
+                  <dt><strong>最尤法</strong></dt>
+                  <dd style="margin-inline-start: 0pt;">
+                    <p><math><msub displaystyle="true"><mi>𝑋</mi><mn>1</mn></msub><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑋</mi><mn>2</mn></msub><mo displaystyle="true">,</mo><mi displaystyle="true">…</mi><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑋</mi><mi>𝑛</mi></msub></math>を正規分布<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝜇</mi><mo>,</mo><msup><mi>𝜎</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>からの無作為標本とし、その実現値を<math><msub displaystyle="true"><mi>𝑥</mi><mn>1</mn></msub><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑥</mi><mn>2</mn></msub><mo displaystyle="true">,</mo><mi displaystyle="true">…</mi><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑥</mi><mi>𝑛</mi></msub></math>とするれば、確率密度関数は</p>
+                    <math display="block">
+                      <mi>𝑓</mi>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <msub>
+                            <mi>𝑥</mi>
+                            <mi>𝑖</mi>
+                          </msub>
+                          <mo>;</mo>
+                          <mi>𝜇</mi>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                      <mo>=</mo>
+                      <mfrac>
+                        <mn>1</mn>
+                        <mrow>
+                          <msqrt>
+                            <mn>2</mn>
+                            <mi>𝜋</mi>
+                          </msqrt>
+                          <mi>𝜎</mi>
+                        </mrow>
+                      </mfrac>
+                      <msup>
+                        <mi>𝑒</mi>
+                        <mrow>
+                          <mo>−</mo>
+                          <mfrac>
+                            <msup>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <msub>
+                                    <mi>𝑥</mi>
+                                    <mi>𝑖</mi>
+                                  </msub>
+                                  <mo lspace="0em" rspace="0em">−</mo>
+                                  <mi>𝜇</mi>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mn>2</mn>
+                            </msup>
+                            <mrow>
+                              <mn>2</mn>
+                              <msup>
+                                <mi>𝜎</mi>
+                                <mn>2</mn>
+                              </msup>
+                            </mrow>
+                          </mfrac>
+                        </mrow>
+                      </msup>
+                    </math>
+                    <p>であり、尤度方程式は</p>
+                    <math display="block">
+                      <mtable class="multiline-equation aligned">
+                        <mtr>
+                          <mtd>
+                            <mfrac>
+                              <mi>𝑑</mi>
+                              <mrow>
+                                <mi>𝑑</mi>
+                                <mi>𝜇</mi>
+                              </mrow>
+                            </mfrac>
+                            <mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">log</mo>
+                            <mi>𝐿</mi>
+                            <mrow>
+                              <mo>(</mo>
+                              <mi>𝜇</mi>
+                              <mo>)</mo>
+                            </mrow>
+                          </mtd>
+                          <mtd>
+                            <mo form="infix">=</mo>
+                            <munderover>
+                              <mo form="prefix" lspace="0em">∑</mo>
+                              <mrow>
+                                <mi>𝑖</mi>
+                                <mo lspace="0em" rspace="0em">=</mo>
+                                <mn>1</mn>
+                              </mrow>
+                              <mi>𝑛</mi>
+                            </munderover>
+                            <mfrac>
+                              <mi>𝑑</mi>
+                              <mrow>
+                                <mi>𝑑</mi>
+                                <mi>𝜇</mi>
+                              </mrow>
+                            </mfrac>
+                            <mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">log</mo>
+                            <mi>𝑓</mi>
+                            <mrow>
+                              <mo>(</mo>
+                              <mrow>
+                                <msub>
+                                  <mi>𝑥</mi>
+                                  <mi>𝑖</mi>
+                                </msub>
+                                <mo>;</mo>
+                                <mi>𝜇</mi>
+                              </mrow>
+                              <mo>)</mo>
+                            </mrow>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd></mtd>
+                          <mtd>
+                            <mo form="infix">=</mo>
+                            <munderover>
+                              <mo form="prefix" lspace="0em">∑</mo>
+                              <mrow>
+                                <mi>𝑖</mi>
+                                <mo lspace="0em" rspace="0em">=</mo>
+                                <mn>1</mn>
+                              </mrow>
+                              <mi>𝑛</mi>
+                            </munderover>
+                            <mfrac>
+                              <mi>𝑑</mi>
+                              <mrow>
+                                <mi>𝑑</mi>
+                                <mi>𝜇</mi>
+                              </mrow>
+                            </mfrac>
+                            <mo form="prefix" lspace="0.16666666666666666em" rspace="0em">log</mo>
+                            <mrow>
+                              <mo>[</mo>
+                              <mrow>
+                                <mfrac>
+                                  <mn>1</mn>
+                                  <mrow>
+                                    <msqrt>
+                                      <mn>2</mn>
+                                      <mi>𝜋</mi>
+                                    </msqrt>
+                                    <mi>𝜎</mi>
+                                  </mrow>
+                                </mfrac>
+                                <msup>
+                                  <mi>𝑒</mi>
+                                  <mrow>
+                                    <mo>−</mo>
+                                    <mfrac>
+                                      <msup>
+                                        <mrow>
+                                          <mo>(</mo>
+                                          <mrow>
+                                            <msub>
+                                              <mi>𝑥</mi>
+                                              <mi>𝑖</mi>
+                                            </msub>
+                                            <mo lspace="0em" rspace="0em">−</mo>
+                                            <mi>𝜇</mi>
+                                          </mrow>
+                                          <mo>)</mo>
+                                        </mrow>
+                                        <mn>2</mn>
+                                      </msup>
+                                      <mrow>
+                                        <mn>2</mn>
+                                        <msup>
+                                          <mi>𝜎</mi>
+                                          <mn>2</mn>
+                                        </msup>
+                                      </mrow>
+                                    </mfrac>
+                                  </mrow>
+                                </msup>
+                              </mrow>
+                              <mo>]</mo>
+                            </mrow>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd></mtd>
+                          <mtd>
+                            <mo form="infix">=</mo>
+                            <munderover>
+                              <mo form="prefix" lspace="0em">∑</mo>
+                              <mrow>
+                                <mi>𝑖</mi>
+                                <mo lspace="0em" rspace="0em">=</mo>
+                                <mn>1</mn>
+                              </mrow>
+                              <mi>𝑛</mi>
+                            </munderover>
+                            <mfrac>
+                              <mi>𝑑</mi>
+                              <mrow>
+                                <mi>𝑑</mi>
+                                <mi>𝜇</mi>
+                              </mrow>
+                            </mfrac>
+                            <mrow>
+                              <mo>[</mo>
+                              <mrow>
+                                <mo lspace="0em" rspace="0.16666666666666666em">log</mo>
+                                <mfrac>
+                                  <mn>1</mn>
+                                  <mrow>
+                                    <msqrt>
+                                      <mn>2</mn>
+                                      <mi>𝜋</mi>
+                                    </msqrt>
+                                    <mi>𝜎</mi>
+                                  </mrow>
+                                </mfrac>
+                                <mo>−</mo>
+                                <mfrac>
+                                  <msup>
+                                    <mrow>
+                                      <mo>(</mo>
+                                      <mrow>
+                                        <msub>
+                                          <mi>𝑥</mi>
+                                          <mi>𝑖</mi>
+                                        </msub>
+                                        <mo>−</mo>
+                                        <mi>𝜇</mi>
+                                      </mrow>
+                                      <mo>)</mo>
+                                    </mrow>
+                                    <mn>2</mn>
+                                  </msup>
+                                  <mrow>
+                                    <mn>2</mn>
+                                    <msup>
+                                      <mi>𝜎</mi>
+                                      <mn>2</mn>
+                                    </msup>
+                                  </mrow>
+                                </mfrac>
+                              </mrow>
+                              <mo>]</mo>
+                            </mrow>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd></mtd>
+                          <mtd>
+                            <mo form="infix">=</mo>
+                            <munderover>
+                              <mo form="prefix" lspace="0em">∑</mo>
+                              <mrow>
+                                <mi>𝑖</mi>
+                                <mo lspace="0em" rspace="0em">=</mo>
+                                <mn>1</mn>
+                              </mrow>
+                              <mi>𝑛</mi>
+                            </munderover>
+                            <mfrac>
+                              <mrow>
+                                <msub>
+                                  <mi>𝑥</mi>
+                                  <mi>𝑖</mi>
+                                </msub>
+                                <mo>−</mo>
+                                <mi>𝜇</mi>
+                              </mrow>
+                              <msup>
+                                <mi>𝜎</mi>
+                                <mn>2</mn>
+                              </msup>
+                            </mfrac>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd></mtd>
+                          <mtd>
+                            <mo form="infix">=</mo>
+                            <mfrac>
+                              <mrow>
+                                <mi>𝑛</mi>
+                                <mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;">
+                                  <mi>𝑥</mi>
+                                </mstyle>
+                                <mo>−</mo>
+                                <mi>𝑛</mi>
+                                <mi>𝜇</mi>
+                              </mrow>
+                              <msup>
+                                <mi>𝜎</mi>
+                                <mn>2</mn>
+                              </msup>
+                            </mfrac>
+                            <mo>=</mo>
+                            <mn>0</mn>
+                          </mtd>
+                        </mtr>
+                      </mtable>
+                    </math>
+                    <p>となる。 これを解くと<math><mi displaystyle="true">𝜇</mi><mo displaystyle="true">=</mo><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><mi>𝑥</mi></mstyle></math>となり、最尤推定量は<math><mover accent="true" displaystyle="true"><mi>𝜇</mi><mo>̂</mo></mover><mo displaystyle="true">=</mo><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><mi>𝑋</mi></mstyle></math>。</p>
+                  </dd>
+                </div>
+              </dl>
+              以上より、両者の結果は一致する。
+            </li>
+            <li>
+              <dl>
+                <div style="display: flex; gap: 4pt;">
+                  <dt><strong>モーメント法</strong></dt>
+                  <dd style="margin-inline-start: 0pt;">
+                    <p>母集団の1次、2次モーメント<math><msub displaystyle="true"><mi>𝜇</mi><mn>1</mn></msub></math>、<math><msub displaystyle="true"><mi>𝜇</mi><mn>2</mn></msub></math>それぞれについて</p>
+                    <math display="block">
+                      <msub>
+                        <mi>𝜇</mi>
+                        <mn>1</mn>
+                      </msub>
+                      <mo>=</mo>
+                      <mi>𝐸</mi>
+                      <mrow>
+                        <mo>[</mo>
+                        <mi>𝑋</mi>
+                        <mo>]</mo>
+                      </mrow>
+                      <mo rspace="0em">,</mo>
+                      <mspace width="2em"/>
+                      <msub>
+                        <mi>𝜇</mi>
+                        <mn>2</mn>
+                      </msub>
+                      <mo>=</mo>
+                      <mi>𝐸</mi>
+                      <mrow>
+                        <mo>[</mo>
+                        <msup>
+                          <mi>𝑋</mi>
+                          <mn>2</mn>
+                        </msup>
+                        <mo>]</mo>
+                      </mrow>
+                    </math>
+                    <p>となり、また分散の性質より</p>
+                    <math display="block">
+                      <msup>
+                        <mi>𝜎</mi>
+                        <mn>2</mn>
+                      </msup>
+                      <mo>=</mo>
+                      <mi>𝐸</mi>
+                      <mrow>
+                        <mo>[</mo>
+                        <msup>
+                          <mi>𝑋</mi>
+                          <mn>2</mn>
+                        </msup>
+                        <mo>]</mo>
+                      </mrow>
+                      <mo>−</mo>
+                      <msup>
+                        <mrow>
+                          <mi>𝐸</mi>
+                          <mrow>
+                            <mo>[</mo>
+                            <mi>𝑋</mi>
+                            <mo>]</mo>
+                          </mrow>
+                        </mrow>
+                        <mn>2</mn>
+                      </msup>
+                      <mo>=</mo>
+                      <msub>
+                        <mi>𝜇</mi>
+                        <mn>2</mn>
+                      </msub>
+                      <mo>−</mo>
+                      <msubsup>
+                        <mi>𝜇</mi>
+                        <mn>1</mn>
+                        <mn>2</mn>
+                      </msubsup>
+                    </math>
+                    <p>が成り立つため、これを上の<math><mover accent="true" displaystyle="true"><msub><mi>𝜇</mi><mn>1</mn></msub><mo>̂</mo></mover></math>および<math><mover accent="true" displaystyle="true"><msub><mi>𝜇</mi><mn>2</mn></msub><mo>̂</mo></mover><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>1</mn><mi>𝑛</mi></mfrac><munderover displaystyle="true"><mo form="prefix">∑</mo><mrow><mi>𝑖</mi><mo lspace="0em" rspace="0em">=</mo><mn>1</mn></mrow><mi>𝑛</mi></munderover><msubsup displaystyle="true"><mi>𝑋</mi><mi>𝑖</mi><mn>2</mn></msubsup><mo displaystyle="true">=</mo><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><msup><mi>𝑋</mi><mn>2</mn></msup></mstyle></math>で置き換えると</p>
+                    <math display="block">
+                      <mover accent="true">
+                        <msup>
+                          <mi>𝜎</mi>
+                          <mn>2</mn>
+                        </msup>
+                        <mo>̂</mo>
+                      </mover>
+                      <mo>=</mo>
+                      <mover accent="true">
+                        <msub>
+                          <mi>𝜇</mi>
+                          <mn>2</mn>
+                        </msub>
+                        <mo>̂</mo>
+                      </mover>
+                      <mo>−</mo>
+                      <msup>
+                        <mover accent="true">
+                          <msub>
+                            <mi>𝜇</mi>
+                            <mn>1</mn>
+                          </msub>
+                          <mo>̂</mo>
+                        </mover>
+                        <mn>2</mn>
+                      </msup>
+                      <mo>=</mo>
+                      <mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;">
+                        <msup>
+                          <mi>𝑋</mi>
+                          <mn>2</mn>
+                        </msup>
+                      </mstyle>
+                      <mo>−</mo>
+                      <msup>
+                        <mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;">
+                          <mi>𝑋</mi>
+                        </mstyle>
+                        <mn>2</mn>
+                      </msup>
+                    </math>
+                  </dd>
+                </div>
+                <div style="display: flex; gap: 4pt;">
+                  <dt><strong>最尤法</strong></dt>
+                  <dd style="margin-inline-start: 0pt;">
+                    <p><math><mi displaystyle="true">𝜃</mi><mo displaystyle="true">=</mo><msup displaystyle="true"><mi>𝜎</mi><mn>2</mn></msup></math>とすると</p>
+                    <math display="block">
+                      <mi>𝑓</mi>
+                      <mrow>
+                        <mo>(</mo>
+                        <mrow>
+                          <msub>
+                            <mi>𝑥</mi>
+                            <mi>𝑖</mi>
+                          </msub>
+                          <mo>;</mo>
+                          <mi>𝜇</mi>
+                          <mo>;</mo>
+                          <msup>
+                            <mi>𝜎</mi>
+                            <mn>2</mn>
+                          </msup>
+                        </mrow>
+                        <mo>)</mo>
+                      </mrow>
+                      <mo>=</mo>
+                      <mfrac>
+                        <mn>1</mn>
+                        <msqrt>
+                          <mn>2</mn>
+                          <mi>𝜋</mi>
+                          <mi>𝜃</mi>
+                        </msqrt>
+                      </mfrac>
+                      <msup>
+                        <mi>𝑒</mi>
+                        <mrow>
+                          <mo>−</mo>
+                          <mfrac>
+                            <msup>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <msub>
+                                    <mi>𝑥</mi>
+                                    <mi>𝑖</mi>
+                                  </msub>
+                                  <mo lspace="0em" rspace="0em">−</mo>
+                                  <mi>𝜇</mi>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mn>2</mn>
+                            </msup>
+                            <mrow>
+                              <mn>2</mn>
+                              <mi>𝜃</mi>
+                            </mrow>
+                          </mfrac>
+                        </mrow>
+                      </msup>
+                    </math>
+                    <p>であり、<math><mi displaystyle="true">𝜃</mi></math>に関する尤度方程式は</p>
+                    <math display="block">
+                      <mtable class="multiline-equation aligned">
+                        <mtr>
+                          <mtd>
+                            <mfrac>
+                              <mi>𝜕</mi>
+                              <mrow>
+                                <mi>𝜕</mi>
+                                <mi>𝜃</mi>
+                              </mrow>
+                            </mfrac>
+                            <mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">log</mo>
+                            <mi>𝐿</mi>
+                            <mrow>
+                              <mo>(</mo>
+                              <mrow>
+                                <mi>𝜇</mi>
+                                <mo>,</mo>
+                                <mi>𝜃</mi>
+                              </mrow>
+                              <mo>)</mo>
+                            </mrow>
+                          </mtd>
+                          <mtd>
+                            <mo form="infix">=</mo>
+                            <munderover>
+                              <mo form="prefix" lspace="0em">∑</mo>
+                              <mrow>
+                                <mi>𝑖</mi>
+                                <mo lspace="0em" rspace="0em">=</mo>
+                                <mn>1</mn>
+                              </mrow>
+                              <mi>𝑛</mi>
+                            </munderover>
+                            <mfrac>
+                              <mi>𝜕</mi>
+                              <mrow>
+                                <mi>𝜕</mi>
+                                <mi>𝜃</mi>
+                              </mrow>
+                            </mfrac>
+                            <mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">log</mo>
+                            <mi>𝑓</mi>
+                            <mrow>
+                              <mo>(</mo>
+                              <mrow>
+                                <msub>
+                                  <mi>𝑥</mi>
+                                  <mi>𝑖</mi>
+                                </msub>
+                                <mo>;</mo>
+                                <mi>𝜇</mi>
+                                <mo>;</mo>
+                                <mi>𝜃</mi>
+                              </mrow>
+                              <mo>)</mo>
+                            </mrow>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd></mtd>
+                          <mtd>
+                            <mo form="infix">=</mo>
+                            <munderover>
+                              <mo form="prefix" lspace="0em">∑</mo>
+                              <mrow>
+                                <mi>𝑖</mi>
+                                <mo lspace="0em" rspace="0em">=</mo>
+                                <mn>1</mn>
+                              </mrow>
+                              <mi>𝑛</mi>
+                            </munderover>
+                            <mfrac>
+                              <mi>𝜕</mi>
+                              <mrow>
+                                <mi>𝜕</mi>
+                                <mi>𝜃</mi>
+                              </mrow>
+                            </mfrac>
+                            <mo form="prefix" lspace="0.16666666666666666em" rspace="0em">log</mo>
+                            <mrow>
+                              <mo>[</mo>
+                              <mrow>
+                                <mfrac>
+                                  <mn>1</mn>
+                                  <msqrt>
+                                    <mn>2</mn>
+                                    <mi>𝜋</mi>
+                                    <mi>𝜃</mi>
+                                  </msqrt>
+                                </mfrac>
+                                <msup>
+                                  <mi>𝑒</mi>
+                                  <mrow>
+                                    <mo>−</mo>
+                                    <mfrac>
+                                      <msup>
+                                        <mrow>
+                                          <mo>(</mo>
+                                          <mrow>
+                                            <msub>
+                                              <mi>𝑥</mi>
+                                              <mi>𝑖</mi>
+                                            </msub>
+                                            <mo lspace="0em" rspace="0em">−</mo>
+                                            <mi>𝜇</mi>
+                                          </mrow>
+                                          <mo>)</mo>
+                                        </mrow>
+                                        <mn>2</mn>
+                                      </msup>
+                                      <mrow>
+                                        <mn>2</mn>
+                                        <mi>𝜃</mi>
+                                      </mrow>
+                                    </mfrac>
+                                  </mrow>
+                                </msup>
+                              </mrow>
+                              <mo>]</mo>
+                            </mrow>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd></mtd>
+                          <mtd>
+                            <mo form="infix">=</mo>
+                            <munderover>
+                              <mo form="prefix" lspace="0em">∑</mo>
+                              <mrow>
+                                <mi>𝑖</mi>
+                                <mo lspace="0em" rspace="0em">=</mo>
+                                <mn>1</mn>
+                              </mrow>
+                              <mi>𝑛</mi>
+                            </munderover>
+                            <mfrac>
+                              <mi>𝜕</mi>
+                              <mrow>
+                                <mi>𝜕</mi>
+                                <mi>𝜃</mi>
+                              </mrow>
+                            </mfrac>
+                            <mrow>
+                              <mo>[</mo>
+                              <mrow>
+                                <mo>−</mo>
+                                <mfrac>
+                                  <mn>1</mn>
+                                  <mn>2</mn>
+                                </mfrac>
+                                <mo form="prefix" lspace="0.16666666666666666em" rspace="0em">log</mo>
+                                <mrow>
+                                  <mo>(</mo>
+                                  <mrow>
+                                    <mn>2</mn>
+                                    <mi>𝜋</mi>
+                                    <mi>𝜃</mi>
+                                  </mrow>
+                                  <mo>)</mo>
+                                </mrow>
+                                <mo>−</mo>
+                                <mfrac>
+                                  <msup>
+                                    <mrow>
+                                      <mo>(</mo>
+                                      <mrow>
+                                        <msub>
+                                          <mi>𝑥</mi>
+                                          <mi>𝑖</mi>
+                                        </msub>
+                                        <mo>−</mo>
+                                        <mi>𝜇</mi>
+                                      </mrow>
+                                      <mo>)</mo>
+                                    </mrow>
+                                    <mn>2</mn>
+                                  </msup>
+                                  <mrow>
+                                    <mn>2</mn>
+                                    <mi>𝜃</mi>
+                                  </mrow>
+                                </mfrac>
+                              </mrow>
+                              <mo>]</mo>
+                            </mrow>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd></mtd>
+                          <mtd>
+                            <mo form="infix">=</mo>
+                            <munderover>
+                              <mo form="prefix" lspace="0em" rspace="0em">∑</mo>
+                              <mrow>
+                                <mi>𝑖</mi>
+                                <mo lspace="0em" rspace="0em">=</mo>
+                                <mn>1</mn>
+                              </mrow>
+                              <mi>𝑛</mi>
+                            </munderover>
+                            <mrow>
+                              <mo>[</mo>
+                              <mrow>
+                                <mo>−</mo>
+                                <mfrac>
+                                  <mn>1</mn>
+                                  <mrow>
+                                    <mn>2</mn>
+                                    <mi>𝜃</mi>
+                                  </mrow>
+                                </mfrac>
+                                <mo>+</mo>
+                                <mfrac>
+                                  <msup>
+                                    <mrow>
+                                      <mo>(</mo>
+                                      <mrow>
+                                        <msub>
+                                          <mi>𝑥</mi>
+                                          <mi>𝑖</mi>
+                                        </msub>
+                                        <mo>−</mo>
+                                        <mi>𝜇</mi>
+                                      </mrow>
+                                      <mo>)</mo>
+                                    </mrow>
+                                    <mn>2</mn>
+                                  </msup>
+                                  <mrow>
+                                    <mn>2</mn>
+                                    <msup>
+                                      <mi>𝜃</mi>
+                                      <mn>2</mn>
+                                    </msup>
+                                  </mrow>
+                                </mfrac>
+                              </mrow>
+                              <mo>]</mo>
+                            </mrow>
+                          </mtd>
+                        </mtr>
+                        <mtr>
+                          <mtd></mtd>
+                          <mtd>
+                            <mo form="infix">=</mo>
+                            <mo form="prefix">−</mo>
+                            <mfrac>
+                              <mi>𝑛</mi>
+                              <mrow>
+                                <mn>2</mn>
+                                <mi>𝜃</mi>
+                              </mrow>
+                            </mfrac>
+                            <mo>+</mo>
+                            <mfrac>
+                              <mn>1</mn>
+                              <mrow>
+                                <mn>2</mn>
+                                <msup>
+                                  <mi>𝜃</mi>
+                                  <mn>2</mn>
+                                </msup>
+                              </mrow>
+                            </mfrac>
+                            <munderover>
+                              <mo form="prefix">∑</mo>
+                              <mrow>
+                                <mi>𝑖</mi>
+                                <mo lspace="0em" rspace="0em">=</mo>
+                                <mn>1</mn>
+                              </mrow>
+                              <mi>𝑛</mi>
+                            </munderover>
+                            <msup>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <msub>
+                                    <mi>𝑥</mi>
+                                    <mi>𝑖</mi>
+                                  </msub>
+                                  <mo>−</mo>
+                                  <mi>𝜇</mi>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mn>2</mn>
+                            </msup>
+                            <mo>=</mo>
+                            <mn>0</mn>
+                          </mtd>
+                        </mtr>
+                      </mtable>
+                    </math>
+                    <p>であり、また<math><mi displaystyle="true">𝜇</mi></math>に関する尤度法の結果<math><mover accent="true" displaystyle="true"><mi>𝜇</mi><mo>̂</mo></mover><mo displaystyle="true">=</mo><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><mi>𝑥</mi></mstyle></math>より、最尤推定量は</p>
+                    <math display="block">
+                      <mover accent="true">
+                        <mi>𝜃</mi>
+                        <mo>̂</mo>
+                      </mover>
+                      <mo>=</mo>
+                      <mfrac>
+                        <mn>1</mn>
+                        <mi>𝑛</mi>
+                      </mfrac>
+                      <munderover>
+                        <mo form="prefix">∑</mo>
+                        <mrow>
+                          <mi>𝑖</mi>
+                          <mo lspace="0em" rspace="0em">=</mo>
+                          <mn>1</mn>
+                        </mrow>
+                        <mi>𝑛</mi>
+                      </munderover>
+                      <msup>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <msub>
+                              <mi>𝑥</mi>
+                              <mi>𝑖</mi>
+                            </msub>
+                            <mo>−</mo>
+                            <mi>𝜇</mi>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                        <mn>2</mn>
+                      </msup>
+                      <mo>=</mo>
+                      <mn>0</mn>
+                    </math>
+                  </dd>
+                </div>
+              </dl>
+              よって両者の結果は一致しない。
+            </li>
+          </ol>
+        </div>
+      </details>
+      <h2 id="14" style="display: flex; justify-content: space-between; align-items: center;"><span>6.14.有限母集団補正</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[有限母集団補正]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#14'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 夏中間</span><span></span></small></p>
       <ol>
         <li>有限母集団補正とは何かを、言葉で説明せよ。</li>
         <li>有限母集団補正において、標本平均の分散を補正するには、どのような補正係数を考えるのか、数式/公式を与えよ。 ここでは、母分散<math><msup displaystyle="true"><mi>𝜎</mi><mn>2</mn></msup></math>、標本サイズ<math><mi displaystyle="true">𝑛</mi></math>、母集団サイズ<math><mi displaystyle="true">𝑁</mi></math>とする。</li>
         <li>補正が必要となる/ならない基準を、現実の事例と数値を用いて論じよ。</li>
       </ol>
+      <details style="margin: 1em 0;">
+        <summary style="cursor: pointer;">解答</summary>
+        <div>
+          <ol>
+            <li>有限母集団から非復元抽出を行うと、抽出された標本同士が独立でなくなるため、標本平均のばらつきは無限母集団や復元抽出の場合より小さくなる。 有限母集団補正とは、この「母集団が有限であること」により生じる分散の減少を反映するための補正である。</li>
+            <li>
+              <p>非復元抽出における標本平均<math><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><mi>𝑋</mi></mstyle></math>の分散は</p>
+              <math display="block">
+                <mtext>Var</mtext>
+                <mrow>
+                  <mo>(</mo>
+                  <mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;">
+                    <mi>𝑋</mi>
+                  </mstyle>
+                  <mo>)</mo>
+                </mrow>
+                <mo>=</mo>
+                <mfrac>
+                  <msup>
+                    <mi>𝜎</mi>
+                    <mn>2</mn>
+                  </msup>
+                  <mi>𝑛</mi>
+                </mfrac>
+                <mfrac>
+                  <mrow>
+                    <mi>𝑁</mi>
+                    <mo>−</mo>
+                    <mi>𝑛</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>𝑁</mi>
+                    <mo>−</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </mfrac>
+              </math>
+              <p>であるから、有限母集団補正係数は</p>
+              <math display="block">
+                <mfrac>
+                  <mrow>
+                    <mi>𝑁</mi>
+                    <mo>−</mo>
+                    <mi>𝑛</mi>
+                  </mrow>
+                  <mrow>
+                    <mi>𝑁</mi>
+                    <mo>−</mo>
+                    <mn>1</mn>
+                  </mrow>
+                </mfrac>
+              </math>
+              <p>である。</p>
+              <ol>
+                <li>補正係数は、標本抽出率<math><mi displaystyle="true">𝑓</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mi>𝑛</mi><mi>𝑁</mi></mfrac></math>が小さい場合はほとんど影響ないため、<math><mi displaystyle="true">𝑓</mi><mo displaystyle="true">≤</mo><mn displaystyle="true">5</mn><mi displaystyle="true">%</mi></math>ならば補正を行わなくてよいという考え方が通説である。 例えば、10000人から5人を選出する場合はその選出が被ることは少ないため、補正を行わなくてもほとんど影響がないと考えられる。</li>
+              </ol>
+            </li>
+          </ol>
+        </div>
+      </details>
       <nav style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1em; margin: 2em;"><a href="../data-statistics"><code>./first</code></a><a href="../moment-generating-function"><code>./prev</code></a><a href="../../"><code>../</code></a><a href="../test"><code>./next</code></a><a href="../test"><code>./last</code></a></nav>
     </main>
   </body>

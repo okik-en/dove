@@ -14,18 +14,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans+Math&amp;family=Noto+Sans+Mono:wght@100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
     <style>
-      body { font-family: 'Noto Sans', 'Noto Emoji', sans-serif; }
-      math { font-family: 'Noto Sans Math', 'Noto Emoji', math; padding: 1pt; }
-      code { font-family: 'Noto Sans Mono', 'Noto Emoji', monospace; }
-      math, pre { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
-      a { text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid; } 
-      li p:first-child { display: inline; }
-      ol { list-style-type: none; counter-reset: dec; }
-      ol > li { counter-increment: dec; }
-      ol > li:before { content: '(' counter(dec, decimal) ') '; }
-      ol ol { list-style-type: none; counter-reset: llt; }
-      ol ol > li { counter-increment: llt; }
-      ol ol > li:before { content: '(' counter(dec, decimal) '-' counter(llt, lower-latin) ') '; }
+      body{font-family: 'Noto Sans', 'Noto Emoji', sans-serif;}
+      math{font-family: 'Noto Sans Math', 'Noto Emoji', math; padding: 1pt;}
+      code{font-family: 'Noto Sans Mono', 'Noto Emoji', monospace;}
+      math, pre{overflow-x: auto; overflow-y: hidden; max-width: 100%;}
+      a{text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid;}
+      li p:first-child{display: inline;}
+      ol{list-style-type: none; counter-reset: dec;}
+      ol > li{counter-increment: dec;}
+      ol > li:before{content: '(' counter(dec, decimal) ') ';}
+      ol ol{list-style-type: none; counter-reset: llt;}
+      ol ol > li{counter-increment: llt;}
+      ol ol > li:before{content: '(' counter(dec, decimal) '-' counter(llt, lower-latin) ') ';}
     </style>
     <style>
       /* Alignment */
@@ -116,25 +116,25 @@
         <li>優位水準と棄却域の設定</li>
         <li>帰無仮説の棄却・選択</li>
       </ol>
-      <h2>7.1. 検定</h2>
-      <p>出題：2022年 春期末、2023年 春期末 教科書：pp. 227 - 231</p>
+      <h2 id="1" style="display: flex; justify-content: space-between; align-items: center;"><span>7.1.検定</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[検定]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/test#1'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 春期末、2023年 春期末</span><span>教科書：pp. 227 - 231</span></small></p>
       <p>仮説検定では、まず仮説を設定し、データを集計する。 仮説が正しいものであるとしたら、 (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>1<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) にそのデータが集まるのはどのくらいの確率なのかを計算する。 計算した確率が、有意水準である基準の確率に対して (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>2<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) であれば、仮説の正しさは疑わしくなるので、 仮説を (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>3<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) して、最初の仮説とは (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>4<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) の考えを正しいものと判断する。 有意水準を<math><mn displaystyle="true">5</mn><mi displaystyle="true">%</mi></math>として仮説検定をすると、仮説を (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>3<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) 、つまり仮説は正しくないと判断したときに、 その判断は<math><mn displaystyle="true">5</mn><mi displaystyle="true">%</mi></math>の確率で (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>5<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) となる。 仮に仮説がほんとうに正しいものであった場合に、仮説とは合わないようなデータが (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>1<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) に集まることもある。 そのような (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>1<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) が起こった可能性もあるわけで、 誤った判断をしてしまうという意味で有意水準のことを、 (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>6<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) とも言う。 このため、検定とは、 (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>6<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) を伴う (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>7<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) 法とも呼ぶ。 したがって、次の２種の誤りを起こす可能性がある。</p>
       <ul>
         <li>第一種の誤り： (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>8: 文章で説明せよ<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>)</li>
         <li>第二種の誤り： (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>9: 文章で説明せよ<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>)</li>
       </ul>
-      <h2>7.2. 検定の考え方</h2>
-      <p>出題：2022年 夏期末 教科書：pp. 227 - 234</p>
+      <h2 id="2" style="display: flex; justify-content: space-between; align-items: center;"><span>7.2.検定の考え方</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[検定の考え方]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/test#2'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏期末</span><span>教科書：pp. 227 - 234</span></small></p>
       <p>ある不思議な「瘦せる」健康法がある。 帰無仮説を「この健康法に体重を減少させる効果がない」、 対立仮説を「この健康法には体重を減少させる効果がある」と設定し、 検定を行ったところ有意となった。 次のような条件の下で、あなたがこの健康法を試したらどのようなことが起こるかを述べよ。</p>
       <ol>
         <li>検定が第一種の過誤によって間違えていた場合</li>
         <li>検定が正しかった場合</li>
       </ol>
-      <h2>7.3. 平均の検定</h2>
-      <p>出題：2023年 夏期末 教科書：pp. 2235 - 236</p>
+      <h2 id="3" style="display: flex; justify-content: space-between; align-items: center;"><span>7.3.平均の検定</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[平均の検定]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/test#3'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 夏期末</span><span>教科書：pp. 2235 - 236</span></small></p>
       <p>ある会社が製造する蛍光灯の平均寿命は8000時間であると宣伝している。 この会社の蛍光灯をいろいろな店から無造作に25本購入し測定した結果、その平均寿命は7700時間であった。 この会社の宣伝は正しいと言えるか、を有意水準5%で検定しなさい。 ただし、この会社が製造する蛍光灯の寿命は、標準偏差が640時間の正規分布に従うものとする。</p>
-      <h2>7.4. 平均の検定</h2>
-      <p>出題：2023年 夏期末 教科書：pp. 238 - 240</p>
+      <h2 id="4" style="display: flex; justify-content: space-between; align-items: center;"><span>7.4.平均の検定</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[平均の検定]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/test#4'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 夏期末</span><span>教科書：pp. 238 - 240</span></small></p>
       <p>伊都さんは、T大理工学部を目指して受験勉強している。 過去のデータから、合格するためには、S社の模擬試験で平均365点以上の得点が必要という情報がある。 伊都さんの今年6回の模擬試験の成績は</p>
       <math display="block">
         <mn>330</mn>
@@ -155,8 +155,8 @@
         <mn>365</mn>
       </math>
       <p>であった。伊都さんの合格の可能性を議論せよ。 ただし、模擬試験の成績は正規分布に従うとし、有意水準5%での検定を行いなさい。</p>
-      <h2>7.5. 平均の検定</h2>
-      <p>出題：2025年 夏期末 教科書：pp. 238 - 240</p>
+      <h2 id="5" style="display: flex; justify-content: space-between; align-items: center;"><span>7.5.平均の検定</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[平均の検定]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/test#5'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 夏期末</span><span>教科書：pp. 238 - 240</span></small></p>
       <p>伊都さんは、T大理工学部を目指して受験勉強している。 過去のデータから、合格するためには、S社の模擬試験で平均360点以上の得点が必要という情報がある。 伊都さんの今年6回の模擬試験の成績は</p>
       <math display="block">
         <mn>350</mn>
@@ -181,8 +181,8 @@
         <li>有意水準10%で検定せよ。</li>
         <li>さらに有意水準5%でも検定せよ。</li>
       </ol>
-      <h2>7.6. 平均の検定</h2>
-      <p>出題：2023年 夏中間、2024年 春期末、2024年 夏中間、2025年 夏中間 教科書：pp. 235 - 236</p>
+      <h2 id="6" style="display: flex; justify-content: space-between; align-items: center;"><span>7.6.平均の検定</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[平均の検定]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/test#6'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 夏中間、2024年 春期末、2024年 夏中間、2025年 夏中間</span><span>教科書：pp. 235 - 236</span></small></p>
       <ol>
         <li>
           <p>平均<math><mi displaystyle="true">𝜇</mi></math>が未知である正規分布<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝜇</mi><mo>,</mo><mn>49</mn></mrow><mo>)</mo></mrow></math>に従う49個の無作為標本を抽出し、 帰無仮説<math><msub displaystyle="true"><mi>𝐻</mi><mn>0</mn></msub><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em" displaystyle="true">:</mo><mi displaystyle="true">𝜇</mi><mo displaystyle="true">=</mo><mn displaystyle="true">4</mn></math>, 対立仮説<math><msub displaystyle="true"><mi>𝐻</mi><mn>1</mn></msub><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em" displaystyle="true">:</mo><mi displaystyle="true">𝜇</mi><mo displaystyle="true">></mo><mn displaystyle="true">4</mn></math>として検定することを考える。 この時、平均の真の値を<math><mi displaystyle="true">𝑚</mi></math>として、次の問いに答えよ。</p>
@@ -193,27 +193,27 @@
         </li>
         <li>上記と似た設定であるが、 対立仮説<math><msub displaystyle="true"><mi>𝐻</mi><mn>1</mn></msub><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em" displaystyle="true">:</mo><mi displaystyle="true">𝜇</mi><mo displaystyle="true">=</mo><mn displaystyle="true">5</mn></math>に対して、有意水準を0.05とする。 第<math><mn displaystyle="true">2</mn></math>種の誤りを犯す確率を0.2、あるいは0.1以下にしたい場合は、 それぞれ標本サイズをどの程度に設定する必要があるか？</li>
       </ol>
-      <h2>7.7. 等平均の検定</h2>
-      <p>出題：2022年 夏期末 教科書：pp. 241 - 242</p>
+      <h2 id="7" style="display: flex; justify-content: space-between; align-items: center;"><span>7.7.等平均の検定</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[等平均の検定]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/test#7'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏期末</span><span>教科書：pp. 241 - 242</span></small></p>
       <ol>
         <li>2リットルのペットボトルに飲料水を入れる機械がAとBの2種類ある。 この機械で入れたペットボトルをそれぞれ10本、12本ずつ無造作に取り出して調べたところ、 機械Aでは平均2.04リットル、標本標準偏差は0.03リットルであり、 機械Bでは平均2.02リットル、標本標準偏差は0.02リットルであった。 2種類の機械のペットボトルの飲料水充填量に差があるといえるかどうかを、危険率5%で検定せよ。 ただし、充填量は正規分布に従い、2つの母集団の分布は等しいとする。</li>
         <li>さらに、機械Aの充填量は、機械Bの充填量よりも多いといえるかどうかを、有意水準5%で検定せよ。</li>
       </ol>
-      <h2>7.8. 等平均の検定</h2>
-      <p>出題：2022年 春期末 教科書：pp. 241 - 242</p>
+      <h2 id="8" style="display: flex; justify-content: space-between; align-items: center;"><span>7.8.等平均の検定</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[等平均の検定]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/test#8'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 春期末</span><span>教科書：pp. 241 - 242</span></small></p>
       <p>ある学校の生徒100名が全国統計学テストを受験し、その平均点が70点であった。 一方、全国平均点は68点で、標準偏差は15点であった。 この時、この学校の生徒の数学の平均点は、全国平均点よりも良いといえるかどうかを、有意水準5%で検定せよ。</p>
-      <h2>7.9. 母比率の検定</h2>
-      <p>出題：2024年 夏期末 教科書：pp. 252 - 253</p>
+      <h2 id="9" style="display: flex; justify-content: space-between; align-items: center;"><span>7.9.母比率の検定</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[母比率の検定]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/test#9'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 夏期末</span><span>教科書：pp. 252 - 253</span></small></p>
       <p>ある店のくじ引きでは、3本に1本当たりが入っているという。</p>
       <ol>
         <li>この店で、Aさんは10回連続でくじを引いたが、一回も当たらなかった。 そこでAさんは、“3本に1本当たりが入っている”というのは嘘だと思った。 このAさんの推測は、正しいと言えるだろうか、有意水準5%で検定せよ。</li>
         <li>10回中7回当たった場合は、“3本に1本より多くの当たりが入っている”と思って良いか？を論じさない。</li>
       </ol>
-      <h2>7.10. 母比率の検定</h2>
-      <p>出題：2024年 春期末 教科書：pp. 252 - 253</p>
+      <h2 id="10" style="display: flex; justify-content: space-between; align-items: center;"><span>7.10.母比率の検定</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[母比率の検定]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/test#10'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 春期末</span><span>教科書：pp. 252 - 253</span></small></p>
       <p>硬貨を5回投げて、表が1回出た時、この硬貨は表が出にくいと言えるか、有意水準5%で検定せよ。</p>
-      <h2>7.11. 母比率の平均</h2>
-      <p>出題：2023年 夏中間 教科書：pp. 252 - 253</p>
+      <h2 id="11" style="display: flex; justify-content: space-between; align-items: center;"><span>7.11.母比率の平均</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[母比率の平均]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/test#11'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 夏中間</span><span>教科書：pp. 252 - 253</span></small></p>
       <p>コインを10回投げ、表が出た回数を<math><mi displaystyle="true">𝑋</mi></math>とする。 このコインについて、表の出る確率を<math><mi displaystyle="true">𝑝</mi></math>として、帰無仮説を<math><msub displaystyle="true"><mi>𝐻</mi><mn>0</mn></msub><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em" displaystyle="true">:</mo><mi displaystyle="true">𝑝</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>1</mn><mn>2</mn></mfrac></math>とする。 <math><msub displaystyle="true"><mi>𝐻</mi><mn>0</mn></msub></math>が正しいと仮定する時、</p>
       <ol>
         <li><math><mi displaystyle="true">𝑋</mi></math>の確率分布表を与えなさい。</li>
@@ -225,8 +225,8 @@
           </ol>
         </li>
       </ol>
-      <h2>7.12. 母比率の検定</h2>
-      <p>出題：2023年 春期末 教科書：pp. 252 - 253</p>
+      <h2 id="12" style="display: flex; justify-content: space-between; align-items: center;"><span>7.12.母比率の検定</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[母比率の検定]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/test#12'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 春期末</span><span>教科書：pp. 252 - 253</span></small></p>
       <p>あるコインに偏りがあるかどうかを知るために、このコインを5回投げる試行を考える。 コインを1回投げた際に表の出る確率を<math><mi displaystyle="true">𝑝</mi></math>とする。</p>
       <ol>
         <li>
@@ -244,14 +244,14 @@
           </ol>
         </li>
       </ol>
-      <h2>7.13. 第2種誤り確率</h2>
+      <h2 id="13" style="display: flex; justify-content: space-between; align-items: center;"><span>7.13.第2種誤り確率</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[第2種誤り確率]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/test#13'});"><code>#</code></a></h2>
       <p>コインを256回投げたところ、表が116回出た。 このコインが公平かどうかを有意水準5%の仮説検定によって判定したい.</p>
       <ol>
         <li>「第2種誤り確率」の定義を述べて、その基本的な性質を上の問題に即して説明せよ。</li>
         <li>第2種誤り確率が10%以下になるような状況はどのような場合であるか議論せよ。</li>
       </ol>
-      <h2>7.14. 母比率の検定</h2>
-      <p>出題：2023年 夏期末、2025年 夏中間 教科書：pp. 252 - 253</p>
+      <h2 id="14" style="display: flex; justify-content: space-between; align-items: center;"><span>7.14.母比率の検定</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[母比率の検定]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/test#14'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 夏期末、2025年 夏中間</span><span>教科書：pp. 252 - 253</span></small></p>
       <p>表が出る確率が<math><mi displaystyle="true">𝑝</mi></math>であるコインがある、ただし、<math><mn displaystyle="true">0</mn><mo displaystyle="true">&lt;</mo><mi displaystyle="true">𝑝</mi><mo displaystyle="true">&lt;</mo><mn displaystyle="true">1</mn></math>とする。 このコインに関して、帰無仮説<math><msub displaystyle="true"><mi>𝐻</mi><mn>0</mn></msub><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em" displaystyle="true">:</mo><mi displaystyle="true">𝑝</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>1</mn><mn>2</mn></mfrac></math>を次のように検定する： “ コインを3回投げ、3回続けて表が出る、あるいは3回続けて裏が出る時には<math><msub displaystyle="true"><mi>𝐻</mi><mn>0</mn></msub></math>を棄却し、 その他の場合は<math><msub displaystyle="true"><mi>𝐻</mi><mn>0</mn></msub></math>を棄却しない。 ”</p>
       <p>この時、次の問いに答えよ。</p>
       <ol>
@@ -259,8 +259,8 @@
         <li>この場合の第2種の誤りを述べよ。また、この第2種の誤りを犯す確率を与えなさい。</li>
         <li>第2種の誤りを犯す確率が<math><mfrac displaystyle="true"><mn>1</mn><mn>3</mn></mfrac></math>未満になるような<math><mi displaystyle="true">𝑝</mi></math>の範囲を求めなさい。</li>
       </ol>
-      <h2>7.15. 母比率の検定</h2>
-      <p>出題：2024年 夏期末 教科書：pp. 252 - 253</p>
+      <h2 id="15" style="display: flex; justify-content: space-between; align-items: center;"><span>7.15.母比率の検定</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[母比率の検定]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/test#15'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 夏期末</span><span>教科書：pp. 252 - 253</span></small></p>
       <p>3種類の品物A、B、Cがある。 Aを3個、Bを2個、Cを1個任意に選んで1つにまとめて1個の商品とする。 次の問いに答えよ。</p>
       <ol>
         <li>「Aには、A 全体の<math><mfrac displaystyle="true"><mn>1</mn><mn>16</mn></mfrac></math>の不良品が含まれ、Bには、B全体の<math><mfrac displaystyle="true"><mn>1</mn><mn>9</mn></mfrac></math>、 Cには、C全体の<math><mfrac displaystyle="true"><mn>1</mn><mn>25</mn></mfrac></math>の不良品が含まれている。」という仮説のもとで、 全商品の中から、無作為に1個の商品を取り出したとき、それが完全な商品である確率を求めよ。 ここで、完全な商品とは不良品が全く含まれていない商品のことである。</li>

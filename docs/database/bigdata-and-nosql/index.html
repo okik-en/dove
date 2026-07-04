@@ -14,26 +14,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@300..700&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans+Math&amp;family=Noto+Sans+Mono:wght@100..900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.simplecss.org/simple.css">
     <style>
-      body { font-family: 'Noto Sans', 'Noto Emoji', sans-serif; }
-      math { font-family: 'Noto Sans Math', 'Noto Emoji', math; padding: 1pt; }
-      code { font-family: 'Noto Sans Mono', 'Noto Emoji', monospace; }
-      math, pre { overflow-x: auto; overflow-y: hidden; max-width: 100%; }
-      a { text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid; } 
-      li p:first-child { display: inline; }
-      ol { list-style-type: none; counter-reset: dec; }
-      ol > li { counter-increment: dec; }
-      ol > li:before { content: '(' counter(dec, decimal) ') '; }
-      ol ol { list-style-type: none; counter-reset: llt; }
-      ol ol > li { counter-increment: llt; }
-      ol ol > li:before { content: '(' counter(dec, decimal) '-' counter(llt, lower-latin) ') '; }
+      body{font-family: 'Noto Sans', 'Noto Emoji', sans-serif;}
+      math{font-family: 'Noto Sans Math', 'Noto Emoji', math; padding: 1pt;}
+      code{font-family: 'Noto Sans Mono', 'Noto Emoji', monospace;}
+      math, pre{overflow-x: auto; overflow-y: hidden; max-width: 100%;}
+      a{text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid;}
+      li p:first-child{display: inline;}
+      ol{list-style-type: none; counter-reset: dec;}
+      ol > li{counter-increment: dec;}
+      ol > li:before{content: '(' counter(dec, decimal) ') ';}
+      ol ol{list-style-type: none; counter-reset: llt;}
+      ol ol > li{counter-increment: llt;}
+      ol ol > li:before{content: '(' counter(dec, decimal) '-' counter(llt, lower-latin) ') ';}
     </style>
   </head>
   <body>
     <main>
       <h1>11. ビッグデータとNoSQL</h1>
       <nav style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1em; margin: 2em;"><a href="../about-database"><code>./first</code></a><a href="../parallel-execution-protocol"><code>./prev</code></a><a href="../../"><code>../</code></a><span><code>-</code></span><span><code>-</code></span></nav>
-      <h2>11.1. ビッグデータの定義</h2>
-      <p>出題：2022年 夏中間、2023年 夏期末、2024年 夏期末、2025年 夏期末 教科書：pp. 177 - 178</p>
+      <h2 id="1" style="display: flex; justify-content: space-between; align-items: center;"><span>11.1.ビッグデータの定義</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ビッグデータの定義]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#1'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏中間、2023年 夏期末、2024年 夏期末、2025年 夏期末</span><span>教科書：pp. 177 - 178</span></small></p>
       <ol>
         <li>ビッグデータの定義で広く受け入れられているVで始まる概念3つに関して、 それぞれの英単語とその意味を説明しなさい。</li>
         <li>さらに、教科書では出ていなかったもう二つのVも説明しなさい。 <strong><strong>3Vとの関係も図示すること。</strong></strong></li>
@@ -41,23 +41,23 @@
         <li>ビッグデータの反対語は (<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>1<span style="white-space: pre-wrap">&#x20;&#x20;&#x20;&#x20;&#x20;</span>) と呼ばれる。</li>
         <li>この研究分野の特徴を、簡単に説明すること。</li>
       </ol>
-      <h2>11.2. ビッグデータの本質</h2>
-      <p>出題：2022年 夏期末、2024年 夏期末 教科書：pp. 177 - 180</p>
+      <h2 id="2" style="display: flex; justify-content: space-between; align-items: center;"><span>11.2.ビッグデータの本質</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ビッグデータの本質]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#2'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏期末、2024年 夏期末</span><span>教科書：pp. 177 - 180</span></small></p>
       <p>ビッグデータの本質として、我々の意識に3つの大きな変化を与え、 ビジネスや社会にパラダイムシフトを起こすことである、と教科書は紹介している。 この3つを、以下に回答することで、具体的に説明しなさい。</p>
       <ol>
         <li>ビッグデータでは、どのような範囲のデータを扱うか？</li>
         <li>ビッグデータでは、どのような性質のデータを扱うか？</li>
         <li>ビッグデータにより変わる価値観とは何か？</li>
       </ol>
-      <h2>11.3. キー・バリューストア</h2>
-      <p>出題：2023年 夏期末 教科書：pp. 180 - 181</p>
+      <h2 id="3" style="display: flex; justify-content: space-between; align-items: center;"><span>11.3.キー・バリューストア</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[キー・バリューストア]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#3'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 夏期末</span><span>教科書：pp. 180 - 181</span></small></p>
       <p>ビッグデータの処理で使われるキーバリューストアの説明として、適切なものはどれか。</p>
       <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;">
         <legend>選択肢</legend>
         <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="1" disabled><b style="display: block;">ア</b><div style="overflow-x: auto;">「ノード」、「リレーションシップ」、「プロパティ」の3要素によってノード間の関係性を表現する。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="1" disabled><b style="display: block;">イ</b><div style="overflow-x: auto;">1件分のデータを「ドキュメント」と呼び、個々のドキュメントのデータ構造は自由であって、 データを追加する都度変えることができる。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="1" disabled><b style="display: block;">ウ</b><div style="overflow-x: auto;">集合論に基づいて、行と列からなる2次元の表で表現する。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="3" name="1" disabled><b style="display: block;">エ</b><div style="overflow-x: auto;">任意の保存したいデータと、そのデータを一意に識別できる値を組みとして保存する。</div></label>
       </fieldset>
-      <h2>11.4. NoSQLと分散DB</h2>
-      <p>出題：2024年 夏期末 教科書：pp. 180 - 183</p>
+      <h2 id="4" style="display: flex; justify-content: space-between; align-items: center;"><span>11.4.NoSQLと分散DB</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[NoSQLと分散DB]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#4'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 夏期末</span><span>教科書：pp. 180 - 183</span></small></p>
       <ol>
         <li>Amazonの開発したDynamoが採用しているNoSQLデータモデルは何か、 その名前（英語名も含む）と構造・機能を、図も使って説明しなさい。</li>
         <li>GoogleのBigtableのNoSQLデータモデルは何か、 その名前（英語名も含む）と構造・機能を図も使って説明しなさい。</li>
@@ -66,8 +66,8 @@
         <li>共有データシステムとは何か、図を交えて説明しなさい。</li>
         <li>AmazonのDynamo、GoogleのBigtableが選択した共通データシステム、それぞれを説明しなさい。</li>
       </ol>
-      <h2>11.5. CAP定理</h2>
-      <p>出題：2022年 夏中間、2023年 夏期末、2024年 夏期末 教科書：pp. 183 - 188</p>
+      <h2 id="5" style="display: flex; justify-content: space-between; align-items: center;"><span>11.5.CAP定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[CAP定理]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#5'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏中間、2023年 夏期末、2024年 夏期末</span><span>教科書：pp. 183 - 188</span></small></p>
       <p>BrewerのCAP定理に関して</p>
       <ol>
         <li>CAPの“C”、“A”、“P”とはそれぞれ何ですか?</li>
@@ -75,8 +75,8 @@
         <li>BASE特性のBASEとは、何の英語の略ですか、またその特性の意味を説明しなさい。</li>
         <li>NoSQLにおけるCAP定理の扱いを、BASE特性を使って説明しなさい。</li>
       </ol>
-      <h2>11.6. NoSQL</h2>
-      <p>出題：2025年 夏期末 </p>
+      <h2 id="6" style="display: flex; justify-content: space-between; align-items: center;"><span>11.6.NoSQL</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[NoSQL]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#6'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 夏期末</span><span></span></small></p>
       <ol>
         <li>BASE特性での“BA”、“S”、“E”が何を意味するのか、元英語と和文を与えよ。</li>
         <li>BASE特性を説明しなさい。</li>
@@ -88,29 +88,29 @@
           </ol>
         </li>
       </ol>
-      <h2>11.7. 相関関係の発見</h2>
-      <p>出題：2022年 夏期末 教科書：p. 188</p>
+      <h2 id="7" style="display: flex; justify-content: space-between; align-items: center;"><span>11.7.相関関係の発見</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[相関関係の発見]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#7'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏期末</span><span>教科書：p. 188</span></small></p>
       <p>ビッグデータの活用例として，大量のデータから統計学的手法などを用いて新たな知識（傾向やパターン） を見つけ出すプロセスはどれか。</p>
       <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;">
         <legend>選択肢</legend>
         <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="2" disabled><b style="display: block;">ア</b><div style="overflow-x: auto;">データウェアハウス</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="2" disabled><b style="display: block;">イ</b><div style="overflow-x: auto;">データディクショナリ</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="2" disabled><b style="display: block;">ウ</b><div style="overflow-x: auto;">データマイニング</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="3" name="2" disabled><b style="display: block;">エ</b><div style="overflow-x: auto;">メタデータ</div></label>
       </fieldset>
-      <h2>11.8. データレイク</h2>
-      <p>出題：2022年 夏期末 </p>
+      <h2 id="8" style="display: flex; justify-content: space-between; align-items: center;"><span>11.8.データレイク</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[データレイク]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#8'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏期末</span><span></span></small></p>
       <p>ビッグデータのデータ貯蔵場所であるデータレイクの特徴として，適切なものはどれか。</p>
       <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;">
         <legend>選択肢</legend>
         <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="3" disabled><b style="display: block;">ア</b><div style="overflow-x: auto;">あらゆるデータをそのままの形式や構造で格納しておく。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="3" disabled><b style="display: block;">イ</b><div style="overflow-x: auto;">データ量を抑えるために，データの記述情報であるメタデータは格納しない。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="3" disabled><b style="display: block;">ウ</b><div style="overflow-x: auto;">データを格納する前にデータ利用方法を設計し，それに沿ってスキーマをあらかじめ定義しておく。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="3" name="3" disabled><b style="display: block;">エ</b><div style="overflow-x: auto;">テキストファイルやバイナリデータなど，格納するデータの形式に応じてリポジトリを使い分ける。</div></label>
       </fieldset>
-      <h2>11.9. データウェアハウス</h2>
-      <p>出題：2023年 夏期末 </p>
+      <h2 id="9" style="display: flex; justify-content: space-between; align-items: center;"><span>11.9.データウェアハウス</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[データウェアハウス]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#9'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 夏期末</span><span></span></small></p>
       <p>データベースに蓄積されたデータを有効活用するためにデータウェアハウスの構築が求められている。 データウェアハウスの構築、運用あるいはデータ分析手法などに関する記述として、最も適切なものはどれか。</p>
       <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;">
         <legend>選択肢</legend>
         <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="4" disabled><b style="display: block;">ア</b><div style="overflow-x: auto;">BI（Business Intelligence）ツールとは、人工知能のアルゴリズムを開発するソフトウェアをいう。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="4" disabled><b style="display: block;">イ</b><div style="overflow-x: auto;">ETL（Extract/Transform/Load）とは、時系列処理のデータ変換を行うアルゴリズムをいい、 将来の販売動向のシミュレーションなどを行うことができる。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="4" disabled><b style="display: block;">ウ</b><div style="overflow-x: auto;">大量かつ多様な形式のデータを処理するデータベースで、 RDBとは異なるデータ構造を扱うものにNoSQLデータベースがある。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="3" name="4" disabled><b style="display: block;">エ</b><div style="overflow-x: auto;">データマイニングとは、データの特性に応じてRDBのスキーマ定義を最適化することをいう。</div></label>
       </fieldset>
-      <h2>11.10. DWH</h2>
-      <p>出題：2024年 夏期末 </p>
+      <h2 id="10" style="display: flex; justify-content: space-between; align-items: center;"><span>11.10.DWH</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[DWH]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#10'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 夏期末</span><span></span></small></p>
       <ol>
         <li>{仮想データベース・データウエアハウス・データレイク・データハブ・データマート}の関係と違いを データベースを基本に説明しさない。図表を作図して説明すること。</li>
         <li>DWHの父Bill Inmonのアプローチである主題思考（subject-oriented）を説明しなさい。</li>

@@ -149,19 +149,21 @@
       html.link(rel: "stylesheet", href: "https://cdn.simplecss.org/simple.css")
       html.style(
         (
-          "body { font-family: 'Noto Sans', 'Noto Emoji', sans-serif; }",
-          "math { font-family: 'Noto Sans Math', 'Noto Emoji', math; padding: 1pt; }",
-          "code { font-family: 'Noto Sans Mono', 'Noto Emoji', monospace; }",
-          "math, pre { overflow-x: auto; overflow-y: hidden; max-width: 100%; }",
-          "a { text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid; } ",
-          "li p:first-child { display: inline; }",
-          "ol { list-style-type: none; counter-reset: dec; }",
-          "ol > li { counter-increment: dec; }",
-          "ol > li:before { content: '(' counter(dec, decimal) ') '; }",
-          "ol ol { list-style-type: none; counter-reset: llt; }",
-          "ol ol > li { counter-increment: llt; }",
-          "ol ol > li:before { content: '(' counter(dec, decimal) '-' counter(llt, lower-latin) ') '; }",
-        ).join("\n"),
+          ("body", (font-family: "'Noto Sans', 'Noto Emoji', sans-serif")),
+          ("math", (font-family: "'Noto Sans Math', 'Noto Emoji', math", padding: "1pt")),
+          ("code", (font-family: "'Noto Sans Mono', 'Noto Emoji', monospace")),
+          ("math, pre", (overflow-x: "auto", overflow-y: "hidden", max-width: "100%")),
+          ("a", (text-decoration: "none", display: "inline-block", border-bottom: "1pt currentColor solid")),
+          ("li p:first-child", (display: "inline")),
+          ("ol", (list-style-type: "none", counter-reset: "dec")),
+          ("ol > li", (counter-increment: "dec")),
+          ("ol > li:before", (content: "'(' counter(dec, decimal) ') '")),
+          ("ol ol", (list-style-type: "none", counter-reset: "llt")),
+          ("ol ol > li", (counter-increment: "llt")),
+          ("ol ol > li:before", (content: "'(' counter(dec, decimal) '-' counter(llt, lower-latin) ') '")),
+        )
+          .map(((selector, rules)) => selector + "{" + styled(..rules) + "}")
+          .join("\n"),
       )
     })
     // <body> ~ </body>

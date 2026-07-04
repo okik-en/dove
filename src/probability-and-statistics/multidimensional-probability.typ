@@ -1,7 +1,5 @@
 #import "/style/utils.typ": *
 
-= 多次元確率分布
-
 == 同時確率分布
 
 #data((2024, 1), p: 107)

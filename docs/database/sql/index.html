@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SQL</title>
-    <meta property="og:title" content="ontext(">
+    <title>4. SQL</title>
+    <meta property="og:title" content="4. SQL">
     <meta property="og:image" content="https://raw.githubusercontent.com/okik-en/mathematical-documents/master/okik-en.png">
     <meta property="og:type" content="article">
-    <meta property="og:site_name" content="dove">
+    <meta property="og:site_name" content="dove-ks 打倒">
     <meta property="og:locale" content="ja_JP">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -25,7 +25,7 @@
       ol > li:before{content: '(' counter(dec, decimal) ') ';}
       ol ol{list-style-type: none; counter-reset: llt;}
       ol ol > li{counter-increment: llt;}
-      ol ol > li:before{content: '(' counter(dec, decimal) '-' counter(llt, lower-latin) ') ';}
+      ol ol > li:before{content: '(' counter(llt, lower-latin) ') ';}
     </style>
     <style>
       /* Alignment */
@@ -109,13 +109,13 @@
     <main>
       <h1>4. SQL</h1>
       <nav style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1em; margin: 2em;"><a href="../about-database"><code>./first</code></a><a href="../operation-description"><code>./prev</code></a><a href="../../"><code>../</code></a><a href="../relational-database-design"><code>./next</code></a><a href="../bigdata-and-nosql"><code>./last</code></a></nav>
-      <h2 id="1" style="display: flex; justify-content: space-between; align-items: center;"><span>4.1.完備性</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[完備性]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/sql#1'});"><code>#</code></a></h2>
+      <h2 id="1" style="display: flex; justify-content: space-between; align-items: center;"><span>4.1.完備性</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[完備性]', text: '[完備性]', url: 'https://okik-en.github.io/dove/database/sql#1'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 春中間</span><span></span></small></p>
       <ol>
         <li>SQLはリレーショナル完備という意味を説明しなさい。</li>
         <li>SQLが計算完備でないことの障害を、具体的に説明しなさい。</li>
       </ol>
-      <h2 id="2" style="display: flex; justify-content: space-between; align-items: center;"><span>4.2.SQL文</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[SQL文]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/sql#2'});"><code>#</code></a></h2>
+      <h2 id="2" style="display: flex; justify-content: space-between; align-items: center;"><span>4.2.SQL文</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[SQL文]', text: '[SQL文]', url: 'https://okik-en.github.io/dove/database/sql#2'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 春中間、2023年 春中間、2025年 春中間</span><span>教科書：pp. 48 - 55</span></small></p>
       <p>“得点”表から、学生ごとに全科目の点数の平均を算出し、 平均が<math><mn displaystyle="true">80</mn></math>点以上の学生の学生番号とその平均点を求める。 <code>{ a }</code>に入れる適切な字句はどれか。 ここで、<span style="text-decoration: underline">実線の下線</span>は主キーを表す。</p>
       <math display="block">
@@ -146,7 +146,7 @@
         <legend>選択肢</legend>
         <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="1" disabled><b style="display: block;">ア</b><div style="overflow-x: auto;"><code>科目 HAVING AVG(点数) >= 80</code></div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="1" disabled><b style="display: block;">イ</b><div style="overflow-x: auto;"><code>科目 WHERE 点数 >= 80</code></div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="1" checked disabled><b style="display: block;">ウ</b><div style="overflow-x: auto;"><code>学生番号 HAVING AVG(点数) >= 80</code></div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="3" name="1" disabled><b style="display: block;">エ</b><div style="overflow-x: auto;"><code>学生番号 WHERE 点数 >= 80</code></div></label>
       </fieldset>
-      <h2 id="3" style="display: flex; justify-content: space-between; align-items: center;"><span>4.3.GROUP BY</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[GROUP BY]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/sql#3'});"><code>#</code></a></h2>
+      <h2 id="3" style="display: flex; justify-content: space-between; align-items: center;"><span>4.3.GROUP BY</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[GROUP BY]', text: '[GROUP BY]', url: 'https://okik-en.github.io/dove/database/sql#3'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2026年 春中間</span><span></span></small></p>
       <p>次の関係がある：</p>
       <math display="block">
@@ -169,7 +169,7 @@
         <li>上記のSQLについて、<code>GROUP BY</code>は何を意味しているか、なぜ<code>WHERE</code>ではなく<code>HAVING</code>を用いるのか、説明しなさい。 単なる用語の説明ではなく、本問に即して説明すること。</li>
         <li>上記のSQLにおいて、もし<code>HAVING</code>の代わりに<code>WHERE</code>を用いた場合、どのような問題が生じるか なぜその問題が起きるのかを説明しなさい。</li>
       </ol>
-      <h2 id="4" style="display: flex; justify-content: space-between; align-items: center;"><span>4.4.リレーショナル代数との関係</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[リレーショナル代数との関係]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/sql#4'});"><code>#</code></a></h2>
+      <h2 id="4" style="display: flex; justify-content: space-between; align-items: center;"><span>4.4.リレーショナル代数との関係</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[リレーショナル代数との関係]', text: '[リレーショナル代数との関係]', url: 'https://okik-en.github.io/dove/database/sql#4'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 春中間</span><span>教科書：pp. 48 - 55</span></small></p>
       <p>列<code>A1</code>〜<code>A5</code>から成る<code>R</code>表に対する次のSQL文</p>
       <figure>
@@ -178,7 +178,7 @@
         <figcaption>コード 2: SQL文</figcaption>
       </figure>
       <p>に対応する関係代数の演算の組み合わせを与えなさい。</p>
-      <h2 id="5" style="display: flex; justify-content: space-between; align-items: center;"><span>4.5.リレーショナル代数との関係</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[リレーショナル代数との関係]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/sql#5'});"><code>#</code></a></h2>
+      <h2 id="5" style="display: flex; justify-content: space-between; align-items: center;"><span>4.5.リレーショナル代数との関係</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[リレーショナル代数との関係]', text: '[リレーショナル代数との関係]', url: 'https://okik-en.github.io/dove/database/sql#5'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2021年 春中間、2022年 春期末、2024年 春期末</span><span>教科書：pp. 48 - 55</span></small></p>
       <p>次のSQL文を考えます。</p>
       <figure>
@@ -231,7 +231,7 @@
         </li>
         <li>さらに問い合わせに相当するリレーショナル代数表現も与えなさい。</li>
       </ol>
-      <h2 id="6" style="display: flex; justify-content: space-between; align-items: center;"><span>4.6.<code>HAVING</code>句</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: 'sequence(raw(text: &quot;HAVING&quot;, block: false), [句])', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/sql#6'});"><code>#</code></a></h2>
+      <h2 id="6" style="display: flex; justify-content: space-between; align-items: center;"><span>4.6.<code>HAVING</code>句</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: 'sequence(raw(text: &quot;HAVING&quot;, block: false), [句])', text: 'sequence(raw(text: &quot;HAVING&quot;, block: false), [句])', url: 'https://okik-en.github.io/dove/database/sql#6'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 春期末</span><span></span></small></p>
       <p>次のSQL文によって“会員”表から新たに得られる表を与えよ。</p>
       <figure>
@@ -257,7 +257,7 @@
           </tr>
         </table>
       </figure>
-      <h2 id="7" style="display: flex; justify-content: space-between; align-items: center;"><span>4.7.自然結合</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[自然結合]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/sql#7'});"><code>#</code></a></h2>
+      <h2 id="7" style="display: flex; justify-content: space-between; align-items: center;"><span>4.7.自然結合</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[自然結合]', text: '[自然結合]', url: 'https://okik-en.github.io/dove/database/sql#7'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2021年 春期末</span><span>教科書：pp. 48 - 55</span></small></p>
       <ol>
         <li>次の2つの関係表を自然結合により、1つにまとめた結果を与えなさい。</li>
@@ -285,14 +285,14 @@
           </tr>
         </table>
       </figure>
-      <h2 id="8" style="display: flex; justify-content: space-between; align-items: center;"><span>4.8.空とその意味</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[空とその意味]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/sql#8'});"><code>#</code></a></h2>
+      <h2 id="8" style="display: flex; justify-content: space-between; align-items: center;"><span>4.8.空とその意味</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[空とその意味]', text: '[空とその意味]', url: 'https://okik-en.github.io/dove/database/sql#8'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2021年 春中間、2022年 春中間、2023年 春中間</span><span>教科書：pp. 43 - 45</span></small></p>
       <p>SQLが提供する3値論理において、<code>A</code>に<code>5</code>、<code>B</code>に<code>4</code>、<code>C</code>に<code>NULL</code>を代入したとき、 論理式<code>(A > C) or (B > A) or (C = A)</code>の評価結果はどれか。</p>
       <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;">
         <legend>選択肢</legend>
         <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="3" disabled><b style="display: block;">ア</b><div style="overflow-x: auto;"><math><mi displaystyle="true">∅</mi></math>(空)</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="3" disabled><b style="display: block;">イ</b><div style="overflow-x: auto;"><code>false</code>(偽)</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="3" disabled><b style="display: block;">ウ</b><div style="overflow-x: auto;"><code>true</code>(真)</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="3" name="3" checked disabled><b style="display: block;">エ</b><div style="overflow-x: auto;"><code>unknown</code>(不定)</div></label>
       </fieldset>
-      <h2 id="9" style="display: flex; justify-content: space-between; align-items: center;"><span>4.9.SQLとビュー</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[SQLとビュー]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/sql#9'});"><code>#</code></a></h2>
+      <h2 id="9" style="display: flex; justify-content: space-between; align-items: center;"><span>4.9.SQLとビュー</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[SQLとビュー]', text: '[SQLとビュー]', url: 'https://okik-en.github.io/dove/database/sql#9'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2021年 春中間</span><span>教科書：pp. 48 - 55</span></small></p>
       <p>次のSQL文の実行結果の説明として、適切なものはどれか。</p>
       <figure>
@@ -306,7 +306,7 @@
         <legend>選択肢</legend>
         <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="4" checked disabled><b style="display: block;">ア</b><div style="overflow-x: auto;">8823のユーザは、所在地が“東京”の行を参照できるようになる。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="4" disabled><b style="display: block;">イ</b><div style="overflow-x: auto;">このビューの作成者はこのビューに対するSELECT権限をもたない。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="4" disabled><b style="display: block;">ウ</b><div style="overflow-x: auto;">実装“取引先”が削除されても、このビューに対するユーザの権限は残る。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="3" name="4" disabled><b style="display: block;">エ</b><div style="overflow-x: auto;">導出表“東京取引先”には、8823行までを記録できる。</div></label>
       </fieldset>
-      <h2 id="10" style="display: flex; justify-content: space-between; align-items: center;"><span>4.10.意味と正しさ</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[意味と正しさ]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/database/sql#10'});"><code>#</code></a></h2>
+      <h2 id="10" style="display: flex; justify-content: space-between; align-items: center;"><span>4.10.意味と正しさ</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[意味と正しさ]', text: '[意味と正しさ]', url: 'https://okik-en.github.io/dove/database/sql#10'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：小テスト</span><span></span></small></p>
       <p>正しいSQL文であっても、誤った結果を返す場合がある。 そのような例を1つ挙げ、なぜ誤った結果になるのか、具体的に説明しなさい。</p>
       <nav style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1em; margin: 2em;"><a href="../about-database"><code>./first</code></a><a href="../operation-description"><code>./prev</code></a><a href="../../"><code>../</code></a><a href="../relational-database-design"><code>./next</code></a><a href="../bigdata-and-nosql"><code>./last</code></a></nav>

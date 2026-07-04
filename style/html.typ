@@ -117,12 +117,13 @@
     html.head({
       html.meta(charset: "utf-8")
       html.meta(name: "viewport", content: "width=device-width, initial-scale=1")
-      if query(<title>).len() > 0 {
-        html.title(query(<title>).first().value)
+      let title_ = if query(<title>).len() > 0 {
+        query(<title>).first().value
       } else {
-        html.title(repr(document.title).slice(1, -1))
+        repr(document.title).slice(1, -1)
       }
-      html.elem("meta", attrs: (property: "og:title", content: repr(document.title).slice(1, -1)))
+      html.title(title_)
+      html.elem("meta", attrs: (property: "og:title", content: title_))
       if document.description != none {
         html.meta(name: "description", content: repr(document.description))
         html.elem("meta", attrs: (property: "og:description", content: repr(document.description)))
@@ -134,7 +135,7 @@
       html.elem("meta", attrs: (property: "og:type", content: doc-type))
       html.elem("meta", attrs: (
         property: "og:site_name",
-        content: "dove",
+        content: "dove-ks 打倒",
       ))
       html.elem("meta", attrs: (
         property: "og:locale",
@@ -160,7 +161,7 @@
           ("ol > li:before", (content: "'(' counter(dec, decimal) ') '")),
           ("ol ol", (list-style-type: "none", counter-reset: "llt")),
           ("ol ol > li", (counter-increment: "llt")),
-          ("ol ol > li:before", (content: "'(' counter(dec, decimal) '-' counter(llt, lower-latin) ') '")),
+          ("ol ol > li:before", (content: "'(' counter(llt, lower-latin) ') '")),
         )
           .map(((selector, rules)) => selector + "{" + styled(..rules) + "}")
           .join("\n"),

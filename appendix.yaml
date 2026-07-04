@@ -1,25 +1,25 @@
 database:
   title: データベース
   chapters:
-    - about-database
-    - relational-data-model
-    - operation-description
-    - sql
-    - relational-database-design
-    - normalization
-    - database-management-system
-    - query-optimization
-    - transaction
-    - parallel-execution-protocol
-    - bigdata-and-nosql
+    - [about-database, データベースとは何か]
+    - [relational-data-model, リレーショナルデータモデル]
+    - [operation-description, リレーショナルデータベースの操作記述]
+    - [sql, SQL]
+    - [relational-database-design, リレーショナルデータベース設計]
+    - [normalization, 正規化理論]
+    - [database-management-system, データベースカンリシステム]
+    - [query-optimization, 質問処理の最適化]
+    - [transaction, トランザクション]
+    - [parallel-execution-protocol, 同時実行制御]
+    - [bigdata-and-nosql, ビッグデータとNoSQL]
 probability-and-statistics:
   title: 確率統計
   remarks: 過去に共通テストやセンター試験（追試験を含む！）から出題されていた例が多くあるので、予め解いておくとよいだろう。
   chapters:
-    - data-statistics
-    - random-variables
-    - multidimensional-probability
-    - binomial-normal
-    - moment-generating-function
-    - estimation
-    - test
+    - [data-statistics, データの整理]
+    - [random-variables, 確率変数と確率分布]
+    - [multidimensional-probability, 多次元確率分布]
+    - [binomial-normal, 二項分布と正規分布]
+    - [moment-generating-function, 確率分布とモーメント母関数]
+    - [estimation, 推定]
+    - [test, 検定]

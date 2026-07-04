@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>データの整理</title>
-    <meta property="og:title" content="ontext(">
+    <title>1. データの整理</title>
+    <meta property="og:title" content="1. データの整理">
     <meta property="og:image" content="https://raw.githubusercontent.com/okik-en/mathematical-documents/master/okik-en.png">
     <meta property="og:type" content="article">
-    <meta property="og:site_name" content="dove">
+    <meta property="og:site_name" content="dove-ks 打倒">
     <meta property="og:locale" content="ja_JP">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -25,7 +25,7 @@
       ol > li:before{content: '(' counter(dec, decimal) ') ';}
       ol ol{list-style-type: none; counter-reset: llt;}
       ol ol > li{counter-increment: llt;}
-      ol ol > li:before{content: '(' counter(dec, decimal) '-' counter(llt, lower-latin) ') ';}
+      ol ol > li:before{content: '(' counter(llt, lower-latin) ') ';}
     </style>
     <style>
       /* Alignment */
@@ -109,10 +109,10 @@
     <main>
       <h1>1. データの整理</h1>
       <nav style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1em; margin: 2em;"><span><code>-</code></span><span><code>-</code></span><a href="../../"><code>../</code></a><a href="../random-variables"><code>./next</code></a><a href="../test"><code>./last</code></a></nav>
-      <h2 id="1" style="display: flex; justify-content: space-between; align-items: center;"><span>1.1.相関と回帰</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[相関と回帰]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/data-statistics#1'});"><code>#</code></a></h2>
+      <h2 id="1" style="display: flex; justify-content: space-between; align-items: center;"><span>1.1.相関と回帰</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[相関と回帰]', text: '[相関と回帰]', url: 'https://okik-en.github.io/dove/probability-and-statistics/data-statistics#1'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏期末</span><span>教科書：pp. 40 - 41</span></small></p>
       <p>相関と回帰の関係と違いを説明しなさい。</p>
-      <h2 id="2" style="display: flex; justify-content: space-between; align-items: center;"><span>1.2.回帰曲線</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[回帰曲線]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/data-statistics#2'});"><code>#</code></a></h2>
+      <h2 id="2" style="display: flex; justify-content: space-between; align-items: center;"><span>1.2.回帰曲線</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[回帰曲線]', text: '[回帰曲線]', url: 'https://okik-en.github.io/dove/probability-and-statistics/data-statistics#2'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 春期末</span><span>教科書：pp. 43, 47 - 54</span></small></p>
       <p>貝殻12個の面積<math><mi displaystyle="true">𝑋</mi><msup displaystyle="true"><mtext>cm</mtext><mn>2</mn></msup></math>と重さ<math><mi displaystyle="true">𝑌</mi><mspace width="0.2222em"/><mtext displaystyle="true">g</mtext></math>を測定した結果は、以下の通りであった。</p>
       <ol>

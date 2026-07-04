@@ -1,7 +1,5 @@
 #import "/style/utils.typ": *
 
-= 二項分布と正規分布
-
 == 二項分布
 
 #data((2025, 1))

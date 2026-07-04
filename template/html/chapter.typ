@@ -4,7 +4,7 @@
 #let __content__ = yaml("/appendix.yaml").at(__srcdir__)
 #let __remarks__ = __content__.at("remarks", default: none)
 
-#let cs = yaml("/appendix.yaml").at(__srcdir__).at("chapters")
+#let cs = __content__.at("chapters").map(((path, label)) => path)
 #let id = cs.position(s => s == __chapter__) + 1
 
 #let navi = html.nav(style: "display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1em; margin: 2em;", {
@@ -25,23 +25,22 @@
   }
 })
 
-#set document(title: context numbering("1. ", id) + query(<title>).first().value)
-#show heading.where(level: 1): it => [
-  #metadata(it.body) <title>
-  #counter(heading).update(0)
-]
+#counter(heading).update(id)
+#set document(title: str(id) + ". " + __content__.at("chapters").at(id - 1).last())
 #show heading.where(level: 2): it => context html.h2(
   id: str(counter(heading).get().last()),
   style: styled(display: "flex", justify-content: "space-between", align-items: "center"),
   {
-    html.span(numbering("1.1.", id, counter(heading).get().last()) + it.body)
+    html.span(counter(heading).display() + it.body)
     html.elem(
       "a",
       attrs: (
         style: styled(cursor: "pointer", font-size: "1rem"),
         onclick: "navigator.share({title: '"
           + repr(it.body)
-          + "', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/"
+          + "', text: '"
+          + repr(it.body)
+          + "', url: 'https://okik-en.github.io/dove/"
           + __srcdir__
           + "/"
           + __chapter__

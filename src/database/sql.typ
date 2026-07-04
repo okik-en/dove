@@ -1,7 +1,5 @@
 #import "/style/utils.typ": *
 
-= SQL
-
 == 完備性
 
 #data((2025, 1))

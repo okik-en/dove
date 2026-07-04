@@ -1,7 +1,5 @@
 #import "/style/utils.typ": *
 
-= 検定
-
 検定に際して、答案には、次の手順を順序立てて詳しく説明すること。
 
 #block(fill: luma(223), inset: 2em, radius: 1em)[

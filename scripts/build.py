@@ -54,7 +54,7 @@ try:
     Path(f"docs/{subject}").mkdir(exist_ok=True)
 
     for i in range(len(appendix[subject]["chapters"])):
-      chapter = appendix[subject]["chapters"][i]
+      chapter = appendix[subject]["chapters"][i][0]
       print(f"    - {chapter}.html")
       Path(f"docs/{subject}/{chapter}").mkdir(exist_ok=True)
       subprocess.run([

@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>二項分布と正規分布</title>
-    <meta property="og:title" content="ontext(">
+    <title>4. 二項分布と正規分布</title>
+    <meta property="og:title" content="4. 二項分布と正規分布">
     <meta property="og:image" content="https://raw.githubusercontent.com/okik-en/mathematical-documents/master/okik-en.png">
     <meta property="og:type" content="article">
-    <meta property="og:site_name" content="dove">
+    <meta property="og:site_name" content="dove-ks 打倒">
     <meta property="og:locale" content="ja_JP">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -25,7 +25,7 @@
       ol > li:before{content: '(' counter(dec, decimal) ') ';}
       ol ol{list-style-type: none; counter-reset: llt;}
       ol ol > li{counter-increment: llt;}
-      ol ol > li:before{content: '(' counter(dec, decimal) '-' counter(llt, lower-latin) ') ';}
+      ol ol > li:before{content: '(' counter(llt, lower-latin) ') ';}
     </style>
     <style>
       /* Alignment */
@@ -109,7 +109,7 @@
     <main>
       <h1>4. 二項分布と正規分布</h1>
       <nav style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1em; margin: 2em;"><a href="../data-statistics"><code>./first</code></a><a href="../multidimensional-probability"><code>./prev</code></a><a href="../../"><code>../</code></a><a href="../moment-generating-function"><code>./next</code></a><a href="../test"><code>./last</code></a></nav>
-      <h2 id="1" style="display: flex; justify-content: space-between; align-items: center;"><span>4.1.二項分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#1'});"><code>#</code></a></h2>
+      <h2 id="1" style="display: flex; justify-content: space-between; align-items: center;"><span>4.1.二項分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布]', text: '[二項分布]', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#1'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 春中間</span><span></span></small></p>
       <p>2項分布<math><mi displaystyle="true">𝐵</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>2</mn><mo>,</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>の平均と分散を（公式からではなく）直接計算によって与えよ。</p>
       <details style="margin: 1em 0;">
@@ -568,7 +568,7 @@
           </math>
         </div>
       </details>
-      <h2 id="2" style="display: flex; justify-content: space-between; align-items: center;"><span>4.2.二項分布の確率</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布の確率]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#2'});"><code>#</code></a></h2>
+      <h2 id="2" style="display: flex; justify-content: space-between; align-items: center;"><span>4.2.二項分布の確率</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布の確率]', text: '[二項分布の確率]', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#2'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 夏中間</span><span>教科書：p. 141</span></small></p>
       <p>ある試験問題は、それぞれの設問が正解を1つだけ含む6つの選択肢から構成されている。 これらの設問群に対して、でたらめ（無作為）に解答する時、次の確率を求めなさい。</p>
       <ol>
@@ -884,7 +884,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="3" style="display: flex; justify-content: space-between; align-items: center;"><span>4.3.二項分布とチェビシェフの不等式</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布とチェビシェフの不等式]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#3'});"><code>#</code></a></h2>
+      <h2 id="3" style="display: flex; justify-content: space-between; align-items: center;"><span>4.3.二項分布とチェビシェフの不等式</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布とチェビシェフの不等式]', text: '[二項分布とチェビシェフの不等式]', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#3'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 春中間、2026年 春中間</span><span>教科書：pp. 93 - 95, 141</span></small></p>
       <p>不良率<math><mi displaystyle="true">𝑝</mi></math>の製品の母集団から無作為に<math><mi displaystyle="true">𝑛</mi></math>個の製品を抽出する。 このとき、不良品の個数を確率変数<math><mi displaystyle="true">𝑋</mi></math>とすると2項分布<math><mtext displaystyle="true">Bin</mtext><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑛</mi><mo>,</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>に従う。 また，標本不良率を<math><mi displaystyle="true">𝑞</mi><mo displaystyle="true">=</mo><mrow displaystyle="true"><mo>(</mo><mfrac><mi>𝑋</mi><mi>𝑛</mi></mfrac><mo>)</mo></mrow></math>とする。</p>
       <ol>
@@ -1449,7 +1449,7 @@
           <p>となる。</p>
         </div>
       </details>
-      <h2 id="4" style="display: flex; justify-content: space-between; align-items: center;"><span>4.4.正規分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[正規分布]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#4'});"><code>#</code></a></h2>
+      <h2 id="4" style="display: flex; justify-content: space-between; align-items: center;"><span>4.4.正規分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[正規分布]', text: '[正規分布]', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#4'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 春中間</span><span>教科書：pp. 143 - 145, 153</span></small></p>
       <ol>
         <li>
@@ -1528,7 +1528,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="5" style="display: flex; justify-content: space-between; align-items: center;"><span>4.5.変数変換と正規分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[変数変換と正規分布]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#5'});"><code>#</code></a></h2>
+      <h2 id="5" style="display: flex; justify-content: space-between; align-items: center;"><span>4.5.変数変換と正規分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[変数変換と正規分布]', text: '[変数変換と正規分布]', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#5'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 春期末</span><span>教科書：pp. 121 - 122, 143</span></small></p>
       <ol>
         <li>
@@ -1818,7 +1818,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="6" style="display: flex; justify-content: space-between; align-items: center;"><span>4.6.標準正規分布表</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[標準正規分布表]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#6'});"><code>#</code></a></h2>
+      <h2 id="6" style="display: flex; justify-content: space-between; align-items: center;"><span>4.6.標準正規分布表</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[標準正規分布表]', text: '[標準正規分布表]', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#6'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 夏中間</span><span>教科書：pp. 147 - 151</span></small></p>
       <ol>
         <li>
@@ -1862,7 +1862,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="7" style="display: flex; justify-content: space-between; align-items: center;"><span>4.7.標準正規分布表の読み取り</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[標準正規分布表の読み取り]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#7'});"><code>#</code></a></h2>
+      <h2 id="7" style="display: flex; justify-content: space-between; align-items: center;"><span>4.7.標準正規分布表の読み取り</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[標準正規分布表の読み取り]', text: '[標準正規分布表の読み取り]', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#7'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 夏期末</span><span>教科書：pp. 149 - 151</span></small></p>
       <ol>
         <li>
@@ -2136,7 +2136,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="8" style="display: flex; justify-content: space-between; align-items: center;"><span>4.8.標準正規分布の利用</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[標準正規分布の利用]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#8'});"><code>#</code></a></h2>
+      <h2 id="8" style="display: flex; justify-content: space-between; align-items: center;"><span>4.8.標準正規分布の利用</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[標準正規分布の利用]', text: '[標準正規分布の利用]', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#8'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 春中間、2026年 春中間</span><span>教科書：pp. 149 - 150</span></small></p>
       <p>ここでの確率値の計算では、小数点以下4桁までで答えること。 また、計算過程を明確に記述すること。 ある全国試験<math><mi displaystyle="true">𝐸</mi></math>の受験者数は350,198人であり、平均点は66.31点、標準偏差は23.55点であった。この試験の得点<math><mi displaystyle="true">𝑋</mi></math>は正規分布<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>66.31</mn><mo>,</mo><msup><mrow><mo>(</mo><mn>23.55</mn><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>に従うものとする。</p>
       <ol>
@@ -2283,7 +2283,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="9" style="display: flex; justify-content: space-between; align-items: center;"><span>4.9.標準正規分布の利用</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[標準正規分布の利用]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#9'});"><code>#</code></a></h2>
+      <h2 id="9" style="display: flex; justify-content: space-between; align-items: center;"><span>4.9.標準正規分布の利用</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[標準正規分布の利用]', text: '[標準正規分布の利用]', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#9'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 春中間</span><span>教科書：pp. 149 - 150</span></small></p>
       <p>確率値の回答では、小数点下4桁までの値で答えること。 計算考察過程も詳しく回答すること。 ある疾患に関する簡易検査の検査値は、感染しているグループでは平均が120、標準偏差が10の正規分布に従う。 また、感染していない正常グループでは、平均が100、標準偏差が15の正規分布に従う。さらに、 検査値が定数<math><mi displaystyle="true">𝐶</mi></math>以上の時に陽性と判断する。</p>
       <ol>
@@ -2324,7 +2324,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="10" style="display: flex; justify-content: space-between; align-items: center;"><span>4.10.二項分布と正規分布の関係</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布と正規分布の関係]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#10'});"><code>#</code></a></h2>
+      <h2 id="10" style="display: flex; justify-content: space-between; align-items: center;"><span>4.10.二項分布と正規分布の関係</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布と正規分布の関係]', text: '[二項分布と正規分布の関係]', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#10'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 春中間</span><span>教科書：pp. 153 - 154</span></small></p>
       <p>公平なコインを繰り返し投げる。</p>
       <ol>
@@ -2396,7 +2396,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="11" style="display: flex; justify-content: space-between; align-items: center;"><span>4.11.二項分布と正規分布の関係</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布と正規分布の関係]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#11'});"><code>#</code></a></h2>
+      <h2 id="11" style="display: flex; justify-content: space-between; align-items: center;"><span>4.11.二項分布と正規分布の関係</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布と正規分布の関係]', text: '[二項分布と正規分布の関係]', url: 'https://okik-en.github.io/dove/probability-and-statistics/binomial-normal#11'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：小テスト</span><span>教科書：pp. 93 - 95, 153 - 154</span></small></p>
       <p>200人が受験した英語テストにおいて、平均点が60点、標準偏差が6点であったとする。 得点を確率変数<math><mi displaystyle="true">𝑋</mi></math>とする。</p>
       <ol>

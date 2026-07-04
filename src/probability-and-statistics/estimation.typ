@@ -1,7 +1,5 @@
 #import "/style/utils.typ": *
 
-= 推定
-
 == 母集団と標本
 
 #data((2022, 4), p: 174)

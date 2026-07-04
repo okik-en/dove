@@ -7,7 +7,7 @@
     <meta property="og:title" content="目次">
     <meta property="og:image" content="https://raw.githubusercontent.com/okik-en/mathematical-documents/master/okik-en.png">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="dove">
+    <meta property="og:site_name" content="dove-ks 打倒">
     <meta property="og:locale" content="ja_JP">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -25,7 +25,7 @@
       ol > li:before{content: '(' counter(dec, decimal) ') ';}
       ol ol{list-style-type: none; counter-reset: llt;}
       ol ol > li{counter-increment: llt;}
-      ol ol > li:before{content: '(' counter(dec, decimal) '-' counter(llt, lower-latin) ') ';}
+      ol ol > li:before{content: '(' counter(llt, lower-latin) ') ';}
     </style>
   </head>
   <body>
@@ -33,27 +33,27 @@
       <h1>目次</h1>
       <h2>1. データベース</h2>
       <ul>
-        <li><a href="./database/about-database">about-database</a></li>
-        <li><a href="./database/relational-data-model">relational-data-model</a></li>
-        <li><a href="./database/operation-description">operation-description</a></li>
-        <li><a href="./database/sql">sql</a></li>
-        <li><a href="./database/relational-database-design">relational-database-design</a></li>
-        <li><a href="./database/normalization">normalization</a></li>
-        <li><a href="./database/database-management-system">database-management-system</a></li>
-        <li><a href="./database/query-optimization">query-optimization</a></li>
-        <li><a href="./database/transaction">transaction</a></li>
-        <li><a href="./database/parallel-execution-protocol">parallel-execution-protocol</a></li>
-        <li><a href="./database/bigdata-and-nosql">bigdata-and-nosql</a></li>
+        <li><a href="./database/about-database">データベースとは何か</a></li>
+        <li><a href="./database/relational-data-model">リレーショナルデータモデル</a></li>
+        <li><a href="./database/operation-description">リレーショナルデータベースの操作記述</a></li>
+        <li><a href="./database/sql">SQL</a></li>
+        <li><a href="./database/relational-database-design">リレーショナルデータベース設計</a></li>
+        <li><a href="./database/normalization">正規化理論</a></li>
+        <li><a href="./database/database-management-system">データベースカンリシステム</a></li>
+        <li><a href="./database/query-optimization">質問処理の最適化</a></li>
+        <li><a href="./database/transaction">トランザクション</a></li>
+        <li><a href="./database/parallel-execution-protocol">同時実行制御</a></li>
+        <li><a href="./database/bigdata-and-nosql">ビッグデータとNoSQL</a></li>
       </ul>
       <h2>2. 確率統計</h2>
       <ul>
-        <li><a href="./probability-and-statistics/data-statistics">data-statistics</a></li>
-        <li><a href="./probability-and-statistics/random-variables">random-variables</a></li>
-        <li><a href="./probability-and-statistics/multidimensional-probability">multidimensional-probability</a></li>
-        <li><a href="./probability-and-statistics/binomial-normal">binomial-normal</a></li>
-        <li><a href="./probability-and-statistics/moment-generating-function">moment-generating-function</a></li>
-        <li><a href="./probability-and-statistics/estimation">estimation</a></li>
-        <li><a href="./probability-and-statistics/test">test</a></li>
+        <li><a href="./probability-and-statistics/data-statistics">データの整理</a></li>
+        <li><a href="./probability-and-statistics/random-variables">確率変数と確率分布</a></li>
+        <li><a href="./probability-and-statistics/multidimensional-probability">多次元確率分布</a></li>
+        <li><a href="./probability-and-statistics/binomial-normal">二項分布と正規分布</a></li>
+        <li><a href="./probability-and-statistics/moment-generating-function">確率分布とモーメント母関数</a></li>
+        <li><a href="./probability-and-statistics/estimation">推定</a></li>
+        <li><a href="./probability-and-statistics/test">検定</a></li>
       </ul>
     </main>
   </body>

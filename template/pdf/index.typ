@@ -10,6 +10,7 @@
 #title()
 #if __remarks__ != none { par("備考。" + __remarks__) }
 #outline()
-#for name in __content__.at("chapters") {
+#for (name, label) in __content__.at("chapters") {
+  heading(level: 1, bookmarked: true, outlined: true, label)
   include "/src/" + __srcdir__ + "/" + name + ".typ"
 }

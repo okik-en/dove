@@ -9,5 +9,5 @@
 
 #for (name, subject) in yaml("/appendix.yaml") {
   heading(level: 1, subject.at("title"))
-  list(..subject.at("chapters").map(chapter => link("./" + name + "/" + chapter, chapter)))
+  list(..subject.at("chapters").map(((path, label)) => link("./" + name + "/" + path, label)))
 }

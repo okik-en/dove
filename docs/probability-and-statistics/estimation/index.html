@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>推定</title>
-    <meta property="og:title" content="ontext(">
+    <title>6. 推定</title>
+    <meta property="og:title" content="6. 推定">
     <meta property="og:image" content="https://raw.githubusercontent.com/okik-en/mathematical-documents/master/okik-en.png">
     <meta property="og:type" content="article">
-    <meta property="og:site_name" content="dove">
+    <meta property="og:site_name" content="dove-ks 打倒">
     <meta property="og:locale" content="ja_JP">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -25,7 +25,7 @@
       ol > li:before{content: '(' counter(dec, decimal) ') ';}
       ol ol{list-style-type: none; counter-reset: llt;}
       ol ol > li{counter-increment: llt;}
-      ol ol > li:before{content: '(' counter(dec, decimal) '-' counter(llt, lower-latin) ') ';}
+      ol ol > li:before{content: '(' counter(llt, lower-latin) ') ';}
     </style>
     <style>
       /* Alignment */
@@ -109,7 +109,7 @@
     <main>
       <h1>6. 推定</h1>
       <nav style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1em; margin: 2em;"><a href="../data-statistics"><code>./first</code></a><a href="../moment-generating-function"><code>./prev</code></a><a href="../../"><code>../</code></a><a href="../test"><code>./next</code></a><a href="../test"><code>./last</code></a></nav>
-      <h2 id="1" style="display: flex; justify-content: space-between; align-items: center;"><span>6.1.母集団と標本</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[母集団と標本]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#1'});"><code>#</code></a></h2>
+      <h2 id="1" style="display: flex; justify-content: space-between; align-items: center;"><span>6.1.母集団と標本</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[母集団と標本]', text: '[母集団と標本]', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#1'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏期末</span><span>教科書：p. 174</span></small></p>
       <p>次の2つの文章において、「日本に住む女性全員」という集団は母集団か標本のどちらであるか、 それぞれ考察し、理由も説明しなさい。</p>
       <ol>
@@ -125,7 +125,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="2" style="display: flex; justify-content: space-between; align-items: center;"><span>6.2.無作為標本の独立性</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[無作為標本の独立性]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#2'});"><code>#</code></a></h2>
+      <h2 id="2" style="display: flex; justify-content: space-between; align-items: center;"><span>6.2.無作為標本の独立性</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[無作為標本の独立性]', text: '[無作為標本の独立性]', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#2'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 春期末</span><span></span></small></p>
       <p>母平均<math><mi displaystyle="true">𝜇</mi></math>、母分散<math><msup displaystyle="true"><mi>𝜎</mi><mn>2</mn></msup></math>の母集団から取り出された<math><mi displaystyle="true">𝑛</mi></math>個の無作為標本を <math><msub displaystyle="true"><mi>𝑋</mi><mn>1</mn></msub><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑋</mi><mn>2</mn></msub><mo displaystyle="true">,</mo><mi displaystyle="true">…</mi><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑋</mi><mi>𝑛</mi></msub></math>とする.</p>
       <ol>
@@ -145,7 +145,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="3" style="display: flex; justify-content: space-between; align-items: center;"><span>6.3.中心極限定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[中心極限定理]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#3'});"><code>#</code></a></h2>
+      <h2 id="3" style="display: flex; justify-content: space-between; align-items: center;"><span>6.3.中心極限定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[中心極限定理]', text: '[中心極限定理]', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#3'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 春期末</span><span>教科書：p. 179</span></small></p>
       <p>ある工場で生産される電球の寿命は平均1180時間、標準偏差20時間の正規分布に従う。</p>
       <ol>
@@ -287,7 +287,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="4" style="display: flex; justify-content: space-between; align-items: center;"><span>6.4.中心極限定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[中心極限定理]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#4'});"><code>#</code></a></h2>
+      <h2 id="4" style="display: flex; justify-content: space-between; align-items: center;"><span>6.4.中心極限定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[中心極限定理]', text: '[中心極限定理]', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#4'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 春期末</span><span></span></small></p>
       <p>ある種の繊維一本の破断強度は平均1.2 kg、標準偏差0.1 kgの正規分布に従う。 この繊維100本の束に、122.5 kgの荷重をかける時、束が破壊される確率を計算せよ。</p>
       <details style="margin: 1em 0;">
@@ -348,7 +348,7 @@
           </math>
         </div>
       </details>
-      <h2 id="5" style="display: flex; justify-content: space-between; align-items: center;"><span>6.5.不偏推定量</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[不偏推定量]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#5'});"><code>#</code></a></h2>
+      <h2 id="5" style="display: flex; justify-content: space-between; align-items: center;"><span>6.5.不偏推定量</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[不偏推定量]', text: '[不偏推定量]', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#5'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏中間</span><span>教科書：pp. 202 - 205</span></small></p>
       <p>平均<math><mi displaystyle="true">𝜇</mi></math>、分散<math><msup displaystyle="true"><mi>𝜎</mi><mn>2</mn></msup></math>の母集団からの大きさ3の無作為標本を<math><msub displaystyle="true"><mi>𝑋</mi><mn>1</mn></msub></math>、<math><msub displaystyle="true"><mi>𝑋</mi><mn>2</mn></msub></math>、<math><msub displaystyle="true"><mi>𝑋</mi><mn>3</mn></msub></math> とする。</p>
       <ol>
@@ -386,7 +386,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="6" style="display: flex; justify-content: space-between; align-items: center;"><span>6.6.不偏分散と推定量</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[不偏分散と推定量]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#6'});"><code>#</code></a></h2>
+      <h2 id="6" style="display: flex; justify-content: space-between; align-items: center;"><span>6.6.不偏分散と推定量</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[不偏分散と推定量]', text: '[不偏分散と推定量]', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#6'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 夏中間、2023年 夏期末、2025年 夏中間</span><span>教科書：pp. 176 - 180, 202 - 205</span></small></p>
       <ol>
         <li>
@@ -441,7 +441,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="7" style="display: flex; justify-content: space-between; align-items: center;"><span>6.7.母平均・母分散の不偏推定量</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[母平均・母分散の不偏推定量]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#7'});"><code>#</code></a></h2>
+      <h2 id="7" style="display: flex; justify-content: space-between; align-items: center;"><span>6.7.母平均・母分散の不偏推定量</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[母平均・母分散の不偏推定量]', text: '[母平均・母分散の不偏推定量]', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#7'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏中間、2024年 春期末</span><span>教科書：p. 205</span></small></p>
       <p>ある入学試験で確率・統計を選択受験したのが1000名でした。 そのうち10人の結果を無造作に抽出した結果は次のとおりでした</p>
       <math display="block">
@@ -656,7 +656,7 @@
           </math>
         </div>
       </details>
-      <h2 id="8" style="display: flex; justify-content: space-between; align-items: center;"><span>6.8.信頼区間の評価</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[信頼区間の評価]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#8'});"><code>#</code></a></h2>
+      <h2 id="8" style="display: flex; justify-content: space-between; align-items: center;"><span>6.8.信頼区間の評価</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[信頼区間の評価]', text: '[信頼区間の評価]', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#8'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 夏中間</span><span>教科書：pp. 179, 216</span></small></p>
       <p>ある製品の不良率を<math><mi displaystyle="true">𝑝</mi></math>とし、この製品の中から<math><mi displaystyle="true">𝑛</mi></math>個を無作為に抽出して調べるとき、その中の不良品の個数を<math><mi displaystyle="true">𝑋</mi></math>個とする。 このとき、次の各問いに答えよ。確率分布は、パラメータまで記述せよ。</p>
       <ol>
@@ -838,7 +838,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="9" style="display: flex; justify-content: space-between; align-items: center;"><span>6.9.信頼区間の評価</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[信頼区間の評価]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#9'});"><code>#</code></a></h2>
+      <h2 id="9" style="display: flex; justify-content: space-between; align-items: center;"><span>6.9.信頼区間の評価</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[信頼区間の評価]', text: '[信頼区間の評価]', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#9'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏中間</span><span>教科書：pp. 180 - 182</span></small></p>
       <p>表が出る確率が<math><mi displaystyle="true">𝑝</mi></math>のコインがあり、この偏った確率<math><mi displaystyle="true">𝑝</mi></math>を知りたい。 10,000回コインを（独立に）投げて、3,500回の表が出た。 <math><mi displaystyle="true">𝑝</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>3500</mn><mn>10000</mn></mfrac><mo displaystyle="true">=</mo><mn displaystyle="true">0.35</mn></math>と断定して良いかどうか、を考える。</p>
       <ol>
@@ -902,7 +902,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="10" style="display: flex; justify-content: space-between; align-items: center;"><span>6.10.信頼区間の評価</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[信頼区間の評価]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#10'});"><code>#</code></a></h2>
+      <h2 id="10" style="display: flex; justify-content: space-between; align-items: center;"><span>6.10.信頼区間の評価</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[信頼区間の評価]', text: '[信頼区間の評価]', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#10'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 夏中間、2024年 夏期末、2025年 夏期末</span><span>教科書：pp. 224 - 225</span></small></p>
       <ol>
         <li>
@@ -1404,7 +1404,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="11" style="display: flex; justify-content: space-between; align-items: center;"><span>6.11.母比率の区間推定</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[母比率の区間推定]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#11'});"><code>#</code></a></h2>
+      <h2 id="11" style="display: flex; justify-content: space-between; align-items: center;"><span>6.11.母比率の区間推定</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[母比率の区間推定]', text: '[母比率の区間推定]', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#11'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 夏期末</span><span>教科書：pp. 223 - 225</span></small></p>
       <p>ある特定銘柄の洗剤を使っている消費者の比率を推定したい。 次の場合、少なくとも何個の標本が必要か。</p>
       <ol>
@@ -1627,7 +1627,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="12" style="display: flex; justify-content: space-between; align-items: center;"><span>6.12.ベルヌーイ試行</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ベルヌーイ試行]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#12'});"><code>#</code></a></h2>
+      <h2 id="12" style="display: flex; justify-content: space-between; align-items: center;"><span>6.12.ベルヌーイ試行</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ベルヌーイ試行]', text: '[ベルヌーイ試行]', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#12'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 夏期末</span><span></span></small></p>
       <p><math><mn displaystyle="true">2</mn></math>種類の結果（確率<math><mi displaystyle="true">𝑝</mi></math>の成功<math><mi displaystyle="true">𝑆</mi></math>と確率<math><mn displaystyle="true">1</mn><mo displaystyle="true">−</mo><mi displaystyle="true">𝑝</mi></math>の失敗<math><mi displaystyle="true">𝐹</mi></math>）を生じる実験を同じ条件でかつ独立に<math><mi displaystyle="true">𝑚</mi></math>回繰り返す ベルヌーイ試行の成功<math><mi displaystyle="true">𝑆</mi></math>の事象の回数<math><mi displaystyle="true">𝑘</mi></math>の確率分布を二項分布<math><mi displaystyle="true">𝐵</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑚</mi><mo>;</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>という。</p>
       <ol>
@@ -2310,7 +2310,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="13" style="display: flex; justify-content: space-between; align-items: center;"><span>6.13.正規分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[正規分布]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#13'});"><code>#</code></a></h2>
+      <h2 id="13" style="display: flex; justify-content: space-between; align-items: center;"><span>6.13.正規分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[正規分布]', text: '[正規分布]', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#13'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 夏中間</span><span></span></small></p>
       <p>正規分布<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝜇</mi><mo>,</mo><msup><mi>𝜎</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>においては、２つの母数<math><mi displaystyle="true">𝜇</mi></math>、<math><msup displaystyle="true"><mi>𝜎</mi><mn>2</mn></msup></math>それぞれが推定対象となる。</p>
       <ol>
@@ -3168,7 +3168,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="14" style="display: flex; justify-content: space-between; align-items: center;"><span>6.14.有限母集団補正</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[有限母集団補正]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#14'});"><code>#</code></a></h2>
+      <h2 id="14" style="display: flex; justify-content: space-between; align-items: center;"><span>6.14.有限母集団補正</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[有限母集団補正]', text: '[有限母集団補正]', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#14'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 夏中間</span><span></span></small></p>
       <ol>
         <li>有限母集団補正とは何かを、言葉で説明せよ。</li>

@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>確率分布とモーメント母関数</title>
-    <meta property="og:title" content="ontext(">
+    <title>5. 確率分布とモーメント母関数</title>
+    <meta property="og:title" content="5. 確率分布とモーメント母関数">
     <meta property="og:image" content="https://raw.githubusercontent.com/okik-en/mathematical-documents/master/okik-en.png">
     <meta property="og:type" content="article">
-    <meta property="og:site_name" content="dove">
+    <meta property="og:site_name" content="dove-ks 打倒">
     <meta property="og:locale" content="ja_JP">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
@@ -25,7 +25,7 @@
       ol > li:before{content: '(' counter(dec, decimal) ') ';}
       ol ol{list-style-type: none; counter-reset: llt;}
       ol ol > li{counter-increment: llt;}
-      ol ol > li:before{content: '(' counter(dec, decimal) '-' counter(llt, lower-latin) ') ';}
+      ol ol > li:before{content: '(' counter(llt, lower-latin) ') ';}
     </style>
     <style>
       /* Alignment */
@@ -109,14 +109,14 @@
     <main>
       <h1>5. 確率分布とモーメント母関数</h1>
       <nav style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1em; margin: 2em;"><a href="../data-statistics"><code>./first</code></a><a href="../binomial-normal"><code>./prev</code></a><a href="../../"><code>../</code></a><a href="../estimation"><code>./next</code></a><a href="../test"><code>./last</code></a></nav>
-      <h2 id="1" style="display: flex; justify-content: space-between; align-items: center;"><span>5.1.ポアソン分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ポアソン分布]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#1'});"><code>#</code></a></h2>
+      <h2 id="1" style="display: flex; justify-content: space-between; align-items: center;"><span>5.1.ポアソン分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ポアソン分布]', text: '[ポアソン分布]', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#1'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 春期末、2025年 春中間</span><span>教科書：pp. 168 - 169</span></small></p>
       <p>命題「二項分布は、ポアソン分布で近似できる。 その一方で、正規分布も二項分布を近似できる」を考える。 この命題は正しいかどうか考察せよ。間違いであれば、その理由を指摘せよ。 もし、正しいならば、なぜ、同じ二項分布が2つの異なる分布、ポアソン分布と正規分布とで近似できるのか、 その理由を、できるだけ数式を用いて説明せよ。</p>
       <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>この命題は正しい。 <math><mtext displaystyle="true">𝐵𝑖𝑛</mtext><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑛</mi><mo>,</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>は<math><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑋</mi><mo>=</mo><mi>𝑘</mi></mrow><mo>)</mo></mrow><mo displaystyle="true">=</mo><mrow displaystyle="true"><mo>(</mo><mfrac linethickness="0"><mi>𝑛</mi><mi>𝑘</mi></mfrac><mo>)</mo></mrow><msup displaystyle="true"><mi>𝑝</mi><mi>𝑘</mi></msup><msup displaystyle="true"><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow><mrow><mi>𝑛</mi><mo lspace="0em" rspace="0em">−</mo><mi>𝑘</mi></mrow></msup></math>とかけて、<math><mi displaystyle="true">𝑛</mi><mi displaystyle="true">𝑝</mi></math>および<math><mi displaystyle="true">𝑛</mi><mrow displaystyle="true"><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>が十分に大きいときはド・モアブル–ラプラスの定理から<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑛</mi><mi>𝑝</mi><mo>,</mo><mi>𝑛</mi><mi>𝑝</mi><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow></math>に近似できる。 他方で<math><mi displaystyle="true">𝑛</mi></math>が十分に大きく<math><mi displaystyle="true">𝑝</mi></math>が十分に小さいときはポアソンの小数の法則から<math><mrow displaystyle="true"><mo>(</mo><mfrac linethickness="0"><mi>𝑛</mi><mi>𝑘</mi></mfrac><mo>)</mo></mrow><msup displaystyle="true"><mi>𝑝</mi><mi>𝑘</mi></msup><msup displaystyle="true"><mrow><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow><mrow><mi>𝑛</mi><mo lspace="0em" rspace="0em">−</mo><mi>𝑘</mi></mrow></msup><mo stretchy="false" displaystyle="true">→</mo><msup displaystyle="true"><mi>𝑒</mi><mrow><mo>−</mo><mi>𝜆</mi></mrow></msup><mfrac displaystyle="true"><msup><mi>𝜆</mi><mi>𝑘</mi></msup><mrow><mi>𝑘</mi><mo>!</mo></mrow></mfrac></math>とみなせて、近似的にポアソン分布に従うものとみなせる。</div>
       </details>
-      <h2 id="2" style="display: flex; justify-content: space-between; align-items: center;"><span>5.2.指数分布とポアソン分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[指数分布とポアソン分布]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#2'});"><code>#</code></a></h2>
+      <h2 id="2" style="display: flex; justify-content: space-between; align-items: center;"><span>5.2.指数分布とポアソン分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[指数分布とポアソン分布]', text: '[指数分布とポアソン分布]', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#2'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 春中間</span><span>教科書：pp. 93, 168 - 169</span></small></p>
       <p>ある銀行に1台のATMがあり、このATMの1人当たりの処理時間は平均40秒の指数分布に従う。 また、このATMを利用するために到着する利用者の数は1時間当たり平均60人のポアソン分布に従う。 このとき、利用者がATMに並んでから処理が終了するまでの時間の平均値はどれですか。 選択に際した、理由/計算考察も詳しく記述すること。</p>
       <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;">
@@ -127,7 +127,7 @@
         <summary style="cursor: pointer;">解答</summary>
         <div><a href="https://okik-en.github.io/mathematical-documents/mm1/"><math><mi displaystyle="true">𝑀</mi><mi displaystyle="true">/</mi><mi displaystyle="true">𝑀</mi><mi displaystyle="true">/</mi><mn displaystyle="true">1</mn></math>システム</a>によれば、単位時間あたりに平均<math><mi displaystyle="true">𝜆</mi></math>人が到着し、平均<math><mi displaystyle="true">𝜇</mi></math>人分の処理が完了するとき、利用率を<math><mi displaystyle="true">𝜌</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mi>𝜆</mi><mi>𝜇</mi></mfrac></math>と定義すれば、<math><mi displaystyle="true">𝜌</mi><mo displaystyle="true">&lt;</mo><mn displaystyle="true">1</mn></math>のときに定常状態が存在し、その平均客数は<math><mi displaystyle="true">𝐿</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mi>𝜌</mi><mrow><mn>1</mn><mo>−</mo><mi>𝜌</mi></mrow></mfrac></math>であり、平均滞在時間は<math><mi displaystyle="true">𝑊</mi><mo displaystyle="true">=</mo><msup displaystyle="true"><mi>𝜆</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mi displaystyle="true">𝐿</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><msup><mi>𝜇</mi><mrow><mo>−</mo><mn>1</mn></mrow></msup><mrow><mn>1</mn><mo>−</mo><mi>𝜌</mi></mrow></mfrac></math>となることが知られている。 これによれば、<math><mi displaystyle="true">𝑊</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mrow><mo stretchy="false">(</mo><mn>1</mn><mi>/</mi><mn>90</mn><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>−</mo><mo form="prefix" stretchy="false">(</mo><mn>60</mn><mi>/</mi><mn>90</mn><mo stretchy="false">)</mo></mrow></mfrac><mspace width="0.2222em"/><mtext displaystyle="true">h</mtext><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>1</mn><mn>30</mn></mfrac><mspace width="0.2222em"/><mtext displaystyle="true">h</mtext><mo displaystyle="true">=</mo><mn displaystyle="true">120</mn><mspace width="0.2222em"/><mtext displaystyle="true">s</mtext></math>となり、答えとしてオが得られる。</div>
       </details>
-      <h2 id="3" style="display: flex; justify-content: space-between; align-items: center;"><span>5.3.二項分布とポアソン分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布とポアソン分布]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#3'});"><code>#</code></a></h2>
+      <h2 id="3" style="display: flex; justify-content: space-between; align-items: center;"><span>5.3.二項分布とポアソン分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布とポアソン分布]', text: '[二項分布とポアソン分布]', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#3'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 春中間</span><span>教科書：pp. 166 - 169</span></small></p>
       <ol>
         <li>打率が3割のバッターが5打席で、ヒットを少なくとも一本打つ確率を求めなさい。</li>
@@ -381,7 +381,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="4" style="display: flex; justify-content: space-between; align-items: center;"><span>5.4.ポアソン分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ポアソン分布]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#4'});"><code>#</code></a></h2>
+      <h2 id="4" style="display: flex; justify-content: space-between; align-items: center;"><span>5.4.ポアソン分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ポアソン分布]', text: '[ポアソン分布]', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#4'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 春中間</span><span></span></small></p>
       <p>確率値の回答では、小数点下4桁までの値で答えること。</p>
       <ol>
@@ -602,7 +602,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="5" style="display: flex; justify-content: space-between; align-items: center;"><span>5.5.ポアソン分布の例</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ポアソン分布の例]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#5'});"><code>#</code></a></h2>
+      <h2 id="5" style="display: flex; justify-content: space-between; align-items: center;"><span>5.5.ポアソン分布の例</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ポアソン分布の例]', text: '[ポアソン分布の例]', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#5'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 春期末</span><span>教科書：pp. 166 - 169</span></small></p>
       <p>不良品率が1%である製品を、200個取り出し袋に詰める時、次を求めよ。</p>
       <ol>
@@ -621,7 +621,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="6" style="display: flex; justify-content: space-between; align-items: center;"><span>5.6.二項分布とその近似</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布とその近似]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#6'});"><code>#</code></a></h2>
+      <h2 id="6" style="display: flex; justify-content: space-between; align-items: center;"><span>5.6.二項分布とその近似</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布とその近似]', text: '[二項分布とその近似]', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#6'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 春中間</span><span>教科書：pp. 153 - 154, 166 - 169</span></small></p>
       <p>確率値の回答では、小数点下4桁までの値で答えること。 計算考察過程も詳しく回答すること。</p>
       <ol>
@@ -978,7 +978,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="7" style="display: flex; justify-content: space-between; align-items: center;"><span>5.7.二項分布の近似</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布の近似]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#7'});"><code>#</code></a></h2>
+      <h2 id="7" style="display: flex; justify-content: space-between; align-items: center;"><span>5.7.二項分布の近似</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布の近似]', text: '[二項分布の近似]', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#7'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2026年 春期末</span><span></span></small></p>
       <p>ある製品の不良率は<math><mi displaystyle="true">𝑝</mi><mo displaystyle="true">=</mo><mn displaystyle="true">0.001</mn></math>とする。この製品を無作為に<math><mi displaystyle="true">𝑛</mi><mo displaystyle="true">=</mo><mn displaystyle="true">500</mn></math>個抽出し、不良品の数を<math><mi displaystyle="true">𝑋</mi></math>とする。</p>
       <p>必要に応じて次を用いてよい：</p>
@@ -1060,7 +1060,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="8" style="display: flex; justify-content: space-between; align-items: center;"><span>5.8.二項分布とポアソン分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布とポアソン分布]', text: 'こんな簡単な問題もわからないなんて…', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#8'});"><code>#</code></a></h2>
+      <h2 id="8" style="display: flex; justify-content: space-between; align-items: center;"><span>5.8.二項分布とポアソン分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[二項分布とポアソン分布]', text: '[二項分布とポアソン分布]', url: 'https://okik-en.github.io/dove/probability-and-statistics/moment-generating-function#8'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 春中間、2023年 春中間</span><span>教科書：pp. 139 - 143, 168 - 169</span></small></p>
       <p>「表が出る確率が<math><mi displaystyle="true">𝑝</mi></math>（<math><mn displaystyle="true">0</mn><mo displaystyle="true">&lt;</mo><mi displaystyle="true">𝑝</mi><mo displaystyle="true">&lt;</mo><mn displaystyle="true">1</mn></math>）、裏が出る確率が<math><mrow displaystyle="true"><mo>(</mo><mrow><mn>1</mn><mo>−</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>のコインを独立に<math><mi displaystyle="true">𝑁</mi></math>回（<math><mi displaystyle="true">𝑁</mi><mo displaystyle="true">></mo><mn displaystyle="true">1</mn></math>）投げ、 得られる表と裏の列」を考える。 以下の問に、式の導出も含めて答えよ。</p>
       <ol>

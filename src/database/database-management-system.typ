@@ -1,8 +1,6 @@
 #import "/style/utils.typ": *
 #import "@preview/cetz:0.5.2"
 
-= データベース管理システム
-
 == 3層スキーマ構造
 
 #data(((2021, 1), (2022, 1)), p: (104, 105))

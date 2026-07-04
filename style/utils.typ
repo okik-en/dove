@@ -13,13 +13,26 @@
 #let Bin = math.class("normal", math.italic("Bin"))
 #let Po = math.class("normal", math.italic("Po"))
 
-#let ana(x) = [
+#let ana(x) = if is-html {
+  html.span(
+    style: styled(
+      display: "inline-flex",
+      align-items: "center",
+      justify-content: "center",
+      gap: "1.5em",
+      margin-inline: ".3em",
+    ),
+    {
+      html.span(sym.paren.l)
+      html.span[#x]
+      html.span(sym.paren.r)
+    },
+  )
+} else [
   #sym.paren.l
-  #sym.space
-  #sym.space
+  #h(1em)
   #x
-  #sym.space
-  #sym.space
+  #h(1em)
   #sym.paren.r
 ]
 

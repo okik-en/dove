@@ -29,7 +29,7 @@
 #set document(title: str(id) + ". " + __content__.at("chapters").at(id - 1).last())
 #show heading.where(level: 2): it => context html.h2(
   id: str(counter(heading).get().last()),
-  style: styled(display: "flex", justify-content: "space-between", align-items: "center"),
+  style: styled(display: "flex", justify-content: "space-between", align-items: "center", gap: "2em"),
   {
     html.span(counter(heading).display() + it.body)
     html.elem(

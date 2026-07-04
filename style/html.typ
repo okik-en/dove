@@ -123,7 +123,17 @@
       html.link(rel: "stylesheet", href: "https://cdn.simplecss.org/simple.css")
       html.style(
         (
-          ("body", (font-family: "'Noto Sans', 'Noto Emoji', sans-serif")),
+          (
+            "body",
+            (
+              font-family: "'Noto Sans', 'Noto Emoji', sans-serif",
+              text-autospace: "normal",
+              overflow-wrap: "anywhere",
+              word-break: "normal",
+              line-break: "strict",
+            ),
+          ),
+          ("p", (text-align: "justify")),
           ("math", (font-family: "'Noto Sans Math', 'Noto Emoji', math", padding: "1pt")),
           ("code", (font-family: "'Noto Sans Mono', 'Noto Emoji', monospace")),
           ("math, pre", (overflow-x: "auto", overflow-y: "hidden", max-width: "100%")),

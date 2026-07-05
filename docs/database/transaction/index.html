@@ -186,14 +186,10 @@
             <li>振替送金トランザクションにおいて、依頼者の残高が不足していれば、残高不足を依頼者に示して、アボートする。</li>
             <li>
               <dl>
-                <div style="display: flex; gap: 4pt;">
-                  <dt><strong>E</strong></dt>
-                  <dd style="margin-inline-start: 0pt;">現代のコンピュータアーキテクチャは主記憶–2次記憶という2階層の記憶構造の下で仮想環境空間が張られており、DBMSはその上で稼働しているため、EXEC SQL COMMIT文が実行されたとしても、トランザクションが書き出したデータはまだ主記憶の作業領域にあって、2次記憶に書き出されていない状況</dd>
-                </div>
-                <div style="display: flex; gap: 4pt;">
-                  <dt><strong>F</strong></dt>
-                  <dd style="margin-inline-start: 0pt;">揮発性</dd>
-                </div>
+                <dt>E</dt>
+                <dd>現代のコンピュータアーキテクチャは主記憶–2次記憶という2階層の記憶構造の下で仮想環境空間が張られており、DBMSはその上で稼働しているため、EXEC SQL COMMIT文が実行されたとしても、トランザクションが書き出したデータはまだ主記憶の作業領域にあって、2次記憶に書き出されていない状況</dd>
+                <dt>F</dt>
+                <dd>揮発性</dd>
               </dl>
             </li>
           </ol>
@@ -215,22 +211,14 @@
           <ol>
             <li>
               <dl>
-                <div style="display: flex; gap: 4pt;">
-                  <dt><strong>A</strong></dt>
-                  <dd style="margin-inline-start: 0pt;">Atomicity — 原子性</dd>
-                </div>
-                <div style="display: flex; gap: 4pt;">
-                  <dt><strong>C</strong></dt>
-                  <dd style="margin-inline-start: 0pt;">Consistency — 一貫性</dd>
-                </div>
-                <div style="display: flex; gap: 4pt;">
-                  <dt><strong>I</strong></dt>
-                  <dd style="margin-inline-start: 0pt;">Isolation — 隔離性</dd>
-                </div>
-                <div style="display: flex; gap: 4pt;">
-                  <dt><strong>D</strong></dt>
-                  <dd style="margin-inline-start: 0pt;">Durability — 耐久性</dd>
-                </div>
+                <dt>A</dt>
+                <dd>Atomicity — 原子性</dd>
+                <dt>C</dt>
+                <dd>Consistency — 一貫性</dd>
+                <dt>I</dt>
+                <dd>Isolation — 隔離性</dd>
+                <dt>D</dt>
+                <dd>Durability — 耐久性</dd>
               </dl>
             </li>
             <li>Durability（D）と関係がある。</li>
@@ -238,18 +226,12 @@
             <li>Durability（D）と関係がある。トランザクションは障害時回復の単位であり、トランザクション指向の障害時回復が実装されるから耐久性が実現できる。</li>
             <li>
               <dl>
-                <div style="display: flex; gap: 4pt;">
-                  <dt><strong>トランザクション障害</strong></dt>
-                  <dd style="margin-inline-start: 0pt;">トランザクションが、何らかの不備によって、異常終了するような場合。</dd>
-                </div>
-                <div style="display: flex; gap: 4pt;">
-                  <dt><strong>システム障害</strong></dt>
-                  <dd style="margin-inline-start: 0pt;">システムを再スタートさせないといけない状況に陥る場合。</dd>
-                </div>
-                <div style="display: flex; gap: 4pt;">
-                  <dt><strong>メディア障害</strong></dt>
-                  <dd style="margin-inline-start: 0pt;">ディスク等の2次記憶装置の障害。</dd>
-                </div>
+                <dt>トランザクション障害</dt>
+                <dd>トランザクションが、何らかの不備によって、異常終了するような場合。</dd>
+                <dt>システム障害</dt>
+                <dd>システムを再スタートさせないといけない状況に陥る場合。</dd>
+                <dt>メディア障害</dt>
+                <dd>ディスク等の2次記憶装置の障害。</dd>
               </dl>
             </li>
           </ol>

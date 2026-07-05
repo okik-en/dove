@@ -58,15 +58,6 @@
   set par(first-line-indent: (amount: 1em, all: true), justify: true, leading: .8em)
   set list(indent: 2em, body-indent: 0.4em, spacing: 1em)
   set enum(indent: 2em, body-indent: 0.4em, spacing: 1em, numbering: "(1-a)")
-  show terms: it => html.dl({
-    it
-      .children
-      .map(el => html.div(style: styled(display: "flex", gap: "4pt"), {
-        html.dt(html.strong(el.term))
-        html.dd(style: styled(margin-inline-start: "0pt"), el.description)
-      }))
-      .join()
-  })
   show raw: set text(size: 11pt)
   show strong: it => html.elem("strong", it)
   show figure.where(kind: database): set figure(supplement: none)

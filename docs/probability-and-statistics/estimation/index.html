@@ -2324,553 +2324,778 @@
           <ol>
             <li>
               <dl>
-                <div style="display: flex; gap: 4pt;">
-                  <dt><strong>モーメント法</strong></dt>
-                  <dd style="margin-inline-start: 0pt;">
-                    <p><math><mi displaystyle="true">𝑋</mi><mo displaystyle="true">∼</mo><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝜇</mi><mo>,</mo><msup><mi>𝜎</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>とする。 母数<math><mi displaystyle="true">𝜇</mi></math>は母集団の1次モーメント<math><msub displaystyle="true"><mi>𝜇</mi><mn>1</mn></msub></math>に等しく <math><msub displaystyle="true"><mi>𝜇</mi><mn>1</mn></msub><mo displaystyle="true">=</mo><mi displaystyle="true">𝐸</mi><mrow displaystyle="true"><mo>[</mo><mi>𝑋</mi><mo>]</mo></mrow><mo displaystyle="true">=</mo><mi displaystyle="true">𝜇</mi></math> であい、ゆえに<math><msub displaystyle="true"><mi>𝜇</mi><mn>1</mn></msub></math>を<math><mover accent="true" displaystyle="true"><msub><mi>𝜇</mi><mn>1</mn></msub><mo>̂</mo></mover><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>1</mn><mi>𝑛</mi></mfrac><munderover displaystyle="true"><mo form="prefix">∑</mo><mrow><mi>𝑖</mi><mo lspace="0em" rspace="0em">=</mo><mn>1</mn></mrow><mi>𝑛</mi></munderover><msub displaystyle="true"><mi>𝑋</mi><mi>𝑖</mi></msub><mo displaystyle="true">=</mo><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><mi>𝑋</mi></mstyle></math>で置き換えると</p>
-                    <math display="block">
-                      <mover accent="true">
-                        <mi>𝜇</mi>
-                        <mo>̂</mo>
-                      </mover>
-                      <mo>=</mo>
-                      <mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;">
-                        <mi>𝑋</mi>
-                      </mstyle>
-                    </math>
-                  </dd>
-                </div>
-                <div style="display: flex; gap: 4pt;">
-                  <dt><strong>最尤法</strong></dt>
-                  <dd style="margin-inline-start: 0pt;">
-                    <p><math><msub displaystyle="true"><mi>𝑋</mi><mn>1</mn></msub><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑋</mi><mn>2</mn></msub><mo displaystyle="true">,</mo><mi displaystyle="true">…</mi><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑋</mi><mi>𝑛</mi></msub></math>を正規分布<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝜇</mi><mo>,</mo><msup><mi>𝜎</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>からの無作為標本とし、その実現値を<math><msub displaystyle="true"><mi>𝑥</mi><mn>1</mn></msub><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑥</mi><mn>2</mn></msub><mo displaystyle="true">,</mo><mi displaystyle="true">…</mi><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑥</mi><mi>𝑛</mi></msub></math>とするれば、確率密度関数は</p>
-                    <math display="block">
-                      <mi>𝑓</mi>
+                <dt>モーメント法</dt>
+                <dd>
+                  <p><math><mi displaystyle="true">𝑋</mi><mo displaystyle="true">∼</mo><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝜇</mi><mo>,</mo><msup><mi>𝜎</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>とする。 母数<math><mi displaystyle="true">𝜇</mi></math>は母集団の1次モーメント<math><msub displaystyle="true"><mi>𝜇</mi><mn>1</mn></msub></math>に等しく <math><msub displaystyle="true"><mi>𝜇</mi><mn>1</mn></msub><mo displaystyle="true">=</mo><mi displaystyle="true">𝐸</mi><mrow displaystyle="true"><mo>[</mo><mi>𝑋</mi><mo>]</mo></mrow><mo displaystyle="true">=</mo><mi displaystyle="true">𝜇</mi></math> であい、ゆえに<math><msub displaystyle="true"><mi>𝜇</mi><mn>1</mn></msub></math>を<math><mover accent="true" displaystyle="true"><msub><mi>𝜇</mi><mn>1</mn></msub><mo>̂</mo></mover><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>1</mn><mi>𝑛</mi></mfrac><munderover displaystyle="true"><mo form="prefix">∑</mo><mrow><mi>𝑖</mi><mo lspace="0em" rspace="0em">=</mo><mn>1</mn></mrow><mi>𝑛</mi></munderover><msub displaystyle="true"><mi>𝑋</mi><mi>𝑖</mi></msub><mo displaystyle="true">=</mo><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><mi>𝑋</mi></mstyle></math>で置き換えると</p>
+                  <math display="block">
+                    <mover accent="true">
+                      <mi>𝜇</mi>
+                      <mo>̂</mo>
+                    </mover>
+                    <mo>=</mo>
+                    <mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;">
+                      <mi>𝑋</mi>
+                    </mstyle>
+                  </math>
+                </dd>
+                <dt>最尤法</dt>
+                <dd>
+                  <p><math><msub displaystyle="true"><mi>𝑋</mi><mn>1</mn></msub><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑋</mi><mn>2</mn></msub><mo displaystyle="true">,</mo><mi displaystyle="true">…</mi><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑋</mi><mi>𝑛</mi></msub></math>を正規分布<math><mi displaystyle="true">𝑁</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝜇</mi><mo>,</mo><msup><mi>𝜎</mi><mn>2</mn></msup></mrow><mo>)</mo></mrow></math>からの無作為標本とし、その実現値を<math><msub displaystyle="true"><mi>𝑥</mi><mn>1</mn></msub><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑥</mi><mn>2</mn></msub><mo displaystyle="true">,</mo><mi displaystyle="true">…</mi><mo displaystyle="true">,</mo><msub displaystyle="true"><mi>𝑥</mi><mi>𝑛</mi></msub></math>とするれば、確率密度関数は</p>
+                  <math display="block">
+                    <mi>𝑓</mi>
+                    <mrow>
+                      <mo>(</mo>
                       <mrow>
-                        <mo>(</mo>
-                        <mrow>
-                          <msub>
-                            <mi>𝑥</mi>
-                            <mi>𝑖</mi>
-                          </msub>
-                          <mo>;</mo>
-                          <mi>𝜇</mi>
-                        </mrow>
-                        <mo>)</mo>
+                        <msub>
+                          <mi>𝑥</mi>
+                          <mi>𝑖</mi>
+                        </msub>
+                        <mo>;</mo>
+                        <mi>𝜇</mi>
                       </mrow>
-                      <mo>=</mo>
-                      <mfrac>
-                        <mn>1</mn>
-                        <mrow>
-                          <msqrt>
-                            <mn>2</mn>
-                            <mi>𝜋</mi>
-                          </msqrt>
-                          <mi>𝜎</mi>
-                        </mrow>
-                      </mfrac>
-                      <msup>
-                        <mi>𝑒</mi>
-                        <mrow>
-                          <mo>−</mo>
-                          <mfrac>
-                            <msup>
+                      <mo>)</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mn>1</mn>
+                      <mrow>
+                        <msqrt>
+                          <mn>2</mn>
+                          <mi>𝜋</mi>
+                        </msqrt>
+                        <mi>𝜎</mi>
+                      </mrow>
+                    </mfrac>
+                    <msup>
+                      <mi>𝑒</mi>
+                      <mrow>
+                        <mo>−</mo>
+                        <mfrac>
+                          <msup>
+                            <mrow>
+                              <mo>(</mo>
                               <mrow>
-                                <mo>(</mo>
-                                <mrow>
-                                  <msub>
-                                    <mi>𝑥</mi>
-                                    <mi>𝑖</mi>
-                                  </msub>
-                                  <mo lspace="0em" rspace="0em">−</mo>
-                                  <mi>𝜇</mi>
-                                </mrow>
-                                <mo>)</mo>
+                                <msub>
+                                  <mi>𝑥</mi>
+                                  <mi>𝑖</mi>
+                                </msub>
+                                <mo lspace="0em" rspace="0em">−</mo>
+                                <mi>𝜇</mi>
                               </mrow>
+                              <mo>)</mo>
+                            </mrow>
+                            <mn>2</mn>
+                          </msup>
+                          <mrow>
+                            <mn>2</mn>
+                            <msup>
+                              <mi>𝜎</mi>
                               <mn>2</mn>
                             </msup>
+                          </mrow>
+                        </mfrac>
+                      </mrow>
+                    </msup>
+                  </math>
+                  <p>であり、尤度方程式は</p>
+                  <math display="block">
+                    <mtable class="multiline-equation aligned">
+                      <mtr>
+                        <mtd>
+                          <mfrac>
+                            <mi>𝑑</mi>
                             <mrow>
-                              <mn>2</mn>
-                              <msup>
-                                <mi>𝜎</mi>
-                                <mn>2</mn>
-                              </msup>
+                              <mi>𝑑</mi>
+                              <mi>𝜇</mi>
                             </mrow>
                           </mfrac>
-                        </mrow>
-                      </msup>
-                    </math>
-                    <p>であり、尤度方程式は</p>
-                    <math display="block">
-                      <mtable class="multiline-equation aligned">
-                        <mtr>
-                          <mtd>
-                            <mfrac>
-                              <mi>𝑑</mi>
-                              <mrow>
-                                <mi>𝑑</mi>
-                                <mi>𝜇</mi>
-                              </mrow>
-                            </mfrac>
-                            <mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">log</mo>
-                            <mi>𝐿</mi>
+                          <mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">log</mo>
+                          <mi>𝐿</mi>
+                          <mrow>
+                            <mo>(</mo>
+                            <mi>𝜇</mi>
+                            <mo>)</mo>
+                          </mrow>
+                        </mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <munderover>
+                            <mo form="prefix" lspace="0em">∑</mo>
                             <mrow>
-                              <mo>(</mo>
+                              <mi>𝑖</mi>
+                              <mo lspace="0em" rspace="0em">=</mo>
+                              <mn>1</mn>
+                            </mrow>
+                            <mi>𝑛</mi>
+                          </munderover>
+                          <mfrac>
+                            <mi>𝑑</mi>
+                            <mrow>
+                              <mi>𝑑</mi>
                               <mi>𝜇</mi>
-                              <mo>)</mo>
                             </mrow>
-                          </mtd>
-                          <mtd>
-                            <mo form="infix">=</mo>
-                            <munderover>
-                              <mo form="prefix" lspace="0em">∑</mo>
-                              <mrow>
-                                <mi>𝑖</mi>
-                                <mo lspace="0em" rspace="0em">=</mo>
-                                <mn>1</mn>
-                              </mrow>
-                              <mi>𝑛</mi>
-                            </munderover>
-                            <mfrac>
-                              <mi>𝑑</mi>
-                              <mrow>
-                                <mi>𝑑</mi>
-                                <mi>𝜇</mi>
-                              </mrow>
-                            </mfrac>
-                            <mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">log</mo>
-                            <mi>𝑓</mi>
+                          </mfrac>
+                          <mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">log</mo>
+                          <mi>𝑓</mi>
+                          <mrow>
+                            <mo>(</mo>
                             <mrow>
-                              <mo>(</mo>
-                              <mrow>
-                                <msub>
-                                  <mi>𝑥</mi>
-                                  <mi>𝑖</mi>
-                                </msub>
-                                <mo>;</mo>
-                                <mi>𝜇</mi>
-                              </mrow>
-                              <mo>)</mo>
+                              <msub>
+                                <mi>𝑥</mi>
+                                <mi>𝑖</mi>
+                              </msub>
+                              <mo>;</mo>
+                              <mi>𝜇</mi>
                             </mrow>
-                          </mtd>
-                        </mtr>
-                        <mtr>
-                          <mtd></mtd>
-                          <mtd>
-                            <mo form="infix">=</mo>
-                            <munderover>
-                              <mo form="prefix" lspace="0em">∑</mo>
-                              <mrow>
-                                <mi>𝑖</mi>
-                                <mo lspace="0em" rspace="0em">=</mo>
-                                <mn>1</mn>
-                              </mrow>
-                              <mi>𝑛</mi>
-                            </munderover>
-                            <mfrac>
-                              <mi>𝑑</mi>
-                              <mrow>
-                                <mi>𝑑</mi>
-                                <mi>𝜇</mi>
-                              </mrow>
-                            </mfrac>
-                            <mo form="prefix" lspace="0.16666666666666666em" rspace="0em">log</mo>
+                            <mo>)</mo>
+                          </mrow>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <munderover>
+                            <mo form="prefix" lspace="0em">∑</mo>
                             <mrow>
-                              <mo>[</mo>
-                              <mrow>
-                                <mfrac>
-                                  <mn>1</mn>
-                                  <mrow>
-                                    <msqrt>
-                                      <mn>2</mn>
-                                      <mi>𝜋</mi>
-                                    </msqrt>
-                                    <mi>𝜎</mi>
-                                  </mrow>
-                                </mfrac>
-                                <msup>
-                                  <mi>𝑒</mi>
-                                  <mrow>
-                                    <mo>−</mo>
-                                    <mfrac>
-                                      <msup>
-                                        <mrow>
-                                          <mo>(</mo>
-                                          <mrow>
-                                            <msub>
-                                              <mi>𝑥</mi>
-                                              <mi>𝑖</mi>
-                                            </msub>
-                                            <mo lspace="0em" rspace="0em">−</mo>
-                                            <mi>𝜇</mi>
-                                          </mrow>
-                                          <mo>)</mo>
-                                        </mrow>
-                                        <mn>2</mn>
-                                      </msup>
-                                      <mrow>
-                                        <mn>2</mn>
-                                        <msup>
-                                          <mi>𝜎</mi>
-                                          <mn>2</mn>
-                                        </msup>
-                                      </mrow>
-                                    </mfrac>
-                                  </mrow>
-                                </msup>
-                              </mrow>
-                              <mo>]</mo>
+                              <mi>𝑖</mi>
+                              <mo lspace="0em" rspace="0em">=</mo>
+                              <mn>1</mn>
                             </mrow>
-                          </mtd>
-                        </mtr>
-                        <mtr>
-                          <mtd></mtd>
-                          <mtd>
-                            <mo form="infix">=</mo>
-                            <munderover>
-                              <mo form="prefix" lspace="0em">∑</mo>
-                              <mrow>
-                                <mi>𝑖</mi>
-                                <mo lspace="0em" rspace="0em">=</mo>
-                                <mn>1</mn>
-                              </mrow>
-                              <mi>𝑛</mi>
-                            </munderover>
-                            <mfrac>
-                              <mi>𝑑</mi>
-                              <mrow>
-                                <mi>𝑑</mi>
-                                <mi>𝜇</mi>
-                              </mrow>
-                            </mfrac>
+                            <mi>𝑛</mi>
+                          </munderover>
+                          <mfrac>
+                            <mi>𝑑</mi>
                             <mrow>
-                              <mo>[</mo>
-                              <mrow>
-                                <mo lspace="0em" rspace="0.16666666666666666em">log</mo>
-                                <mfrac>
-                                  <mn>1</mn>
-                                  <mrow>
-                                    <msqrt>
-                                      <mn>2</mn>
-                                      <mi>𝜋</mi>
-                                    </msqrt>
-                                    <mi>𝜎</mi>
-                                  </mrow>
-                                </mfrac>
-                                <mo>−</mo>
-                                <mfrac>
-                                  <msup>
-                                    <mrow>
-                                      <mo>(</mo>
-                                      <mrow>
-                                        <msub>
-                                          <mi>𝑥</mi>
-                                          <mi>𝑖</mi>
-                                        </msub>
-                                        <mo>−</mo>
-                                        <mi>𝜇</mi>
-                                      </mrow>
-                                      <mo>)</mo>
-                                    </mrow>
+                              <mi>𝑑</mi>
+                              <mi>𝜇</mi>
+                            </mrow>
+                          </mfrac>
+                          <mo form="prefix" lspace="0.16666666666666666em" rspace="0em">log</mo>
+                          <mrow>
+                            <mo>[</mo>
+                            <mrow>
+                              <mfrac>
+                                <mn>1</mn>
+                                <mrow>
+                                  <msqrt>
                                     <mn>2</mn>
-                                  </msup>
-                                  <mrow>
-                                    <mn>2</mn>
+                                    <mi>𝜋</mi>
+                                  </msqrt>
+                                  <mi>𝜎</mi>
+                                </mrow>
+                              </mfrac>
+                              <msup>
+                                <mi>𝑒</mi>
+                                <mrow>
+                                  <mo>−</mo>
+                                  <mfrac>
                                     <msup>
-                                      <mi>𝜎</mi>
+                                      <mrow>
+                                        <mo>(</mo>
+                                        <mrow>
+                                          <msub>
+                                            <mi>𝑥</mi>
+                                            <mi>𝑖</mi>
+                                          </msub>
+                                          <mo lspace="0em" rspace="0em">−</mo>
+                                          <mi>𝜇</mi>
+                                        </mrow>
+                                        <mo>)</mo>
+                                      </mrow>
                                       <mn>2</mn>
                                     </msup>
-                                  </mrow>
-                                </mfrac>
-                              </mrow>
-                              <mo>]</mo>
+                                    <mrow>
+                                      <mn>2</mn>
+                                      <msup>
+                                        <mi>𝜎</mi>
+                                        <mn>2</mn>
+                                      </msup>
+                                    </mrow>
+                                  </mfrac>
+                                </mrow>
+                              </msup>
                             </mrow>
-                          </mtd>
-                        </mtr>
-                        <mtr>
-                          <mtd></mtd>
-                          <mtd>
-                            <mo form="infix">=</mo>
-                            <munderover>
-                              <mo form="prefix" lspace="0em">∑</mo>
-                              <mrow>
-                                <mi>𝑖</mi>
-                                <mo lspace="0em" rspace="0em">=</mo>
+                            <mo>]</mo>
+                          </mrow>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <munderover>
+                            <mo form="prefix" lspace="0em">∑</mo>
+                            <mrow>
+                              <mi>𝑖</mi>
+                              <mo lspace="0em" rspace="0em">=</mo>
+                              <mn>1</mn>
+                            </mrow>
+                            <mi>𝑛</mi>
+                          </munderover>
+                          <mfrac>
+                            <mi>𝑑</mi>
+                            <mrow>
+                              <mi>𝑑</mi>
+                              <mi>𝜇</mi>
+                            </mrow>
+                          </mfrac>
+                          <mrow>
+                            <mo>[</mo>
+                            <mrow>
+                              <mo lspace="0em" rspace="0.16666666666666666em">log</mo>
+                              <mfrac>
                                 <mn>1</mn>
-                              </mrow>
+                                <mrow>
+                                  <msqrt>
+                                    <mn>2</mn>
+                                    <mi>𝜋</mi>
+                                  </msqrt>
+                                  <mi>𝜎</mi>
+                                </mrow>
+                              </mfrac>
+                              <mo>−</mo>
+                              <mfrac>
+                                <msup>
+                                  <mrow>
+                                    <mo>(</mo>
+                                    <mrow>
+                                      <msub>
+                                        <mi>𝑥</mi>
+                                        <mi>𝑖</mi>
+                                      </msub>
+                                      <mo>−</mo>
+                                      <mi>𝜇</mi>
+                                    </mrow>
+                                    <mo>)</mo>
+                                  </mrow>
+                                  <mn>2</mn>
+                                </msup>
+                                <mrow>
+                                  <mn>2</mn>
+                                  <msup>
+                                    <mi>𝜎</mi>
+                                    <mn>2</mn>
+                                  </msup>
+                                </mrow>
+                              </mfrac>
+                            </mrow>
+                            <mo>]</mo>
+                          </mrow>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <munderover>
+                            <mo form="prefix" lspace="0em">∑</mo>
+                            <mrow>
+                              <mi>𝑖</mi>
+                              <mo lspace="0em" rspace="0em">=</mo>
+                              <mn>1</mn>
+                            </mrow>
+                            <mi>𝑛</mi>
+                          </munderover>
+                          <mfrac>
+                            <mrow>
+                              <msub>
+                                <mi>𝑥</mi>
+                                <mi>𝑖</mi>
+                              </msub>
+                              <mo>−</mo>
+                              <mi>𝜇</mi>
+                            </mrow>
+                            <msup>
+                              <mi>𝜎</mi>
+                              <mn>2</mn>
+                            </msup>
+                          </mfrac>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <mfrac>
+                            <mrow>
                               <mi>𝑛</mi>
-                            </munderover>
-                            <mfrac>
-                              <mrow>
-                                <msub>
-                                  <mi>𝑥</mi>
-                                  <mi>𝑖</mi>
-                                </msub>
-                                <mo>−</mo>
-                                <mi>𝜇</mi>
-                              </mrow>
-                              <msup>
-                                <mi>𝜎</mi>
-                                <mn>2</mn>
-                              </msup>
-                            </mfrac>
-                          </mtd>
-                        </mtr>
-                        <mtr>
-                          <mtd></mtd>
-                          <mtd>
-                            <mo form="infix">=</mo>
-                            <mfrac>
-                              <mrow>
-                                <mi>𝑛</mi>
-                                <mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;">
-                                  <mi>𝑥</mi>
-                                </mstyle>
-                                <mo>−</mo>
-                                <mi>𝑛</mi>
-                                <mi>𝜇</mi>
-                              </mrow>
-                              <msup>
-                                <mi>𝜎</mi>
-                                <mn>2</mn>
-                              </msup>
-                            </mfrac>
-                            <mo>=</mo>
-                            <mn>0</mn>
-                          </mtd>
-                        </mtr>
-                      </mtable>
-                    </math>
-                    <p>となる。 これを解くと<math><mi displaystyle="true">𝜇</mi><mo displaystyle="true">=</mo><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><mi>𝑥</mi></mstyle></math>となり、最尤推定量は<math><mover accent="true" displaystyle="true"><mi>𝜇</mi><mo>̂</mo></mover><mo displaystyle="true">=</mo><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><mi>𝑋</mi></mstyle></math>。</p>
-                  </dd>
-                </div>
+                              <mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;">
+                                <mi>𝑥</mi>
+                              </mstyle>
+                              <mo>−</mo>
+                              <mi>𝑛</mi>
+                              <mi>𝜇</mi>
+                            </mrow>
+                            <msup>
+                              <mi>𝜎</mi>
+                              <mn>2</mn>
+                            </msup>
+                          </mfrac>
+                          <mo>=</mo>
+                          <mn>0</mn>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                  </math>
+                  <p>となる。 これを解くと<math><mi displaystyle="true">𝜇</mi><mo displaystyle="true">=</mo><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><mi>𝑥</mi></mstyle></math>となり、最尤推定量は<math><mover accent="true" displaystyle="true"><mi>𝜇</mi><mo>̂</mo></mover><mo displaystyle="true">=</mo><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><mi>𝑋</mi></mstyle></math>。</p>
+                </dd>
               </dl>
-              以上より、両者の結果は一致する。
+              <p>以上より、両者の結果は一致する。</p>
             </li>
             <li>
               <dl>
-                <div style="display: flex; gap: 4pt;">
-                  <dt><strong>モーメント法</strong></dt>
-                  <dd style="margin-inline-start: 0pt;">
-                    <p>母集団の1次、2次モーメント<math><msub displaystyle="true"><mi>𝜇</mi><mn>1</mn></msub></math>、<math><msub displaystyle="true"><mi>𝜇</mi><mn>2</mn></msub></math>それぞれについて</p>
-                    <math display="block">
-                      <msub>
-                        <mi>𝜇</mi>
-                        <mn>1</mn>
-                      </msub>
-                      <mo>=</mo>
-                      <mi>𝐸</mi>
-                      <mrow>
-                        <mo>[</mo>
+                <dt>モーメント法</dt>
+                <dd>
+                  <p>母集団の1次、2次モーメント<math><msub displaystyle="true"><mi>𝜇</mi><mn>1</mn></msub></math>、<math><msub displaystyle="true"><mi>𝜇</mi><mn>2</mn></msub></math>それぞれについて</p>
+                  <math display="block">
+                    <msub>
+                      <mi>𝜇</mi>
+                      <mn>1</mn>
+                    </msub>
+                    <mo>=</mo>
+                    <mi>𝐸</mi>
+                    <mrow>
+                      <mo>[</mo>
+                      <mi>𝑋</mi>
+                      <mo>]</mo>
+                    </mrow>
+                    <mo rspace="0em">,</mo>
+                    <mspace width="2em"/>
+                    <msub>
+                      <mi>𝜇</mi>
+                      <mn>2</mn>
+                    </msub>
+                    <mo>=</mo>
+                    <mi>𝐸</mi>
+                    <mrow>
+                      <mo>[</mo>
+                      <msup>
                         <mi>𝑋</mi>
-                        <mo>]</mo>
-                      </mrow>
-                      <mo rspace="0em">,</mo>
-                      <mspace width="2em"/>
-                      <msub>
-                        <mi>𝜇</mi>
                         <mn>2</mn>
-                      </msub>
-                      <mo>=</mo>
-                      <mi>𝐸</mi>
+                      </msup>
+                      <mo>]</mo>
+                    </mrow>
+                  </math>
+                  <p>となり、また分散の性質より</p>
+                  <math display="block">
+                    <msup>
+                      <mi>𝜎</mi>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>=</mo>
+                    <mi>𝐸</mi>
+                    <mrow>
+                      <mo>[</mo>
+                      <msup>
+                        <mi>𝑋</mi>
+                        <mn>2</mn>
+                      </msup>
+                      <mo>]</mo>
+                    </mrow>
+                    <mo>−</mo>
+                    <msup>
                       <mrow>
-                        <mo>[</mo>
-                        <msup>
+                        <mi>𝐸</mi>
+                        <mrow>
+                          <mo>[</mo>
                           <mi>𝑋</mi>
-                          <mn>2</mn>
-                        </msup>
-                        <mo>]</mo>
+                          <mo>]</mo>
+                        </mrow>
                       </mrow>
-                    </math>
-                    <p>となり、また分散の性質より</p>
-                    <math display="block">
+                      <mn>2</mn>
+                    </msup>
+                    <mo>=</mo>
+                    <msub>
+                      <mi>𝜇</mi>
+                      <mn>2</mn>
+                    </msub>
+                    <mo>−</mo>
+                    <msubsup>
+                      <mi>𝜇</mi>
+                      <mn>1</mn>
+                      <mn>2</mn>
+                    </msubsup>
+                  </math>
+                  <p>が成り立つため、これを上の<math><mover accent="true" displaystyle="true"><msub><mi>𝜇</mi><mn>1</mn></msub><mo>̂</mo></mover></math>および<math><mover accent="true" displaystyle="true"><msub><mi>𝜇</mi><mn>2</mn></msub><mo>̂</mo></mover><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>1</mn><mi>𝑛</mi></mfrac><munderover displaystyle="true"><mo form="prefix">∑</mo><mrow><mi>𝑖</mi><mo lspace="0em" rspace="0em">=</mo><mn>1</mn></mrow><mi>𝑛</mi></munderover><msubsup displaystyle="true"><mi>𝑋</mi><mi>𝑖</mi><mn>2</mn></msubsup><mo displaystyle="true">=</mo><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><msup><mi>𝑋</mi><mn>2</mn></msup></mstyle></math>で置き換えると</p>
+                  <math display="block">
+                    <mover accent="true">
                       <msup>
                         <mi>𝜎</mi>
                         <mn>2</mn>
                       </msup>
-                      <mo>=</mo>
-                      <mi>𝐸</mi>
-                      <mrow>
-                        <mo>[</mo>
-                        <msup>
-                          <mi>𝑋</mi>
-                          <mn>2</mn>
-                        </msup>
-                        <mo>]</mo>
-                      </mrow>
-                      <mo>−</mo>
-                      <msup>
-                        <mrow>
-                          <mi>𝐸</mi>
-                          <mrow>
-                            <mo>[</mo>
-                            <mi>𝑋</mi>
-                            <mo>]</mo>
-                          </mrow>
-                        </mrow>
-                        <mn>2</mn>
-                      </msup>
-                      <mo>=</mo>
+                      <mo>̂</mo>
+                    </mover>
+                    <mo>=</mo>
+                    <mover accent="true">
                       <msub>
                         <mi>𝜇</mi>
                         <mn>2</mn>
                       </msub>
-                      <mo>−</mo>
-                      <msubsup>
-                        <mi>𝜇</mi>
-                        <mn>1</mn>
-                        <mn>2</mn>
-                      </msubsup>
-                    </math>
-                    <p>が成り立つため、これを上の<math><mover accent="true" displaystyle="true"><msub><mi>𝜇</mi><mn>1</mn></msub><mo>̂</mo></mover></math>および<math><mover accent="true" displaystyle="true"><msub><mi>𝜇</mi><mn>2</mn></msub><mo>̂</mo></mover><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mn>1</mn><mi>𝑛</mi></mfrac><munderover displaystyle="true"><mo form="prefix">∑</mo><mrow><mi>𝑖</mi><mo lspace="0em" rspace="0em">=</mo><mn>1</mn></mrow><mi>𝑛</mi></munderover><msubsup displaystyle="true"><mi>𝑋</mi><mi>𝑖</mi><mn>2</mn></msubsup><mo displaystyle="true">=</mo><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><msup><mi>𝑋</mi><mn>2</mn></msup></mstyle></math>で置き換えると</p>
-                    <math display="block">
+                      <mo>̂</mo>
+                    </mover>
+                    <mo>−</mo>
+                    <msup>
                       <mover accent="true">
+                        <msub>
+                          <mi>𝜇</mi>
+                          <mn>1</mn>
+                        </msub>
+                        <mo>̂</mo>
+                      </mover>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>=</mo>
+                    <mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;">
+                      <msup>
+                        <mi>𝑋</mi>
+                        <mn>2</mn>
+                      </msup>
+                    </mstyle>
+                    <mo>−</mo>
+                    <msup>
+                      <mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;">
+                        <mi>𝑋</mi>
+                      </mstyle>
+                      <mn>2</mn>
+                    </msup>
+                  </math>
+                </dd>
+                <dt>最尤法</dt>
+                <dd>
+                  <p><math><mi displaystyle="true">𝜃</mi><mo displaystyle="true">=</mo><msup displaystyle="true"><mi>𝜎</mi><mn>2</mn></msup></math>とすると</p>
+                  <math display="block">
+                    <mi>𝑓</mi>
+                    <mrow>
+                      <mo>(</mo>
+                      <mrow>
+                        <msub>
+                          <mi>𝑥</mi>
+                          <mi>𝑖</mi>
+                        </msub>
+                        <mo>;</mo>
+                        <mi>𝜇</mi>
+                        <mo>;</mo>
                         <msup>
                           <mi>𝜎</mi>
                           <mn>2</mn>
                         </msup>
-                        <mo>̂</mo>
-                      </mover>
-                      <mo>=</mo>
-                      <mover accent="true">
-                        <msub>
-                          <mi>𝜇</mi>
-                          <mn>2</mn>
-                        </msub>
-                        <mo>̂</mo>
-                      </mover>
-                      <mo>−</mo>
-                      <msup>
-                        <mover accent="true">
-                          <msub>
-                            <mi>𝜇</mi>
-                            <mn>1</mn>
-                          </msub>
-                          <mo>̂</mo>
-                        </mover>
+                      </mrow>
+                      <mo>)</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mn>1</mn>
+                      <msqrt>
                         <mn>2</mn>
-                      </msup>
-                      <mo>=</mo>
-                      <mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;">
-                        <msup>
-                          <mi>𝑋</mi>
-                          <mn>2</mn>
-                        </msup>
-                      </mstyle>
-                      <mo>−</mo>
-                      <msup>
-                        <mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;">
-                          <mi>𝑋</mi>
-                        </mstyle>
-                        <mn>2</mn>
-                      </msup>
-                    </math>
-                  </dd>
-                </div>
-                <div style="display: flex; gap: 4pt;">
-                  <dt><strong>最尤法</strong></dt>
-                  <dd style="margin-inline-start: 0pt;">
-                    <p><math><mi displaystyle="true">𝜃</mi><mo displaystyle="true">=</mo><msup displaystyle="true"><mi>𝜎</mi><mn>2</mn></msup></math>とすると</p>
-                    <math display="block">
-                      <mi>𝑓</mi>
+                        <mi>𝜋</mi>
+                        <mi>𝜃</mi>
+                      </msqrt>
+                    </mfrac>
+                    <msup>
+                      <mi>𝑒</mi>
                       <mrow>
-                        <mo>(</mo>
-                        <mrow>
-                          <msub>
-                            <mi>𝑥</mi>
-                            <mi>𝑖</mi>
-                          </msub>
-                          <mo>;</mo>
-                          <mi>𝜇</mi>
-                          <mo>;</mo>
+                        <mo>−</mo>
+                        <mfrac>
                           <msup>
-                            <mi>𝜎</mi>
+                            <mrow>
+                              <mo>(</mo>
+                              <mrow>
+                                <msub>
+                                  <mi>𝑥</mi>
+                                  <mi>𝑖</mi>
+                                </msub>
+                                <mo lspace="0em" rspace="0em">−</mo>
+                                <mi>𝜇</mi>
+                              </mrow>
+                              <mo>)</mo>
+                            </mrow>
                             <mn>2</mn>
                           </msup>
-                        </mrow>
-                        <mo>)</mo>
+                          <mrow>
+                            <mn>2</mn>
+                            <mi>𝜃</mi>
+                          </mrow>
+                        </mfrac>
                       </mrow>
-                      <mo>=</mo>
-                      <mfrac>
-                        <mn>1</mn>
-                        <msqrt>
-                          <mn>2</mn>
-                          <mi>𝜋</mi>
-                          <mi>𝜃</mi>
-                        </msqrt>
-                      </mfrac>
-                      <msup>
-                        <mi>𝑒</mi>
-                        <mrow>
-                          <mo>−</mo>
+                    </msup>
+                  </math>
+                  <p>であり、<math><mi displaystyle="true">𝜃</mi></math>に関する尤度方程式は</p>
+                  <math display="block">
+                    <mtable class="multiline-equation aligned">
+                      <mtr>
+                        <mtd>
                           <mfrac>
-                            <msup>
+                            <mi>𝜕</mi>
+                            <mrow>
+                              <mi>𝜕</mi>
+                              <mi>𝜃</mi>
+                            </mrow>
+                          </mfrac>
+                          <mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">log</mo>
+                          <mi>𝐿</mi>
+                          <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                              <mi>𝜇</mi>
+                              <mo>,</mo>
+                              <mi>𝜃</mi>
+                            </mrow>
+                            <mo>)</mo>
+                          </mrow>
+                        </mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <munderover>
+                            <mo form="prefix" lspace="0em">∑</mo>
+                            <mrow>
+                              <mi>𝑖</mi>
+                              <mo lspace="0em" rspace="0em">=</mo>
+                              <mn>1</mn>
+                            </mrow>
+                            <mi>𝑛</mi>
+                          </munderover>
+                          <mfrac>
+                            <mi>𝜕</mi>
+                            <mrow>
+                              <mi>𝜕</mi>
+                              <mi>𝜃</mi>
+                            </mrow>
+                          </mfrac>
+                          <mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">log</mo>
+                          <mi>𝑓</mi>
+                          <mrow>
+                            <mo>(</mo>
+                            <mrow>
+                              <msub>
+                                <mi>𝑥</mi>
+                                <mi>𝑖</mi>
+                              </msub>
+                              <mo>;</mo>
+                              <mi>𝜇</mi>
+                              <mo>;</mo>
+                              <mi>𝜃</mi>
+                            </mrow>
+                            <mo>)</mo>
+                          </mrow>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <munderover>
+                            <mo form="prefix" lspace="0em">∑</mo>
+                            <mrow>
+                              <mi>𝑖</mi>
+                              <mo lspace="0em" rspace="0em">=</mo>
+                              <mn>1</mn>
+                            </mrow>
+                            <mi>𝑛</mi>
+                          </munderover>
+                          <mfrac>
+                            <mi>𝜕</mi>
+                            <mrow>
+                              <mi>𝜕</mi>
+                              <mi>𝜃</mi>
+                            </mrow>
+                          </mfrac>
+                          <mo form="prefix" lspace="0.16666666666666666em" rspace="0em">log</mo>
+                          <mrow>
+                            <mo>[</mo>
+                            <mrow>
+                              <mfrac>
+                                <mn>1</mn>
+                                <msqrt>
+                                  <mn>2</mn>
+                                  <mi>𝜋</mi>
+                                  <mi>𝜃</mi>
+                                </msqrt>
+                              </mfrac>
+                              <msup>
+                                <mi>𝑒</mi>
+                                <mrow>
+                                  <mo>−</mo>
+                                  <mfrac>
+                                    <msup>
+                                      <mrow>
+                                        <mo>(</mo>
+                                        <mrow>
+                                          <msub>
+                                            <mi>𝑥</mi>
+                                            <mi>𝑖</mi>
+                                          </msub>
+                                          <mo lspace="0em" rspace="0em">−</mo>
+                                          <mi>𝜇</mi>
+                                        </mrow>
+                                        <mo>)</mo>
+                                      </mrow>
+                                      <mn>2</mn>
+                                    </msup>
+                                    <mrow>
+                                      <mn>2</mn>
+                                      <mi>𝜃</mi>
+                                    </mrow>
+                                  </mfrac>
+                                </mrow>
+                              </msup>
+                            </mrow>
+                            <mo>]</mo>
+                          </mrow>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <munderover>
+                            <mo form="prefix" lspace="0em">∑</mo>
+                            <mrow>
+                              <mi>𝑖</mi>
+                              <mo lspace="0em" rspace="0em">=</mo>
+                              <mn>1</mn>
+                            </mrow>
+                            <mi>𝑛</mi>
+                          </munderover>
+                          <mfrac>
+                            <mi>𝜕</mi>
+                            <mrow>
+                              <mi>𝜕</mi>
+                              <mi>𝜃</mi>
+                            </mrow>
+                          </mfrac>
+                          <mrow>
+                            <mo>[</mo>
+                            <mrow>
+                              <mo>−</mo>
+                              <mfrac>
+                                <mn>1</mn>
+                                <mn>2</mn>
+                              </mfrac>
+                              <mo form="prefix" lspace="0.16666666666666666em" rspace="0em">log</mo>
                               <mrow>
                                 <mo>(</mo>
                                 <mrow>
-                                  <msub>
-                                    <mi>𝑥</mi>
-                                    <mi>𝑖</mi>
-                                  </msub>
-                                  <mo lspace="0em" rspace="0em">−</mo>
-                                  <mi>𝜇</mi>
+                                  <mn>2</mn>
+                                  <mi>𝜋</mi>
+                                  <mi>𝜃</mi>
                                 </mrow>
                                 <mo>)</mo>
                               </mrow>
-                              <mn>2</mn>
-                            </msup>
+                              <mo>−</mo>
+                              <mfrac>
+                                <msup>
+                                  <mrow>
+                                    <mo>(</mo>
+                                    <mrow>
+                                      <msub>
+                                        <mi>𝑥</mi>
+                                        <mi>𝑖</mi>
+                                      </msub>
+                                      <mo>−</mo>
+                                      <mi>𝜇</mi>
+                                    </mrow>
+                                    <mo>)</mo>
+                                  </mrow>
+                                  <mn>2</mn>
+                                </msup>
+                                <mrow>
+                                  <mn>2</mn>
+                                  <mi>𝜃</mi>
+                                </mrow>
+                              </mfrac>
+                            </mrow>
+                            <mo>]</mo>
+                          </mrow>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <munderover>
+                            <mo form="prefix" lspace="0em" rspace="0em">∑</mo>
+                            <mrow>
+                              <mi>𝑖</mi>
+                              <mo lspace="0em" rspace="0em">=</mo>
+                              <mn>1</mn>
+                            </mrow>
+                            <mi>𝑛</mi>
+                          </munderover>
+                          <mrow>
+                            <mo>[</mo>
+                            <mrow>
+                              <mo>−</mo>
+                              <mfrac>
+                                <mn>1</mn>
+                                <mrow>
+                                  <mn>2</mn>
+                                  <mi>𝜃</mi>
+                                </mrow>
+                              </mfrac>
+                              <mo>+</mo>
+                              <mfrac>
+                                <msup>
+                                  <mrow>
+                                    <mo>(</mo>
+                                    <mrow>
+                                      <msub>
+                                        <mi>𝑥</mi>
+                                        <mi>𝑖</mi>
+                                      </msub>
+                                      <mo>−</mo>
+                                      <mi>𝜇</mi>
+                                    </mrow>
+                                    <mo>)</mo>
+                                  </mrow>
+                                  <mn>2</mn>
+                                </msup>
+                                <mrow>
+                                  <mn>2</mn>
+                                  <msup>
+                                    <mi>𝜃</mi>
+                                    <mn>2</mn>
+                                  </msup>
+                                </mrow>
+                              </mfrac>
+                            </mrow>
+                            <mo>]</mo>
+                          </mrow>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <mo form="prefix">−</mo>
+                          <mfrac>
+                            <mi>𝑛</mi>
                             <mrow>
                               <mn>2</mn>
                               <mi>𝜃</mi>
                             </mrow>
                           </mfrac>
-                        </mrow>
-                      </msup>
-                    </math>
-                    <p>であり、<math><mi displaystyle="true">𝜃</mi></math>に関する尤度方程式は</p>
-                    <math display="block">
-                      <mtable class="multiline-equation aligned">
-                        <mtr>
-                          <mtd>
-                            <mfrac>
-                              <mi>𝜕</mi>
-                              <mrow>
-                                <mi>𝜕</mi>
-                                <mi>𝜃</mi>
-                              </mrow>
-                            </mfrac>
-                            <mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">log</mo>
-                            <mi>𝐿</mi>
+                          <mo>+</mo>
+                          <mfrac>
+                            <mn>1</mn>
                             <mrow>
-                              <mo>(</mo>
-                              <mrow>
-                                <mi>𝜇</mi>
-                                <mo>,</mo>
+                              <mn>2</mn>
+                              <msup>
                                 <mi>𝜃</mi>
-                              </mrow>
-                              <mo>)</mo>
+                                <mn>2</mn>
+                              </msup>
                             </mrow>
-                          </mtd>
-                          <mtd>
-                            <mo form="infix">=</mo>
-                            <munderover>
-                              <mo form="prefix" lspace="0em">∑</mo>
-                              <mrow>
-                                <mi>𝑖</mi>
-                                <mo lspace="0em" rspace="0em">=</mo>
-                                <mn>1</mn>
-                              </mrow>
-                              <mi>𝑛</mi>
-                            </munderover>
-                            <mfrac>
-                              <mi>𝜕</mi>
-                              <mrow>
-                                <mi>𝜕</mi>
-                                <mi>𝜃</mi>
-                              </mrow>
-                            </mfrac>
-                            <mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">log</mo>
-                            <mi>𝑓</mi>
+                          </mfrac>
+                          <munderover>
+                            <mo form="prefix">∑</mo>
+                            <mrow>
+                              <mi>𝑖</mi>
+                              <mo lspace="0em" rspace="0em">=</mo>
+                              <mn>1</mn>
+                            </mrow>
+                            <mi>𝑛</mi>
+                          </munderover>
+                          <msup>
                             <mrow>
                               <mo>(</mo>
                               <mrow>
@@ -2878,293 +3103,60 @@
                                   <mi>𝑥</mi>
                                   <mi>𝑖</mi>
                                 </msub>
-                                <mo>;</mo>
+                                <mo>−</mo>
                                 <mi>𝜇</mi>
-                                <mo>;</mo>
-                                <mi>𝜃</mi>
                               </mrow>
                               <mo>)</mo>
                             </mrow>
-                          </mtd>
-                        </mtr>
-                        <mtr>
-                          <mtd></mtd>
-                          <mtd>
-                            <mo form="infix">=</mo>
-                            <munderover>
-                              <mo form="prefix" lspace="0em">∑</mo>
-                              <mrow>
-                                <mi>𝑖</mi>
-                                <mo lspace="0em" rspace="0em">=</mo>
-                                <mn>1</mn>
-                              </mrow>
-                              <mi>𝑛</mi>
-                            </munderover>
-                            <mfrac>
-                              <mi>𝜕</mi>
-                              <mrow>
-                                <mi>𝜕</mi>
-                                <mi>𝜃</mi>
-                              </mrow>
-                            </mfrac>
-                            <mo form="prefix" lspace="0.16666666666666666em" rspace="0em">log</mo>
-                            <mrow>
-                              <mo>[</mo>
-                              <mrow>
-                                <mfrac>
-                                  <mn>1</mn>
-                                  <msqrt>
-                                    <mn>2</mn>
-                                    <mi>𝜋</mi>
-                                    <mi>𝜃</mi>
-                                  </msqrt>
-                                </mfrac>
-                                <msup>
-                                  <mi>𝑒</mi>
-                                  <mrow>
-                                    <mo>−</mo>
-                                    <mfrac>
-                                      <msup>
-                                        <mrow>
-                                          <mo>(</mo>
-                                          <mrow>
-                                            <msub>
-                                              <mi>𝑥</mi>
-                                              <mi>𝑖</mi>
-                                            </msub>
-                                            <mo lspace="0em" rspace="0em">−</mo>
-                                            <mi>𝜇</mi>
-                                          </mrow>
-                                          <mo>)</mo>
-                                        </mrow>
-                                        <mn>2</mn>
-                                      </msup>
-                                      <mrow>
-                                        <mn>2</mn>
-                                        <mi>𝜃</mi>
-                                      </mrow>
-                                    </mfrac>
-                                  </mrow>
-                                </msup>
-                              </mrow>
-                              <mo>]</mo>
-                            </mrow>
-                          </mtd>
-                        </mtr>
-                        <mtr>
-                          <mtd></mtd>
-                          <mtd>
-                            <mo form="infix">=</mo>
-                            <munderover>
-                              <mo form="prefix" lspace="0em">∑</mo>
-                              <mrow>
-                                <mi>𝑖</mi>
-                                <mo lspace="0em" rspace="0em">=</mo>
-                                <mn>1</mn>
-                              </mrow>
-                              <mi>𝑛</mi>
-                            </munderover>
-                            <mfrac>
-                              <mi>𝜕</mi>
-                              <mrow>
-                                <mi>𝜕</mi>
-                                <mi>𝜃</mi>
-                              </mrow>
-                            </mfrac>
-                            <mrow>
-                              <mo>[</mo>
-                              <mrow>
-                                <mo>−</mo>
-                                <mfrac>
-                                  <mn>1</mn>
-                                  <mn>2</mn>
-                                </mfrac>
-                                <mo form="prefix" lspace="0.16666666666666666em" rspace="0em">log</mo>
-                                <mrow>
-                                  <mo>(</mo>
-                                  <mrow>
-                                    <mn>2</mn>
-                                    <mi>𝜋</mi>
-                                    <mi>𝜃</mi>
-                                  </mrow>
-                                  <mo>)</mo>
-                                </mrow>
-                                <mo>−</mo>
-                                <mfrac>
-                                  <msup>
-                                    <mrow>
-                                      <mo>(</mo>
-                                      <mrow>
-                                        <msub>
-                                          <mi>𝑥</mi>
-                                          <mi>𝑖</mi>
-                                        </msub>
-                                        <mo>−</mo>
-                                        <mi>𝜇</mi>
-                                      </mrow>
-                                      <mo>)</mo>
-                                    </mrow>
-                                    <mn>2</mn>
-                                  </msup>
-                                  <mrow>
-                                    <mn>2</mn>
-                                    <mi>𝜃</mi>
-                                  </mrow>
-                                </mfrac>
-                              </mrow>
-                              <mo>]</mo>
-                            </mrow>
-                          </mtd>
-                        </mtr>
-                        <mtr>
-                          <mtd></mtd>
-                          <mtd>
-                            <mo form="infix">=</mo>
-                            <munderover>
-                              <mo form="prefix" lspace="0em" rspace="0em">∑</mo>
-                              <mrow>
-                                <mi>𝑖</mi>
-                                <mo lspace="0em" rspace="0em">=</mo>
-                                <mn>1</mn>
-                              </mrow>
-                              <mi>𝑛</mi>
-                            </munderover>
-                            <mrow>
-                              <mo>[</mo>
-                              <mrow>
-                                <mo>−</mo>
-                                <mfrac>
-                                  <mn>1</mn>
-                                  <mrow>
-                                    <mn>2</mn>
-                                    <mi>𝜃</mi>
-                                  </mrow>
-                                </mfrac>
-                                <mo>+</mo>
-                                <mfrac>
-                                  <msup>
-                                    <mrow>
-                                      <mo>(</mo>
-                                      <mrow>
-                                        <msub>
-                                          <mi>𝑥</mi>
-                                          <mi>𝑖</mi>
-                                        </msub>
-                                        <mo>−</mo>
-                                        <mi>𝜇</mi>
-                                      </mrow>
-                                      <mo>)</mo>
-                                    </mrow>
-                                    <mn>2</mn>
-                                  </msup>
-                                  <mrow>
-                                    <mn>2</mn>
-                                    <msup>
-                                      <mi>𝜃</mi>
-                                      <mn>2</mn>
-                                    </msup>
-                                  </mrow>
-                                </mfrac>
-                              </mrow>
-                              <mo>]</mo>
-                            </mrow>
-                          </mtd>
-                        </mtr>
-                        <mtr>
-                          <mtd></mtd>
-                          <mtd>
-                            <mo form="infix">=</mo>
-                            <mo form="prefix">−</mo>
-                            <mfrac>
-                              <mi>𝑛</mi>
-                              <mrow>
-                                <mn>2</mn>
-                                <mi>𝜃</mi>
-                              </mrow>
-                            </mfrac>
-                            <mo>+</mo>
-                            <mfrac>
-                              <mn>1</mn>
-                              <mrow>
-                                <mn>2</mn>
-                                <msup>
-                                  <mi>𝜃</mi>
-                                  <mn>2</mn>
-                                </msup>
-                              </mrow>
-                            </mfrac>
-                            <munderover>
-                              <mo form="prefix">∑</mo>
-                              <mrow>
-                                <mi>𝑖</mi>
-                                <mo lspace="0em" rspace="0em">=</mo>
-                                <mn>1</mn>
-                              </mrow>
-                              <mi>𝑛</mi>
-                            </munderover>
-                            <msup>
-                              <mrow>
-                                <mo>(</mo>
-                                <mrow>
-                                  <msub>
-                                    <mi>𝑥</mi>
-                                    <mi>𝑖</mi>
-                                  </msub>
-                                  <mo>−</mo>
-                                  <mi>𝜇</mi>
-                                </mrow>
-                                <mo>)</mo>
-                              </mrow>
-                              <mn>2</mn>
-                            </msup>
-                            <mo>=</mo>
-                            <mn>0</mn>
-                          </mtd>
-                        </mtr>
-                      </mtable>
-                    </math>
-                    <p>であり、また<math><mi displaystyle="true">𝜇</mi></math>に関する尤度法の結果<math><mover accent="true" displaystyle="true"><mi>𝜇</mi><mo>̂</mo></mover><mo displaystyle="true">=</mo><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><mi>𝑥</mi></mstyle></math>より、最尤推定量は</p>
-                    <math display="block">
-                      <mover accent="true">
-                        <mi>𝜃</mi>
-                        <mo>̂</mo>
-                      </mover>
-                      <mo>=</mo>
-                      <mfrac>
+                            <mn>2</mn>
+                          </msup>
+                          <mo>=</mo>
+                          <mn>0</mn>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                  </math>
+                  <p>であり、また<math><mi displaystyle="true">𝜇</mi></math>に関する尤度法の結果<math><mover accent="true" displaystyle="true"><mi>𝜇</mi><mo>̂</mo></mover><mo displaystyle="true">=</mo><mstyle style="border-top: 1pt solid currentColor; padding: 2pt 1pt 0pt;" displaystyle="true"><mi>𝑥</mi></mstyle></math>より、最尤推定量は</p>
+                  <math display="block">
+                    <mover accent="true">
+                      <mi>𝜃</mi>
+                      <mo>̂</mo>
+                    </mover>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mn>1</mn>
+                      <mi>𝑛</mi>
+                    </mfrac>
+                    <munderover>
+                      <mo form="prefix">∑</mo>
+                      <mrow>
+                        <mi>𝑖</mi>
+                        <mo lspace="0em" rspace="0em">=</mo>
                         <mn>1</mn>
-                        <mi>𝑛</mi>
-                      </mfrac>
-                      <munderover>
-                        <mo form="prefix">∑</mo>
+                      </mrow>
+                      <mi>𝑛</mi>
+                    </munderover>
+                    <msup>
+                      <mrow>
+                        <mo>(</mo>
                         <mrow>
-                          <mi>𝑖</mi>
-                          <mo lspace="0em" rspace="0em">=</mo>
-                          <mn>1</mn>
+                          <msub>
+                            <mi>𝑥</mi>
+                            <mi>𝑖</mi>
+                          </msub>
+                          <mo>−</mo>
+                          <mi>𝜇</mi>
                         </mrow>
-                        <mi>𝑛</mi>
-                      </munderover>
-                      <msup>
-                        <mrow>
-                          <mo>(</mo>
-                          <mrow>
-                            <msub>
-                              <mi>𝑥</mi>
-                              <mi>𝑖</mi>
-                            </msub>
-                            <mo>−</mo>
-                            <mi>𝜇</mi>
-                          </mrow>
-                          <mo>)</mo>
-                        </mrow>
-                        <mn>2</mn>
-                      </msup>
-                      <mo>=</mo>
-                      <mn>0</mn>
-                    </math>
-                  </dd>
-                </div>
+                        <mo>)</mo>
+                      </mrow>
+                      <mn>2</mn>
+                    </msup>
+                    <mo>=</mo>
+                    <mn>0</mn>
+                  </math>
+                </dd>
               </dl>
-              よって両者の結果は一致しない。
+              <p>よって両者の結果は一致しない。</p>
             </li>
           </ol>
         </div>

@@ -164,22 +164,14 @@ end</code></pre>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 夏中間</span><span>教科書：pp. 154 - 157</span></small></p>
       <p><math><mn displaystyle="true">2</mn></math>つのトランザクション<math><msub displaystyle="true"><mi>𝑇</mi><mn>1</mn></msub></math>、<math><msub displaystyle="true"><mi>𝑇</mi><mn>2</mn></msub></math>が、データ<code>a</code>、<code>b</code>に並行してアクセスする。 <math><msub displaystyle="true"><mi>𝑇</mi><mn>1</mn></msub></math>、<math><msub displaystyle="true"><mi>𝑇</mi><mn>2</mn></msub></math>の組合せのうち、直列可能性が保証できるものはどれか。 ここで、トランザクションの各操作の意味は次のとおりとする。</p>
       <dl>
-        <div style="display: flex; gap: 4pt;">
-          <dt><strong><code>LOCK x</code></strong></dt>
-          <dd style="margin-inline-start: 0pt;">データ<code>x</code>をロックする</dd>
-        </div>
-        <div style="display: flex; gap: 4pt;">
-          <dt><strong><code>READ x</code></strong></dt>
-          <dd style="margin-inline-start: 0pt;">データ<code>x</code>を読み込む</dd>
-        </div>
-        <div style="display: flex; gap: 4pt;">
-          <dt><strong><code>WRITE x</code></strong></dt>
-          <dd style="margin-inline-start: 0pt;">データ<code>x</code>を書き出す</dd>
-        </div>
-        <div style="display: flex; gap: 4pt;">
-          <dt><strong><code>UNLOCK x</code></strong></dt>
-          <dd style="margin-inline-start: 0pt;">データ<code>x</code>をアンロックする</dd>
-        </div>
+        <dt><code>LOCK x</code></dt>
+        <dd>データ<code>x</code>をロックする</dd>
+        <dt><code>READ x</code></dt>
+        <dd>データ<code>x</code>を読み込む</dd>
+        <dt><code>WRITE x</code></dt>
+        <dd>データ<code>x</code>を書き出す</dd>
+        <dt><code>UNLOCK x</code></dt>
+        <dd>データ<code>x</code>をアンロックする</dd>
       </dl>
       <figure>
         <table>

@@ -126,6 +126,7 @@
           ),
           ("p", (text-align: "justify")),
           ("math", (font-family: "'Noto Sans Math', 'Noto Emoji', math", padding: "1pt")),
+          ("mtable", (width: "max-content")),
           ("code", (font-family: "'Noto Sans Mono', 'Noto Emoji', monospace")),
           ("math, pre", (overflow-x: "auto", overflow-y: "hidden", max-width: "100%")),
           ("a", (text-decoration: "none", display: "inline-block", border-bottom: "1pt currentColor solid")),

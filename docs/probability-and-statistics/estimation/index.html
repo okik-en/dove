@@ -402,9 +402,9 @@
         </li>
         <li>
           不偏分散について述べられた次の文章のうち、誤っているものを選び、理由も与えなさい。
-          <fieldset style="display: flex; flex-direction: column; gap: 4pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;">
+          <fieldset style="display: flex; flex-direction: column; gap: 6pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;">
             <legend>選択肢</legend>
-            <label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="0" name="1" disabled><b style="display: block;">ア</b><div style="overflow-x: auto;">不偏分散は母分散の不偏推定量である</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="1" name="1" disabled><b style="display: block;">イ</b><div style="overflow-x: auto;">一般に、不偏分散の平方根を取ったものは、標準偏差の不偏推定量になる</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: center;"><input style="display: block;" type="radio" value="2" name="1" disabled><b style="display: block;">ウ</b><div style="overflow-x: auto;">同じデータから標本分散と不偏分散を計算すると、不偏分散の方が常に大きくなる</div></label>
+            <label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="0" name="1" disabled><b style="display: block;">ア</b><div style="overflow-x: auto;">不偏分散は母分散の不偏推定量である</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="1" name="1" disabled><b style="display: block;">イ</b><div style="overflow-x: auto;">一般に、不偏分散の平方根を取ったものは、標準偏差の不偏推定量になる</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="2" name="1" disabled><b style="display: block;">ウ</b><div style="overflow-x: auto;">同じデータから標本分散と不偏分散を計算すると、不偏分散の方が常に大きくなる</div></label>
           </fieldset>
         </li>
         <li>不偏分散と通常の分散の使い分けを、利用するデータを基準に論じなさい。</li>
@@ -1630,7 +1630,7 @@
         </div>
       </details>
       <h2 id="12" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>6.12.ベルヌーイ試行</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ベルヌーイ試行]', text: '[ベルヌーイ試行]', url: 'https://okik-en.github.io/dove/probability-and-statistics/estimation#12'});"><code>#</code></a></h2>
-      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 夏期末</span><span></span></small></p>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 夏期末</span><span>教科書：pp. 204 - 205</span></small></p>
       <p><math><mn displaystyle="true">2</mn></math>種類の結果（確率<math><mi displaystyle="true">𝑝</mi></math>の成功<math><mi displaystyle="true">𝑆</mi></math>と確率<math><mn displaystyle="true">1</mn><mo displaystyle="true">−</mo><mi displaystyle="true">𝑝</mi></math>の失敗<math><mi displaystyle="true">𝐹</mi></math>）を生じる実験を同じ条件でかつ独立に<math><mi displaystyle="true">𝑚</mi></math>回繰り返す ベルヌーイ試行の成功<math><mi displaystyle="true">𝑆</mi></math>の事象の回数<math><mi displaystyle="true">𝑘</mi></math>の確率分布を二項分布<math><mi displaystyle="true">𝐵</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑚</mi><mo>;</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>という。</p>
       <ol>
         <li>二項分布<math><mi displaystyle="true">𝐵</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑚</mi><mo>;</mo><mi>𝑝</mi></mrow><mo>)</mo></mrow></math>の確率関数<math><mi displaystyle="true">𝑓</mi><mrow displaystyle="true"><mo>(</mo><mi>𝑘</mi><mo>)</mo></mrow></math>を与えよ.</li>
@@ -1642,7 +1642,7 @@
           <ol>
             <li>(4)で求めた最尤推定量は不偏推定量と言えるか?</li>
             <li>(4)で求めた最尤推定量は一致推定量と言えるか?</li>
-            <li><s>(4)で求めた最尤推定量は有効推定量と言えるか?</s> ⟵ <strong><strong>超絶悪問というよりもはや問題不備のため解答不可</strong></strong></li>
+            <li>(4)で求めた最尤推定量は有効推定量と言えるか?</li>
           </ol>
         </li>
       </ol>
@@ -2306,7 +2306,349 @@
                   <p>より不偏推定量である。</p>
                 </li>
                 <li>大数の法則から<math><munder displaystyle="true"><mo lspace="0em" rspace="0.16666666666666666em">lim</mo><mrow><mi>𝑚</mi><mo lspace="0em" rspace="0em" stretchy="false">→</mo><mi>∞</mi></mrow></munder><mover accent="true" displaystyle="true"><mi>𝑝</mi><mo>̂</mo></mover><mo displaystyle="true">=</mo><munder displaystyle="true"><mo form="prefix" lspace="0em" rspace="0.16666666666666666em">lim</mo><mrow><mi>𝑚</mi><mo lspace="0em" rspace="0em" stretchy="false">→</mo><mi>∞</mi></mrow></munder><mfrac displaystyle="true"><mi>𝑘</mi><mi>𝑚</mi></mfrac><mo displaystyle="true">=</mo><mi displaystyle="true">𝑝</mi></math>であるから一致推定量である。</li>
-                <li><strong><strong>この問題および某氏の示した（恐らくAIによる）解答は、誰の目から見ても明らかに本授業の範囲を逸脱しており、誠に残念でしかなく、同時に強い遺憾の念を抱く。</strong></strong> このような問題を解くことは明らかに時間の無駄であるから、常にミスがあると仮定し（現に2026年度も例に漏れず大量のミスがあった）、捨てる判断が求められる。</li>
+                <li>
+                  <p>クラメール・ラオの不等式によれば、<math><mi displaystyle="true">𝜃</mi></math>の不偏推定量<math><mover accent="true" displaystyle="true"><mi>𝜃</mi><mo>̂</mo></mover></math>について</p>
+                  <math display="block">
+                    <mtext>Var</mtext>
+                    <mrow>
+                      <mo>(</mo>
+                      <mover accent="true">
+                        <mi>𝜃</mi>
+                        <mo>̂</mo>
+                      </mover>
+                      <mo>)</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mn>1</mn>
+                      <mrow>
+                        <mi>𝐼</mi>
+                        <mrow>
+                          <mo>(</mo>
+                          <mi>𝜃</mi>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                    </mfrac>
+                  </math>
+                  <p>が成り立つ。 ただし、<math><mi displaystyle="true">𝐼</mi><mrow displaystyle="true"><mo>(</mo><mi>𝜃</mi><mo>)</mo></mrow></math>はフィッシャー情報量であって</p>
+                  <math display="block">
+                    <mi>𝐼</mi>
+                    <mrow>
+                      <mo>(</mo>
+                      <mi>𝜃</mi>
+                      <mo>)</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mi>𝐸</mi>
+                    <mrow>
+                      <mo>[</mo>
+                      <msup>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <mfrac>
+                              <mi>𝜕</mi>
+                              <mrow>
+                                <mi>𝜕</mi>
+                                <mi>𝜃</mi>
+                              </mrow>
+                            </mfrac>
+                            <mo form="prefix" lspace="0.16666666666666666em" rspace="0.16666666666666666em">log</mo>
+                            <mi>𝑓</mi>
+                            <mrow>
+                              <mo>(</mo>
+                              <mrow>
+                                <mi>𝑥</mi>
+                                <mo>;</mo>
+                                <mi>𝜃</mi>
+                              </mrow>
+                              <mo>)</mo>
+                            </mrow>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                        <mn>2</mn>
+                      </msup>
+                      <mo>]</mo>
+                    </mrow>
+                  </math>
+                  <p>である。</p>
+                  <p>さて、いま<math><mi displaystyle="true">𝜃</mi><mo displaystyle="true">=</mo><mi displaystyle="true">𝑝</mi></math>であるのでフィッシャー情報量<math><mi displaystyle="true">𝐼</mi><mrow displaystyle="true"><mo>(</mo><mi>𝑝</mi><mo>)</mo></mrow></math>は</p>
+                  <math display="block">
+                    <mtable class="multiline-equation aligned">
+                      <mtr>
+                        <mtd>
+                          <mi>𝐼</mi>
+                          <mrow>
+                            <mo>(</mo>
+                            <mi>𝑝</mi>
+                            <mo>)</mo>
+                          </mrow>
+                        </mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <mi>𝐸</mi>
+                          <mrow>
+                            <mo>[</mo>
+                            <msup>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mfrac>
+                                    <mi>𝜕</mi>
+                                    <mrow>
+                                      <mi>𝜕</mi>
+                                      <mi>𝑝</mi>
+                                    </mrow>
+                                  </mfrac>
+                                  <mi>𝑙</mi>
+                                  <mrow>
+                                    <mo>(</mo>
+                                    <mi>𝑝</mi>
+                                    <mo>)</mo>
+                                  </mrow>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mn>2</mn>
+                            </msup>
+                            <mo>]</mo>
+                          </mrow>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <mi>𝐸</mi>
+                          <mrow>
+                            <mo>[</mo>
+                            <msup>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mfrac>
+                                    <mi>𝑘</mi>
+                                    <mi>𝑝</mi>
+                                  </mfrac>
+                                  <mo>−</mo>
+                                  <mfrac>
+                                    <mrow>
+                                      <mi>𝑚</mi>
+                                      <mo>−</mo>
+                                      <mi>𝑘</mi>
+                                    </mrow>
+                                    <mrow>
+                                      <mn>1</mn>
+                                      <mo>−</mo>
+                                      <mi>𝑝</mi>
+                                    </mrow>
+                                  </mfrac>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mn>2</mn>
+                            </msup>
+                            <mo>]</mo>
+                          </mrow>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <mi>𝐸</mi>
+                          <mrow>
+                            <mo>[</mo>
+                            <msup>
+                              <mrow>
+                                <mo>(</mo>
+                                <mfrac>
+                                  <mrow>
+                                    <mi>𝑘</mi>
+                                    <mo>−</mo>
+                                    <mi>𝑚</mi>
+                                    <mi>𝑝</mi>
+                                  </mrow>
+                                  <mrow>
+                                    <mi>𝑝</mi>
+                                    <mrow>
+                                      <mo>(</mo>
+                                      <mrow>
+                                        <mn>1</mn>
+                                        <mo>−</mo>
+                                        <mi>𝑝</mi>
+                                      </mrow>
+                                      <mo>)</mo>
+                                    </mrow>
+                                  </mrow>
+                                </mfrac>
+                                <mo>)</mo>
+                              </mrow>
+                              <mn>2</mn>
+                            </msup>
+                            <mo>]</mo>
+                          </mrow>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <mfrac>
+                            <mn>1</mn>
+                            <mrow>
+                              <msup>
+                                <mi>𝑝</mi>
+                                <mn>2</mn>
+                              </msup>
+                              <msup>
+                                <mrow>
+                                  <mo>(</mo>
+                                  <mrow>
+                                    <mn>1</mn>
+                                    <mo>−</mo>
+                                    <mi>𝑝</mi>
+                                  </mrow>
+                                  <mo>)</mo>
+                                </mrow>
+                                <mn>2</mn>
+                              </msup>
+                            </mrow>
+                          </mfrac>
+                          <mi>𝐸</mi>
+                          <mrow>
+                            <mo>[</mo>
+                            <msup>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mi>𝑘</mi>
+                                  <mo>−</mo>
+                                  <mi>𝑚</mi>
+                                  <mi>𝑝</mi>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                              <mn>2</mn>
+                            </msup>
+                            <mo>]</mo>
+                          </mrow>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <mfrac>
+                            <mn>1</mn>
+                            <mrow>
+                              <msup>
+                                <mi>𝑝</mi>
+                                <mn>2</mn>
+                              </msup>
+                              <msup>
+                                <mrow>
+                                  <mo>(</mo>
+                                  <mrow>
+                                    <mn>1</mn>
+                                    <mo>−</mo>
+                                    <mi>𝑝</mi>
+                                  </mrow>
+                                  <mo>)</mo>
+                                </mrow>
+                                <mn>2</mn>
+                              </msup>
+                            </mrow>
+                          </mfrac>
+                          <mspace width="0.2222em"/>
+                          <mtext>Var</mtext>
+                          <mrow>
+                            <mo>(</mo>
+                            <mi>𝑘</mi>
+                            <mo>)</mo>
+                          </mrow>
+                        </mtd>
+                      </mtr>
+                      <mtr>
+                        <mtd></mtd>
+                        <mtd>
+                          <mo form="infix">=</mo>
+                          <mfrac>
+                            <mi>𝑚</mi>
+                            <mrow>
+                              <mi>𝑝</mi>
+                              <mrow>
+                                <mo>(</mo>
+                                <mrow>
+                                  <mn>1</mn>
+                                  <mo>−</mo>
+                                  <mi>𝑝</mi>
+                                </mrow>
+                                <mo>)</mo>
+                              </mrow>
+                            </mrow>
+                          </mfrac>
+                        </mtd>
+                      </mtr>
+                    </mtable>
+                  </math>
+                  <p>とわかる。 一方でたしかに</p>
+                  <math display="block">
+                    <mtext>Var</mtext>
+                    <mrow>
+                      <mo>(</mo>
+                      <mover accent="true">
+                        <mi>𝑝</mi>
+                        <mo>̂</mo>
+                      </mover>
+                      <mo>)</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mtext>Var</mtext>
+                    <mrow>
+                      <mo>(</mo>
+                      <mfrac>
+                        <mi>𝑘</mi>
+                        <mi>𝑚</mi>
+                      </mfrac>
+                      <mo>)</mo>
+                    </mrow>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mrow>
+                        <mtext>Var</mtext>
+                        <mrow>
+                          <mo>(</mo>
+                          <mi>𝑘</mi>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                      <msup>
+                        <mi>𝑚</mi>
+                        <mn>2</mn>
+                      </msup>
+                    </mfrac>
+                    <mo>=</mo>
+                    <mfrac>
+                      <mrow>
+                        <mi>𝑝</mi>
+                        <mrow>
+                          <mo>(</mo>
+                          <mrow>
+                            <mn>1</mn>
+                            <mo>−</mo>
+                            <mi>𝑝</mi>
+                          </mrow>
+                          <mo>)</mo>
+                        </mrow>
+                      </mrow>
+                      <mi>𝑚</mi>
+                    </mfrac>
+                  </math>
+                  <p>であり、これは<math><mi displaystyle="true">𝐼</mi><mrow displaystyle="true"><mo>(</mo><mi>𝑝</mi><mo>)</mo></mrow></math>の逆数に等しいので、クラメール・ラオの不等式を満たす最小の分散を持つ不偏推定量であることが示される。</p>
+                </li>
               </ol>
             </li>
           </ol>
@@ -3222,10 +3564,8 @@
                 </mfrac>
               </math>
               <p>である。</p>
-              <ol>
-                <li>補正係数は、標本抽出率<math><mi displaystyle="true">𝑓</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mi>𝑛</mi><mi>𝑁</mi></mfrac></math>が小さい場合はほとんど影響ないため、<math><mi displaystyle="true">𝑓</mi><mo displaystyle="true">≤</mo><mn displaystyle="true">5</mn><mi displaystyle="true">%</mi></math>ならば補正を行わなくてよいという考え方が通説である。 例えば、10000人から5人を選出する場合はその選出が被ることは少ないため、補正を行わなくてもほとんど影響がないと考えられる。</li>
-              </ol>
             </li>
+            <li>補正係数は、標本抽出率<math><mi displaystyle="true">𝑓</mi><mo displaystyle="true">=</mo><mfrac displaystyle="true"><mi>𝑛</mi><mi>𝑁</mi></mfrac></math>が小さい場合はほとんど影響ないため、<math><mi displaystyle="true">𝑓</mi><mo displaystyle="true">≤</mo><mn displaystyle="true">5</mn><mi displaystyle="true">%</mi></math>ならば補正を行わなくてよいという考え方が通説である。 例えば、10000人から5人を選出する場合は非復元抽出による影響は少ないため、補正を行わなくてもほとんど影響がないと考えられる。</li>
           </ol>
         </div>
       </details>

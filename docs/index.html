@@ -57,6 +57,11 @@
         <li><a href="./probability-and-statistics/estimation">推定</a></li>
         <li><a href="./probability-and-statistics/test">検定</a></li>
       </ul>
+      <hr>
+      <p><small>Report any errors/issues on <a href="https://github.com/okik-en/dove/issues">our repository</a> . Last updated at<span style="white-space: pre-wrap">&#x20;</span><span id="updated_at"></span> .</small></p>
+      <script>
+        (async () => document.getElementById('updated_at').textContent = await fetch('https://api.github.com/repos/okik-en/dove/deployments').then(x => x.json()).then(x => new Date(Date.parse(x[0].updated_at)).toLocaleString()))();
+      </script>
     </main>
   </body>
 </html>

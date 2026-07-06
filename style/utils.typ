@@ -64,7 +64,7 @@
       style: styled(
         display: "flex",
         flex-direction: "column",
-        gap: "4pt",
+        gap: "6pt",
         width: "fit-content",
         min-width: "0",
         max-width: "100%",
@@ -82,7 +82,7 @@
                 display: "flex",
                 flex-direction: "row",
                 gap: "4pt",
-                align-items: "center",
+                align-items: "flex-start",
               ),
               {
                 html.input(

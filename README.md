@@ -4,6 +4,9 @@
 
 You can view the distribution at [GitHub Pages](https://okik-en.github.io/dove/)!
 
+This repository deploys Pages from a workflow (`.github/workflows/pages-deploy.yml`).
+Set the Pages source in repository settings to **GitHub Actions**.
+
 ## Dir
 
 ```tree

@@ -22,7 +22,7 @@ You can find the distributed pdf files in the `dist` directory, files with `answ
 
 ## Init
 
-You do not need to follow these steps if you just want to view the problems. These are for those who want to contribute or build the PDFs and HTML files by themselves.
+You do not need to follow these steps if you just want to view the problems. These are for those who want to contribute or build the PDF and/or HTML files by themselves.
 
 ### Clone repo
 
@@ -32,7 +32,7 @@ git clone https://github.com/okik-en/dove.git
 
 ### Install Typst
 
-You can skip this step if you have already installed Typst
+You can skip this step if you have already installed Typst.
 
 Refer to [GitHub](https://github.com/typst/typst#installation) for installation instructions, or use the following commands:
 ```bash
@@ -42,16 +42,18 @@ brew install typst  # for macOS
 winget install typst  # for Windows
   ```
 
-### Add pre-commit hooks
+## Add pre-commit hooks
 
-#### Install pre-commit
+When contributing, add pre-commit hooks and make sure to build before your commitment.
+
+### Install pre-commit
 
 Refer to the [official documentation](https://pre-commit.com/#installation) for installation instructions, or use the following command:
 ```bash
 pip install pre-commit
 ```
 
-#### Install hooks
+### Install hooks
 
 Following command enables pre-commit hooks for this repository.
 

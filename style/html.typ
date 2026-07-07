@@ -1,22 +1,5 @@
+#import "utils.typ": __svg__, frame, myrepr
 #import "style.typ": database, styled
-#let __svg__ = state("__svg__", false)
-
-#let frame(it) = context {
-  __svg__.update(_ => true)
-  if sys.inputs.keys().contains("html") and sys.inputs.html == "true" {
-    html.div(
-      style: styled(
-        width: "fit-content",
-        background-color: "white",
-        margin: ".5em",
-        padding: ".5em",
-        overflow-x: "auto",
-      ),
-      html.frame(it),
-    )
-  } else { it }
-  __svg__.update(_ => false)
-}
 
 #let style(doc-type: "article", body) = context {
   set text(
@@ -81,16 +64,11 @@
     html.head({
       html.meta(charset: "utf-8")
       html.meta(name: "viewport", content: "width=device-width, initial-scale=1")
-      let title_ = if query(<title>).len() > 0 {
-        query(<title>).first().value
-      } else {
-        repr(document.title).slice(1, -1)
-      }
-      html.title(title_)
-      html.elem("meta", attrs: (property: "og:title", content: title_))
+      html.title(myrepr(document.title))
+      html.elem("meta", attrs: (property: "og:title", content: myrepr(document.title)))
       if document.description != none {
-        html.meta(name: "description", content: repr(document.description))
-        html.elem("meta", attrs: (property: "og:description", content: repr(document.description)))
+        html.meta(name: "description", content: myrepr(document.description))
+        html.elem("meta", attrs: (property: "og:description", content: myrepr(document.description)))
       }
       html.elem("meta", attrs: (
         property: "og:image",
@@ -126,7 +104,7 @@
           ),
           ("p", (text-align: "justify")),
           ("math", (font-family: "'Noto Sans Math', 'Noto Emoji', math", padding: "1pt")),
-          ("mtable", (width: "max-content")),
+          ("mtable, mrow", (width: "max-content")),
           ("code", (font-family: "'Noto Sans Mono', 'Noto Emoji', monospace")),
           ("math, pre", (overflow-x: "auto", overflow-y: "hidden", max-width: "100%")),
           ("a", (text-decoration: "none", display: "inline-block", border-bottom: "1pt currentColor solid")),

@@ -1,5 +1,4 @@
 #import "@preview/cetz:0.5.2"
-#import "html.typ": frame
 #import "style.typ": database, family, styled
 
 #let with-hint = sys.inputs.at("hint", default: "false") == "true"
@@ -8,10 +7,29 @@
 #let unknown = (__tag__: "unknown")
 #let pretest = (__tag__: "pretest")
 
+#let __svg__ = state("__svg__", false)
+
 #let Var = math.class("normal", "Var")
 #let Cov = math.class("normal", "Cov")
 #let Bin = math.class("normal", math.italic("Bin"))
 #let Po = math.class("normal", math.italic("Po"))
+
+#let frame(it) = context {
+  __svg__.update(_ => true)
+  if sys.inputs.keys().contains("html") and sys.inputs.html == "true" {
+    html.div(
+      style: styled(
+        width: "fit-content",
+        background-color: "white",
+        margin: ".5em",
+        padding: ".5em",
+        overflow-x: "auto",
+      ),
+      html.frame(it),
+    )
+  } else { it }
+  __svg__.update(_ => false)
+}
 
 #let ana(x) = if is-html {
   html.span(
@@ -180,6 +198,20 @@
     width: 100%,
     body,
   )
+}
+
+#let sequence = [$a$ b].func()
+#let symb = [--].func()
+#let myrepr(it) = {
+  if it.func() == text or it.func() == raw or it.func() == symb {
+    str(it.at("text"))
+  } else if it.func() == math.attach {
+    str(myrepr(it.fields().at("base")) + "^" + myrepr(it.fields().at("t")))
+  } else if it.func() == math.equation {
+    myrepr(it.body)
+  } else if it.func() == sequence {
+    it.fields().children.map(myrepr).join()
+  } else { panic() }
 }
 
 #let eqref(ref, body) = {

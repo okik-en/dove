@@ -7,13 +7,18 @@
 下に示しているのは、リレーション$R(A, B)$と$S(B, C)$の自然結合を$S$をアウターリレーションとして、
 入れ子ループ結合法でとる擬似プログラムである。#ana(1)〜#ana(4)を埋めてプログラムを完成させなさい。
 
-$
-  & "for" "each" t "in" #ana(1) \
-  & quad "for" "each" t' "in" #ana(2) \
-  & wide "such" "that" #ana(3) \
-  & quad "compute" #ana(4) \
-  & "end"
-$
+#figure(
+  table(
+    stroke: none,
+    align: left,
+    columns: (2em,) * 2 + (auto,),
+    table.cell(colspan: 3)[for each $t$ in #ana(1)],
+    [], table.cell(colspan: 2)[for each $t'$ in #ana(2)],
+    [], [], [such that #ana(3)],
+    [], table.cell(colspan: 2)[compute #ana(4)],
+    table.cell(colspan: 3)[end],
+  ),
+)
 
 #ans[
   + $R$

@@ -34,7 +34,7 @@ $ "得点"(underline("学生番号"), underline("科目"), "点数") $
   + `学生番号 WHERE 点数 >= 80`
 ]
 
-== GROUP BY
+== `GROUP BY`
 
 #data((2026, 1))
 

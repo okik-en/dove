@@ -1,3 +1,4 @@
+#import "/style/utils.typ": myrepr
 #import "/style/html.typ": style, styled
 #let __chapter__ = sys.inputs.at("chapter")
 #let __srcdir__ = sys.inputs.at("srcdir")
@@ -36,10 +37,20 @@
       "a",
       attrs: (
         style: styled(cursor: "pointer", font-size: "1rem"),
-        onclick: "navigator.share({title: '"
-          + repr(it.body)
-          + "', text: '"
-          + repr(it.body)
+        onclick: "navigator.share({title: '[dove-ks打倒 | "
+          + __content__.at("title")
+          + " | "
+          + __content__.at("chapters").at(id - 1).last()
+          + " | "
+          + myrepr(it.body)
+          + "](https://okik-en.github.io/dove/"
+          + __srcdir__
+          + "/"
+          + __chapter__
+          + "#"
+          + str(counter(heading).get().last())
+          + ")', text: '"
+          + myrepr(it.body)
           + "', url: 'https://okik-en.github.io/dove/"
           + __srcdir__
           + "/"

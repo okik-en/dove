@@ -17,7 +17,7 @@
       body{font-family: 'Noto Sans', 'Noto Emoji', sans-serif; text-autospace: normal; overflow-wrap: anywhere; word-break: normal; line-break: strict;}
       p{text-align: justify;}
       math{font-family: 'Noto Sans Math', 'Noto Emoji', math; padding: 1pt;}
-      mtable{width: max-content;}
+      mtable, mrow{width: max-content;}
       code{font-family: 'Noto Sans Mono', 'Noto Emoji', monospace;}
       math, pre{overflow-x: auto; overflow-y: hidden; max-width: 100%;}
       a{text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid;}
@@ -111,7 +111,7 @@
     <main>
       <h1>3. 多次元確率分布</h1>
       <nav style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1em; margin: 2em;"><a href="../data-statistics"><code>./first</code></a><a href="../random-variables"><code>./prev</code></a><a href="../../"><code>../</code></a><a href="../binomial-normal"><code>./next</code></a><a href="../test"><code>./last</code></a></nav>
-      <h2 id="1" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.1.同時確率分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[同時確率分布]', text: '[同時確率分布]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#1'});"><code>#</code></a></h2>
+      <h2 id="1" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.1.同時確率分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | 同時確率分布](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#1)', text: '同時確率分布', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#1'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 春中間</span><span>教科書：p. 107</span></small></p>
       <p>6個の赤玉と4個の白玉が入っている袋から、無作為に1個の玉を取り出す試行を2回繰り返す。 取り出した玉をもとに戻さない時、</p>
       <ol>
@@ -127,7 +127,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="2" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.2.復元抽出と非復元抽出</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[復元抽出と非復元抽出]', text: '[復元抽出と非復元抽出]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#2'});"><code>#</code></a></h2>
+      <h2 id="2" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.2.復元抽出と非復元抽出</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | 復元抽出と非復元抽出](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#2)', text: '復元抽出と非復元抽出', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#2'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2026年 春期末</span><span>教科書：p. 107</span></small></p>
       <p>箱の中に赤玉が3個、白玉が5個入っている。</p>
       <ol>
@@ -158,7 +158,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="3" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.3.変数変換と確率分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[変数変換と確率分布]', text: '[変数変換と確率分布]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#3'});"><code>#</code></a></h2>
+      <h2 id="3" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.3.変数変換と確率分布</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | 変数変換と確率分布](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#3)', text: '変数変換と確率分布', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#3'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 春中間</span><span>教科書：pp. 107 - 108</span></small></p>
       <p>1、2、3、4の数字が等確率で出る<math><mn displaystyle="true">2</mn></math>つの（正四面体）サイコロを投げたときの目を それぞれ<math><msub displaystyle="true"><mi>𝑋</mi><mn>1</mn></msub></math>、<math><msub displaystyle="true"><mi>𝑋</mi><mn>2</mn></msub></math>とし、<math><mi displaystyle="true">𝑌</mi><mo displaystyle="true">=</mo><mrow displaystyle="true"><mo>|</mo><mrow><msub><mi>𝑋</mi><mn>1</mn></msub><mo>−</mo><msub><mi>𝑋</mi><mn>2</mn></msub></mrow><mo>|</mo></mrow></math>とする。</p>
       <ol>
@@ -199,7 +199,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="4" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.4.連続型確率変数の独立性</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[連続型確率変数の独立性]', text: '[連続型確率変数の独立性]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#4'});"><code>#</code></a></h2>
+      <h2 id="4" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.4.連続型確率変数の独立性</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | 連続型確率変数の独立性](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#4)', text: '連続型確率変数の独立性', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#4'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 春期末、2025年 春期末</span><span>教科書：pp. 113 - 114</span></small></p>
       <p><math><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑋</mi><mo>,</mo><mi>𝑌</mi></mrow><mo>)</mo></mrow></math>の同時確率密度関数がつぎで与えられている時</p>
       <math display="block">
@@ -603,7 +603,7 @@
           <p>が成り立つ。すなわち、<math><mi displaystyle="true">𝑋</mi></math>と<math><mi displaystyle="true">𝑌</mi></math>は独立である。</p>
         </div>
       </details>
-      <h2 id="5" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.5.連続型確率変数の独立性</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[連続型確率変数の独立性]', text: '[連続型確率変数の独立性]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#5'});"><code>#</code></a></h2>
+      <h2 id="5" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.5.連続型確率変数の独立性</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | 連続型確率変数の独立性](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#5)', text: '連続型確率変数の独立性', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#5'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2026年 春期末</span><span></span></small></p>
       <p>次の同時確率密度関数について、確率変数<math><mi displaystyle="true">𝑋</mi></math>、<math><mi displaystyle="true">𝑌</mi></math>の独立性を判定せよ。</p>
       <p>ただし、必要に応じて次を用いてよい：</p>
@@ -1339,7 +1339,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="6" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.6.同時確率分布と独立性</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[同時確率分布と独立性]', text: '[同時確率分布と独立性]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#6'});"><code>#</code></a></h2>
+      <h2 id="6" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.6.同時確率分布と独立性</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | 同時確率分布と独立性](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#6)', text: '同時確率分布と独立性', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#6'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏期末</span><span>教科書：pp. 103 - 104, 113</span></small></p>
       <p>1つの袋に赤玉4個、白玉2個を入れて、無作為に2個続けて取り出す。 1個目に取り出した玉が赤玉の時は、<math><mi displaystyle="true">𝑋</mi><mo displaystyle="true">=</mo><mn displaystyle="true">0</mn></math>、白玉の時は<math><mi displaystyle="true">𝑋</mi><mo displaystyle="true">=</mo><mn displaystyle="true">1</mn></math>とする。 また、2個目に取り出した玉が赤玉の時は、<math><mi displaystyle="true">𝑌</mi><mo displaystyle="true">=</mo><mn displaystyle="true">0</mn></math>、白玉の時は<math><mi displaystyle="true">𝑌</mi><mo displaystyle="true">=</mo><mn displaystyle="true">1</mn></math>とする。</p>
       <ol>
@@ -1359,14 +1359,14 @@
           </ol>
         </div>
       </details>
-      <h2 id="7" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.7.事象の独立と排反</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[事象の独立と排反]', text: '[事象の独立と排反]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#7'});"><code>#</code></a></h2>
+      <h2 id="7" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.7.事象の独立と排反</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | 事象の独立と排反](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#7)', text: '事象の独立と排反', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#7'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 春中間</span><span>教科書：pp. 67, 114 - 115</span></small></p>
       <p>2つの事象<math><mi displaystyle="true">𝐴</mi></math>と<math><mi displaystyle="true">𝐵</mi></math>が独立であることの定義を与えよ。とくに排反との違いを述べよ。</p>
       <details style="margin: 1em 0;">
         <summary style="cursor: pointer;">解答</summary>
         <div>事象<math><mi displaystyle="true">𝐴</mi></math>と<math><mi displaystyle="true">𝐵</mi></math>が独立であるとは、<math><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝐴</mi><mo>∩</mo><mi>𝐵</mi></mrow><mo>)</mo></mrow><mo displaystyle="true">=</mo><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mi>𝐴</mi><mo>)</mo></mrow><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mi>𝐵</mi><mo>)</mo></mrow></math>が成り立つことをいう。 一方、事象<math><mi displaystyle="true">𝐴</mi></math>と<math><mi displaystyle="true">𝐵</mi></math>が排反であるとは、<math><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝐴</mi><mo>∩</mo><mi>𝐵</mi></mrow><mo>)</mo></mrow><mo displaystyle="true">=</mo><mn displaystyle="true">0</mn></math>が成り立つことをいう。 独立性は、2つの事象が互いに影響を与えないことを意味するのに対し、排反性は、2つの事象が同時に起こらないことを意味する。</div>
       </details>
-      <h2 id="8" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.8.事象の独立</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[事象の独立]', text: '[事象の独立]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#8'});"><code>#</code></a></h2>
+      <h2 id="8" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.8.事象の独立</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | 事象の独立](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#8)', text: '事象の独立', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#8'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 春中間、2023年 春中間、2026年 春中間</span><span>教科書：p. 115</span></small></p>
       <p>子供が3人いる家族を考える。 各子供は独立に男または女が生まれ、その確率はそれぞれ<math><mfrac displaystyle="true"><mn>1</mn><mn>2</mn></mfrac></math>とする。</p>
       <ol>
@@ -1384,7 +1384,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="9" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.9.事象の独立</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[事象の独立]', text: '[事象の独立]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#9'});"><code>#</code></a></h2>
+      <h2 id="9" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.9.事象の独立</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | 事象の独立](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#9)', text: '事象の独立', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#9'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 春中間</span><span>教科書：p. 115</span></small></p>
       <p>サイコロを2回振る試行を考える。 <math><mi displaystyle="true">𝐴</mi></math>を初回の目が4である事象、<math><mi displaystyle="true">𝐵</mi></math>を初回と2回目との和が7である事象、 <math><mi displaystyle="true">𝐶</mi></math>を初回と2回目との和が9である事象とする。 以下の事象の組は、独立かどうか、ぞれぞれに理由と共に回答しなさい。</p>
       <ol>
@@ -1415,7 +1415,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="10" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.10.事象の独立と和事象</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[事象の独立と和事象]', text: '[事象の独立と和事象]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#10'});"><code>#</code></a></h2>
+      <h2 id="10" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.10.事象の独立と和事象</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | 事象の独立と和事象](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#10)', text: '事象の独立と和事象', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#10'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 春中間</span><span>教科書：pp. 72 - 73, 109 - 110, 114 - 115</span></small></p>
       <p>2つの事象<math><mi displaystyle="true">𝐸</mi></math>と<math><mi displaystyle="true">𝐹</mi></math>は独立であって、それそれの確率<math><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mi>𝐸</mi><mo>)</mo></mrow><mo displaystyle="true">=</mo><mi displaystyle="true">𝑎</mi></math>、<math><mi displaystyle="true">𝑃</mi><mrow displaystyle="true"><mo>(</mo><mi>𝐹</mi><mo>)</mo></mrow><mo displaystyle="true">=</mo><mi displaystyle="true">𝑏</mi></math>がわかっている。</p>
       <ol>
@@ -1431,7 +1431,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="11" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.11.独立性と積</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[独立性と積]', text: '[独立性と積]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#11'});"><code>#</code></a></h2>
+      <h2 id="11" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.11.独立性と積</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | 独立性と積](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#11)', text: '独立性と積', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#11'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 春期末</span><span></span></small></p>
       <p>袋の中に1から5までの数字が書かれた玉が一個ずつ入っている。 この中から同時に三個の球を取り出す時、最も大きい数字を<math><mi displaystyle="true">𝑋</mi></math>、最も小さい数字を<math><mi displaystyle="true">𝑌</mi></math>とし、<math><mi displaystyle="true">𝑍</mi><mo displaystyle="true">=</mo><mi displaystyle="true">𝑋</mi><mo displaystyle="true">−</mo><mi displaystyle="true">𝑌</mi></math>とする。 この時、次の設問に答えよ。</p>
       <ol>
@@ -1440,21 +1440,21 @@
         <li><math><mi displaystyle="true">𝑍</mi></math>の平均を求めよ。</li>
         <li><math><mi displaystyle="true">𝑍</mi></math>の分散を求めよ。</li>
       </ol>
-      <h2 id="12" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.12.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ベイズの定理]', text: '[ベイズの定理]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#12'});"><code>#</code></a></h2>
+      <h2 id="12" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.12.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | ベイズの定理](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#12)', text: 'ベイズの定理', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#12'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 春中間</span><span>教科書：pp. 118 - 119</span></small></p>
       <ol>
         <li>2つの事象<math><mi displaystyle="true">𝐴</mi></math>と<math><mi displaystyle="true">𝐵</mi></math>に関するベイズの定理を、図と式と言葉を用いて説明しなさい。 ただし、定理の証明まで与える必要はありません。</li>
         <li>ある国では、500人に1人の割合で、ウイルス<math><mi displaystyle="true">𝑋</mi></math>に感染している。 このウイルス<math><mi displaystyle="true">𝑋</mi></math>には、2種類の株<math><msub displaystyle="true"><mi>𝐾</mi><mn>1</mn></msub></math>と<math><msub displaystyle="true"><mi>𝐾</mi><mn>2</mn></msub></math>とがあり、それらに感染する比率は<math><mn displaystyle="true">3</mn><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em" displaystyle="true">:</mo><mn displaystyle="true">1</mn></math>であるという。 開発された新薬を使うと、<math><msub displaystyle="true"><mi>𝐾</mi><mn>1</mn></msub></math>,<math><msub displaystyle="true"><mi>𝐾</mi><mn>2</mn></msub></math>に感染していれば、それぞれ0.98、0.90の確率で陽性反応がでるという。 ただし、感染していない場合でも、0.01の確率で陽性反応が出る特性である。 ある人に陽性反応が出た時、この人が<math><msub displaystyle="true"><mi>𝐾</mi><mn>1</mn></msub></math>の感染者である確率を求めさない。</li>
       </ol>
       <p>（答えは、分数のままではなく、小数で回答すること。）</p>
-      <h2 id="13" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.13.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ベイズの定理]', text: '[ベイズの定理]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#13'});"><code>#</code></a></h2>
+      <h2 id="13" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.13.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | ベイズの定理](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#13)', text: 'ベイズの定理', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#13'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 春中間、2023年 春中間</span><span>教科書：pp. 118 - 119</span></small></p>
       <p>箱の中に赤玉が3個、白玉が5個入っている。 箱の中から玉を1個取り出し色を確認し、玉を戻さずに2個目の玉を取り出し色を確認する。</p>
       <ol>
         <li>少なくとも1回は白玉を取り出す確率を求めよ。</li>
         <li>2回目が赤玉であった時、1回目も赤玉であった確率を求めよ。</li>
       </ol>
-      <h2 id="14" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.14.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ベイズの定理]', text: '[ベイズの定理]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#14'});"><code>#</code></a></h2>
+      <h2 id="14" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.14.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | ベイズの定理](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#14)', text: 'ベイズの定理', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#14'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 春期末</span><span>教科書：pp. 118 - 119</span></small></p>
       <p>ある機械は稼働して1日すると、10%の確率で故障する。 この機械を稼働して3日間連続で放置したとする。</p>
       <ol>
@@ -1470,7 +1470,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="15" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.15.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ベイズの定理]', text: '[ベイズの定理]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#15'});"><code>#</code></a></h2>
+      <h2 id="15" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.15.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | ベイズの定理](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#15)', text: 'ベイズの定理', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#15'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 春期末</span><span>教科書：pp. 118 - 119</span></small></p>
       <p>箱の中に、赤玉が5個、青玉が4個、白玉が3個入っている。 それぞれの玉の大きさは同じで、1個あたりの重さは、 赤玉が100 g、青玉が45 g、白玉が30 gである。 このとき以下の問に答えよ。 ただし、取り出した玉は重さを量ったあとで、箱の中にもどすものとする。</p>
       <ol>
@@ -1488,7 +1488,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="16" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.16.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ベイズの定理]', text: '[ベイズの定理]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#16'});"><code>#</code></a></h2>
+      <h2 id="16" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.16.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | ベイズの定理](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#16)', text: 'ベイズの定理', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#16'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏中間、2024年 春期末</span><span>教科書：pp. 118 - 119</span></small></p>
       <p>ある地域で、病気Aにかかっている人は、人口の0.1%である。 検査方法は不完全であり、病気Aに罹患（らかん/病気にかかっている、の意味）している人について、 正しく陽性と判定する確率は99%、罹患していない人について、誤って陽性と判定する確率は10%である。</p>
       <ol>
@@ -1505,7 +1505,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="17" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.17.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ベイズの定理]', text: '[ベイズの定理]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#17'});"><code>#</code></a></h2>
+      <h2 id="17" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.17.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | ベイズの定理](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#17)', text: 'ベイズの定理', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#17'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 夏期末</span><span>教科書：pp. 118 - 119</span></small></p>
       <p>ある病原菌の検査試薬は、病原菌に感染している個体に用いると99%の確率で陽性と判定し， 感染していない個体に用いると99%の確率で陰性と判定する。 ここで、全体の0.5%がこの病原菌に感染している集団から個体を1つ取り出し、 この検査試薬を用いて感染しているかどうかを検査する。 以下の問いに答えよ。</p>
       <ol>
@@ -1576,7 +1576,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="18" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.18.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ベイズの定理]', text: '[ベイズの定理]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#18'});"><code>#</code></a></h2>
+      <h2 id="18" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.18.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | ベイズの定理](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#18)', text: 'ベイズの定理', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#18'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 夏中間</span><span>教科書：pp. 118 - 119</span></small></p>
       <p>ある病気Sは、⼀万⼈に⼀人の割合で発症する。 この病気Sにかかっているかどうかを調べる検査Kの信頼性は次のとおり：</p>
       <ul>
@@ -1714,7 +1714,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="19" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.19.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ベイズの定理]', text: '[ベイズの定理]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#19'});"><code>#</code></a></h2>
+      <h2 id="19" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.19.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | ベイズの定理](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#19)', text: 'ベイズの定理', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#19'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 春期末</span><span>教科書：pp. 118 - 119</span></small></p>
       <p>（答えは、分数のままではなく、小数で回答すること。）</p>
       <p>ある薬物検査法において</p>
@@ -1874,7 +1874,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="20" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.20.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[ベイズの定理]', text: '[ベイズの定理]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#20'});"><code>#</code></a></h2>
+      <h2 id="20" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.20.ベイズの定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | ベイズの定理](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#20)', text: 'ベイズの定理', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#20'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：小テスト</span><span>教科書：pp. 118 - 119</span></small></p>
       <p>ある国では、500人に1人の割合でウイルスXXXに感染している。 このウイルスには2種類の株<math><msub displaystyle="true"><mi>𝐾</mi><mn>1</mn></msub></math>、<math><msub displaystyle="true"><mi>𝐾</mi><mn>2</mn></msub></math>があり、その割合は<math><msub displaystyle="true"><mi>𝐾</mi><mn>1</mn></msub><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em" displaystyle="true">:</mo><msub displaystyle="true"><mi>𝐾</mi><mn>2</mn></msub><mo displaystyle="true">=</mo><mn displaystyle="true">3</mn><mo lspace="0.2777777777777778em" rspace="0.2777777777777778em" displaystyle="true">:</mo><mn displaystyle="true">1</mn></math>である。 新薬を用いた検査では，次の性質を持つ：</p>
       <dl>
@@ -2070,7 +2070,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="21" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.21.離散型確率変数の共分散</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[離散型確率変数の共分散]', text: '[離散型確率変数の共分散]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#21'});"><code>#</code></a></h2>
+      <h2 id="21" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.21.離散型確率変数の共分散</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | 離散型確率変数の共分散](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#21)', text: '離散型確率変数の共分散', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#21'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 夏中間</span><span>教科書：pp. 122 - 124</span></small></p>
       <p>実数<math><mi displaystyle="true">𝑝</mi></math>は<math><mn displaystyle="true">0</mn><mo displaystyle="true">&lt;</mo><mi displaystyle="true">𝑝</mi><mo displaystyle="true">&lt;</mo><mn displaystyle="true">1</mn></math>を満たすものとする。 確率変数<math><mi displaystyle="true">𝑋</mi></math>と<math><mi displaystyle="true">𝑌</mi></math>は独立に同一の確率関数</p>
       <math display="block">
@@ -2269,7 +2269,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="22" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.22.共分散と独立性</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[共分散と独立性]', text: '[共分散と独立性]', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#22'});"><code>#</code></a></h2>
+      <h2 id="22" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.22.共分散と独立性</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | 共分散と独立性](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#22)', text: '共分散と独立性', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#22'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 春期末、2024年 春期末</span><span>教科書：pp. 125 - 126</span></small></p>
       <p>2つの離散確率変数<math><mi displaystyle="true">𝑋</mi></math>、<math><mi displaystyle="true">𝑌</mi></math>の確率分布が表で与えられている。</p>
       <ol>
@@ -2386,13 +2386,7 @@
           </ol>
         </div>
       </details>
-      <h2 id="23" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.23.<math><mi displaystyle="true">𝑛</mi></math>個の確率変数</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: 'sequence(
-  equation(block: false, body: [n]),
-  [個の確率変数],
-)', text: 'sequence(
-  equation(block: false, body: [n]),
-  [個の確率変数],
-)', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#23'});"><code>#</code></a></h2>
+      <h2 id="23" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>3.23.<math><mi displaystyle="true">𝑛</mi></math>個の確率変数</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | 確率統計 | 多次元確率分布 | n個の確率変数](https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#23)', text: 'n個の確率変数', url: 'https://okik-en.github.io/dove/probability-and-statistics/multidimensional-probability#23'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 春期末</span><span>教科書：p. 127</span></small></p>
       <p><math><mi displaystyle="true">𝑛</mi></math>を正の整数とし、1つのサイコロを<math><mi displaystyle="true">𝑛</mi></math>回投げるとする。 出た目の総和が<math><mrow displaystyle="true"><mo>(</mo><mrow><mi>𝑛</mi><mo>+</mo><mn>1</mn></mrow><mo>)</mo></mrow></math>である確率を求めよ。</p>
       <details style="margin: 1em 0;">

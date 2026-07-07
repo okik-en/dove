@@ -1,7 +1,7 @@
 #import "@preview/cjk-spacer:0.2.1": cjk-spacer
 #import "fix-indent.typ": *
 
-#let emoji-regex = regex("[\u{2600}-\u{27BF}\u{1F000}-\u{1FFFF}]")
+#let emoji-regex = regex("[\u{2600}-\u{27BF}\u{2B55}\u{1F000}-\u{1FFFF}]")
 
 #let fonts = (
   serif: "New Computer Modern",

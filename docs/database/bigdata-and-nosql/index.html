@@ -21,6 +21,7 @@
       code{font-family: 'Noto Sans Mono', 'Noto Emoji', monospace;}
       math, pre{overflow-x: auto; overflow-y: hidden; max-width: 100%;}
       a{text-decoration: none; display: inline-block; border-bottom: 1pt currentColor solid;}
+      li{overflow-x: auto;}
       li p:first-child{display: inline;}
       ol{list-style-type: none; counter-reset: dec;}
       ol > li{counter-increment: dec;}
@@ -58,7 +59,16 @@
         <legend>選択肢</legend>
         <label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="0" name="1" disabled><b style="display: block;">ア</b><div style="overflow-x: auto;">「ノード」、「リレーションシップ」、「プロパティ」の3要素によってノード間の関係性を表現する。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="1" name="1" disabled><b style="display: block;">イ</b><div style="overflow-x: auto;">1件分のデータを「ドキュメント」と呼び、個々のドキュメントのデータ構造は自由であって、 データを追加する都度変えることができる。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="2" name="1" disabled><b style="display: block;">ウ</b><div style="overflow-x: auto;">集合論に基づいて、行と列からなる2次元の表で表現する。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="3" name="1" disabled><b style="display: block;">エ</b><div style="overflow-x: auto;">任意の保存したいデータと、そのデータを一意に識別できる値を組みとして保存する。</div></label>
       </fieldset>
-      <h2 id="4" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.4.NoSQLと分散DB</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | NoSQLと分散DB](https://okik-en.github.io/dove/database/bigdata-and-nosql#4)', text: 'NoSQLと分散DB', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#4'});"><code>#</code></a></h2>
+      <h2 id="4" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.4.分散データベース</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | 分散データベース](https://okik-en.github.io/dove/database/bigdata-and-nosql#4)', text: '分散データベース', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#4'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：小テスト</span><span></span></small></p>
+      <p>分散データベースとは何か。 また、集中型データベースと比較した利点を2つ説明せよ。</p>
+      <details style="margin: 1em 0;">
+        <summary style="cursor: pointer;">解答</summary>
+        <div>
+          <p>分散データベースとは、複数のコンピュータにデータを<span style="text-decoration: underline">分散配置</span>し、全体として一つのデータベースのように利用する仕組みである。 利点として、サーバを追加して処理能力や容量を拡張できるため<span style="text-decoration: underline">スケールアウト</span>しやすい点がある。 また、一部のサーバに障害が発生しても他のサーバで処理を継続できるため、<span style="text-decoration: underline">可用性</span>や<span style="text-decoration: underline">障害耐性</span>が高い。</p>
+        </div>
+      </details>
+      <h2 id="5" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.5.NoSQLと分散DB</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | NoSQLと分散DB](https://okik-en.github.io/dove/database/bigdata-and-nosql#5)', text: 'NoSQLと分散DB', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#5'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 夏期末</span><span>教科書：pp. 180 - 183</span></small></p>
       <ol>
         <li>Amazonの開発したDynamoが採用しているNoSQLデータモデルは何か、 その名前（英語名も含む）と構造・機能を、図も使って説明しなさい。</li>
@@ -68,16 +78,18 @@
         <li>共有データシステムとは何か、図を交えて説明しなさい。</li>
         <li>AmazonのDynamo、GoogleのBigtableが選択した共通データシステム、それぞれを説明しなさい。</li>
       </ol>
-      <h2 id="5" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.5.CAP定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | CAP定理](https://okik-en.github.io/dove/database/bigdata-and-nosql#5)', text: 'CAP定理', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#5'});"><code>#</code></a></h2>
+      <h2 id="6" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.6.CAP定理</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | CAP定理](https://okik-en.github.io/dove/database/bigdata-and-nosql#6)', text: 'CAP定理', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#6'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏中間、2023年 夏期末、2024年 夏期末</span><span>教科書：pp. 183 - 188</span></small></p>
       <p>BrewerのCAP定理に関して</p>
       <ol>
         <li>CAPの“C”、“A”、“P”とはそれぞれ何ですか?</li>
         <li>CAP 定理を説明しなさい。</li>
-        <li>BASE特性のBASEとは、何の英語の略ですか、またその特性の意味を説明しなさい。</li>
+        <li>なぜ3つの性質を同時に完全には満たせないのか説明しなさい。</li>
+        <li>BASE特性を説明しなさい。</li>
         <li>NoSQLにおけるCAP定理の扱いを、BASE特性を使って説明しなさい。</li>
+        <li>なぜNoSQLではACID特性よりもBASE特性が重視される場合があるのかを説明しなさい。</li>
       </ol>
-      <h2 id="6" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.6.NoSQL</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | NoSQL](https://okik-en.github.io/dove/database/bigdata-and-nosql#6)', text: 'NoSQL', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#6'});"><code>#</code></a></h2>
+      <h2 id="7" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.7.BASE特性</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | BASE特性](https://okik-en.github.io/dove/database/bigdata-and-nosql#7)', text: 'BASE特性', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#7'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2025年 夏期末</span><span></span></small></p>
       <ol>
         <li>BASE特性での“BA”、“S”、“E”が何を意味するのか、元英語と和文を与えよ。</li>
@@ -90,28 +102,42 @@
           </ol>
         </li>
       </ol>
-      <h2 id="7" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.7.相関関係の発見</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | 相関関係の発見](https://okik-en.github.io/dove/database/bigdata-and-nosql#7)', text: '相関関係の発見', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#7'});"><code>#</code></a></h2>
+      <h2 id="8" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.8.NewSQL</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | NewSQL](https://okik-en.github.io/dove/database/bigdata-and-nosql#8)', text: 'NewSQL', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#8'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：小テスト</span><span></span></small></p>
+      <p>NewSQLは何を解決するために登場したのか。 NoSQLとの違いを含めて説明せよ（120～180字）。</p>
+      <details style="margin: 1em 0;">
+        <summary style="cursor: pointer;">解答</summary>
+        <div>NewSQLは、<span style="text-decoration: underline">ACID特性</span>や<span style="text-decoration: underline">SQL</span>の利便性を維持したまま、大規模データ処理に必要な<span style="text-decoration: underline">スケールアウト</span>を実現するために登場した。 従来のRDBMSは拡張性に課題があり、一方NoSQLは高いスケーラビリティを持つが、ACID保証やSQL機能を弱める場合がある。 NewSQLは両者の長所を取り入れ、整合性と拡張性を両立することを目指している。</div>
+      </details>
+      <h2 id="9" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.9.相関関係の発見</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | 相関関係の発見](https://okik-en.github.io/dove/database/bigdata-and-nosql#9)', text: '相関関係の発見', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#9'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏期末</span><span>教科書：p. 188</span></small></p>
       <p>ビッグデータの活用例として，大量のデータから統計学的手法などを用いて新たな知識（傾向やパターン） を見つけ出すプロセスはどれか。</p>
       <fieldset style="display: flex; flex-direction: column; gap: 6pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;">
         <legend>選択肢</legend>
         <label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="0" name="2" disabled><b style="display: block;">ア</b><div style="overflow-x: auto;">データウェアハウス</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="1" name="2" disabled><b style="display: block;">イ</b><div style="overflow-x: auto;">データディクショナリ</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="2" name="2" disabled><b style="display: block;">ウ</b><div style="overflow-x: auto;">データマイニング</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="3" name="2" disabled><b style="display: block;">エ</b><div style="overflow-x: auto;">メタデータ</div></label>
       </fieldset>
-      <h2 id="8" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.8.データレイク</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | データレイク](https://okik-en.github.io/dove/database/bigdata-and-nosql#8)', text: 'データレイク', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#8'});"><code>#</code></a></h2>
+      <h2 id="10" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.10.データマイニング</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | データマイニング](https://okik-en.github.io/dove/database/bigdata-and-nosql#10)', text: 'データマイニング', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#10'});"><code>#</code></a></h2>
+      <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：小テスト</span><span></span></small></p>
+      <p>データマイニングと統計的手法の共通点と相違点を説明せよ。 さらに、データベースとの関係について述べよ（150～200字）。</p>
+      <details style="margin: 1em 0;">
+        <summary style="cursor: pointer;">解答</summary>
+        <div>データマイニングと統計的手法は、どちらも大量のデータを分析して有用な情報を得る点で共通している。 しかし、統計的手法が主に<span style="text-decoration: underline">仮説を立ててその妥当性を検証</span>するのに対し、データマイニングは事前の仮説がなくてもデータから規則性や関連性を発見し、<span style="text-decoration: underline">知識発見</span>を行う点が異なる。 また、データマイニングは<span style="text-decoration: underline">データベース</span>に蓄積された大量データを分析対象とし、<span style="text-decoration: underline">パターン発見</span>や意思決定支援に活用される。</div>
+      </details>
+      <h2 id="11" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.11.データレイク</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | データレイク](https://okik-en.github.io/dove/database/bigdata-and-nosql#11)', text: 'データレイク', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#11'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2022年 夏期末</span><span></span></small></p>
       <p>ビッグデータのデータ貯蔵場所であるデータレイクの特徴として，適切なものはどれか。</p>
       <fieldset style="display: flex; flex-direction: column; gap: 6pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;">
         <legend>選択肢</legend>
         <label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="0" name="3" disabled><b style="display: block;">ア</b><div style="overflow-x: auto;">あらゆるデータをそのままの形式や構造で格納しておく。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="1" name="3" disabled><b style="display: block;">イ</b><div style="overflow-x: auto;">データ量を抑えるために，データの記述情報であるメタデータは格納しない。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="2" name="3" disabled><b style="display: block;">ウ</b><div style="overflow-x: auto;">データを格納する前にデータ利用方法を設計し，それに沿ってスキーマをあらかじめ定義しておく。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="3" name="3" disabled><b style="display: block;">エ</b><div style="overflow-x: auto;">テキストファイルやバイナリデータなど，格納するデータの形式に応じてリポジトリを使い分ける。</div></label>
       </fieldset>
-      <h2 id="9" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.9.データウェアハウス</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | データウェアハウス](https://okik-en.github.io/dove/database/bigdata-and-nosql#9)', text: 'データウェアハウス', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#9'});"><code>#</code></a></h2>
+      <h2 id="12" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.12.データウェアハウス</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | データウェアハウス](https://okik-en.github.io/dove/database/bigdata-and-nosql#12)', text: 'データウェアハウス', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#12'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2023年 夏期末</span><span></span></small></p>
       <p>データベースに蓄積されたデータを有効活用するためにデータウェアハウスの構築が求められている。 データウェアハウスの構築、運用あるいはデータ分析手法などに関する記述として、最も適切なものはどれか。</p>
       <fieldset style="display: flex; flex-direction: column; gap: 6pt; width: fit-content; min-width: 0; max-width: 100%; padding-right: 1em; overflow-x: hidden;">
         <legend>選択肢</legend>
         <label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="0" name="4" disabled><b style="display: block;">ア</b><div style="overflow-x: auto;">BI（Business Intelligence）ツールとは、人工知能のアルゴリズムを開発するソフトウェアをいう。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="1" name="4" disabled><b style="display: block;">イ</b><div style="overflow-x: auto;">ETL（Extract/Transform/Load）とは、時系列処理のデータ変換を行うアルゴリズムをいい、 将来の販売動向のシミュレーションなどを行うことができる。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="2" name="4" disabled><b style="display: block;">ウ</b><div style="overflow-x: auto;">大量かつ多様な形式のデータを処理するデータベースで、 RDBとは異なるデータ構造を扱うものにNoSQLデータベースがある。</div></label><label style="display: flex; flex-direction: row; gap: 4pt; align-items: flex-start;"><input style="display: block;" type="radio" value="3" name="4" disabled><b style="display: block;">エ</b><div style="overflow-x: auto;">データマイニングとは、データの特性に応じてRDBのスキーマ定義を最適化することをいう。</div></label>
       </fieldset>
-      <h2 id="10" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.10.DWH</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | DWH](https://okik-en.github.io/dove/database/bigdata-and-nosql#10)', text: 'DWH', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#10'});"><code>#</code></a></h2>
+      <h2 id="13" style="display: flex; justify-content: space-between; align-items: center; gap: 2em;"><span>11.13.DWH</span><a style="cursor: pointer; font-size: 1rem;" onclick="navigator.share({title: '[dove-ks打倒 | データベース | ビッグデータとNoSQL | DWH](https://okik-en.github.io/dove/database/bigdata-and-nosql#13)', text: 'DWH', url: 'https://okik-en.github.io/dove/database/bigdata-and-nosql#13'});"><code>#</code></a></h2>
       <p><small style="display: flex; width: 100%; justify-content: space-between; flex-wrap: wrap;"><span>出題：2024年 夏期末</span><span></span></small></p>
       <ol>
         <li>{仮想データベース・データウエアハウス・データレイク・データハブ・データマート}の関係と違いを データベースを基本に説明しさない。図表を作図して説明すること。</li>

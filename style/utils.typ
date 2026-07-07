@@ -31,7 +31,7 @@
   __svg__.update(_ => false)
 }
 
-#let ana(x) = if is-html {
+#let ana(x) = context if is-html and not __svg__.get() {
   html.span(
     style: styled(
       display: "inline-flex",
